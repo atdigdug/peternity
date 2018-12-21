@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody, Col, Badge, Table } from 'reactstrap';
+import { Card, CardBody, Col, Table } from 'reactstrap';
 
 const VipIssues = () => (
   <Col md={12} lg={12} xl={6}>
@@ -7,67 +7,35 @@ const VipIssues = () => (
       <CardBody>
         <div className="card__title">
           <h5 className="bold-text">Unassigned Defects</h5>
-          <h5 className="subhead">Use default table</h5>
+          <h5 className="subhead">Requires dev team attention</h5>
         </div>
         <Table responsive hover>
           <thead>
             <tr>
-              <th>#</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Username</th>
-              <th>Status</th>
+              <th>Last Updated</th>
+              <th>Assigned To</th>
+              <th>App</th>
+              <th>Defect</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>1</td>
-              <td>Maria</td>
-              <td>Morisson</td>
-              <td>@dragon</td>
-              <td><Badge color="success">Work</Badge></td>
+              <td>1 week ago</td>
+              <td>Asha</td>
+              <td>Storage module</td>
+              <td>null password</td>
             </tr>
             <tr>
-              <td>2</td>
-              <td>Bobby</td>
-              <td>Brown</td>
-              <td>@boboby</td>
-              <td><Badge color="warning">Vacation</Badge></td>
+              <td>3 days ago</td>
+              <td>Bhageeta</td>
+              <td>Indala app</td>
+              <td>Outdated library</td>
             </tr>
             <tr>
-              <td>3</td>
-              <td>Alexander</td>
-              <td>Medinberg</td>
-              <td>@medimedi</td>
-              <td><Badge color="warning">Vacation</Badge></td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>Vera</td>
-              <td>Lori</td>
-              <td>@lori</td>
-              <td><Badge color="success">Work</Badge></td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>Maria</td>
-              <td>Morisson</td>
-              <td>@dragon</td>
-              <td><Badge color="warning">Vacation</Badge></td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>Bobby</td>
-              <td>Brown</td>
-              <td>@boboby</td>
-              <td><Badge color="success">Work</Badge></td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>Alexander</td>
-              <td>Medinberg</td>
-              <td>@medimedi</td>
-              <td><Badge color="success">Work</Badge></td>
+              <td>Yesterday</td>
+              <td>Bhageeta</td>
+              <td>Emon website</td>
+              <td>Cross-site scripting</td>
             </tr>
           </tbody>
         </Table>

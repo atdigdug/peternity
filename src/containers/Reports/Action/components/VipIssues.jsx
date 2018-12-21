@@ -7,7 +7,7 @@ const VipIssues = () => (
       <CardBody>
         <div className="card__title">
           <h5 className="bold-text">Important Issues</h5>
-          <h5 className="subhead">Use default table</h5>
+          <h5 className="subhead">Very High Priority Engagements</h5>
         </div>
         <Table responsive hover>
           <thead>

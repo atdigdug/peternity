@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody, Col, Badge, Table } from 'reactstrap';
+import { Card, CardBody, Col, Table } from 'reactstrap';
 
 const VipIssues = () => (
   <Col md={12} lg={12} xl={6}>
@@ -7,67 +7,35 @@ const VipIssues = () => (
       <CardBody>
         <div className="card__title">
           <h5 className="bold-text">Issues Missing Detail</h5>
-          <h5 className="subhead">Use default table</h5>
+          <h5 className="subhead">Intake on hold</h5>
         </div>
         <Table responsive hover>
           <thead>
             <tr>
-              <th>#</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Username</th>
-              <th>Status</th>
+              <th>Last Updated</th>
+              <th>Assigned To</th>
+              <th>Issue</th>
+              <th>Detail Needed</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>1</td>
-              <td>Maria</td>
-              <td>Morisson</td>
-              <td>@dragon</td>
-              <td><Badge color="success">Work</Badge></td>
+              <td>1 month ago</td>
+              <td>Chandra</td>
+              <td>KSHV App Release</td>
+              <td>No architecture details</td>
             </tr>
             <tr>
-              <td>2</td>
-              <td>Bobby</td>
-              <td>Brown</td>
-              <td>@boboby</td>
-              <td><Badge color="warning">Vacation</Badge></td>
+              <td>1 week ago</td>
+              <td>Chandra</td>
+              <td>react-notify-toast module update</td>
+              <td>Description missing</td>
             </tr>
             <tr>
-              <td>3</td>
-              <td>Alexander</td>
-              <td>Medinberg</td>
-              <td>@medimedi</td>
-              <td><Badge color="warning">Vacation</Badge></td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>Vera</td>
-              <td>Lori</td>
-              <td>@lori</td>
-              <td><Badge color="success">Work</Badge></td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>Maria</td>
-              <td>Morisson</td>
-              <td>@dragon</td>
-              <td><Badge color="warning">Vacation</Badge></td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>Bobby</td>
-              <td>Brown</td>
-              <td>@boboby</td>
-              <td><Badge color="success">Work</Badge></td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>Alexander</td>
-              <td>Medinberg</td>
-              <td>@medimedi</td>
-              <td><Badge color="success">Work</Badge></td>
+              <td>Yesterday</td>
+              <td>Chandra</td>
+              <td>New Year Launch</td>
+              <td>No apps assigned</td>
             </tr>
           </tbody>
         </Table>

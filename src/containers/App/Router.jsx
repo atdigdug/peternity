@@ -4,6 +4,7 @@ import MainWrapper from './MainWrapper';
 import Layout from '../Layout/index';
 
 import ReportAction from '../Reports/Action/index';
+import ReportStatus from '../Reports/Status/index';
 
 import Alerts from '../UI/Alerts/index';
 import Buttons from '../UI/Buttons/index';
@@ -96,6 +97,7 @@ import ECommerceDashboardEdit from '../Dashboards/ECommerceTableEdit/index';
 const Reports = () => (
   <Switch>
     <Route path="/reports/action" component={ReportAction} />
+    <Route path="/reports/status" component={ReportStatus} />
   </Switch>
 );
 

@@ -21,7 +21,7 @@ class SidebarContent extends Component {
           <SidebarLink title="Home" icon="home" route="/dashboard_default" onClick={this.hideSidebar} />
           <SidebarCategory title="Reports" icon="chart-bars">
             <SidebarLink title="Action" route="/reports/action" onClick={this.hideSidebar} />
-            <SidebarLink title="Status" route="/dashboard_default" onClick={this.hideSidebar} />
+            <SidebarLink title="Status" route="/reports/status" onClick={this.hideSidebar} />
             <SidebarLink title="Business" route="/dashboard_default" onClick={this.hideSidebar} />
             <SidebarLink title="CISO" route="/dashboard_default" onClick={this.hideSidebar} />
             <SidebarLink title="Dev Team" route="/dashboard_default" onClick={this.hideSidebar} />

@@ -2,7 +2,7 @@
   "name": "Easydev",
   "version": "1.4.0",
   "private": true,
-  "homepage": "",
+  "homepage": "/",
   "dependencies": {
     "@material-ui/core": "^3.8.3",
     "@mdi/font": "^2.8.94",

@@ -1,7 +1,5 @@
 import React, { PureComponent } from 'react';
 import { BarChart, Bar, ResponsiveContainer, Tooltip, XAxis, YAxis, CartesianGrid } from 'recharts';
-import { translate } from 'react-i18next';
-import PropTypes from 'prop-types';
 import Panel from '../../../../shared/components/Panel';
 
 const dataYearly = [
@@ -51,10 +49,6 @@ const dataMontly = [
 ];
 
 class SalesStatistisBar extends PureComponent {
-  static propTypes = {
-    t: PropTypes.func.isRequired,
-  };
-
   constructor() {
     super();
     this.state = {
@@ -67,15 +61,13 @@ class SalesStatistisBar extends PureComponent {
   };
 
   render() {
-    const { t } = this.props;
-
     return (
       <Panel
         xl={6}
         lg={6}
         md={12}
-        title={t('dashboard_commerce.sales_statistic')}
-        subhead="See how effective your business is"
+        title="Issues Closed"
+        subhead="By Consultant"
       >
         <ResponsiveContainer height={260}>
           {this.state.yearly ?
@@ -109,4 +101,4 @@ class SalesStatistisBar extends PureComponent {
   }
 }
 
-export default translate('common')(SalesStatistisBar);
+export default SalesStatistisBar;

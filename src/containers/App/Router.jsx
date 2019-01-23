@@ -6,6 +6,7 @@ import Layout from '../Layout/index';
 import ReportAction from '../Reports/Action/index';
 import ReportStatus from '../Reports/Status/index';
 import ReportBusiness from '../Reports/Business/index';
+import ReportCiso from '../Reports/Ciso/index';
 
 import Alerts from '../UI/Alerts/index';
 import Buttons from '../UI/Buttons/index';
@@ -100,6 +101,7 @@ const Reports = () => (
     <Route path="/reports/action" component={ReportAction} />
     <Route path="/reports/status" component={ReportStatus} />
     <Route path="/reports/business" component={ReportBusiness} />
+    <Route path="/reports/ciso" component={ReportCiso} />
   </Switch>
 );
 

@@ -1,12 +1,18 @@
 import React from 'react';
 import { Container, Row } from 'reactstrap';
 
-import Score from './components/Score';
+import Defects from './components/Defects';
+import StaleDefects from './components/StaleDefects';
+import DefectsList from './components/DefectsList';
 
 const ReportAction = () => (
   <Container className="dashboard">
     <Row>
-      <Score />
+      <Defects />
+      <StaleDefects />
+    </Row>
+    <Row>
+      <DefectsList />
     </Row>
   </Container>
 );

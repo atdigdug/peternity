@@ -7,6 +7,8 @@ import ReportAction from '../Reports/Action/index';
 import ReportStatus from '../Reports/Status/index';
 import ReportBusiness from '../Reports/Business/index';
 import ReportCiso from '../Reports/Ciso/index';
+import ReportDevTeam from '../Reports/DevTeam/index';
+import ReportExternal from '../Reports/External/index';
 
 import Alerts from '../UI/Alerts/index';
 import Buttons from '../UI/Buttons/index';
@@ -102,6 +104,8 @@ const Reports = () => (
     <Route path="/reports/status" component={ReportStatus} />
     <Route path="/reports/business" component={ReportBusiness} />
     <Route path="/reports/ciso" component={ReportCiso} />
+    <Route path="/reports/devteam" component={ReportDevTeam} />
+    <Route path="/reports/external" component={ReportExternal} />
   </Switch>
 );
 

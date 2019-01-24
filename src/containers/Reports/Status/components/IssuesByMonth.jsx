@@ -63,8 +63,8 @@ class SalesStatistisBar extends PureComponent {
   render() {
     return (
       <Panel
-        xl={6}
-        lg={6}
+        xl={8}
+        lg={8}
         md={12}
         title="Issues Closed"
         subhead="By Consultant"

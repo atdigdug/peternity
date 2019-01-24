@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import NeutralAlertsWithIcons from './components/NeutralAlertsWithIcons';
-import TopSellingProducts from './components/TopSellingProducts';
+import Defects from './components/Defects';
 import InboxTable from './components/InboxTable';
 import emails from './components/email-list';
 
@@ -16,7 +16,7 @@ const HomePage = () => (
       <NeutralAlertsWithIcons />
     </Row>
     <Row>
-      <TopSellingProducts />
+      <Defects />
       <InboxTable emails={emails} />
     </Row>
   </Container>

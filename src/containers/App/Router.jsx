@@ -9,6 +9,7 @@ import ReportBusiness from '../Reports/Business/index';
 import ReportCiso from '../Reports/Ciso/index';
 import ReportDevTeam from '../Reports/DevTeam/index';
 import ReportExternal from '../Reports/External/index';
+import EngagementsInput from '../Engagements/Input/index';
 
 import Alerts from '../UI/Alerts/index';
 import Buttons from '../UI/Buttons/index';
@@ -106,6 +107,13 @@ const Reports = () => (
     <Route path="/reports/ciso" component={ReportCiso} />
     <Route path="/reports/devteam" component={ReportDevTeam} />
     <Route path="/reports/external" component={ReportExternal} />
+    <Route path="/engagements/input" component={EngagementsInput} />
+  </Switch>
+);
+
+const Engagements = () => (
+  <Switch>
+    <Route path="/engagements/input" component={EngagementsInput} />
   </Switch>
 );
 
@@ -237,6 +245,7 @@ const wrappedRoutes = () => (
       <Route path="/dashboard_fitness" component={FitnessDashboard} />
       <Route path="/dashboard_crypto" component={Crypto} />
       <Route path="/reports" component={Reports} />
+      <Route path="/engagements" component={Engagements} />
       <Route path="/ui" component={UI} />
       <Route path="/mail" component={Mail} />
       <Route path="/chat" component={Chat} />

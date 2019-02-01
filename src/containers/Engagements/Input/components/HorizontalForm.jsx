@@ -44,6 +44,76 @@ class HorizontalForm extends PureComponent {
             </div>
             <form className="form form--horizontal" onSubmit={handleSubmit}>
               <div className="form__form-group">
+                <span className="form__form-group-label">ID</span>
+                <div className="form__form-group-field">
+                  <Field
+                    name="defaultInput"
+                    component="input"
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div className="form__form-group">
+                <span className="form__form-group-label">Name</span>
+                <div className="form__form-group-field">
+                  <Field
+                    name="defaultInput"
+                    component="input"
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div className="form__form-group">
+                <span className="form__form-group-label">Status</span>
+                <div className="form__form-group-field">
+                  <Field
+                    name="defaultInput"
+                    component="input"
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div className="form__form-group">
+                <span className="form__form-group-label">Start Date</span>
+                <div className="form__form-group-field">
+                  <Field
+                    name="defaultInput"
+                    component="input"
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div className="form__form-group">
+                <span className="form__form-group-label">End Date</span>
+                <div className="form__form-group-field">
+                  <Field
+                    name="defaultInput"
+                    component="input"
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div className="form__form-group">
+                <span className="form__form-group-label">Description</span>
+                <div className="form__form-group-field">
+                  <Field
+                    name="defaultInput"
+                    component="input"
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div className="form__form-group">
+                <span className="form__form-group-label">?</span>
+                <div className="form__form-group-field">
+                  <Field
+                    name="defaultInput"
+                    component="input"
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div className="form__form-group">
                 <span className="form__form-group-label">Default Label</span>
                 <div className="form__form-group-field">
                   <Field

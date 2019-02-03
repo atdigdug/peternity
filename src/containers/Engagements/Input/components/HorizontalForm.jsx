@@ -1,14 +1,8 @@
 import React, { PureComponent } from 'react';
 import { Card, CardBody, Col, Button, ButtonToolbar } from 'reactstrap';
 import { Field, reduxForm } from 'redux-form';
-import EyeIcon from 'mdi-react/EyeIcon';
-import EmailIcon from 'mdi-react/EmailIcon';
-import AccountSearchIcon from 'mdi-react/AccountSearchIcon';
 import { translate } from 'react-i18next';
 import PropTypes from 'prop-types';
-import renderFileInputField from '../../../../shared/components/form/FileInput';
-import renderSelectField from '../../../../shared/components/form/Select';
-import renderMultiSelectField from '../../../../shared/components/form/MultiSelect';
 
 class HorizontalForm extends PureComponent {
   static propTypes = {
@@ -104,7 +98,7 @@ class HorizontalForm extends PureComponent {
                 </div>
               </div>
               <div className="form__form-group">
-                <span className="form__form-group-label">?</span>
+                <span className="form__form-group-label">Requestor Name</span>
                 <div className="form__form-group-field">
                   <Field
                     name="defaultInput"
@@ -114,139 +108,56 @@ class HorizontalForm extends PureComponent {
                 </div>
               </div>
               <div className="form__form-group">
-                <span className="form__form-group-label">Default Label</span>
+                <span className="form__form-group-label">Requestor Email</span>
                 <div className="form__form-group-field">
                   <Field
                     name="defaultInput"
                     component="input"
                     type="text"
-                    placeholder="Default Input"
                   />
                 </div>
               </div>
               <div className="form__form-group">
-                <span className="form__form-group-label">Disabled Field</span>
+                <span className="form__form-group-label">Requestor Phone</span>
                 <div className="form__form-group-field">
                   <Field
-                    name="disableInput"
-                    component="input"
-                    type="text"
-                    placeholder="Disabled Input"
-                    disabled
-                  />
-                </div>
-              </div>
-              <div className="form__form-group">
-                <span className="form__form-group-label">E-mail</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="email"
-                    component="input"
-                    type="email"
-                    placeholder="example@mail.com"
-                  />
-                </div>
-              </div>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Password</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="password"
-                    component="input"
-                    type={this.state.showPassword ? 'text' : 'password'}
-                    placeholder="Password"
-                  />
-                  <button
-                    className={`form__form-group-button${this.state.showPassword ? ' active' : ''}`}
-                    onClick={e => this.showPassword(e)}
-                  ><EyeIcon />
-                  </button>
-                </div>
-              </div>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Icon Left</span>
-                <div className="form__form-group-field">
-                  <div className="form__form-group-icon">
-                    <EmailIcon />
-                  </div>
-                  <Field
-                    name="leftIcon"
-                    component="input"
-                    type="email"
-                    placeholder="Icon Left Input"
-                  />
-                </div>
-              </div>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Icon Right</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="rightIcon"
-                    component="input"
-                    type="text"
-                    placeholder="Icon Right Input"
-                  />
-                  <div className="form__form-group-icon">
-                    <AccountSearchIcon />
-                  </div>
-                </div>
-              </div>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Field with description</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="descriptionInput"
+                    name="defaultInput"
                     component="input"
                     type="text"
                   />
                 </div>
-                <span className="form__form-group-description">
-                  Zealously now pronounce existence add you instantly say offending.
-                </span>
               </div>
               <div className="form__form-group">
-                <span className="form__form-group-label">Dropdown</span>
+                <span className="form__form-group-label">Requestor preferred method of contact</span>
                 <div className="form__form-group-field">
                   <Field
-                    name="select"
-                    component={renderSelectField}
-                    options={[
-                      { value: 'one', label: 'One' },
-                      { value: 'two', label: 'Two' },
-                    ]}
-                  />
-                </div>
-              </div>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Multiselect</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="multiSelect"
-                    component={renderMultiSelectField}
-                    options={[
-                      { value: 'one', label: 'One' },
-                      { value: 'two', label: 'Two' },
-                    ]}
-                  />
-                </div>
-              </div>
-              <div className="form__form-group">
-                <div className="form__form-group-field">
-                  <Field
-                    name="textarea"
-                    component="textarea"
+                    name="defaultInput"
+                    component="input"
                     type="text"
                   />
                 </div>
               </div>
               <div className="form__form-group">
                 <span className="form__form-group-label">
-                  Add file
+Project name,
+Project manager,
+Project status,
+Expected to go live date,
+System information owner, created by, last modified by,
+Priority,
+Resolution,
+Assignee,
+Date reported, created, updated,
+Date assigned to AppSec, date acknowledged, date consultant assigned, date request fulfilled,
+CSEQ submitted date,
+Is self-service,
+Comments
                 </span>
                 <div className="form__form-group-field">
                   <Field
-                    name="file"
-                    component={renderFileInputField}
+                    name="defaultInput"
+                    component="input"
+                    type="text"
                   />
                 </div>
               </div>

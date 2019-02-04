@@ -7,8 +7,8 @@ const BasicForm = () => (
   <Container>
     <Row>
       <Col md={12}>
-        <h3 className="page-title">Engagements</h3>
-        <h3 className="page-subhead subhead">Engagement details</h3>
+        <h3 className="page-title">Applications and Modules</h3>
+        <h3 className="page-subhead subhead">App details</h3>
       </Col>
     </Row>
     <Row>

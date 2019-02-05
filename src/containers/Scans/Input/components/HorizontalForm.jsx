@@ -32,12 +32,12 @@ class HorizontalForm extends PureComponent {
         <Card>
           <CardBody>
             <div className="card__title">
-              <h5 className="bold-text">New Engagement</h5>
+              <h5 className="bold-text">New Whitehat Scan</h5>
               <h5 className="subhead">Enter as many fields as possible</h5>
             </div>
             <form className="form form--horizontal" onSubmit={handleSubmit}>
               <div className="form__form-group">
-                <span className="form__form-group-label">ID</span>
+                <span className="form__form-group-label">DAST URL</span>
                 <div className="form__form-group-field">
                   <Field
                     name="defaultInput"
@@ -47,7 +47,7 @@ class HorizontalForm extends PureComponent {
                 </div>
               </div>
               <div className="form__form-group">
-                <span className="form__form-group-label">Name</span>
+                <span className="form__form-group-label">Whitehat Asset Name</span>
                 <div className="form__form-group-field">
                   <Field
                     name="defaultInput"
@@ -57,7 +57,7 @@ class HorizontalForm extends PureComponent {
                 </div>
               </div>
               <div className="form__form-group">
-                <span className="form__form-group-label">Status</span>
+                <span className="form__form-group-label">Whitehat Service Level</span>
                 <div className="form__form-group-field">
                   <Field
                     name="defaultInput"
@@ -67,7 +67,7 @@ class HorizontalForm extends PureComponent {
                 </div>
               </div>
               <div className="form__form-group">
-                <span className="form__form-group-label">Start Date</span>
+                <span className="form__form-group-label">Whitehat Primary Hostname URL</span>
                 <div className="form__form-group-field">
                   <Field
                     name="defaultInput"
@@ -77,7 +77,7 @@ class HorizontalForm extends PureComponent {
                 </div>
               </div>
               <div className="form__form-group">
-                <span className="form__form-group-label">End Date</span>
+                <span className="form__form-group-label">Whitehat Asset Priority</span>
                 <div className="form__form-group-field">
                   <Field
                     name="defaultInput"
@@ -87,7 +87,7 @@ class HorizontalForm extends PureComponent {
                 </div>
               </div>
               <div className="form__form-group">
-                <span className="form__form-group-label">Description</span>
+                <span className="form__form-group-label">Whitehat Scan Speed</span>
                 <div className="form__form-group-field">
                   <Field
                     name="defaultInput"
@@ -97,7 +97,7 @@ class HorizontalForm extends PureComponent {
                 </div>
               </div>
               <div className="form__form-group">
-                <span className="form__form-group-label">Requestor Name</span>
+                <span className="form__form-group-label">DAST Internal Site</span>
                 <div className="form__form-group-field">
                   <Field
                     name="defaultInput"
@@ -107,7 +107,7 @@ class HorizontalForm extends PureComponent {
                 </div>
               </div>
               <div className="form__form-group">
-                <span className="form__form-group-label">Requestor Email</span>
+                <span className="form__form-group-label">DAST Appliance</span>
                 <div className="form__form-group-field">
                   <Field
                     name="defaultInput"
@@ -117,197 +117,7 @@ class HorizontalForm extends PureComponent {
                 </div>
               </div>
               <div className="form__form-group">
-                <span className="form__form-group-label">Requestor Phone</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="defaultInput"
-                    component="input"
-                    type="text"
-                  />
-                </div>
-              </div>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Requestor preferred method of contact</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="defaultInput"
-                    component="input"
-                    type="text"
-                  />
-                </div>
-              </div>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Project Manager</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="defaultInput"
-                    component="input"
-                    type="text"
-                  />
-                </div>
-              </div>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Project Status</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="defaultInput"
-                    component="input"
-                    type="text"
-                  />
-                </div>
-              </div>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Expected to go live date</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="defaultInput"
-                    component="input"
-                    type="text"
-                  />
-                </div>
-              </div>
-              <div className="form__form-group">
-                <span className="form__form-group-label">System Information Owner</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="defaultInput"
-                    component="input"
-                    type="text"
-                  />
-                </div>
-              </div>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Created By</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="defaultInput"
-                    component="input"
-                    type="text"
-                  />
-                </div>
-              </div>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Last Modified By</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="defaultInput"
-                    component="input"
-                    type="text"
-                  />
-                </div>
-              </div>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Priority</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="defaultInput"
-                    component="input"
-                    type="text"
-                  />
-                </div>
-              </div>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Resolution</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="defaultInput"
-                    component="input"
-                    type="text"
-                  />
-                </div>
-              </div>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Assignee</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="defaultInput"
-                    component="input"
-                    type="text"
-                  />
-                </div>
-              </div>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Date Reported</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="defaultInput"
-                    component="input"
-                    type="text"
-                  />
-                </div>
-              </div>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Date Created</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="defaultInput"
-                    component="input"
-                    type="text"
-                  />
-                </div>
-              </div>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Date Updated</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="defaultInput"
-                    component="input"
-                    type="text"
-                  />
-                </div>
-              </div>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Date assigned to AppSec</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="defaultInput"
-                    component="input"
-                    type="text"
-                  />
-                </div>
-              </div>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Date Acknowledged</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="defaultInput"
-                    component="input"
-                    type="text"
-                  />
-                </div>
-              </div>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Date Consultant Assigned</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="defaultInput"
-                    component="input"
-                    type="text"
-                  />
-                </div>
-              </div>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Date Request Fulfilled</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="defaultInput"
-                    component="input"
-                    type="text"
-                  />
-                </div>
-              </div>
-              <div className="form__form-group">
-                <span className="form__form-group-label">CSEQ Submitted Date</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="defaultInput"
-                    component="input"
-                    type="text"
-                  />
-                </div>
-              </div>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Is Self-Service</span>
+                <span className="form__form-group-label">Internal Site IP</span>
                 <div className="form__form-group-field">
                   <Field
                     name="defaultInput"

@@ -33,8 +33,7 @@ export default [
       },
       {
         userName: 'littleOrc',
-        message: 'Eldest father can design tastes did joy settle. Roused future he ye an marked. Arose mr rapid ' +
-        'in so vexed words. Gay welcome led add lasting chiefly say looking. ',
+        message: 'Findings 1',
         date: new Date(2018, 3, 7, 12, 35, 0, 0),
       },
     ],
@@ -79,7 +78,7 @@ export default [
     messages: [
       {
         userName: 'dragonKing',
-        message: 'Unpleasing pianoforte unreserved as oh he unpleasant no inquietude insipidity. ',
+        message: 'Findings 3',
         date: new Date(2018, 3, 7, 12, 35, 0, 0),
       },
     ],

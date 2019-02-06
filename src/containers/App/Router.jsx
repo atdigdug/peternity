@@ -12,6 +12,7 @@ import ReportExternal from '../Reports/External/index';
 import EngagementsInput from '../Engagements/Input/index';
 import AppsModulesInput from '../AppsModules/Input/index';
 import ScansInput from '../Scans/Input/index';
+import DevSupportDefault from '../DevSupport/index';
 
 import Alerts from '../UI/Alerts/index';
 import Buttons from '../UI/Buttons/index';
@@ -127,6 +128,12 @@ const AppsModules = () => (
 const Scans = () => (
   <Switch>
     <Route path="/scans/input" component={ScansInput} />
+  </Switch>
+);
+
+const DevSupport = () => (
+  <Switch>
+    <Route path="/devsupport" component={DevSupportDefault} />
   </Switch>
 );
 
@@ -261,6 +268,7 @@ const wrappedRoutes = () => (
       <Route path="/engagements" component={Engagements} />
       <Route path="/appsmodules" component={AppsModules} />
       <Route path="/scans" component={Scans} />
+      <Route path="/devsupport" component={DevSupport} />
       <Route path="/ui" component={UI} />
       <Route path="/mail" component={Mail} />
       <Route path="/chat" component={Chat} />

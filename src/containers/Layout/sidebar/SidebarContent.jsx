@@ -30,7 +30,7 @@ class SidebarContent extends Component {
           <SidebarLink title="Engagements" icon="mustache" route="/engagements/input" onClick={this.hideSidebar} />
           <SidebarLink title="Apps/Modules" icon="mustache" route="/appsmodules/input" onClick={this.hideSidebar} />
           <SidebarLink title="Scans" icon="mustache" route="/scans/input" onClick={this.hideSidebar} />
-          <SidebarLink title="Findings" icon="mustache" route="/dashboard_default" onClick={this.hideSidebar} />
+          <SidebarLink title="Findings" icon="mustache" route="/findings" onClick={this.hideSidebar} />
           <SidebarLink title="Dev Support" icon="mustache" route="/devsupport" onClick={this.hideSidebar} />
         </ul>
         <ul className="sidebar__block">

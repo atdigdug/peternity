@@ -12,6 +12,7 @@ import ReportExternal from '../Reports/External/index';
 import EngagementsInput from '../Engagements/Input/index';
 import AppsModulesInput from '../AppsModules/Input/index';
 import ScansInput from '../Scans/Input/index';
+import FindingsDefault from '../Findings/index';
 import DevSupportDefault from '../DevSupport/index';
 
 import Alerts from '../UI/Alerts/index';
@@ -128,6 +129,12 @@ const AppsModules = () => (
 const Scans = () => (
   <Switch>
     <Route path="/scans/input" component={ScansInput} />
+  </Switch>
+);
+
+const Findings = () => (
+  <Switch>
+    <Route path="/findings" component={FindingsDefault} />
   </Switch>
 );
 
@@ -268,6 +275,7 @@ const wrappedRoutes = () => (
       <Route path="/engagements" component={Engagements} />
       <Route path="/appsmodules" component={AppsModules} />
       <Route path="/scans" component={Scans} />
+      <Route path="/findings" component={Findings} />
       <Route path="/devsupport" component={DevSupport} />
       <Route path="/ui" component={UI} />
       <Route path="/mail" component={Mail} />

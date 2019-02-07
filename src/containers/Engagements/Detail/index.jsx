@@ -1,12 +1,11 @@
 import React from 'react';
 import { Col, Container, Row, Card, CardBody } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
 
-const BasicForm = () => (
+const EngagementsDetail = () => (
   <Container>
     <Row>
       <Col md={12}>
-        <h3 className="page-title">Engagements</h3>
+        <h3 className="page-title">Engagement Detail</h3>
         <h3 className="page-subhead subhead">Summary</h3>
       </Col>
     </Row>
@@ -19,11 +18,9 @@ const BasicForm = () => (
             </div>
             <div>
               <ul>
-                <NavLink to="/engagements/detail">
-                  <li>Engagement 1</li>
-                </NavLink>
-                <li>Engagement 2</li>
-                <li>Engagement 3</li>
+                <li>Engagment 1</li>
+                <li>Engagment 2</li>
+                <li>Engagment 3</li>
               </ul>
             </div>
           </CardBody>
@@ -33,4 +30,4 @@ const BasicForm = () => (
   </Container>
 );
 
-export default BasicForm;
+export default EngagementsDetail;

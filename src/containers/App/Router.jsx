@@ -11,6 +11,7 @@ import ReportDevTeam from '../Reports/DevTeam/index';
 import ReportExternal from '../Reports/External/index';
 import EngagementsDefault from '../Engagements/index';
 import EngagementsInput from '../Engagements/Input/index';
+import EngagementsDetail from '../Engagements/Detail/index';
 import AppsModulesInput from '../AppsModules/Input/index';
 import ScansInput from '../Scans/Input/index';
 import FindingsDefault from '../Findings/index';
@@ -117,8 +118,9 @@ const Reports = () => (
 
 const Engagements = () => (
   <Switch>
-    <Route path="/engagements" component={EngagementsDefault} />
+    <Route path="/engagements/detail" component={EngagementsDetail} />
     <Route path="/engagements/input" component={EngagementsInput} />
+    <Route path="/engagements" component={EngagementsDefault} />
   </Switch>
 );
 

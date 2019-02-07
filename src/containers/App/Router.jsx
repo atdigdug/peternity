@@ -9,6 +9,7 @@ import ReportBusiness from '../Reports/Business/index';
 import ReportCiso from '../Reports/Ciso/index';
 import ReportDevTeam from '../Reports/DevTeam/index';
 import ReportExternal from '../Reports/External/index';
+import EngagementsDefault from '../Engagements/index';
 import EngagementsInput from '../Engagements/Input/index';
 import AppsModulesInput from '../AppsModules/Input/index';
 import ScansInput from '../Scans/Input/index';
@@ -116,6 +117,7 @@ const Reports = () => (
 
 const Engagements = () => (
   <Switch>
+    <Route path="/engagements" component={EngagementsDefault} />
     <Route path="/engagements/input" component={EngagementsInput} />
   </Switch>
 );

@@ -2,11 +2,11 @@ import React from 'react';
 import { Col, Container, Row, Card, CardBody } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
-const EngagementsDetail = () => (
+const AppsModulesDetail = () => (
   <Container>
     <Row>
       <Col md={12}>
-        <h3 className="page-title">Engagement Details</h3>
+        <h3 className="page-title">App Details</h3>
         <h3 className="page-subhead subhead">Summary</h3>
       </Col>
     </Row>
@@ -45,11 +45,11 @@ const EngagementsDetail = () => (
     </Row>
     <Row>
       <Col>
-        <NavLink to="/appsmodules/detail">
+        <NavLink to="/scans/detail">
           <Card>
             <CardBody>
               <div className="card__title">
-                <h5 className="bold-text">App 1</h5>
+                <h5 className="bold-text">Scan 1</h5>
               </div>
             </CardBody>
           </Card>
@@ -59,7 +59,7 @@ const EngagementsDetail = () => (
         <Card>
           <CardBody>
             <div className="card__title">
-              <h5 className="bold-text">App 2</h5>
+              <h5 className="bold-text">Scan 2</h5>
             </div>
           </CardBody>
         </Card>
@@ -79,4 +79,4 @@ const EngagementsDetail = () => (
   </Container>
 );
 
-export default EngagementsDetail;
+export default AppsModulesDetail;

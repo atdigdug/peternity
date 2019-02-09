@@ -13,7 +13,9 @@ import EngagementsDefault from '../Engagements/index';
 import EngagementsInput from '../Engagements/Input/index';
 import EngagementsDetail from '../Engagements/Detail/index';
 import AppsModulesInput from '../AppsModules/Input/index';
+import AppsModulesDetail from '../AppsModules/Detail/index';
 import ScansInput from '../Scans/Input/index';
+import ScansDetail from '../Scans/Detail/index';
 import FindingsDefault from '../Findings/index';
 import DevSupportDefault from '../DevSupport/index';
 
@@ -126,12 +128,14 @@ const Engagements = () => (
 
 const AppsModules = () => (
   <Switch>
+    <Route path="/appsmodules/detail" component={AppsModulesDetail} />
     <Route path="/appsmodules/input" component={AppsModulesInput} />
   </Switch>
 );
 
 const Scans = () => (
   <Switch>
+    <Route path="/scans/detail" component={ScansDetail} />
     <Route path="/scans/input" component={ScansInput} />
   </Switch>
 );

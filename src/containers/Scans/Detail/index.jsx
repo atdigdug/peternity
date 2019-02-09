@@ -1,12 +1,11 @@
 import React from 'react';
 import { Col, Container, Row, Card, CardBody } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
 
-const EngagementsDetail = () => (
+const ScansDetail = () => (
   <Container>
     <Row>
       <Col md={12}>
-        <h3 className="page-title">Engagement Details</h3>
+        <h3 className="page-title">Scan Details</h3>
         <h3 className="page-subhead subhead">Summary</h3>
       </Col>
     </Row>
@@ -45,32 +44,10 @@ const EngagementsDetail = () => (
     </Row>
     <Row>
       <Col>
-        <NavLink to="/appsmodules/detail">
-          <Card>
-            <CardBody>
-              <div className="card__title">
-                <h5 className="bold-text">App 1</h5>
-              </div>
-            </CardBody>
-          </Card>
-        </NavLink>
-      </Col>
-      <Col>
         <Card>
           <CardBody>
             <div className="card__title">
-              <h5 className="bold-text">App 2</h5>
-            </div>
-          </CardBody>
-        </Card>
-      </Col>
-    </Row>
-    <Row>
-      <Col>
-        <Card>
-          <CardBody>
-            <div className="card__title">
-              <h5 className="bold-text">Aggregated Data</h5>
+              <h5 className="bold-text">Findings</h5>
             </div>
           </CardBody>
         </Card>
@@ -79,4 +56,4 @@ const EngagementsDetail = () => (
   </Container>
 );
 
-export default EngagementsDetail;
+export default ScansDetail;

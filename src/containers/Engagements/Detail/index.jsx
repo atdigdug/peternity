@@ -5,7 +5,7 @@ const EngagementsDetail = () => (
   <Container>
     <Row>
       <Col md={12}>
-        <h3 className="page-title">Engagement Detail</h3>
+        <h3 className="page-title">Engagement Details</h3>
         <h3 className="page-subhead subhead">Summary</h3>
       </Col>
     </Row>
@@ -14,14 +14,60 @@ const EngagementsDetail = () => (
         <Card>
           <CardBody>
             <div className="card__title">
-              <h5 className="bold-text">Active Engagements</h5>
+              <h5 className="bold-text">Breadcrumbs</h5>
             </div>
-            <div>
-              <ul>
-                <li>Engagment 1</li>
-                <li>Engagment 2</li>
-                <li>Engagment 3</li>
-              </ul>
+          </CardBody>
+        </Card>
+      </Col>
+    </Row>
+    <Row>
+      <Col>
+        <Card>
+          <CardBody>
+            <div className="card__title">
+              <h5 className="bold-text">Status</h5>
+            </div>
+          </CardBody>
+        </Card>
+      </Col>
+    </Row>
+    <Row>
+      <Col>
+        <Card>
+          <CardBody>
+            <div className="card__title">
+              <h5 className="bold-text">Details</h5>
+            </div>
+          </CardBody>
+        </Card>
+      </Col>
+    </Row>
+    <Row>
+      <Col>
+        <Card>
+          <CardBody>
+            <div className="card__title">
+              <h5 className="bold-text">App 1</h5>
+            </div>
+          </CardBody>
+        </Card>
+      </Col>
+      <Col>
+        <Card>
+          <CardBody>
+            <div className="card__title">
+              <h5 className="bold-text">App 2</h5>
+            </div>
+          </CardBody>
+        </Card>
+      </Col>
+    </Row>
+    <Row>
+      <Col>
+        <Card>
+          <CardBody>
+            <div className="card__title">
+              <h5 className="bold-text">Aggregated Data</h5>
             </div>
           </CardBody>
         </Card>

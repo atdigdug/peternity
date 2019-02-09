@@ -1,6 +1,7 @@
 import React from 'react';
 import { Col, Container, Row, Card, CardBody } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+import RiskPriorities from './components/RiskPriorities';
 
 const AppsModulesDetail = () => (
   <Container>
@@ -51,6 +52,7 @@ const AppsModulesDetail = () => (
               <div className="card__title">
                 <h5 className="bold-text">Scan 1</h5>
               </div>
+              <RiskPriorities />
             </CardBody>
           </Card>
         </NavLink>
@@ -61,6 +63,7 @@ const AppsModulesDetail = () => (
             <div className="card__title">
               <h5 className="bold-text">Scan 2</h5>
             </div>
+            <RiskPriorities />
           </CardBody>
         </Card>
       </Col>

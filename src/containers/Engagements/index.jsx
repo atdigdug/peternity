@@ -1,6 +1,6 @@
 import React from 'react';
-import { Col, Container, Row, Card, CardBody } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
+import { Col, Container, Row } from 'reactstrap';
+import NeutralAlertsWithIcons from './components/NeutralAlertsWithIcons';
 
 const BasicForm = () => (
   <Container>
@@ -11,24 +11,7 @@ const BasicForm = () => (
       </Col>
     </Row>
     <Row>
-      <Col>
-        <Card>
-          <CardBody>
-            <div className="card__title">
-              <h5 className="bold-text">Active Engagements</h5>
-            </div>
-            <div>
-              <ul>
-                <NavLink to="/engagements/detail">
-                  <li>Engagement 1</li>
-                </NavLink>
-                <li>Engagement 2</li>
-                <li>Engagement 3</li>
-              </ul>
-            </div>
-          </CardBody>
-        </Card>
-      </Col>
+      <NeutralAlertsWithIcons />
     </Row>
   </Container>
 );

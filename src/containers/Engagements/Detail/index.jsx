@@ -6,19 +6,8 @@ const EngagementsDetail = () => (
   <Container>
     <Row>
       <Col md={12}>
-        <h3 className="page-title">Engagement Details</h3>
-        <h3 className="page-subhead subhead">Summary</h3>
-      </Col>
-    </Row>
-    <Row>
-      <Col>
-        <Card>
-          <CardBody>
-            <div className="card__title">
-              <h5 className="bold-text">Breadcrumbs</h5>
-            </div>
-          </CardBody>
-        </Card>
+        <h3 className="page-title">Engagement 1 Details</h3>
+        <h3 className="page-subhead subhead">Next step: This is what you have to do next.</h3>
       </Col>
     </Row>
     <Row>

@@ -5,6 +5,7 @@ import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import HorizontalForm from './components/HorizontalForm';
+import RiskPriorities from './components/RiskPriorities';
 
 const EngagementsDetail = () => (
   <Container>
@@ -65,6 +66,7 @@ const EngagementsDetail = () => (
               <div className="card__title">
                 <h5 className="bold-text">App 1</h5>
               </div>
+              <RiskPriorities />
             </CardBody>
           </Card>
         </NavLink>
@@ -75,6 +77,7 @@ const EngagementsDetail = () => (
             <div className="card__title">
               <h5 className="bold-text">App 2</h5>
             </div>
+            <RiskPriorities />
           </CardBody>
         </Card>
       </Col>
@@ -86,6 +89,7 @@ const EngagementsDetail = () => (
             <div className="card__title">
               <h5 className="bold-text">Aggregated Data</h5>
             </div>
+            <RiskPriorities />
           </CardBody>
         </Card>
       </Col>

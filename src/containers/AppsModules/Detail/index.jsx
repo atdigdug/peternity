@@ -80,6 +80,7 @@ const AppsModulesDetail = () => (
             <div className="card__title">
               <h5 className="bold-text">Aggregated Data</h5>
             </div>
+            <RiskPriorities />
           </CardBody>
         </Card>
       </Col>

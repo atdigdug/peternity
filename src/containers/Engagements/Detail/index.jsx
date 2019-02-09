@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
+import HorizontalForm from './components/HorizontalForm';
 
 const EngagementsDetail = () => (
   <Container>
@@ -48,6 +49,10 @@ const EngagementsDetail = () => (
             <div className="card__title">
               <h5 className="bold-text">Details</h5>
             </div>
+            <Row>
+              <Col><HorizontalForm /></Col>
+              <Col><HorizontalForm /></Col>
+            </Row>
           </CardBody>
         </Card>
       </Col>

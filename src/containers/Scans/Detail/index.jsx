@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Row, Card, CardBody } from 'reactstrap';
+import HorizontalForm from './components/HorizontalForm';
 import RiskPriorities from './components/RiskPriorities';
 
 const ScansDetail = () => (
@@ -39,6 +40,10 @@ const ScansDetail = () => (
             <div className="card__title">
               <h5 className="bold-text">Details</h5>
             </div>
+            <Row>
+              <Col><HorizontalForm /></Col>
+              <Col><HorizontalForm /></Col>
+            </Row>
           </CardBody>
         </Card>
       </Col>

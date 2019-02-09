@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Row, Card, CardBody } from 'reactstrap';
+import RiskPriorities from './components/RiskPriorities';
 
 const ScansDetail = () => (
   <Container>
@@ -46,9 +47,7 @@ const ScansDetail = () => (
       <Col>
         <Card>
           <CardBody>
-            <div className="card__title">
-              <h5 className="bold-text">Findings</h5>
-            </div>
+            <RiskPriorities />
           </CardBody>
         </Card>
       </Col>

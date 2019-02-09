@@ -1,6 +1,9 @@
 import React from 'react';
 import { Col, Container, Row, Card, CardBody } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+import Stepper from '@material-ui/core/Stepper';
+import Step from '@material-ui/core/Step';
+import StepLabel from '@material-ui/core/StepLabel';
 
 const EngagementsDetail = () => (
   <Container>
@@ -17,6 +20,23 @@ const EngagementsDetail = () => (
             <div className="card__title">
               <h5 className="bold-text">Status</h5>
             </div>
+            <Stepper activeStep="0">
+              <Step key="Intake" completed="true">
+                <StepLabel>Intake</StepLabel>
+              </Step>
+              <Step key="Threat Model" completed="true">
+                <StepLabel>Threat Model</StepLabel>
+              </Step>
+              <Step key="Onboard" completed="true">
+                <StepLabel>Onboard</StepLabel>
+              </Step>
+              <Step key="Offboard" active="true">
+                <StepLabel>Offboard</StepLabel>
+              </Step>
+              <Step key="Risk Model">
+                <StepLabel>Risk Model</StepLabel>
+              </Step>
+            </Stepper>
           </CardBody>
         </Card>
       </Col>

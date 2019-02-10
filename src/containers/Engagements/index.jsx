@@ -1,8 +1,8 @@
 import React from 'react';
-import { Col, Container, Row } from 'reactstrap';
+import { Col, Container, Row, Button } from 'reactstrap';
 import NeutralAlertsWithIcons from './components/NeutralAlertsWithIcons';
 
-const BasicForm = () => (
+const EngagementDefault = () => (
   <Container>
     <Row>
       <Col md={12}>
@@ -11,9 +11,12 @@ const BasicForm = () => (
       </Col>
     </Row>
     <Row>
+      <Col><Button color="primary" type="submit">New Engagement</Button></Col>
+    </Row>
+    <Row>
       <NeutralAlertsWithIcons />
     </Row>
   </Container>
 );
 
-export default BasicForm;
+export default EngagementDefault;

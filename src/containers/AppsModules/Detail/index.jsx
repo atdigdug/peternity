@@ -19,7 +19,7 @@ const AppsModulesDetail = () => (
     <Row>
       <Col>
         <Breadcrumb>
-          <Breadcrumb.Item href="#">Engagement 1</Breadcrumb.Item>
+          <Breadcrumb.Item href="/engagements/detail">Engagement 1</Breadcrumb.Item>
           <Breadcrumb.Item active>Application 1</Breadcrumb.Item>
         </Breadcrumb>
       </Col>
@@ -28,9 +28,6 @@ const AppsModulesDetail = () => (
       <Col>
         <Card>
           <CardBody>
-            <div className="card__title">
-              <h5 className="bold-text">Status</h5>
-            </div>
             <Stepper activeStep="0">
               <Step key="Intake" completed="true">
                 <StepLabel>Intake</StepLabel>

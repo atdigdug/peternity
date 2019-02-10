@@ -8,6 +8,7 @@ import StepLabel from '@material-ui/core/StepLabel';
 import HorizontalForm from './components/HorizontalForm';
 import ArchitectureForm from './components/ArchitectureForm';
 import RiskPriorities from './components/RiskPriorities';
+import ScanPlan from './components/NeutralAlertsWithIcons';
 
 const AppsModulesDetail = () => (
   <Container>
@@ -54,6 +55,7 @@ const AppsModulesDetail = () => (
       <HorizontalForm />
       <ArchitectureForm />
     </Row>
+    <Row><ScanPlan /></Row>
     <Row>
       <Col>
         <NavLink to="/scans/detail">

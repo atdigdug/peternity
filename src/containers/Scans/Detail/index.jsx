@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Row, Card, CardBody } from 'reactstrap';
+import { Breadcrumb } from 'react-bootstrap';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
@@ -16,13 +17,13 @@ const ScansDetail = () => (
     </Row>
     <Row>
       <Col>
-        <Card>
-          <CardBody>
-            <div className="card__title">
-              <h5 className="bold-text">Breadcrumbs</h5>
-            </div>
-          </CardBody>
-        </Card>
+        <Breadcrumb>
+          <Breadcrumb.Item href="#">Engagement 1</Breadcrumb.Item>
+          <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
+            Application 1
+          </Breadcrumb.Item>
+          <Breadcrumb.Item active>Scan 1</Breadcrumb.Item>
+        </Breadcrumb>
       </Col>
     </Row>
     <Row>

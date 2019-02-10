@@ -19,9 +19,6 @@ const EngagementsDetail = () => (
       <Col>
         <Card>
           <CardBody>
-            <div className="card__title">
-              <h5 className="bold-text">Status</h5>
-            </div>
             <Stepper activeStep="0">
               <Step key="Intake" completed="true">
                 <StepLabel>Intake</StepLabel>

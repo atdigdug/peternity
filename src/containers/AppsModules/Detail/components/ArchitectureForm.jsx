@@ -4,7 +4,7 @@ import { Field, reduxForm } from 'redux-form';
 import { translate } from 'react-i18next';
 import PropTypes from 'prop-types';
 
-class HorizontalForm extends PureComponent {
+class ArchitectureForm extends PureComponent {
   static propTypes = {
     handleSubmit: PropTypes.func.isRequired,
   };
@@ -31,17 +31,17 @@ class HorizontalForm extends PureComponent {
         <Card>
           <CardBody>
             <div className="card__title">
-              <h5 className="bold-text">Details</h5>
+              <h5 className="bold-text">Architecture</h5>
             </div>
             <form className="form form--horizontal" onSubmit={handleSubmit}>
               <div className="form__form-group">
-                <span className="form__form-group-label">Field</span>
+                <span className="form__form-group-label">Architechture Type</span>
                 <div className="form__form-group-field">
                   <Field
                     name="disableInput"
                     component="input"
                     type="text"
-                    placeholder="Value"
+                    placeholder="Java Application"
                     disabled
                   />
                 </div>
@@ -80,4 +80,4 @@ class HorizontalForm extends PureComponent {
 
 export default reduxForm({
   form: 'horizontal_form', // a unique identifier for this form
-})(translate('common')(HorizontalForm));
+})(translate('common')(ArchitectureForm));

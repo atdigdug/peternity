@@ -18,10 +18,8 @@ const ScansDetail = () => (
     <Row>
       <Col>
         <Breadcrumb>
-          <Breadcrumb.Item href="#">Engagement 1</Breadcrumb.Item>
-          <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
-            Application 1
-          </Breadcrumb.Item>
+          <Breadcrumb.Item href="/engagements/detail">Engagement 1</Breadcrumb.Item>
+          <Breadcrumb.Item href="/appsmodules/detail">Application 1</Breadcrumb.Item>
           <Breadcrumb.Item active>Scan 1</Breadcrumb.Item>
         </Breadcrumb>
       </Col>
@@ -30,9 +28,6 @@ const ScansDetail = () => (
       <Col>
         <Card>
           <CardBody>
-            <div className="card__title">
-              <h5 className="bold-text">Status</h5>
-            </div>
             <Stepper activeStep="0">
               <Step key="Intake" completed="true">
                 <StepLabel>Intake</StepLabel>

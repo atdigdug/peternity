@@ -4,10 +4,10 @@ import { PieChart, Pie, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types';
 import Panel from '../../../../shared/components/Panel';
 
-const data01 = [{ name: 'Cycling', value: 10, fill: '#4ce1b6' },
-  { name: 'Walking', value: 37, fill: '#70bbfd' },
-  { name: 'Run', value: 21, fill: '#f6da6e' },
-  { name: 'Swimming', value: 32, fill: '#ff4861' }];
+const data01 = [{ name: 'Priority 1', value: 10, fill: '#4ce1b6' },
+  { name: 'Priority 2', value: 37, fill: '#70bbfd' },
+  { name: 'Priority 3', value: 21, fill: '#f6da6e' },
+  { name: 'Priority 4', value: 32, fill: '#ff4861' }];
 
 const style = {
   left: 0,

@@ -30,13 +30,13 @@ const ScansDetail = () => (
           <CardBody>
             <Stepper activeStep="0">
               <Step key="Intake" completed="true">
-                <StepLabel>Intake</StepLabel>
+                <StepLabel optional="1/1/2018">Intake</StepLabel>
               </Step>
               <Step key="Threat Model" completed="true">
-                <StepLabel>Threat Model</StepLabel>
+                <StepLabel optional="2/1/2018">Threat Model</StepLabel>
               </Step>
               <Step key="Onboard" completed="true">
-                <StepLabel>Onboard</StepLabel>
+                <StepLabel optional="3/1/2018">Onboard</StepLabel>
               </Step>
               <Step key="Offboard" active="true">
                 <StepLabel>Offboard</StepLabel>

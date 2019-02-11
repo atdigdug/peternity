@@ -14,15 +14,15 @@ const AppsModulesDetail = () => (
   <Container>
     <Row>
       <Col md={12}>
-        <h3 className="page-title">App Details</h3>
-        <h3 className="page-subhead subhead">Summary</h3>
+        <h3 className="page-title">Sonia App Details</h3>
+        <h3 className="page-subhead subhead">Part of the Annual Sale Launch Engagement</h3>
       </Col>
     </Row>
     <Row>
       <Col>
         <Breadcrumb>
-          <Breadcrumb.Item href="/engagements/detail">Engagement 1</Breadcrumb.Item>
-          <Breadcrumb.Item active>Application 1</Breadcrumb.Item>
+          <Breadcrumb.Item href="/engagements/detail">Annual Sale Launch Engagement</Breadcrumb.Item>
+          <Breadcrumb.Item active>Sonia App</Breadcrumb.Item>
         </Breadcrumb>
       </Col>
     </Row>
@@ -62,7 +62,7 @@ const AppsModulesDetail = () => (
           <Card>
             <CardBody>
               <div className="card__title">
-                <h5 className="bold-text">Scan 1</h5>
+                <h5 className="bold-text">WhiteHat Scan</h5>
               </div>
               <RiskPriorities />
             </CardBody>
@@ -73,7 +73,7 @@ const AppsModulesDetail = () => (
         <Card>
           <CardBody>
             <div className="card__title">
-              <h5 className="bold-text">Scan 2</h5>
+              <h5 className="bold-text">Nexus Scan</h5>
             </div>
             <RiskPriorities />
           </CardBody>

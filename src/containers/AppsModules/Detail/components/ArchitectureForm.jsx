@@ -47,25 +47,25 @@ class ArchitectureForm extends PureComponent {
                 </div>
               </div>
               <div className="form__form-group">
-                <span className="form__form-group-label">Field</span>
+                <span className="form__form-group-label">Data Center</span>
                 <div className="form__form-group-field">
                   <Field
                     name="disableInput"
                     component="input"
                     type="text"
-                    placeholder="Value"
+                    placeholder="Sacramento"
                     disabled
                   />
                 </div>
               </div>
               <div className="form__form-group">
-                <span className="form__form-group-label">Field</span>
+                <span className="form__form-group-label">SDLC Phase</span>
                 <div className="form__form-group-field">
                   <Field
                     name="disableInput"
                     component="input"
                     type="text"
-                    placeholder="Value"
+                    placeholder="Development"
                     disabled
                   />
                 </div>

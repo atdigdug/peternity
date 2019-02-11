@@ -35,37 +35,37 @@ class HorizontalForm extends PureComponent {
             </div>
             <form className="form form--horizontal" onSubmit={handleSubmit}>
               <div className="form__form-group">
-                <span className="form__form-group-label">Field</span>
+                <span className="form__form-group-label">Version</span>
                 <div className="form__form-group-field">
                   <Field
                     name="disableInput"
                     component="input"
                     type="text"
-                    placeholder="Value"
+                    placeholder="7.2"
                     disabled
                   />
                 </div>
               </div>
               <div className="form__form-group">
-                <span className="form__form-group-label">Field</span>
+                <span className="form__form-group-label">JIRA Project Key</span>
                 <div className="form__form-group-field">
                   <Field
                     name="disableInput"
                     component="input"
                     type="text"
-                    placeholder="Value"
+                    placeholder="SN-207"
                     disabled
                   />
                 </div>
               </div>
               <div className="form__form-group">
-                <span className="form__form-group-label">Field</span>
+                <span className="form__form-group-label">Technical Contact</span>
                 <div className="form__form-group-field">
                   <Field
                     name="disableInput"
                     component="input"
                     type="text"
-                    placeholder="Value"
+                    placeholder="lisa@sonia.app"
                     disabled
                   />
                 </div>

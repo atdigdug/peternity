@@ -5,13 +5,14 @@ import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import HorizontalForm from './components/HorizontalForm';
+import HorizontalForm2 from './components/HorizontalForm2';
 import RiskPriorities from './components/RiskPriorities';
 
 const EngagementsDetail = () => (
   <Container>
     <Row>
       <Col md={12}>
-        <h3 className="page-title">Engagement 1 Details</h3>
+        <h3 className="page-title">Annual Sale Launch Engagement Details</h3>
         <h3 className="page-subhead subhead">Next step: This is what you have to do next.</h3>
       </Col>
     </Row>
@@ -49,7 +50,7 @@ const EngagementsDetail = () => (
             </div>
             <Row>
               <Col><HorizontalForm /></Col>
-              <Col><HorizontalForm /></Col>
+              <Col><HorizontalForm2 /></Col>
             </Row>
           </CardBody>
         </Card>
@@ -61,7 +62,7 @@ const EngagementsDetail = () => (
           <Card>
             <CardBody>
               <div className="card__title">
-                <h5 className="bold-text">App 1</h5>
+                <h5 className="bold-text">Sonia App</h5>
               </div>
               <RiskPriorities />
             </CardBody>
@@ -72,7 +73,7 @@ const EngagementsDetail = () => (
         <Card>
           <CardBody>
             <div className="card__title">
-              <h5 className="bold-text">App 2</h5>
+              <h5 className="bold-text">Customer Portal</h5>
             </div>
             <RiskPriorities />
           </CardBody>

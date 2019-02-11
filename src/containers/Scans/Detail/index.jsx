@@ -11,16 +11,16 @@ const ScansDetail = () => (
   <Container>
     <Row>
       <Col md={12}>
-        <h3 className="page-title">Scan Details</h3>
-        <h3 className="page-subhead subhead">Summary</h3>
+        <h3 className="page-title">WhiteHat Scan Details</h3>
+        <h3 className="page-subhead subhead">WhiteHat scan of Sonia App</h3>
       </Col>
     </Row>
     <Row>
       <Col>
         <Breadcrumb>
-          <Breadcrumb.Item href="/engagements/detail">Engagement 1</Breadcrumb.Item>
-          <Breadcrumb.Item href="/appsmodules/detail">Application 1</Breadcrumb.Item>
-          <Breadcrumb.Item active>Scan 1</Breadcrumb.Item>
+          <Breadcrumb.Item href="/engagements/detail">Annual Sale Launch Engagement</Breadcrumb.Item>
+          <Breadcrumb.Item href="/appsmodules/detail">Sonia App</Breadcrumb.Item>
+          <Breadcrumb.Item active>WhiteHat Scan</Breadcrumb.Item>
         </Breadcrumb>
       </Col>
     </Row>

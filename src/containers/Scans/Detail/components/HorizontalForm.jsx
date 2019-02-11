@@ -32,37 +32,37 @@ class HorizontalForm extends PureComponent {
           <CardBody>
             <form className="form form--horizontal" onSubmit={handleSubmit}>
               <div className="form__form-group">
-                <span className="form__form-group-label">Field</span>
+                <span className="form__form-group-label">DAST URL</span>
                 <div className="form__form-group-field">
                   <Field
                     name="disableInput"
                     component="input"
                     type="text"
-                    placeholder="Value"
+                    placeholder="www.sonia.app"
                     disabled
                   />
                 </div>
               </div>
               <div className="form__form-group">
-                <span className="form__form-group-label">Field</span>
+                <span className="form__form-group-label">DAST Applicance</span>
                 <div className="form__form-group-field">
                   <Field
                     name="disableInput"
                     component="input"
                     type="text"
-                    placeholder="Value"
+                    placeholder="orange-pekoe"
                     disabled
                   />
                 </div>
               </div>
               <div className="form__form-group">
-                <span className="form__form-group-label">Field</span>
+                <span className="form__form-group-label">Internal Site IP</span>
                 <div className="form__form-group-field">
                   <Field
                     name="disableInput"
                     component="input"
                     type="text"
-                    placeholder="Value"
+                    placeholder="137.1.4.67"
                     disabled
                   />
                 </div>

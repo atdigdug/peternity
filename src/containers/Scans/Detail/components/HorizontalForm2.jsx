@@ -28,37 +28,37 @@ class HorizontalForm extends PureComponent {
     return (
       <form className="form form--horizontal" onSubmit={handleSubmit}>
         <div className="form__form-group">
-          <span className="form__form-group-label">DAST URL</span>
+          <span className="form__form-group-label">WhiteHat Asset Name</span>
           <div className="form__form-group-field">
             <Field
               name="disableInput"
               component="input"
               type="text"
-              placeholder="www.sonia.app"
+              placeholder="citrus-tea"
               disabled
             />
           </div>
         </div>
         <div className="form__form-group">
-          <span className="form__form-group-label">DAST Applicance</span>
+          <span className="form__form-group-label">WhiteHat Asset Priority</span>
           <div className="form__form-group-field">
             <Field
               name="disableInput"
               component="input"
               type="text"
-              placeholder="orange-pekoe-1"
+              placeholder="1"
               disabled
             />
           </div>
         </div>
         <div className="form__form-group">
-          <span className="form__form-group-label">Internal Site IP</span>
+          <span className="form__form-group-label">WhiteHat Service Level</span>
           <div className="form__form-group-field">
             <Field
               name="disableInput"
               component="input"
               type="text"
-              placeholder="137.1.4.67"
+              placeholder="Business Enterprise"
               disabled
             />
           </div>

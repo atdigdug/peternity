@@ -5,6 +5,7 @@ import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import HorizontalForm from './components/HorizontalForm';
+import HorizontalForm2 from './components/HorizontalForm2';
 import RiskPriorities from './components/RiskPriorities';
 
 const ScansDetail = () => (
@@ -58,7 +59,7 @@ const ScansDetail = () => (
             </div>
             <Row>
               <Col><HorizontalForm /></Col>
-              <Col><HorizontalForm /></Col>
+              <Col><HorizontalForm2 /></Col>
             </Row>
           </CardBody>
         </Card>

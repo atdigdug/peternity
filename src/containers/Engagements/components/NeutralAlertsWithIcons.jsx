@@ -13,7 +13,7 @@ const NeutralAlertsWithIcons = () => (
         </div>
         <NavLink to="/engagements/detail">
           <Alert color="warning" className="alert--neutral" icon>
-            <p><span className="bold-text">Engagement 1: </span>
+            <p><span className="bold-text">Annual Sale Launch Engagement: </span>
               This is what you have to do next.
             </p>
           </Alert>

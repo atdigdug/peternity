@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Row, Button } from 'reactstrap';
+import ListOfActiveEngagements from './components/ListOfActiveEngagements';
 import NeutralAlertsWithIcons from './components/NeutralAlertsWithIcons';
 
 const EngagementDefault = () => (
@@ -12,6 +13,9 @@ const EngagementDefault = () => (
     </Row>
     <Row>
       <Col><Button color="primary" type="submit">New Engagement</Button></Col>
+    </Row>
+    <Row>
+      <ListOfActiveEngagements />
     </Row>
     <Row>
       <NeutralAlertsWithIcons />

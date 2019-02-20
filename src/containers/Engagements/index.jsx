@@ -1,6 +1,7 @@
 import React from 'react';
 import { Col, Container, Row, Button } from 'reactstrap';
 import ListOfActiveEngagements from './components/ListOfActiveEngagements';
+import EngagementsAggregate from './components/EngagementsAggregate';
 import NeutralAlertsWithIcons from './components/NeutralAlertsWithIcons';
 
 const EngagementDefault = () => (
@@ -16,6 +17,9 @@ const EngagementDefault = () => (
     </Row>
     <Row>
       <ListOfActiveEngagements />
+    </Row>
+    <Row>
+      <EngagementsAggregate />
     </Row>
     <Row>
       <NeutralAlertsWithIcons />

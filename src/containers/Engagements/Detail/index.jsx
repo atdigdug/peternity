@@ -79,7 +79,7 @@ const EngagementsDetail = () => (
       </Col>
     </Row>
     <Row>
-      <Col>
+      <Col xl="3">
         <NavLink to="/appsmodules/detail">
           <Card>
             <CardBody>
@@ -91,13 +91,30 @@ const EngagementsDetail = () => (
           </Card>
         </NavLink>
       </Col>
-      <Col>
+      <Col xl="3">
         <Card>
           <CardBody>
             <div className="card__title">
               <h5 className="bold-text">Customer Portal</h5>
             </div>
             <RiskPriorities />
+          </CardBody>
+        </Card>
+      </Col>
+      <Col xl="3">
+        <Card>
+          <CardBody>
+            <div className="card__title">
+              <h5 className="bold-text">App 3</h5>
+            </div>
+            <RiskPriorities />
+          </CardBody>
+        </Card>
+      </Col>
+      <Col xl="3">
+        <Card>
+          <CardBody>
+            <h1 className="bold-text">+ Add App</h1>
           </CardBody>
         </Card>
       </Col>

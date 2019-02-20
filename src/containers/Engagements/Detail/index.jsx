@@ -1,6 +1,7 @@
 import React from 'react';
-import { Col, Container, Row, Card, CardBody } from 'reactstrap';
+import { Col, Container, Row, Card, CardBody, UncontrolledTooltip } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+import { Breadcrumb } from 'react-bootstrap';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
@@ -20,14 +21,26 @@ const EngagementsDetail = () => (
       <Col>
         <Card>
           <CardBody>
+            <Breadcrumb>
+              <Breadcrumb.Item href="/engagements">Organization 1</Breadcrumb.Item>
+              <Breadcrumb.Item active>Annual Sale Launch Engagement</Breadcrumb.Item>
+            </Breadcrumb>
+          </CardBody>
+        </Card>
+      </Col>
+    </Row>
+    <Row>
+      <Col>
+        <Card>
+          <CardBody>
             <Stepper activeStep="0">
-              <Step key="Intake" completed="true">
+              <Step id="tooltip1" key="Intake" completed="true">
                 <StepLabel optional="1/1/2018">Intake</StepLabel>
               </Step>
-              <Step key="Threat Model" completed="true">
+              <Step id="tooltip2" key="Threat Model" completed="true">
                 <StepLabel optional="2/1/2018">Threat Model</StepLabel>
               </Step>
-              <Step key="Onboard" completed="true">
+              <Step id="tooltip3" key="Onboard" completed="true">
                 <StepLabel optional="3/1/2018">Onboard</StepLabel>
               </Step>
               <Step key="Offboard" active="true">
@@ -37,6 +50,15 @@ const EngagementsDetail = () => (
                 <StepLabel>Risk Model</StepLabel>
               </Step>
             </Stepper>
+            <UncontrolledTooltip placement="bottom" target="tooltip1">
+              More detail about Intake completion
+            </UncontrolledTooltip>
+            <UncontrolledTooltip placement="bottom" target="tooltip2">
+              More detail about Threat Model completion
+            </UncontrolledTooltip>
+            <UncontrolledTooltip placement="bottom" target="tooltip3">
+              More detail about Onboard completion
+            </UncontrolledTooltip>
           </CardBody>
         </Card>
       </Col>

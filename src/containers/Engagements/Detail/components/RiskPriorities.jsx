@@ -2,7 +2,6 @@
 import React from 'react';
 import { PieChart, Pie, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types';
-import Panel from '../../../../shared/components/Panel';
 
 const data01 = [{ name: 'Priority 1', value: 10, fill: '#4ce1b6' },
   { name: 'Priority 2', value: 37, fill: '#70bbfd' },
@@ -33,15 +32,13 @@ renderLegend.propTypes = {
 };
 
 const ActivityRating = () => (
-  <Panel lg={12} xl={6} md={12} title="Findings">
-    <ResponsiveContainer className="dashboard__chart-pie dashboard__chart-pie--fitness" width="100%" height={360}>
-      <PieChart className="dashboard__chart-pie-container">
-        <Tooltip />
-        <Pie data={data01} dataKey="value" cy={120} innerRadius={70} outerRadius={100} label />
-        <Legend layout="vertical" verticalAlign="bottom" wrapperStyle={style} content={renderLegend} />
-      </PieChart>
-    </ResponsiveContainer>
-  </Panel>
+  <ResponsiveContainer className="dashboard__chart-pie dashboard__chart-pie--fitness" width="100%" height={360}>
+    <PieChart className="dashboard__chart-pie-container">
+      <Tooltip />
+      <Pie data={data01} dataKey="value" cy={120} innerRadius={70} outerRadius={100} label />
+      <Legend layout="vertical" verticalAlign="bottom" wrapperStyle={style} content={renderLegend} />
+    </PieChart>
+  </ResponsiveContainer>
 );
 
 export default ActivityRating;

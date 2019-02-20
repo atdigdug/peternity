@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardBody, Row, Col } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 
 const ListOfActiveEngagements = () => (
   <Col xl={12}>
@@ -8,12 +9,14 @@ const ListOfActiveEngagements = () => (
         <div style={{ textAlign: 'right' }}>Recent | Favorites</div><p />
         <Row>
           <Col xl={3}>
-            <Card>
-              <CardBody style={{ backgroundColor: '#add8e6' }}>
-                <h1 className="bold-text">E1</h1>
-                Engagement 1
-              </CardBody>
-            </Card>
+            <NavLink to="/engagements/detail">
+              <Card>
+                <CardBody style={{ backgroundColor: '#add8e6' }}>
+                  <h1 className="bold-text">E1</h1>
+                  Engagement 1
+                </CardBody>
+              </Card>
+            </NavLink>
           </Col>
           <Col xl={3}>
             <Card>

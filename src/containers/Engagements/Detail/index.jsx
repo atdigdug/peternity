@@ -122,11 +122,42 @@ const EngagementsDetail = () => (
     <Row>
       <Col>
         <Card>
-          <CardBody>
+          <CardBody style={{ backgroundColor: '#ffffe0' }}>
             <div className="card__title">
               <h5 className="bold-text">Aggregated Data</h5>
             </div>
-            <RiskPriorities />
+            <Row>
+              <Col xl="4">
+                <Card>
+                  <CardBody>
+                    <div className="card__title">
+                      <h5 className="bold-text">Findings By Status</h5>
+                    </div>
+                    <RiskPriorities />
+                  </CardBody>
+                </Card>
+              </Col>
+              <Col xl="4">
+                <Card>
+                  <CardBody>
+                    <div className="card__title">
+                      <h5 className="bold-text">Active Findings By Priority</h5>
+                    </div>
+                    <RiskPriorities />
+                  </CardBody>
+                </Card>
+              </Col>
+              <Col xl="4">
+                <Card>
+                  <CardBody>
+                    <div className="card__title">
+                      <h5 className="bold-text">Findings By App</h5>
+                    </div>
+                    <RiskPriorities />
+                  </CardBody>
+                </Card>
+              </Col>
+            </Row>
           </CardBody>
         </Card>
       </Col>

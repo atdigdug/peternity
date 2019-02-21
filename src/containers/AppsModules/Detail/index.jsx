@@ -8,6 +8,7 @@ import StepLabel from '@material-ui/core/StepLabel';
 import HorizontalForm from './components/HorizontalForm';
 import ArchitectureForm from './components/ArchitectureForm';
 import RiskPriorities from './components/RiskPriorities';
+import Plots from './components/Plots';
 
 const AppsModulesDetail = () => (
   <Container>
@@ -96,6 +97,9 @@ const AppsModulesDetail = () => (
           </CardBody>
         </Card>
       </Col>
+    </Row>
+    <Row>
+      <Plots />
     </Row>
     <Row>
       <Col>

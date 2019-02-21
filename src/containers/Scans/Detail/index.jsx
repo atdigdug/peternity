@@ -66,6 +66,21 @@ const ScansDetail = () => (
     <Row>
       <Col>
         <Card>
+          <CardBody>
+            <div className="card__title">
+              <h5 className="bold-text">Details</h5>
+            </div>
+            <Row>
+              <Col><HorizontalForm /></Col>
+              <Col><HorizontalForm2 /></Col>
+            </Row>
+          </CardBody>
+        </Card>
+      </Col>
+    </Row>
+    <Row>
+      <Col>
+        <Card>
           <CardBody style={{ backgroundColor: '#ffffe0' }}>
             <div className="card__title">
               <h5 className="bold-text">Aggregated Data</h5>
@@ -102,30 +117,6 @@ const ScansDetail = () => (
                 </Card>
               </Col>
             </Row>
-          </CardBody>
-        </Card>
-      </Col>
-    </Row>
-    <Row>
-      <Col>
-        <Card>
-          <CardBody>
-            <div className="card__title">
-              <h5 className="bold-text">Details</h5>
-            </div>
-            <Row>
-              <Col><HorizontalForm /></Col>
-              <Col><HorizontalForm2 /></Col>
-            </Row>
-          </CardBody>
-        </Card>
-      </Col>
-    </Row>
-    <Row>
-      <Col>
-        <Card>
-          <CardBody>
-            <RiskPriorities />
           </CardBody>
         </Card>
       </Col>

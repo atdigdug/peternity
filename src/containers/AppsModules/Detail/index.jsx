@@ -61,7 +61,7 @@ const AppsModulesDetail = () => (
           <CardBody style={{ backgroundColor: '#add8e6' }}>
             <Row>
               <Col xl="3">
-                <NavLink to="/appsmodules/detail">
+                <NavLink to="/scans/detail">
                   <Card>
                     <CardBody>
                       <div className="card__title">

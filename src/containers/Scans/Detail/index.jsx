@@ -7,6 +7,7 @@ import StepLabel from '@material-ui/core/StepLabel';
 import HorizontalForm from './components/HorizontalForm';
 import HorizontalForm2 from './components/HorizontalForm2';
 import RiskPriorities from './components/RiskPriorities';
+import Plots from './components/Plots';
 
 const ScansDetail = () => (
   <Container>
@@ -49,6 +50,9 @@ const ScansDetail = () => (
           </CardBody>
         </Card>
       </Col>
+    </Row>
+    <Row>
+      <Plots />
     </Row>
     <Row>
       <Col>

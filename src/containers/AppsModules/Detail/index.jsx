@@ -68,6 +68,7 @@ const AppsModulesDetail = () => (
                         <h5 className="subhead">DAST</h5>
                       </div>
                       <RiskPriorities />
+                      Last run: 2018-02-01 19:07
                     </CardBody>
                   </Card>
                 </NavLink>
@@ -80,6 +81,7 @@ const AppsModulesDetail = () => (
                       <h5 className="subhead">OSS</h5>
                     </div>
                     <RiskPriorities />
+                    Last run: 2018-02-01 19:09
                   </CardBody>
                 </Card>
               </Col>

@@ -36,7 +36,7 @@ const ActivityRating = () => (
     <PieChart className="dashboard__chart-pie-container">
       <Tooltip />
       <Pie data={data01} dataKey="value" cy={100} innerRadius={30} outerRadius={70} label />
-      <Legend layout="vertical" verticalAlign="bottom" wrapperStyle={style} content={renderLegend} />
+      <Legend wrapperStyle={style} content={renderLegend} />
     </PieChart>
   </ResponsiveContainer>
 );

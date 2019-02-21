@@ -8,7 +8,6 @@ import StepLabel from '@material-ui/core/StepLabel';
 import HorizontalForm from './components/HorizontalForm';
 import ArchitectureForm from './components/ArchitectureForm';
 import RiskPriorities from './components/RiskPriorities';
-import ScanPlan from './components/NeutralAlertsWithIcons';
 
 const AppsModulesDetail = () => (
   <Container>
@@ -55,27 +54,43 @@ const AppsModulesDetail = () => (
       <HorizontalForm />
       <ArchitectureForm />
     </Row>
-    <Row><ScanPlan /></Row>
     <Row>
       <Col>
-        <NavLink to="/scans/detail">
-          <Card>
-            <CardBody>
-              <div className="card__title">
-                <h5 className="bold-text">WhiteHat Scan</h5>
-              </div>
-              <RiskPriorities />
-            </CardBody>
-          </Card>
-        </NavLink>
-      </Col>
-      <Col>
         <Card>
-          <CardBody>
-            <div className="card__title">
-              <h5 className="bold-text">Nexus Scan</h5>
-            </div>
-            <RiskPriorities />
+          <CardBody style={{ backgroundColor: '#add8e6' }}>
+            <Row>
+              <Col xl="3">
+                <NavLink to="/appsmodules/detail">
+                  <Card>
+                    <CardBody>
+                      <div className="card__title">
+                        <h5 className="bold-text">Whitehat Scan</h5>
+                        <h5 className="subhead">DAST</h5>
+                      </div>
+                      <RiskPriorities />
+                    </CardBody>
+                  </Card>
+                </NavLink>
+              </Col>
+              <Col xl="3">
+                <Card>
+                  <CardBody>
+                    <div className="card__title">
+                      <h5 className="bold-text">Nexus Scan</h5>
+                      <h5 className="subhead">OSS</h5>
+                    </div>
+                    <RiskPriorities />
+                  </CardBody>
+                </Card>
+              </Col>
+              <Col xl="3">
+                <Card>
+                  <CardBody>
+                    <h1 className="bold-text">+ Add Scan</h1>
+                  </CardBody>
+                </Card>
+              </Col>
+            </Row>
           </CardBody>
         </Card>
       </Col>

@@ -73,7 +73,7 @@ const EngagementsAggregate = () => (
     <Card>
       <CardBody>
         <div className="card__title">
-          <h5 className="bold-text">Applications and Modules Overview</h5>
+          <h5 className="bold-text">Scans Overview</h5>
         </div>
         <Row>
           <Col xl={4}>

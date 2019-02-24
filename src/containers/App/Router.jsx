@@ -12,6 +12,7 @@ import ReportExternal from '../Reports/External/index';
 import EngagementsDefault from '../Engagements/index';
 import EngagementsInput from '../Engagements/Input/index';
 import EngagementsDetail from '../Engagements/Detail/index';
+import AppsModulesDefault from '../AppsModules/index';
 import AppsModulesInput from '../AppsModules/Input/index';
 import AppsModulesDetail from '../AppsModules/Detail/index';
 import ScansInput from '../Scans/Input/index';
@@ -130,6 +131,7 @@ const AppsModules = () => (
   <Switch>
     <Route path="/appsmodules/detail" component={AppsModulesDetail} />
     <Route path="/appsmodules/input" component={AppsModulesInput} />
+    <Route path="/appsmodules" component={AppsModulesDefault} />
   </Switch>
 );
 

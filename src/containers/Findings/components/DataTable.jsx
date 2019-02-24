@@ -18,18 +18,18 @@ export default class DataTable extends PureComponent {
         sortable: true,
       },
       {
-        key: 'last',
-        name: 'Status',
-        sortable: true,
-      },
-      {
         key: 'user',
-        name: 'Consultant',
+        name: 'Scan',
         sortable: true,
       },
       {
         key: 'age',
-        name: 'Business Unit',
+        name: 'Application',
+        sortable: true,
+      },
+      {
+        key: 'last',
+        name: 'Status',
         sortable: true,
       },
       {
@@ -59,8 +59,8 @@ export default class DataTable extends PureComponent {
         id: i,
         first: ['Finding 1', 'Finding 2', 'Finding 3'][Math.floor((Math.random() * 3))],
         last: ['Pri 0', 'Pri 1', 'Pri 2'][Math.floor((Math.random() * 3))],
-        user: ['Alice', 'Bob', 'Chandra'][Math.floor((Math.random() * 3))],
-        age: ['Online', 'Professional', 'Internal'][Math.floor((Math.random() * 3))],
+        user: ['Scan 1', 'Scan 2', 'Scan 3'][Math.floor((Math.random() * 3))],
+        age: ['App 1', 'App 2', 'App 3'][Math.floor((Math.random() * 3))],
         summary: ['Cross-site scripting', 'SQL Injection', 'Out-dated Library'][Math.floor((Math.random() * 3))],
       });
     }

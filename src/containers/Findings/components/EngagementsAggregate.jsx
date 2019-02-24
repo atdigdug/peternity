@@ -4,9 +4,9 @@ import { Pie } from 'react-chartjs-2';
 
 const data = {
   labels: [
-    'Pri 0',
-    'Pri 1',
-    'Pri 2',
+    'Scan 1',
+    'Scan 2',
+    'Scan 3',
   ],
   datasets: [{
     data: [300, 50, 100],
@@ -26,9 +26,9 @@ const data = {
 
 const dataConsultant = {
   labels: [
-    'Alice',
-    'Bob',
-    'Chandra',
+    'App 1',
+    'App 2',
+    'App 3',
   ],
   datasets: [{
     data: [30, 30, 40],
@@ -48,9 +48,9 @@ const dataConsultant = {
 
 const dataBU = {
   labels: [
-    'Online',
-    'Professional',
-    'Internal',
+    'Pri 0',
+    'Pri 1',
+    'Pri 2',
   ],
   datasets: [{
     data: [25, 5, 100],
@@ -80,7 +80,7 @@ const EngagementsAggregate = () => (
             <Card>
               <CardBody style={{ backgroundColor: '#90ee90' }}>
                 <div className="card__title">
-                  <h5 className="bold-text">By Status</h5>
+                  <h5 className="bold-text">By Scan</h5>
                 </div>
                 <Pie data={data} />
               </CardBody>
@@ -90,7 +90,7 @@ const EngagementsAggregate = () => (
             <Card>
               <CardBody style={{ backgroundColor: '#90ee90' }}>
                 <div className="card__title">
-                  <h5 className="bold-text">By Consultant</h5>
+                  <h5 className="bold-text">By App</h5>
                 </div>
                 <Pie data={dataConsultant} />
               </CardBody>
@@ -100,7 +100,7 @@ const EngagementsAggregate = () => (
             <Card>
               <CardBody style={{ backgroundColor: '#90ee90' }}>
                 <div className="card__title">
-                  <h5 className="bold-text">By Business Unit</h5>
+                  <h5 className="bold-text">By Status</h5>
                 </div>
                 <Pie data={dataBU} />
               </CardBody>

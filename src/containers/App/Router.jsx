@@ -15,6 +15,7 @@ import EngagementsDetail from '../Engagements/Detail/index';
 import AppsModulesDefault from '../AppsModules/index';
 import AppsModulesInput from '../AppsModules/Input/index';
 import AppsModulesDetail from '../AppsModules/Detail/index';
+import ScansDefault from '../Scans/index';
 import ScansInput from '../Scans/Input/index';
 import ScansDetail from '../Scans/Detail/index';
 import FindingsDefault from '../Findings/index';
@@ -139,6 +140,7 @@ const Scans = () => (
   <Switch>
     <Route path="/scans/detail" component={ScansDetail} />
     <Route path="/scans/input" component={ScansInput} />
+    <Route path="/scans" component={ScansDefault} />
   </Switch>
 );
 

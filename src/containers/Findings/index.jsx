@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Row, Card, CardBody, Button } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 import EngagementsAggregate from './components/EngagementsAggregate';
 import Table from './components/DataTable';
 
@@ -38,6 +39,17 @@ const ApplicationsDefault = () => (
     </Row>
     <Row>
       <Table />
+    </Row>
+    <Row>
+      <Col xl="12">
+        <NavLink to="/findings/detail">
+          <Card>
+            <CardBody>
+              Finding 1
+            </CardBody>
+          </Card>
+        </NavLink>
+      </Col>
     </Row>
   </Container>
 );

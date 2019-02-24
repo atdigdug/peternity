@@ -19,6 +19,7 @@ import ScansDefault from '../Scans/index';
 import ScansInput from '../Scans/Input/index';
 import ScansDetail from '../Scans/Detail/index';
 import FindingsDefault from '../Findings/index';
+import FindingsDetail from '../Findings/Detail/index';
 import DevSupportDefault from '../DevSupport/index';
 
 import Alerts from '../UI/Alerts/index';
@@ -146,6 +147,7 @@ const Scans = () => (
 
 const Findings = () => (
   <Switch>
+    <Route path="/findings/detail" component={FindingsDetail} />
     <Route path="/findings" component={FindingsDefault} />
   </Switch>
 );

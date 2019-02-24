@@ -14,7 +14,7 @@ export default class DataTable extends PureComponent {
       },
       {
         key: 'first',
-        name: 'Scan',
+        name: 'Findings',
         sortable: true,
       },
       {
@@ -30,6 +30,11 @@ export default class DataTable extends PureComponent {
       {
         key: 'age',
         name: 'Business Unit',
+        sortable: true,
+      },
+      {
+        key: 'summary',
+        name: 'Summary',
         sortable: true,
       },
     ];
@@ -52,10 +57,11 @@ export default class DataTable extends PureComponent {
     for (let i = 1; i < numberOfRows + 1; i += 1) {
       rows.push({
         id: i,
-        first: ['Scan 1', 'Scan 2', 'Scan 3'][Math.floor((Math.random() * 3))],
+        first: ['Finding 1', 'Finding 2', 'Finding 3'][Math.floor((Math.random() * 3))],
         last: ['Pri 0', 'Pri 1', 'Pri 2'][Math.floor((Math.random() * 3))],
         user: ['Alice', 'Bob', 'Chandra'][Math.floor((Math.random() * 3))],
         age: ['Online', 'Professional', 'Internal'][Math.floor((Math.random() * 3))],
+        summary: ['Cross-site scripting', 'SQL Injection', 'Out-dated Library'][Math.floor((Math.random() * 3))],
       });
     }
     return rows;

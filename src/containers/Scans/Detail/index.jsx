@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Row, Card, CardBody, UncontrolledTooltip } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 import { Breadcrumb } from 'react-bootstrap';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
@@ -82,9 +83,11 @@ const ScansDetail = () => (
       <Col>
         <Card>
           <CardBody style={{ backgroundColor: '#ffffe0' }}>
-            <div className="card__title">
-              <h5 className="bold-text">Aggregated Data</h5>
-            </div>
+            <NavLink to="/findings">
+              <div className="card__title">
+                <h5 className="bold-text">Findings</h5>
+              </div>
+            </NavLink>
             <Row>
               <Col xl="4">
                 <Card>

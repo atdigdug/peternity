@@ -16,12 +16,12 @@ const ScansDetail = () => (
             <form className="form">
               <div className="form__form-group">
                 <Row>
-                  <Col xl="2">
+                  <Col xl="4">
                     <div className="form__form-group-field">
                       <input />
                     </div>
                   </Col>
-                  <Col xl="1">
+                  <Col xl="2">
                     <Button color="primary" type="submit">Search</Button>
                   </Col>
                 </Row>
@@ -39,11 +39,25 @@ const ScansDetail = () => (
             <div className="card__title">
               <h5 className="bold-text">Knowledge Base</h5>
             </div>
-            System displays an error message Eg: Unable to update the record.
-            But according to functionality system should update the updated record.
-            This particular defect occurs in version 9.2.
-            This particular defect also found in other modules.
-            Inconsistency of application while reproducing the defect.
+            <form className="form">
+              <div className="form__form-group">
+                <Row>
+                  <Col xl="6">
+                    <div className="form__form-group-field">
+                      <input />
+                    </div>
+                  </Col>
+                  <Col xl="6">
+                    <Button color="primary" type="submit">Search</Button>
+                  </Col>
+                </Row>
+              </div>
+            </form>
+            <h5 className="bold-text">Bookmarks</h5>
+            Link 1 | Link 2 | Link 3
+            <p />
+            <h5 className="bold-text">Most Recent</h5>
+            Link 1 | Link 2 | Link 3
           </CardBody>
         </Card>
       </Col>

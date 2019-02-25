@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { Button } from 'reactstrap';
 import { Field, reduxForm } from 'redux-form';
 import { translate } from 'react-i18next';
 import PropTypes from 'prop-types';
@@ -63,6 +64,7 @@ class HorizontalForm extends PureComponent {
             />
           </div>
         </div>
+        <Button color="primary" type="submit">Add File</Button>
       </form>
     );
   }

@@ -41,6 +41,20 @@ const ScansDetail = () => (
         <Card>
           <CardBody>
             <div className="card__title">
+              <h5 className="bold-text">Description</h5>
+            </div>
+              System displays an error message Eg: Unable to update the record.
+              But according to functionality system should update the updated record.
+              This particular defect occurs in version 9.2.
+              This particular defect also found in other modules.
+              Inconsistency of application while reproducing the defect.
+          </CardBody>
+        </Card>
+      </Col>
+      <Col>
+        <Card>
+          <CardBody>
+            <div className="card__title">
               <h5 className="bold-text">Details</h5>
             </div>
             <Row>

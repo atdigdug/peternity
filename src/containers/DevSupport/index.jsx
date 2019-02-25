@@ -1,6 +1,7 @@
 import React from 'react';
 import { Col, Container, Row, Card, CardBody, Button } from 'reactstrap';
 import Table from './components/DataTable';
+import IrritatingAggregate from './components/Irritating';
 
 const ScansDetail = () => (
   <Container>
@@ -67,6 +68,9 @@ const ScansDetail = () => (
             <div className="card__title">
               <h5 className="bold-text">Metrics</h5>
             </div>
+            Time spent: 13 hours 5 minutes.
+            <p />
+            <IrritatingAggregate />
           </CardBody>
         </Card>
       </Col>

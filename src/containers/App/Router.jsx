@@ -21,6 +21,7 @@ import ScansDetail from '../Scans/Detail/index';
 import FindingsDefault from '../Findings/index';
 import FindingsDetail from '../Findings/Detail/index';
 import DevSupportDefault from '../DevSupport/index';
+import SettingsConnections from '../Settings/Connections/index';
 
 import Alerts from '../UI/Alerts/index';
 import Buttons from '../UI/Buttons/index';
@@ -158,6 +159,12 @@ const DevSupport = () => (
   </Switch>
 );
 
+const Settings = () => (
+  <Switch>
+    <Route path="/settings/connections" component={SettingsConnections} />
+  </Switch>
+);
+
 const UI = () => (
   <Switch>
     <Route path="/ui/alerts" component={Alerts} />
@@ -291,6 +298,7 @@ const wrappedRoutes = () => (
       <Route path="/scans" component={Scans} />
       <Route path="/findings" component={Findings} />
       <Route path="/devsupport" component={DevSupport} />
+      <Route path="/settings" component={Settings} />
       <Route path="/ui" component={UI} />
       <Route path="/mail" component={Mail} />
       <Route path="/chat" component={Chat} />

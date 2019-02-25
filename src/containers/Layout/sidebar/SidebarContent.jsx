@@ -35,6 +35,7 @@ class SidebarContent extends Component {
         </ul>
         <ul className="sidebar__block">
           <SidebarCategory title="Settings" icon="layers">
+            <SidebarLink title="Connections" route="/settings/connections" onClick={this.hideSidebar} />
             <button className="sidebar__link" onClick={this.props.changeToLight}>
               <p className="sidebar__link-title">Light Theme</p>
             </button>

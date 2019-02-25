@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Row, Card, CardBody, Button } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 
 const ScansDetail = () => (
   <Container>
@@ -9,7 +10,11 @@ const ScansDetail = () => (
       </Col>
     </Row>
     <Row>
-      <Col><Button color="primary" type="submit">Add Connection</Button></Col>
+      <Col>
+        <NavLink to="/settings/connections/add">
+          <Button color="primary" type="submit">Add Connection</Button>
+        </NavLink>
+      </Col>
     </Row>
     <Row>
       <Col>

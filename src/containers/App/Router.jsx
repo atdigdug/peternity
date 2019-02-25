@@ -22,6 +22,7 @@ import FindingsDefault from '../Findings/index';
 import FindingsDetail from '../Findings/Detail/index';
 import DevSupportDefault from '../DevSupport/index';
 import SettingsConnections from '../Settings/Connections/index';
+import SettingsConnectionsAdd from '../Settings/Connections/Add/index';
 
 import Alerts from '../UI/Alerts/index';
 import Buttons from '../UI/Buttons/index';
@@ -161,6 +162,7 @@ const DevSupport = () => (
 
 const Settings = () => (
   <Switch>
+    <Route path="/settings/connections/add" component={SettingsConnectionsAdd} />
     <Route path="/settings/connections" component={SettingsConnections} />
   </Switch>
 );

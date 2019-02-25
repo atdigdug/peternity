@@ -4,6 +4,14 @@ import { Field, reduxForm } from 'redux-form';
 import { translate } from 'react-i18next';
 import PropTypes from 'prop-types';
 
+const logoJava = `${process.env.PUBLIC_URL}/img/java.png`;
+
+const logostyle = {
+  left: 0,
+  width: 100,
+  lineHeight: '24px',
+};
+
 class ArchitectureForm extends PureComponent {
   static propTypes = {
     handleSubmit: PropTypes.func.isRequired,
@@ -36,15 +44,7 @@ class ArchitectureForm extends PureComponent {
             <form className="form form--horizontal" onSubmit={handleSubmit}>
               <div className="form__form-group">
                 <span className="form__form-group-label">Architechture Type</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="disableInput"
-                    component="input"
-                    type="text"
-                    placeholder="Java Application"
-                    disabled
-                  />
-                </div>
+                <img style={logostyle} src={logoJava} alt="" />
               </div>
               <div className="form__form-group">
                 <span className="form__form-group-label">Data Center</span>

@@ -116,11 +116,13 @@ const EngagementsDetail = () => (
                 </Card>
               </Col>
               <Col xl="3">
-                <Card>
-                  <CardBody>
-                    <h1 className="bold-text">+ Add App</h1>
-                  </CardBody>
-                </Card>
+                <NavLink to="/appsmodules/input">
+                  <Card>
+                    <CardBody>
+                      <h1 className="bold-text">+ Add App</h1>
+                    </CardBody>
+                  </Card>
+                </NavLink>
               </Col>
             </Row>
           </CardBody>

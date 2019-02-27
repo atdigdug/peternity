@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Row, Button } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 import ListOfActiveEngagements from './components/ListOfActiveEngagements';
 import EngagementsAggregate from './components/EngagementsAggregate';
 import Table from './components/DataTable';
@@ -13,7 +14,11 @@ const EngagementDefault = () => (
       </Col>
     </Row>
     <Row>
-      <Col><Button color="primary" type="submit">New Engagement</Button></Col>
+      <Col>
+        <NavLink to="/engagements/input">
+          <Button color="primary" type="submit">New Engagement</Button>
+        </NavLink>
+      </Col>
     </Row>
     <Row>
       <ListOfActiveEngagements />

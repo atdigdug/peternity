@@ -7,9 +7,9 @@ import PropTypes from 'prop-types';
 const logoJava = `${process.env.PUBLIC_URL}/img/java.png`;
 
 const logostyle = {
-  left: 0,
-  width: 100,
-  lineHeight: '24px',
+  maxWidth: 100,
+  width: '100%',
+  height: '100%',
 };
 
 class ArchitectureForm extends PureComponent {

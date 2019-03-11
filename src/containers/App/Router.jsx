@@ -20,6 +20,7 @@ import ScansInput from '../Scans/Input/index';
 import ScansDetail from '../Scans/Detail/index';
 import FindingsDefault from '../Findings/index';
 import FindingsDetail from '../Findings/Detail/index';
+import FindingsRiskAnalysis from '../Findings/RiskAnalysis/index';
 import DevSupportDefault from '../DevSupport/index';
 import SettingsConnections from '../Settings/Connections/index';
 import SettingsConnectionsAdd from '../Settings/Connections/Add/index';
@@ -150,6 +151,7 @@ const Scans = () => (
 const Findings = () => (
   <Switch>
     <Route path="/findings/detail" component={FindingsDetail} />
+    <Route path="/findings/riskanalysis" component={FindingsRiskAnalysis} />
     <Route path="/findings" component={FindingsDefault} />
   </Switch>
 );

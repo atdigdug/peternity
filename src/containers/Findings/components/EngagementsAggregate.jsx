@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardBody, Row, Col } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 import { Pie } from 'react-chartjs-2';
 
 const data = {
@@ -79,9 +80,11 @@ const EngagementsAggregate = () => (
           <Col xl={4}>
             <Card>
               <CardBody style={{ backgroundColor: '#90ee90' }}>
-                <div className="card__title">
-                  <h5 className="bold-text">By Scan</h5>
-                </div>
+                <NavLink to="/findings/riskanalysis">
+                  <div className="card__title">
+                    <h5 className="bold-text">By Scan</h5>
+                  </div>
+                </NavLink>
                 <Pie data={data} />
               </CardBody>
             </Card>

@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unused-state,react/no-unescaped-entities */
 import React, { PureComponent } from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
-import EditTable from '../../../shared/components/table/EditableTable';
+import EditTable from '../../../../shared/components/table/EditableTable';
 
 export default class DataTable extends PureComponent {
   constructor() {

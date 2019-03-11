@@ -13,28 +13,28 @@ export default class DataTable extends PureComponent {
         width: 80,
       },
       {
-        key: 'first',
-        name: 'Findings',
+        key: 'risk',
+        name: 'Risk',
         sortable: true,
       },
       {
-        key: 'user',
-        name: 'Scan',
+        key: 'rule',
+        name: 'Rule',
         sortable: true,
       },
       {
-        key: 'age',
-        name: 'Application',
+        key: 'tool',
+        name: 'Tool',
         sortable: true,
       },
       {
-        key: 'last',
-        name: 'Status',
+        key: 'over',
+        name: 'Override',
         sortable: true,
       },
       {
-        key: 'summary',
-        name: 'Summary',
+        key: 'assigned',
+        name: 'Assigned',
         sortable: true,
       },
     ];
@@ -57,11 +57,22 @@ export default class DataTable extends PureComponent {
     for (let i = 1; i < numberOfRows + 1; i += 1) {
       rows.push({
         id: i,
-        first: ['Finding 1', 'Finding 2', 'Finding 3'][Math.floor((Math.random() * 3))],
-        last: ['Pri 0', 'Pri 1', 'Pri 2'][Math.floor((Math.random() * 3))],
-        user: ['Scan 1', 'Scan 2', 'Scan 3'][Math.floor((Math.random() * 3))],
-        age: ['App 1', 'App 2', 'App 3'][Math.floor((Math.random() * 3))],
-        summary: ['Cross-site scripting', 'SQL Injection', 'Out-dated Library'][Math.floor((Math.random() * 3))],
+        risk: ['High', 'Medium', 'Low'][Math.floor((Math.random() * 3))],
+        rule: ['Authentication',
+          'Avoid namespaces with few types',
+          'Cleanup',
+          'Code Injection',
+          'Command Injection',
+          'Concurrency',
+          'Credentials Management',
+          'Cross-Site Request Forgery (CSRF)',
+          'Cross-Site Scripting (XSS)',
+          'Cryptographic Issue',
+          'Dead Code',
+        ][Math.floor((Math.random() * 11))],
+        tool: ['WhiteHat', 'Veracode', 'CheckMarx', 'FxCop'][Math.floor((Math.random() * 4))],
+        over: ['Y', 'N'][Math.floor((Math.random() * 2))],
+        assigned: ['Alice', 'Bob', 'Chandra'][Math.floor((Math.random() * 3))],
       });
     }
     return rows;

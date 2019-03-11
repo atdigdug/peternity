@@ -9,38 +9,13 @@ export default class DataTable extends PureComponent {
     this.heads = [
       {
         key: 'id',
-        name: '#',
-        width: 80,
-      },
-      {
-        key: 'first',
-        name: 'Findings',
-        sortable: true,
-      },
-      {
-        key: 'user',
-        name: 'Scan',
-        sortable: true,
-      },
-      {
-        key: 'age',
-        name: 'Application',
-        sortable: true,
-      },
-      {
-        key: 'last',
-        name: 'Status',
-        sortable: true,
-      },
-      {
-        key: 'summary',
-        name: 'Summary',
-        sortable: true,
+        name: 'Rule',
+        width: 300,
       },
     ];
 
     this.state = {
-      rows: this.createRows(23),
+      rows: this.createRows(),
       pageOfItems: [],
     };
   }
@@ -52,18 +27,19 @@ export default class DataTable extends PureComponent {
   getRandomDate = (start, end) => new Date(start.getTime() + (Math.random() * (end.getTime()
     - start.getTime()))).toLocaleDateString();
 
-  createRows = (numberOfRows) => {
-    const rows = [];
-    for (let i = 1; i < numberOfRows + 1; i += 1) {
-      rows.push({
-        id: i,
-        first: ['Finding 1', 'Finding 2', 'Finding 3'][Math.floor((Math.random() * 3))],
-        last: ['Pri 0', 'Pri 1', 'Pri 2'][Math.floor((Math.random() * 3))],
-        user: ['Scan 1', 'Scan 2', 'Scan 3'][Math.floor((Math.random() * 3))],
-        age: ['App 1', 'App 2', 'App 3'][Math.floor((Math.random() * 3))],
-        summary: ['Cross-site scripting', 'SQL Injection', 'Out-dated Library'][Math.floor((Math.random() * 3))],
-      });
-    }
+  createRows = () => {
+    const rows = [{ id: 'Authentication' },
+      { id: 'Avoid namespaces with few types' },
+      { id: 'Cleanup' },
+      { id: 'Code Injection' },
+      { id: 'Command Injection' },
+      { id: 'Concurrency' },
+      { id: 'Credentials Management' },
+      { id: 'Cross-Site Request Forgery (CSRF)' },
+      { id: 'Cross-Site Scripting (XSS)' },
+      { id: 'Cryptographic Issue' },
+      { id: 'Dead Code' },
+    ];
     return rows;
   };
 

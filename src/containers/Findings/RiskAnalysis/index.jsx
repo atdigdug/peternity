@@ -19,7 +19,7 @@ const ApplicationsDefault = () => (
       </Col>
     </Row>
     <Row>
-      <Col><RiskFilter /><RuleFilter /></Col>
+      <Col xl="3"><Row><RiskFilter /></Row><Row><RuleFilter /></Row></Col>
       <Col xl="9"><Table /></Col>
     </Row>
   </Container>

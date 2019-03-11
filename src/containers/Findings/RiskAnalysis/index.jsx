@@ -1,6 +1,8 @@
 import React from 'react';
-import { Col, Container, Row } from 'reactstrap';
+import { Col, Container, Row, Button } from 'reactstrap';
 import Table from './components/DataTable';
+import RiskFilter from './components/RiskFilter';
+import RuleFilter from './components/RuleFilter';
 
 const ApplicationsDefault = () => (
   <Container>
@@ -11,7 +13,14 @@ const ApplicationsDefault = () => (
       </Col>
     </Row>
     <Row>
-      <Table />
+      <Col align="right">
+        <Button color="primary" type="submit">Edit Template</Button>
+        <Button color="primary" type="submit">Run Risk Analysis</Button>
+      </Col>
+    </Row>
+    <Row>
+      <Col><RiskFilter /><RuleFilter /></Col>
+      <Col xl="9"><Table /></Col>
     </Row>
   </Container>
 );

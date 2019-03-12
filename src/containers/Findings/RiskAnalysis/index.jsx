@@ -4,6 +4,8 @@ import { NavLink } from 'react-router-dom';
 import Table from './components/DataTable';
 import RiskFilter from './components/RiskFilter';
 import RuleFilter from './components/RuleFilter';
+import ToolFilter from './components/ToolFilter';
+import AssignedFilter from './components/AssignedFilter';
 import HorizontalForm from './components/HorizontalForm';
 
 const ApplicationsDefault = () => (
@@ -21,7 +23,12 @@ const ApplicationsDefault = () => (
       </Col>
     </Row>
     <Row>
-      <Col xl="3"><Row><RiskFilter /></Row><Row><RuleFilter /></Row></Col>
+      <Col xl="3">
+        <Row><RiskFilter /></Row>
+        <Row><RuleFilter /></Row>
+        <Row><ToolFilter /></Row>
+        <Row><AssignedFilter /></Row>
+      </Col>
       <Col xl="9"><Table /></Col>
     </Row>
     <Row>

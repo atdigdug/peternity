@@ -9,7 +9,7 @@ export default class DataTable extends PureComponent {
     this.heads = [
       {
         key: 'id',
-        name: 'Risk',
+        name: 'Risk Filter',
         width: 300,
       },
     ];

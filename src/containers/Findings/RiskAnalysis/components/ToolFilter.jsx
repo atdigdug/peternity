@@ -9,7 +9,7 @@ export default class DataTable extends PureComponent {
     this.heads = [
       {
         key: 'id',
-        name: 'Rule Filter',
+        name: 'Tool Filter',
         width: 300,
       },
     ];
@@ -28,18 +28,7 @@ export default class DataTable extends PureComponent {
     - start.getTime()))).toLocaleDateString();
 
   createRows = () => {
-    const rows = [{ id: 'Authentication' },
-      { id: 'Avoid namespaces with few types' },
-      { id: 'Cleanup' },
-      { id: 'Code Injection' },
-      { id: 'Command Injection' },
-      { id: 'Concurrency' },
-      { id: 'Credentials Management' },
-      { id: 'Cross-Site Request Forgery (CSRF)' },
-      { id: 'Cross-Site Scripting (XSS)' },
-      { id: 'Cryptographic Issue' },
-      { id: 'Dead Code' },
-    ];
+    const rows = [{ id: 'WhiteHat' }, { id: 'Veracode' }, { id: 'CheckMarx' }, { id: 'FxCop' }];
     return rows;
   };
 

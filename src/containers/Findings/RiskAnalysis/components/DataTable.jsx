@@ -16,6 +16,7 @@ export default class DataTable extends PureComponent {
         key: 'risk',
         name: 'Risk',
         sortable: true,
+        width: 100,
       },
       {
         key: 'rule',
@@ -31,6 +32,7 @@ export default class DataTable extends PureComponent {
         key: 'over',
         name: 'Override',
         sortable: true,
+        width: 100,
       },
       {
         key: 'assigned',
@@ -40,7 +42,7 @@ export default class DataTable extends PureComponent {
     ];
 
     this.state = {
-      rows: this.createRows(40),
+      rows: this.createRows(80),
       pageOfItems: [],
     };
   }

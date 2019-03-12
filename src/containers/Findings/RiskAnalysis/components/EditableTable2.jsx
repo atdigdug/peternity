@@ -18,7 +18,7 @@ export default class EditableTable extends PureComponent {
   constructor(props, context) {
     super(props, context);
     const originalRows = this.props.rows;
-    const rows = originalRows.slice(0, 40);
+    const rows = originalRows.slice(0, 80);
     this.state = { rows, originalRows };
   }
 
@@ -61,8 +61,8 @@ export default class EditableTable extends PureComponent {
           rowsCount={this.state.rows.length}
           onGridRowsUpdated={this.handleGridRowsUpdated}
           rowHeight={22}
-          minColumnWidth={100}
-          minHeight={800}
+          minColumnWidth={50}
+          minHeight={1700}
         />
       </div>
     );

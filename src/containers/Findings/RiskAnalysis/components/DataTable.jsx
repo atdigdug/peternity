@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unused-state,react/no-unescaped-entities */
 import React, { PureComponent } from 'react';
 import { Card, CardBody } from 'reactstrap';
-import EditTable from '../../../../shared/components/table/EditableTable';
+import EditTable from './EditableTable2';
 
 export default class DataTable extends PureComponent {
   constructor() {
@@ -40,7 +40,7 @@ export default class DataTable extends PureComponent {
     ];
 
     this.state = {
-      rows: this.createRows(23),
+      rows: this.createRows(40),
       pageOfItems: [],
     };
   }

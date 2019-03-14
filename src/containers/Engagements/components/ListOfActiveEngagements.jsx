@@ -6,17 +6,28 @@ const ListOfActiveEngagements = () => (
   <Col xl={12}>
     <Card>
       <CardBody>
-        <div style={{ textAlign: 'right' }}>Recent | Favorites</div><p />
+        <Row>
+          <Col xl="6">
+            <NavLink to="/engagements/input">
+              <div>+ Add New Engagement</div>
+            </NavLink>
+          </Col>
+          <Col xl="6"><div style={{ textAlign: 'right' }}>Recent | Favorites</div></Col>
+        </Row>
+        <p />
         <Row>
           <Col xl={3}>
-            <NavLink to="/engagements/detail">
-              <Card>
-                <CardBody style={{ backgroundColor: '#add8e6' }}>
+            <Card>
+              <CardBody style={{ backgroundColor: '#add8e6' }}>
+                <NavLink to="/engagements/detail">
                   <h1 className="bold-text">Merger Release</h1>
-                  Merger Release
-                </CardBody>
-              </Card>
-            </NavLink>
+                </NavLink>
+                Due in 3 weeks<p />
+                State: Offboarding<p />
+                Risk Rating: Low<p />
+                AppSecFlo Score: 876
+              </CardBody>
+            </Card>
           </Col>
           <Col xl={3}>
             <Card>

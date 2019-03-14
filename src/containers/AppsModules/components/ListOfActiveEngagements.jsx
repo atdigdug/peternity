@@ -9,28 +9,28 @@ const ListOfActiveEngagements = () => (
         <div style={{ textAlign: 'right' }}>Recent | Favorites</div><p />
         <Row>
           <Col xl={3}>
-            <NavLink to="/appsmodules/detail">
-              <Card>
-                <CardBody style={{ backgroundColor: '#add8e6' }}>
-                  <h1 className="bold-text">App 1</h1>
-                  Application 1
-                </CardBody>
-              </Card>
-            </NavLink>
-          </Col>
-          <Col xl={3}>
             <Card>
               <CardBody style={{ backgroundColor: '#add8e6' }}>
-                <h1 className="bold-text">App 2</h1>
-                Application 2
+                <NavLink to="/appsmodules/detail">
+                  <h1 className="bold-text">Customer Portal</h1>
+                </NavLink>
+                Version: 2.0.1
               </CardBody>
             </Card>
           </Col>
           <Col xl={3}>
             <Card>
               <CardBody style={{ backgroundColor: '#add8e6' }}>
-                <h1 className="bold-text">App 3</h1>
-                Application 3
+                <h1 className="bold-text">Partner Mobile App</h1>
+                Version: 3.1.4
+              </CardBody>
+            </Card>
+          </Col>
+          <Col xl={3}>
+            <Card>
+              <CardBody style={{ backgroundColor: '#add8e6' }}>
+                <h1 className="bold-text">Vendor Registration App</h1>
+                Version: 1.1.2
               </CardBody>
             </Card>
           </Col>
@@ -38,7 +38,7 @@ const ListOfActiveEngagements = () => (
             <Card>
               <CardBody style={{ backgroundColor: '#add8e6' }}>
                 <h1 className="bold-text">App 4</h1>
-                Application 4
+                Version: 0.1
               </CardBody>
             </Card>
           </Col>

@@ -1,8 +1,9 @@
 import React from 'react';
 import {
-  Col, Container, Row, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem,
+  Col, Container, Row, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, ButtonToolbar, Button,
 } from 'reactstrap';
 import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
+import SettingsIcon from 'mdi-react/SettingsIcon';
 import EngagementsAggregate from './components/EngagementsAggregate';
 import Table from './components/NewDataTable';
 
@@ -20,7 +21,7 @@ const EngagementDefault = () => (
       <EngagementsAggregate />
     </Row>
     <Row>
-      <Col>
+      <Col xl="6">
         <UncontrolledDropdown>
           <DropdownToggle className="icon icon--right">
             <p>Most urgent <ChevronDownIcon /></p>
@@ -29,6 +30,14 @@ const EngagementDefault = () => (
             <DropdownItem>Most urgent</DropdownItem>
           </DropdownMenu>
         </UncontrolledDropdown>
+      </Col>
+      <Col xl="6">
+        <div align="right">
+          <ButtonToolbar>
+            <Button className="icon"><p><SettingsIcon /> Condensed</p></Button>
+            <Button className="icon" outline><p><SettingsIcon /> Detailed</p></Button>
+          </ButtonToolbar>
+        </div>
       </Col>
     </Row>
     <Row>

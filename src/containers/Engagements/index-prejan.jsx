@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
+import ListOfActiveEngagements from './components/ListOfActiveEngagements';
 import EngagementsAggregate from './components/EngagementsAggregate';
 import Table from './components/DataTable';
 
@@ -12,6 +13,9 @@ const EngagementDefault = () => (
           Active 54 &nbsp;&nbsp;&nbsp; Closed 392 &nbsp;&nbsp;&nbsp; Favorites Only 13
         </h3>
       </Col>
+    </Row>
+    <Row>
+      <ListOfActiveEngagements />
     </Row>
     <Row>
       <EngagementsAggregate />

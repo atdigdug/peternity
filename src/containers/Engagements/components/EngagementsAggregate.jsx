@@ -6,9 +6,9 @@ import { Pie } from 'react-chartjs-2';
 
 const data = {
   labels: [
-    'Pri 0',
-    'Pri 1',
-    'Pri 2',
+    'High',
+    'Medium',
+    'Low',
   ],
   datasets: [{
     data: [300, 50, 100],
@@ -72,45 +72,38 @@ const dataBU = {
 
 const EngagementsAggregate = () => (
   <Col xl={12}>
-    <Card>
-      <CardBody>
-        <div className="card__title">
-          <h5 className="bold-text">Engagements Overview</h5>
-        </div>
-        <Row>
-          <Col xl={4}>
-            <Card>
-              <CardBody style={{ backgroundColor: '#90ee90' }}>
-                <div className="card__title">
-                  <h5 className="bold-text">By Status</h5>
-                </div>
-                <Pie data={data} />
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xl={4}>
-            <Card>
-              <CardBody style={{ backgroundColor: '#90ee90' }}>
-                <div className="card__title">
-                  <h5 className="bold-text">By Consultant</h5>
-                </div>
-                <Pie data={dataConsultant} />
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xl={4}>
-            <Card>
-              <CardBody style={{ backgroundColor: '#90ee90' }}>
-                <div className="card__title">
-                  <h5 className="bold-text">By Business Unit</h5>
-                </div>
-                <Pie data={dataBU} />
-              </CardBody>
-            </Card>
-          </Col>
-        </Row>
-      </CardBody>
-    </Card>
+    <Row>
+      <Col xl={4}>
+        <Card>
+          <CardBody>
+            <div className="card__title">
+              <h5 className="bold-text">By Risk</h5>
+            </div>
+            <Pie data={data} />
+          </CardBody>
+        </Card>
+      </Col>
+      <Col xl={4}>
+        <Card>
+          <CardBody>
+            <div className="card__title">
+              <h5 className="bold-text">By Consultant</h5>
+            </div>
+            <Pie data={dataConsultant} />
+          </CardBody>
+        </Card>
+      </Col>
+      <Col xl={4}>
+        <Card>
+          <CardBody>
+            <div className="card__title">
+              <h5 className="bold-text">By Business Unit</h5>
+            </div>
+            <Pie data={dataBU} />
+          </CardBody>
+        </Card>
+      </Col>
+    </Row>
   </Col>
 );
 

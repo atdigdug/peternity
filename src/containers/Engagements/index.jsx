@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import EngagementsAggregate from './components/EngagementsAggregate';
-import Table from './components/DataTable';
+import Table from './components/NewDataTable';
 
 const EngagementDefault = () => (
   <Container>
@@ -17,7 +17,9 @@ const EngagementDefault = () => (
       <EngagementsAggregate />
     </Row>
     <Row>
-      <Table />
+      <Col xl="12">
+        <Table />
+      </Col>
     </Row>
   </Container>
 );

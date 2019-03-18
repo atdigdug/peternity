@@ -1,5 +1,8 @@
 import React from 'react';
-import { Col, Container, Row } from 'reactstrap';
+import {
+  Col, Container, Row, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem,
+} from 'reactstrap';
+import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
 import EngagementsAggregate from './components/EngagementsAggregate';
 import Table from './components/NewDataTable';
 
@@ -15,6 +18,18 @@ const EngagementDefault = () => (
     </Row>
     <Row>
       <EngagementsAggregate />
+    </Row>
+    <Row>
+      <Col>
+        <UncontrolledDropdown>
+          <DropdownToggle className="icon icon--right">
+            <p>Most urgent <ChevronDownIcon /></p>
+          </DropdownToggle>
+          <DropdownMenu className="dropdown__menu">
+            <DropdownItem>Most urgent</DropdownItem>
+          </DropdownMenu>
+        </UncontrolledDropdown>
+      </Col>
     </Row>
     <Row>
       <Col xl="12">

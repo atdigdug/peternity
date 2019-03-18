@@ -9,7 +9,9 @@ const EngagementDefault = () => (
     <Row>
       <Col md={12}>
         <h3 className="page-title">Engagements</h3>
-        <h3 className="page-subhead subhead">Dashboard</h3>
+        <h3 className="page-subhead subhead">
+          Active 54 &nbsp;&nbsp;&nbsp; Closed 392 &nbsp;&nbsp;&nbsp; Favorites Only 13
+        </h3>
       </Col>
     </Row>
     <Row>

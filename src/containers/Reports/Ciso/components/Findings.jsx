@@ -1,6 +1,8 @@
 import React from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
-import { RadialBarChart, RadialBar, Legend, Tooltip, ResponsiveContainer } from 'recharts';
+import {
+  RadialBarChart, RadialBar, Legend, Tooltip, ResponsiveContainer,
+} from 'recharts';
 
 const data = [
   {

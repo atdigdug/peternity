@@ -23,35 +23,40 @@ class SketchColorPickerField extends PureComponent {
 
   handleClick = (e) => {
     e.preventDefault();
-    this.setState({ displayColorPicker: !this.state.displayColorPicker, active: !this.state.active });
+    this.setState(prevState => ({ displayColorPicker: !prevState.displayColorPicker, active: !prevState.active }));
   };
 
   handleChange = (color) => {
+    const { onChange } = this.props;
     this.setState({ color: color.hex, rgb: color.rgb });
-    this.props.onChange(color);
+    onChange(color);
   };
 
   render() {
     const { name } = this.props;
+    const {
+      active, color, displayColorPicker, rgb,
+    } = this.state;
 
     return (
       <div className="color-picker">
         <button
-          className={`color-picker__button${this.state.active ? ' active' : ''}`}
+          type="button"
+          className={`color-picker__button${active ? ' active' : ''}`}
           onClick={this.handleClick}
           id={name}
         >
-          <p className="color-picker__color">{this.state.color}</p>
-          <div className="color-picker__color-view" style={{ backgroundColor: this.state.color }} />
+          <p className="color-picker__color">{color}</p>
+          <div className="color-picker__color-view" style={{ backgroundColor: color }} />
         </button>
         <Popover
-          isOpen={this.state.displayColorPicker}
+          isOpen={displayColorPicker}
           target={name}
           placement="bottom"
           className="color-picker__popover"
         >
           <SketchPicker
-            color={this.state.rgb}
+            color={rgb}
             onChange={this.handleChange}
           />
         </Popover>
@@ -60,14 +65,17 @@ class SketchColorPickerField extends PureComponent {
   }
 }
 
-const renderSketchColorPickerField = props => (
-  <div className="form__form-group-input-wrap">
-    <SketchColorPickerField
-      {...props.input}
-    />
-    {props.meta.touched && props.meta.error && <span className="form__form-group-error">{props.meta.error}</span>}
-  </div>
-);
+const renderSketchColorPickerField = (props) => {
+  const { input, meta } = props;
+  return (
+    <div className="form__form-group-input-wrap">
+      <SketchColorPickerField
+        {...input}
+      />
+      {meta.touched && meta.error && <span className="form__form-group-error">{meta.error}</span>}
+    </div>
+  );
+};
 
 renderSketchColorPickerField.propTypes = {
   input: PropTypes.shape({

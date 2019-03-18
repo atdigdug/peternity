@@ -60,7 +60,7 @@ import SearchResults from '../DefaultPage/SearchResults/index';
 import ProjectSummary from '../DefaultPage/ProjectSummary/index';
 
 import Catalog from '../ECommerce/Catalog/index';
-import ProductPage from '../ECommerce/product_page/index';
+import ProductPage from '../ECommerce/ProductPage/index';
 
 import Profile from '../Account/Profile/index';
 import EmailConfirmation from '../Account/EmailConfimation/index';

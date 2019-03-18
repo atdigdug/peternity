@@ -2,25 +2,26 @@ import React from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
 import { compose, withProps } from 'recompose';
 import { GoogleMap, withGoogleMap, withScriptjs } from 'react-google-maps';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const Map = compose(
   withProps({
     // generate your API key
-    googleMapURL: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD84CRFR44xSC242F5rPodUZ3CqKbUlqMw&v=3.' +
-    'exp&libraries=geometry,drawing,places',
+    googleMapURL: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD84CRFR44xSC242F5rPodUZ3CqKbUlqMw&v=3.'
+    + 'exp&libraries=geometry,drawing,places',
     loadingElement: <div style={{ height: '100%' }} />,
     containerElement: <div className="map" style={{ height: '360px' }} />,
     mapElement: <div style={{ height: '100%' }} />,
   }),
   withScriptjs,
   withGoogleMap,
-)(() =>
-  (<GoogleMap
+)(() => (
+  <GoogleMap
     defaultZoom={13}
     defaultCenter={{ lat: 56.009483, lng: 92.8121694 }}
-  />));
+  />
+));
 
 const BasicMap = ({ t }) => (
   <Col xs={12} md={12} lg={12}>
@@ -39,4 +40,4 @@ BasicMap.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(BasicMap);
+export default withTranslation('common')(BasicMap);

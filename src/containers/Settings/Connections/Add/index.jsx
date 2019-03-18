@@ -1,5 +1,7 @@
 import React from 'react';
-import { Col, Container, Row, Card, CardBody } from 'reactstrap';
+import {
+  Col, Container, Row, Card, CardBody,
+} from 'reactstrap';
 
 const logoWhitehat = `${process.env.PUBLIC_URL}/img/whitehat.png`;
 const logoVeracode = `${process.env.PUBLIC_URL}/img/veracode.png`;

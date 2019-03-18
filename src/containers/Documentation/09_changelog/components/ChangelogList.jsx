@@ -7,6 +7,51 @@ const ResourcesLinks = () => (
   <Card className="card--not-full-height">
     <CardBody className="documentation__changelog">
       <div className="card__title">
+        <h5 className="bold-text">v2.0.0</h5>
+        <h5 className="subhead">12-March-2019</h5>
+      </div>
+      <ul>
+        <li>Updated all packages with breaking changes</li>
+        <li>Deleted prefix 'new-' in all folders names</li>
+        <li>Fixed all bugs, caused breaking changes dependencies</li>
+      </ul>
+      <div className="card__title">
+        <h5 className="bold-text">v1.6.1</h5>
+        <h5 className="subhead">12-March-2019</h5>
+      </div>
+      <ul>
+        <li>Updated all dependencies for non breaking changes versions at seed and seed-without-redux</li>
+        <li>Bug fixes at Mail and Chat Application</li>
+        <li>Bug fixed at Tooltips & Popovers, popover on right</li>
+        <li>Minor bug fixes</li>
+      </ul>
+      <div className="card__title">
+        <h5 className="bold-text">v1.6.0</h5>
+        <h5 className="subhead">05-March-2019</h5>
+      </div>
+      <ul>
+        <li>Updated packages without breaking changes</li>
+        <li>Minor bug fixes</li>
+      </ul>
+      <div className="card__title">
+        <h5 className="bold-text">v1.5.0</h5>
+        <h5 className="subhead">26-February-2019</h5>
+      </div>
+      <ul>
+        <li>Added new Dashboard Mobile App</li>
+        <li>Fixed pagination in Data Table</li>
+        <li>Minor bug fixes</li>
+      </ul>
+      <div className="card__title">
+        <h5 className="bold-text">v1.4.1</h5>
+        <h5 className="subhead">19-February-2019</h5>
+      </div>
+      <ul>
+        <li>Update react-select to v.2</li>
+        <li>Added new Dashboard Booking</li>
+        <li>Minor bug fixes</li>
+      </ul>
+      <div className="card__title">
         <h5 className="bold-text">v1.4.0</h5>
         <h5 className="subhead">17-October-2018</h5>
       </div>

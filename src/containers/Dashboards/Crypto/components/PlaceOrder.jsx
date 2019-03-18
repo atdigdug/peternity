@@ -1,5 +1,5 @@
 import React from 'react';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import Panel from '../../../../shared/components/Panel';
 import BuyBTC from './BuyBTC';
@@ -23,4 +23,4 @@ PlaceOrder.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(PlaceOrder);
+export default withTranslation('common')(PlaceOrder);

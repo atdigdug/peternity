@@ -6,55 +6,41 @@ import TextField from '@material-ui/core/TextField';
 import PropTypes from 'prop-types';
 
 const renderTextField = ({
-  input, label, meta: { touched, error }, defaultValue, children,
+  input, label, meta: { touched, error }, children,
 }) => (
   <TextField
     className="material-form__field"
     label={label}
     error={touched && error}
-    {...input}
     children={children}
-    value={defaultValue}
+    value={input.value}
+    onChange={(e) => {
+      e.preventDefault();
+      input.onChange(e.target.value);
+    }}
   />
 );
 
 renderTextField.propTypes = {
   input: PropTypes.shape().isRequired,
-  label: PropTypes.string.isRequired,
-  defaultValue: PropTypes.string,
+  label: PropTypes.string,
   meta: PropTypes.shape({
     touched: PropTypes.bool,
     error: PropTypes.string,
   }),
-  select: PropTypes.bool,
   children: PropTypes.arrayOf(PropTypes.element),
 };
 
 renderTextField.defaultProps = {
   meta: null,
-  select: false,
+  label: '',
   children: [],
-  defaultValue: '',
 };
 
 class ProfileSettings extends PureComponent {
   static propTypes = {
     handleSubmit: PropTypes.func.isRequired,
     reset: PropTypes.func.isRequired,
-  };
-
-  constructor(props, context) {
-    super(props, context);
-    this.state = {
-      name: 'Larry Boom',
-      email: 'boom@mail.com',
-    };
-  }
-
-  handleChange = name => (event) => {
-    this.setState({
-      [name]: event.target.value,
-    });
   };
 
   render() {
@@ -67,8 +53,6 @@ class ProfileSettings extends PureComponent {
             name="username"
             component={renderTextField}
             placeholder="Name"
-            defaultValue={this.state.name}
-            onChange={this.handleChange('name')}
           />
         </div>
         <div>
@@ -77,8 +61,6 @@ class ProfileSettings extends PureComponent {
             name="email"
             component={renderTextField}
             placeholder="example@mail.com"
-            defaultValue={this.state.email}
-            onChange={this.handleChange('email')}
             type="email"
           />
         </div>
@@ -123,4 +105,3 @@ class ProfileSettings extends PureComponent {
 export default reduxForm({
   form: 'profile_settings_form', // a unique identifier for this form
 })(ProfileSettings);
-

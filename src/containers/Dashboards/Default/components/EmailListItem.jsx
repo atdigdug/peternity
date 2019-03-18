@@ -14,18 +14,6 @@ export default class EmailListItem extends PureComponent {
     onLetter: PropTypes.func.isRequired,
   };
 
-  constructor() {
-    super();
-    this.state = {
-      favorite: false,
-    };
-  }
-
-  onFavorite = (e) => {
-    e.preventDefault();
-    this.setState({ favorite: !this.state.favorite });
-  };
-
   render() {
     const { email, onLetter } = this.props;
     const itemClass = classNames({

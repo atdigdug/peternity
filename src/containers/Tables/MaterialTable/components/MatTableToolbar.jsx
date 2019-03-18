@@ -11,7 +11,7 @@ const MatTableToolbar = ({ numSelected, handleDeleteSelected, onRequestSort }) =
       <div>
         {numSelected > 0 && (
         <h5 className="material-table__toolbar-selected">{numSelected} <span>selected</span></h5>
-            )}
+        )}
       </div>
       <div>
         {numSelected > 0 ? (
@@ -21,9 +21,9 @@ const MatTableToolbar = ({ numSelected, handleDeleteSelected, onRequestSort }) =
           >
             <DeleteIcon />
           </IconButton>
-            ) : (
-              <MatTableFilterButton onRequestSort={onRequestSort} />
-            )}
+        ) : (
+          <MatTableFilterButton onRequestSort={onRequestSort} />
+        )}
       </div>
     </Toolbar>
   </div>

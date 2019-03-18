@@ -1,6 +1,8 @@
 import React from 'react';
-import { Card, CardBody, Col, Badge, Table } from 'reactstrap';
-import { translate } from 'react-i18next';
+import {
+  Card, CardBody, Col, Badge, Table,
+} from 'reactstrap';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const HeadAccentTable = ({ t }) => (
@@ -84,4 +86,4 @@ HeadAccentTable.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(HeadAccentTable);
+export default withTranslation('common')(HeadAccentTable);

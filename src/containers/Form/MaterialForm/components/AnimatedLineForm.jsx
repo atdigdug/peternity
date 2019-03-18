@@ -1,10 +1,12 @@
 /* eslint-disable react/no-children-prop */
 import React from 'react';
-import { Card, CardBody, Col, Button, ButtonToolbar } from 'reactstrap';
+import {
+  Card, CardBody, Col, Button, ButtonToolbar,
+} from 'reactstrap';
 import { Field, reduxForm } from 'redux-form';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const renderTextField = ({
@@ -126,4 +128,4 @@ AnimatedLine.propTypes = {
 
 export default reduxForm({
   form: 'material_form', // a unique identifier for this form
-})(translate('common')(AnimatedLine));
+})(withTranslation('common')(AnimatedLine));

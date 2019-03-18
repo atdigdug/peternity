@@ -55,6 +55,12 @@
       height: 16px;
     }
   }
+  &.progress-wrap--rounded {
+
+    .progress-bar {
+      border-radius: 5px;
+    }
+  }
 
   &.progress-wrap--yellow {
 
@@ -100,11 +106,77 @@
     }
   }
 
+  &.progress-wrap--red {
+
+    .progress-bar {
+      background-color: $color-red;
+    }
+
+    .progress__label {
+      color: $color-red;
+    }
+  }
+
+  &.progress-wrap--green {
+
+    .progress-bar {
+      background-color: $color-green;
+    }
+
+    .progress__label {
+      color: $color-green;
+    }
+  }
+
   &.progress-wrap--label-top {
 
     .progress__label {
       position: absolute;
       right: 0;
+    }
+  }
+
+  &.progress-wrap--pink-gradient {
+    .progress-bar {
+      background-color: unset;
+      background-image: linear-gradient(to left, #ff7e9a, #ff4861);
+    }
+
+    .progress__label {
+      color: $color-red;
+    }
+  }
+
+  &.progress-wrap--lime-gradient {
+    .progress-bar {
+      background-color: unset;
+      background-image: linear-gradient(to left, #d8efc1, #b8e986);
+    }
+
+    .progress__label {
+      color: $color-green;
+    }
+  }
+
+  &.progress-wrap--blue-gradient {
+    .progress-bar {
+      background-color: unset;
+      background-image: linear-gradient(to left, #7edbff, #48b5ff);
+    }
+
+    .progress__label {
+      color: $color-blue;
+    }
+  }
+
+  &.progress-wrap--turquoise-gradient {
+    .progress-bar {
+      background-color: unset;
+      background-image: linear-gradient(to left, #a6efda, #4ce1b6);
+    }
+
+    .progress__label {
+      color: #4ce1b6;
     }
   }
 }

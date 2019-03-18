@@ -2,7 +2,7 @@
 import React, { PureComponent } from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
 import { Pie } from 'react-chartjs-2';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const data = {
@@ -61,6 +61,7 @@ class PolarArea extends PureComponent {
 
   render() {
     const { t } = this.props;
+    const { legend } = this.state;
 
     return (
       <Col md={12} lg={12} xl={6}>
@@ -69,7 +70,7 @@ class PolarArea extends PureComponent {
             <div className="card__title">
               <h5 className="bold-text">{t('charts.react_chartjs.legend_handlers')}</h5>
             </div>
-            <Pie data={data} legend={this.state.legend} />
+            <Pie data={data} legend={legend} />
           </CardBody>
         </Card>
       </Col>
@@ -77,4 +78,4 @@ class PolarArea extends PureComponent {
   }
 }
 
-export default translate('common')(PolarArea);
+export default withTranslation('common')(PolarArea);

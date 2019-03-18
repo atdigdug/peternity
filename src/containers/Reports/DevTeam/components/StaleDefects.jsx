@@ -28,18 +28,18 @@ const Bar = () => (
             <YAxis />
             <VerticalBarSeries
               data={[
-                    { x: 'A', y: 10 },
-                    { x: 'B', y: 5 },
-                    { x: 'C', y: 15 },
-                  ]}
+                { x: 'A', y: 10 },
+                { x: 'B', y: 5 },
+                { x: 'C', y: 15 },
+              ]}
               color="#70bbfd"
             />
             <VerticalBarSeries
               data={[
-                    { x: 'A', y: 12 },
-                    { x: 'B', y: 2 },
-                    { x: 'C', y: 11 },
-                  ]}
+                { x: 'A', y: 12 },
+                { x: 'B', y: 2 },
+                { x: 'C', y: 11 },
+              ]}
               color="#c88ffa"
             />
           </FlexibleWidthXYPlot>

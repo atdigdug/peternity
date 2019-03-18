@@ -1,6 +1,8 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
-import { Card, CardBody, Col, Table } from 'reactstrap';
+import {
+  Card, CardBody, Col, Table,
+} from 'reactstrap';
 import DeleteForeverIcon from 'mdi-react/DeleteForeverIcon';
 import CartPurchase from './CartPurchase';
 
@@ -40,7 +42,7 @@ const CartCard = () => (
                 <td>${ct.tax.toFixed(2)}</td>
                 <td>${ct.total.toFixed(2)}</td>
                 <td>
-                  <button className="cart__table-btn">
+                  <button className="cart__table-btn" type="button">
                     <DeleteForeverIcon /> Remove
                   </button>
                 </td>

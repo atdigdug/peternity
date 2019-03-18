@@ -1,7 +1,9 @@
 import React from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
-import { HorizontalGridLines, MarkSeries, VerticalGridLines, XAxis, FlexibleWidthXYPlot, YAxis } from 'react-vis';
-import { translate } from 'react-i18next';
+import {
+  HorizontalGridLines, MarkSeries, VerticalGridLines, XAxis, FlexibleWidthXYPlot, YAxis,
+} from 'react-vis';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 function getRandomData() {
@@ -48,4 +50,4 @@ MarkSeriesCanvas.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(MarkSeriesCanvas);
+export default withTranslation('common')(MarkSeriesCanvas);

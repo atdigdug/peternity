@@ -72,6 +72,8 @@ export default class EditableTable extends PureComponent {
   };
 
   render() {
+    const { rows } = this.state;
+
     return (
       <Col md={12} lg={12}>
         <Card>
@@ -82,7 +84,7 @@ export default class EditableTable extends PureComponent {
                 <span className="red-text"> editable</span>
               </h5>
             </div>
-            <EditTable heads={this.heads} rows={this.state.rows} />
+            <EditTable heads={this.heads} rows={rows} />
           </CardBody>
         </Card>
       </Col>

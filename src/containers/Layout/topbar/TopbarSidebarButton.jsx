@@ -14,10 +14,10 @@ class TopbarSidebarButton extends PureComponent {
 
     return (
       <div>
-        <button className="topbar__button topbar__button--desktop" onClick={changeSidebarVisibility}>
+        <button className="topbar__button topbar__button--desktop" type="button" onClick={changeSidebarVisibility}>
           <img src={icon} alt="" className="topbar__button-icon" />
         </button>
-        <button className="topbar__button topbar__button--mobile" onClick={changeMobileSidebarVisibility}>
+        <button className="topbar__button topbar__button--mobile" type="button" onClick={changeMobileSidebarVisibility}>
           <img src={icon} alt="" className="topbar__button-icon" />
         </button>
       </div>

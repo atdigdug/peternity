@@ -5,8 +5,6 @@ import {
   VerticalRectSeries,
   XAxis,
 } from 'react-vis';
-import { translate } from 'react-i18next';
-import PropTypes from 'prop-types';
 
 function getRandomSeriesData(total) {
   const result = [];
@@ -26,10 +24,6 @@ function getRandomSeriesData(total) {
 }
 
 class Plots extends PureComponent {
-  static propTypes = {
-    t: PropTypes.func.isRequired,
-  };
-
   constructor(props) {
     super(props);
     const totalValues = 300;
@@ -87,4 +81,4 @@ class Plots extends PureComponent {
   }
 }
 
-export default translate('common')(Plots);
+export default (Plots);

@@ -1,10 +1,14 @@
 /* eslint-disable react/no-array-index-key,react/no-typos */
 import React from 'react';
-import { Area, AreaChart, ResponsiveContainer, Tooltip } from 'recharts';
-import { DropdownItem, DropdownMenu, DropdownToggle, UncontrolledDropdown, Table } from 'reactstrap';
+import {
+  Area, AreaChart, ResponsiveContainer, Tooltip,
+} from 'recharts';
+import {
+  DropdownItem, DropdownMenu, DropdownToggle, UncontrolledDropdown, Table,
+} from 'reactstrap';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import DotsHorizontalIcon from 'mdi-react/DotsHorizontalIcon';
 import { CryptoTableProps } from '../../../../shared/prop-types/TablesProps';
 import Panel from '../../../../shared/components/Panel';
@@ -188,7 +192,7 @@ const TopTen = ({ cryptoTable, onDeleteCryptoTableData, t }) => (
               <DropDownMore index={index} handleDeleteRow={e => onDeleteCryptoTableData(index, e)} />
             </td>
           </tr>
-            ))}
+        ))}
       </tbody>
     </Table>
   </Panel>
@@ -200,4 +204,4 @@ TopTen.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(TopTen);
+export default withTranslation('common')(TopTen);

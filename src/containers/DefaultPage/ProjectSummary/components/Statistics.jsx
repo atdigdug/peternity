@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react';
-import { PieChart, Pie, Tooltip, Legend } from 'recharts';
+import {
+  PieChart, Pie, Tooltip, Legend,
+} from 'recharts';
 import { Button } from 'reactstrap';
 import LoadingIcon from 'mdi-react/LoadingIcon';
 
@@ -40,23 +42,27 @@ export default class Statistics extends PureComponent {
   }
 
   onUpdate() {
+    const { data1: stateData1, data2: stateData2 } = this.state;
+
     this.setState({ update: true });
     // your async logic here
-    const data1 = this.state.data1 === data01 ? data012 : data01;
-    const data2 = this.state.data2 === data02 ? data022 : data02;
+    const data1 = stateData1 === data01 ? data012 : data01;
+    const data2 = stateData2 === data02 ? data022 : data02;
     setTimeout(() => this.setState({ update: false, data1, data2 }), 2000);
   }
 
   render() {
+    const { update, data1, data2 } = this.state;
+
     return (
       <div className="project-summary__statistics">
-        {this.state.update ? <div className="project-summary__statistics-refresh"><LoadingIcon /></div> : ''}
+        {update ? <div className="project-summary__statistics-refresh"><LoadingIcon /></div> : ''}
         <Button className="project-summary__btn" outline size="sm" onClick={this.onUpdate}>Update Data</Button>
         <div className="project-summary__statistic">
           <p className="project-summary__statistic-title">Task Statistic</p>
           <PieChart width={240} height={220}>
             <Tooltip />
-            <Pie data={this.state.data1} dataKey="value" cx={110} cy={110} innerRadius={60} outerRadius={80} label />
+            <Pie data={data1} dataKey="value" cx={110} cy={110} innerRadius={60} outerRadius={80} label />
             <Legend layout="vertical" verticalAlign="middle" wrapperStyle={style} />
           </PieChart>
         </div>
@@ -64,7 +70,7 @@ export default class Statistics extends PureComponent {
           <p className="project-summary__statistic-title">Bug Statistic</p>
           <PieChart width={240} height={250}>
             <Tooltip />
-            <Pie data={this.state.data2} dataKey="value" cx={110} cy={110} innerRadius={60} outerRadius={80} label />
+            <Pie data={data2} dataKey="value" cx={110} cy={110} innerRadius={60} outerRadius={80} label />
             <Legend layout="vertical" verticalAlign="middle" wrapperStyle={style} />
           </PieChart>
         </div>

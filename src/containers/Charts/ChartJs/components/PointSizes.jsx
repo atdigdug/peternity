@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
 import { Line } from 'react-chartjs-2';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const data = {
@@ -115,4 +115,4 @@ PointSizes.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(PointSizes);
+export default withTranslation('common')(PointSizes);

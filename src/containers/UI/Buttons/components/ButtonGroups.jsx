@@ -1,6 +1,8 @@
 import React from 'react';
-import { Button, ButtonGroup, ButtonToolbar, Card, CardBody, Col } from 'reactstrap';
-import { translate } from 'react-i18next';
+import {
+  Button, ButtonGroup, ButtonToolbar, Card, CardBody, Col,
+} from 'reactstrap';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const ButtonGroups = ({ t }) => (
@@ -43,9 +45,9 @@ const ButtonGroups = ({ t }) => (
         </div>
         <ButtonToolbar>
           <ButtonGroup className="btn-group--justified">
-            <Button color="primary" href="#">Left</Button>
-            <Button color="primary" href="#">Middle</Button>
-            <Button color="primary" href="#">Right</Button>
+            <Button color="primary">Left</Button>
+            <Button color="primary">Middle</Button>
+            <Button color="primary">Right</Button>
           </ButtonGroup>
         </ButtonToolbar>
       </CardBody>
@@ -57,4 +59,4 @@ ButtonGroups.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(ButtonGroups);
+export default withTranslation('common')(ButtonGroups);

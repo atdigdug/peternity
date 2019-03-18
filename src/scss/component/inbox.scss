@@ -59,6 +59,10 @@
     cursor: default;
     font-weight: 500;
 
+    @include themify($themes) {
+      background-color: themed('colorFolderHover');
+    }
+
     svg {
 
       @include themify($themes) {
@@ -79,7 +83,7 @@
   &:hover, &.active:hover {
 
     @include themify($themes) {
-      background-color: themed('colorHover');
+      background-color: themed('colorFolderHover');
     }
   }
 }
@@ -427,7 +431,7 @@
 }
 
 .inbox__email-time {
-  margin: auto 30px auto 0;
+  margin: auto 30px auto 0!important;
 }
 
 .inbox__email-btn {
@@ -435,7 +439,6 @@
   margin-right: 5px;
   height: 32px;
   width: 32px;
-  padding-top: 8px;
   cursor: pointer;
 
   @include themify($themes) {
@@ -629,7 +632,7 @@
     top: 0;
     transform: translateX(calc(-100% - 1px));
     transition: 0.3s;
-    z-index: 3;
+    z-index: 99;
     height: 100%;
 
     @include themify($themes) {

@@ -2,7 +2,7 @@
 import React, { PureComponent } from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
 import { Bar } from 'react-chartjs-2';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const initialState = {
@@ -95,11 +95,13 @@ class RandomAnimatedBars extends PureComponent {
   }
 
   componentWillUnmount() {
-    clearInterval(this.state.intervalId);
+    const { intervalId } = this.state;
+    clearInterval(intervalId);
   }
 
   render() {
     const { t } = this.props;
+    const { data } = this.state;
 
     return (
       <Col md={12} lg={12} xl={6}>
@@ -108,7 +110,7 @@ class RandomAnimatedBars extends PureComponent {
             <div className="card__title">
               <h5 className="bold-text">{t('charts.react_chartjs.random_animated_bars')}</h5>
             </div>
-            <Bar data={this.state.data} options={options} />
+            <Bar data={data} options={options} />
           </CardBody>
         </Card>
       </Col>
@@ -116,4 +118,4 @@ class RandomAnimatedBars extends PureComponent {
   }
 }
 
-export default translate('common')(RandomAnimatedBars);
+export default withTranslation('common')(RandomAnimatedBars);

@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
-import { ButtonToolbar, Card, CardBody, Col, Button, Popover, PopoverBody, PopoverHeader } from 'reactstrap';
-import { translate } from 'react-i18next';
+import {
+  ButtonToolbar, Card, CardBody, Col, Button, Popover, PopoverBody, PopoverHeader,
+} from 'reactstrap';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 class PopoverLeft extends PureComponent {
@@ -16,13 +18,12 @@ class PopoverLeft extends PureComponent {
   }
 
   toggle = () => {
-    this.setState({
-      popoverOpen: !this.state.popoverOpen,
-    });
+    this.setState(prevState => ({ popoverOpen: !prevState.popoverOpen }));
   };
 
   render() {
     const { t } = this.props;
+    const { popoverOpen } = this.state;
 
     return (
       <Col sm={12} md={6} lg={6} xl={3}>
@@ -38,7 +39,7 @@ class PopoverLeft extends PureComponent {
               </Button>
               <Popover
                 placement="left"
-                isOpen={this.state.popoverOpen}
+                isOpen={popoverOpen}
                 target="PopoverLeft"
                 toggle={this.toggle}
               >
@@ -55,4 +56,4 @@ class PopoverLeft extends PureComponent {
   }
 }
 
-export default translate('common')(PopoverLeft);
+export default withTranslation('common')(PopoverLeft);

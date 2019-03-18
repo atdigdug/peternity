@@ -1,10 +1,12 @@
 import React, { PureComponent } from 'react';
-import { Card, CardBody, Col, Button, ButtonToolbar } from 'reactstrap';
+import {
+  Card, CardBody, Col, Button, ButtonToolbar,
+} from 'reactstrap';
 import { Field, reduxForm } from 'redux-form';
 import EyeIcon from 'mdi-react/EyeIcon';
 import EmailIcon from 'mdi-react/EmailIcon';
 import AccountSearchIcon from 'mdi-react/AccountSearchIcon';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import renderFileInputField from '../../../../shared/components/form/FileInput';
 import renderSelectField from '../../../../shared/components/form/Select';
@@ -26,13 +28,12 @@ class HorizontalForm extends PureComponent {
 
   showPassword = (e) => {
     e.preventDefault();
-    this.setState({
-      showPassword: !this.state.showPassword,
-    });
+    this.setState(prevState => ({ showPassword: !prevState.showPassword }));
   };
 
   render() {
     const { handleSubmit, reset, t } = this.props;
+    const { showPassword } = this.state;
 
     return (
       <Col md={12} lg={12}>
@@ -83,11 +84,12 @@ class HorizontalForm extends PureComponent {
                   <Field
                     name="password"
                     component="input"
-                    type={this.state.showPassword ? 'text' : 'password'}
+                    type={showPassword ? 'text' : 'password'}
                     placeholder="Password"
                   />
                   <button
-                    className={`form__form-group-button${this.state.showPassword ? ' active' : ''}`}
+                    type="button"
+                    className={`form__form-group-button${showPassword ? ' active' : ''}`}
                     onClick={e => this.showPassword(e)}
                   ><EyeIcon />
                   </button>
@@ -196,4 +198,4 @@ class HorizontalForm extends PureComponent {
 
 export default reduxForm({
   form: 'horizontal_form', // a unique identifier for this form
-})(translate('common')(HorizontalForm));
+})(withTranslation('common')(HorizontalForm));

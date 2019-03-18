@@ -1,6 +1,7 @@
 import React from 'react';
-import { Col, Container, Row, Card, CardBody, Button } from 'reactstrap';
-import { Breadcrumb } from 'react-bootstrap';
+import {
+  Col, Container, Row, Card, CardBody, Button, Breadcrumb, BreadcrumbItem,
+} from 'reactstrap';
 import HorizontalForm from './components/HorizontalForm';
 
 const ScansDetail = () => (
@@ -14,10 +15,10 @@ const ScansDetail = () => (
     <Row>
       <Col>
         <Breadcrumb>
-          <Breadcrumb.Item href="/engagements/detail">Annual Sale Launch Engagement</Breadcrumb.Item>
-          <Breadcrumb.Item href="/appsmodules/detail">Sonia App</Breadcrumb.Item>
-          <Breadcrumb.Item href="/scans/detail">WhiteHat Scan</Breadcrumb.Item>
-          <Breadcrumb.Item active>Finding 1234</Breadcrumb.Item>
+          <BreadcrumbItem><a href="/engagements/detail">Annual Sale Launch Engagement</a></BreadcrumbItem>
+          <BreadcrumbItem><a href="/appsmodules/detail">Sonia App</a></BreadcrumbItem>
+          <BreadcrumbItem><a href="/scans/detail">WhiteHat Scan</a></BreadcrumbItem>
+          <BreadcrumbItem active>Finding 1234</BreadcrumbItem>
         </Breadcrumb>
       </Col>
     </Row>

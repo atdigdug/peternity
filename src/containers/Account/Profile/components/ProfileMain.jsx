@@ -1,5 +1,7 @@
 import React from 'react';
-import { Card, CardBody, Col, Button } from 'reactstrap';
+import {
+  Card, CardBody, Col, Button,
+} from 'reactstrap';
 import MessageTextOutlineIcon from 'mdi-react/MessageTextOutlineIcon';
 
 const Ava = `${process.env.PUBLIC_URL}/img/12.png`;

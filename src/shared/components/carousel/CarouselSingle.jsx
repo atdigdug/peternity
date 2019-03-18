@@ -18,10 +18,11 @@ export default class CarouselSingle extends PureComponent {
       slidesToScroll: 1,
       slidesToShow: 1,
     };
+    const { children } = this.props;
 
     return (
       <Slider {...settings} className="slick-slider--single">
-        {this.props.children}
+        {children}
       </Slider>
     );
   }

@@ -1,7 +1,9 @@
 import React, { PureComponent } from 'react';
-import { Card, CardBody, Col, Nav, NavItem, NavLink, TabContent, TabPane } from 'reactstrap';
+import {
+  Card, CardBody, Col, Nav, NavItem, NavLink, TabContent, TabPane,
+} from 'reactstrap';
 import classnames from 'classnames';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 class VerticalTabsColored extends PureComponent {
@@ -17,7 +19,8 @@ class VerticalTabsColored extends PureComponent {
   }
 
   toggle = (tab) => {
-    if (this.state.activeTab !== tab) {
+    const { activeTab } = this.state;
+    if (activeTab !== tab) {
       this.setState({
         activeTab: tab,
       });
@@ -26,6 +29,7 @@ class VerticalTabsColored extends PureComponent {
 
   render() {
     const { t } = this.props;
+    const { activeTab } = this.state;
 
     return (
       <Col md={12} lg={6} xs={12}>
@@ -42,7 +46,7 @@ class VerticalTabsColored extends PureComponent {
                 <Nav tabs>
                   <NavItem>
                     <NavLink
-                      className={classnames({ active: this.state.activeTab === '1' })}
+                      className={classnames({ active: activeTab === '1' })}
                       onClick={() => {
                         this.toggle('1');
                       }}
@@ -52,7 +56,7 @@ class VerticalTabsColored extends PureComponent {
                   </NavItem>
                   <NavItem>
                     <NavLink
-                      className={classnames({ active: this.state.activeTab === '2' })}
+                      className={classnames({ active: activeTab === '2' })}
                       onClick={() => {
                         this.toggle('2');
                       }}
@@ -62,7 +66,7 @@ class VerticalTabsColored extends PureComponent {
                   </NavItem>
                   <NavItem>
                     <NavLink
-                      className={classnames({ active: this.state.activeTab === '3' })}
+                      className={classnames({ active: activeTab === '3' })}
                       onClick={() => {
                         this.toggle('3');
                       }}
@@ -72,7 +76,7 @@ class VerticalTabsColored extends PureComponent {
                   </NavItem>
                   <NavItem>
                     <NavLink
-                      className={classnames({ active: this.state.activeTab === '4' })}
+                      className={classnames({ active: activeTab === '4' })}
                       onClick={() => {
                         this.toggle('4');
                       }}
@@ -81,7 +85,7 @@ class VerticalTabsColored extends PureComponent {
                     </NavLink>
                   </NavItem>
                 </Nav>
-                <TabContent activeTab={this.state.activeTab}>
+                <TabContent activeTab={activeTab}>
                   <TabPane tabId="1">
                     <p>Direction has strangers now believing. Respect enjoyed gay far exposed parlors towards. Enjoyment
                       use tolerably dependent listening men. No peculiar in handsome together unlocked do by. Article
@@ -115,4 +119,4 @@ class VerticalTabsColored extends PureComponent {
   }
 }
 
-export default translate('common')(VerticalTabsColored);
+export default withTranslation('common')(VerticalTabsColored);

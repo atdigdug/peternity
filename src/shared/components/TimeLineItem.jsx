@@ -37,9 +37,9 @@ const TimeLineItem = ({
   type, img, title, date, children,
 }) => (
   <div className="timeline__item">
-    {img ?
-      <div className="timeline__icon"><img src={img} alt="img" /></div> :
-      <TimeLineIcon type={type} />
+    {img
+      ? <div className="timeline__icon"><img src={img} alt="img" /></div>
+      : <TimeLineIcon type={type} />
     }
     <div className="timeline__content">
       <h5 className="timeline__title">{title}</h5>

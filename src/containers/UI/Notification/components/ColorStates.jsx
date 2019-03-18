@@ -1,7 +1,9 @@
 import React, { PureComponent } from 'react';
-import { Button, ButtonToolbar, Card, CardBody, Col } from 'reactstrap';
+import {
+  Button, ButtonToolbar, Card, CardBody, Col,
+} from 'reactstrap';
 import PropTypes from 'prop-types';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import { BasicNotification } from '../../../../shared/components/Notification';
 
 class ColorStates extends PureComponent {
@@ -11,7 +13,8 @@ class ColorStates extends PureComponent {
   };
 
   show = (color) => {
-    this.props.showNotification({
+    const { showNotification } = this.props;
+    return showNotification({
       notification: <BasicNotification
         color={color}
         title="Alert panel divider"
@@ -50,4 +53,4 @@ class ColorStates extends PureComponent {
   }
 }
 
-export default translate('common')(ColorStates);
+export default withTranslation('common')(ColorStates);

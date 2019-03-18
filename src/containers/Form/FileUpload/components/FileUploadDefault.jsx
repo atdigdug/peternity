@@ -1,8 +1,10 @@
 import React from 'react';
-import { Card, CardBody, Col, Button, ButtonToolbar } from 'reactstrap';
+import {
+  Card, CardBody, Col, Button, ButtonToolbar,
+} from 'reactstrap';
 import { Field, reduxForm } from 'redux-form';
 import PropTypes from 'prop-types';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import renderDropZoneField from '../../../../shared/components/form/DropZone';
 
 const FileUploadDefault = ({ handleSubmit, reset, t }) => (
@@ -20,7 +22,7 @@ const FileUploadDefault = ({ handleSubmit, reset, t }) => (
           />
           <ButtonToolbar className="form__button-toolbar">
             <Button color="primary" type="submit">Submit</Button>
-            <Button type="button" onClick={reset}>
+            <Button type="reset" onClick={reset}>
                   Cancel
             </Button>
           </ButtonToolbar>
@@ -38,4 +40,4 @@ FileUploadDefault.propTypes = {
 
 export default reduxForm({
   form: 'file_upload_default', // a unique identifier for this form
-})(translate('common')(FileUploadDefault));
+})(withTranslation('common')(FileUploadDefault));

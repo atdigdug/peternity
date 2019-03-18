@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
 import { Polar } from 'react-chartjs-2';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const data = {
@@ -46,4 +46,4 @@ PolarArea.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(PolarArea);
+export default withTranslation('common')(PolarArea);

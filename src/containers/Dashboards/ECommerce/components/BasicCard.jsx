@@ -1,5 +1,5 @@
 import React from 'react';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import Panel from '../../../../shared/components/Panel';
 
@@ -15,7 +15,7 @@ const BasicCard = ({ t }) => (
       <h5 className="subhead dashboard__product-subhead">Knowledge nay estimable questions repulsive daughters
             boy.
       </h5>
-      <p><a href="/">View in the item list</a></p>
+      <p><a href="/easydev/e-commerce/catalog">View in the item list</a></p>
     </div>
   </Panel>
 );
@@ -25,4 +25,4 @@ BasicCard.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(BasicCard);
+export default withTranslation('common')(BasicCard);

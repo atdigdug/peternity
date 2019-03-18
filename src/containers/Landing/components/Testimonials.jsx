@@ -1,6 +1,8 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { Col, Row, Container, Card, CardBody } from 'reactstrap';
+import {
+  Col, Row, Container, Card, CardBody,
+} from 'reactstrap';
 import StarIcon from 'mdi-react/StarIcon';
 
 const Testimonials = () => (
@@ -59,7 +61,7 @@ const Testimonials = () => (
             </Card>
           </a>
         </Col>
-        <Col lg={{ size: 4, offset: 0 }} md={{ size: 6, offset: 3 }} >
+        <Col lg={{ size: 4, offset: 0 }} md={{ size: 6, offset: 3 }}>
           <a
             href="https://themeforest.net/item/easypro-developer-friendly-react-bootstrap-4-admin-template/reviews/21798550"
             target="_blank"

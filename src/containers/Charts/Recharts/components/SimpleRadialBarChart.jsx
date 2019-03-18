@@ -1,7 +1,9 @@
 import React from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
-import { RadialBarChart, RadialBar, Legend, Tooltip, ResponsiveContainer } from 'recharts';
-import { translate } from 'react-i18next';
+import {
+  RadialBarChart, RadialBar, Legend, Tooltip, ResponsiveContainer,
+} from 'recharts';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const data = [
@@ -55,4 +57,4 @@ SimpleRadialBarChart.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(SimpleRadialBarChart);
+export default withTranslation('common')(SimpleRadialBarChart);

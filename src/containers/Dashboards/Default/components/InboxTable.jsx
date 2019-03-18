@@ -25,8 +25,7 @@ export default class InboxTable extends PureComponent {
           <div className="inbox__content">
             <Table className="table--bordered inbox__emails-table" responsive>
               <tbody>
-                {emails.slice(1, 15).map((e, i) =>
-                  <EmailListItem email={e} key={i} onLetter={onLetter} />)}
+                {emails.slice(1, 15).map((e, i) => <EmailListItem email={e} key={i} onLetter={onLetter} />)}
               </tbody>
             </Table>
           </div>

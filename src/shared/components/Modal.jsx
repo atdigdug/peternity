@@ -30,15 +30,14 @@ export default class ModalComponent extends PureComponent {
   }
 
   toggle() {
-    this.setState({
-      modal: !this.state.modal,
-    });
+    this.setState(prevState => ({ modal: !prevState.modal }));
   }
 
   render() {
     const {
       color, btn, title, message, colored, header,
     } = this.props;
+    const { modal } = this.state;
     let Icon;
 
     switch (color) {
@@ -66,12 +65,12 @@ export default class ModalComponent extends PureComponent {
       <div>
         <Button color={color} onClick={this.toggle}>{btn}</Button>
         <Modal
-          isOpen={this.state.modal}
+          isOpen={modal}
           toggle={this.toggle}
           className={`modal-dialog--${color} ${modalClass}`}
         >
           <div className="modal__header">
-            <button className="lnr lnr-cross modal__close-btn" onClick={this.toggle} />
+            <button className="lnr lnr-cross modal__close-btn" type="button" onClick={this.toggle} />
             {header ? '' : Icon}
             <h4 className="bold-text  modal__title">{title}</h4>
           </div>

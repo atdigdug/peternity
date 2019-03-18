@@ -23,7 +23,8 @@ class MatTableFilterButton extends React.Component {
   };
 
   handleSort = property => (event) => {
-    this.props.onRequestSort(event, property);
+    const { onRequestSort } = this.props;
+    onRequestSort(event, property);
     this.handleClose();
   };
 

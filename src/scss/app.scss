@@ -10,8 +10,8 @@
 @import './base/typography';          // base styles of h1-h6, p, span
 
 //components...
-@import 'component/alert';                    // components/Alert.js ('reactstrap')
-@import 'component/btn';                      // Button from 'reactstrap'
+@import './component/alert';                    // components/Alert.js ('reactstrap')
+@import './component/btn';                      // Button from 'reactstrap'
 @import './component/calendar';               // components/Calendar.js  ('react-big-calendar')
 @import './component/card';                   // Card, CardBody from 'reactstrap'
 @import './component/carousel';               // components/carousel/* ('react-slick')
@@ -41,6 +41,7 @@
 @import './component/progress-bar';           // ProgressBar from 'reactstrap'
 @import './component/project-member';         // components/ProjectMember.js
 @import './component/radio-btn';              // components/form/RadioButton.js
+@import './component/react-select';
 @import './component/scroll';
 @import './component/search-result';          // components/SearchResult.js
 @import './component/select-options';         // <select> and <option>

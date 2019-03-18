@@ -1,6 +1,8 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
-import { PieChart, Pie, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import {
+  PieChart, Pie, Tooltip, Legend, ResponsiveContainer,
+} from 'recharts';
 import PropTypes from 'prop-types';
 import Panel from '../../../../shared/components/Panel';
 

@@ -18,11 +18,11 @@ export default class WizardForm extends PureComponent {
   }
 
   nextPage = () => {
-    this.setState({ page: this.state.page + 1 });
+    this.setState(prevState => ({ page: prevState.page + 1 }));
   };
 
   previousPage = () => {
-    this.setState({ page: this.state.page - 1 });
+    this.setState(prevState => ({ page: prevState.page - 1 }));
   };
 
   render() {
@@ -41,16 +41,20 @@ export default class WizardForm extends PureComponent {
               </div>
               <div className="wizard__form-wrapper">
                 {page === 1 && <WizardFormOne onSubmit={this.nextPage} />}
-                {page === 2 &&
+                {page === 2
+                && (
                 <WizardFormTwo
                   previousPage={this.previousPage}
                   onSubmit={this.nextPage}
-                />}
-                {page === 3 &&
+                />
+                )}
+                {page === 3
+                && (
                 <WizardFormThree
                   previousPage={this.previousPage}
                   onSubmit={onSubmit}
-                />}
+                />
+                )}
               </div>
             </div>
           </Card>
@@ -59,4 +63,3 @@ export default class WizardForm extends PureComponent {
     );
   }
 }
-

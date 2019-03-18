@@ -1,5 +1,7 @@
 import React from 'react';
-import { Card, CardBody, Col, Button } from 'reactstrap';
+import {
+  Card, CardBody, Col, Button,
+} from 'reactstrap';
 
 const balloon = `${process.env.PUBLIC_URL}/img/pricing_cards/002-hot-air-balloon.svg`;
 

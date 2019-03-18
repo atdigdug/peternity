@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import React, { PureComponent } from 'react';
-import { Badge, Card, CardBody, Col, Collapse } from 'reactstrap';
+import {
+  Badge, Card, CardBody, Col, Collapse,
+} from 'reactstrap';
 import PropTypes from 'prop-types';
 
 import CloseIcon from 'mdi-react/CloseIcon';
@@ -21,6 +23,8 @@ export default class AlertComponent extends PureComponent {
     xl: PropTypes.number,
     sm: PropTypes.number,
     xs: PropTypes.number,
+    before: PropTypes.element,
+    panelClass: PropTypes.string,
   };
 
   static defaultProps = {
@@ -35,6 +39,8 @@ export default class AlertComponent extends PureComponent {
     xl: 0,
     sm: 0,
     xs: 0,
+    before: null,
+    panelClass: '',
   };
 
   constructor() {
@@ -56,33 +62,36 @@ export default class AlertComponent extends PureComponent {
   };
 
   onCollapse = () => {
-    this.setState({ collapse: !this.state.collapse });
+    this.setState(prevState => ({ collapse: !prevState.collapse }));
   };
 
   onRefresh = () => {
     // your async logic here
-    this.setState({ refresh: !this.state.refresh });
+    this.setState(prevState => ({ refresh: !prevState.refresh }));
     setTimeout(() => this.setState({ refresh: false }), 5000);
   };
 
   render() {
     const {
-      md, lg, xl, sm, xs, color, divider, icon, title, label, subhead,
+      md, lg, xl, sm, xs, color, divider, icon, title, label, subhead, before,
+      panelClass, children,
     } = this.props;
 
-    if (this.state.visible) {
+    const { collapse, refresh, visible } = this.state;
+
+    if (visible) {
       return (
         <Col md={md} lg={lg} xl={xl} sm={sm} xs={xs}>
           <Card
-            className={`panel${this.props.color ? ` panel--${color}` : ''}
-            ${divider ? ' panel--divider' : ''}${this.state.collapse ? '' : ' panel--collapse'}`}
+            className={`panel${color ? ` panel--${color}` : ''}
+            ${divider ? ' panel--divider' : ''}${collapse ? '' : ' panel--collapse'} ${panelClass}`}
           >
             <CardBody className="panel__body">
-              {this.state.refresh ? <div className="panel__refresh"><LoadingIcon /></div> : ''}
+              {refresh ? <div className="panel__refresh"><LoadingIcon /></div> : ''}
               <div className="panel__btns">
-                <button className="panel__btn" onClick={this.onCollapse}><MinusIcon /></button>
-                <button className="panel__btn" onClick={this.onRefresh}><AutorenewIcon /></button>
-                <button className="panel__btn" onClick={this.onDismiss}><CloseIcon /></button>
+                <button className="panel__btn" type="button" onClick={this.onCollapse}><MinusIcon /></button>
+                <button className="panel__btn" type="button" onClick={this.onRefresh}><AutorenewIcon /></button>
+                <button className="panel__btn" type="button" onClick={this.onDismiss}><CloseIcon /></button>
               </div>
               <div className="panel__title">
                 <h5 className="bold-text">
@@ -92,13 +101,14 @@ export default class AlertComponent extends PureComponent {
                 </h5>
                 <h5 className="subhead">{subhead}</h5>
               </div>
-              <Collapse isOpen={this.state.collapse}>
+              <Collapse isOpen={collapse}>
                 <div className="panel__content">
-                  {this.props.children}
+                  {children}
                 </div>
               </Collapse>
             </CardBody>
           </Card>
+          {before}
         </Col>
       );
     }
@@ -106,3 +116,11 @@ export default class AlertComponent extends PureComponent {
     return '';
   }
 }
+
+export const PanelTitle = ({ title }) => (
+  <div className="panel__title">
+    <h5 className="bold-text">
+      {title}
+    </h5>
+  </div>
+);

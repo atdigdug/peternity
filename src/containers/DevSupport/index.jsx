@@ -1,5 +1,7 @@
 import React from 'react';
-import { Col, Container, Row, Card, CardBody, Button } from 'reactstrap';
+import {
+  Col, Container, Row, Card, CardBody, Button,
+} from 'reactstrap';
 import Table from './components/DataTable';
 import IrritatingAggregate from './components/Irritating';
 

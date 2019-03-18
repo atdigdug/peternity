@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react';
-import { Button, ButtonToolbar, Card, CardBody, Col } from 'reactstrap';
+import {
+  Button, ButtonToolbar, Card, CardBody, Col,
+} from 'reactstrap';
 import { Field, reduxForm } from 'redux-form';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';

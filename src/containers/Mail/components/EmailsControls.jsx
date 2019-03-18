@@ -1,6 +1,8 @@
 /* eslint-disable react/no-typos */
 import React from 'react';
-import { Button, DropdownItem, DropdownMenu, DropdownToggle, UncontrolledDropdown } from 'reactstrap';
+import {
+  Button, DropdownItem, DropdownMenu, DropdownToggle, UncontrolledDropdown,
+} from 'reactstrap';
 import PropTypes from 'prop-types';
 
 import CheckIcon from 'mdi-react/CheckIcon';
@@ -14,7 +16,7 @@ const EmailsControls = ({ emails, onChangePage }) => (
   <div className="inbox__emails-controls-wrap">
     <div className="inbox__emails-controls">
       <label className="checkbox-btn checkbox-btn--colored-click inbox__emails-control-checkbox" htmlFor="checkbox">
-        <input className="checkbox-btn__checkbox" type="checkbox" />
+        <input id="checkbox" className="checkbox-btn__checkbox" type="checkbox" />
         <span className="checkbox-btn__checkbox-custom">
           <CheckIcon />
         </span>
@@ -38,7 +40,7 @@ const EmailsControls = ({ emails, onChangePage }) => (
         <input placeholder="Search" />
         <div className="inbox__emails-control-search-icon"><MagnifyIcon /></div>
       </div>
-      <Pagination items={emails} onChangePage={onChangePage} />
+      <Pagination items={emails} onChangePage={onChangePage} initialPage={1} />
     </div>
   </div>
 );

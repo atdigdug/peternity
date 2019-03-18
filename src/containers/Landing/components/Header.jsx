@@ -23,7 +23,7 @@ const Header = ({ onClick }) => (
           <Link className="landing__btn landing__btn--header" to="/documentation/introduction" target="_blank">
             Check out the docs
           </Link>
-          <button className="landing__btn landing__btn--header" onClick={onClick}>
+          <button type="button" className="landing__btn landing__btn--header" onClick={onClick}>
             Go to demo
           </button>
           <img className="landing__header-img" src={img} alt="macbook" />

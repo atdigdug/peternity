@@ -26,7 +26,8 @@ class SelectField extends PureComponent {
   };
 
   handleChange = (selectedOption) => {
-    this.props.onChange(selectedOption);
+    const { onChange } = this.props;
+    onChange(selectedOption);
   };
 
   render() {
@@ -41,23 +42,29 @@ class SelectField extends PureComponent {
         onChange={this.handleChange}
         options={options}
         clearable={false}
-        className="form__form-group-select"
+        className="react-select"
         placeholder={placeholder}
+        classNamePrefix="react-select"
       />
     );
   }
 }
 
-const renderSelectField = props => (
-  <div className="form__form-group-input-wrap">
-    <SelectField
-      {...props.input}
-      options={props.options}
-      placeholder={props.placeholder}
-    />
-    {props.meta.touched && props.meta.error && <span className="form__form-group-error">{props.meta.error}</span>}
-  </div>
-);
+const renderSelectField = (props) => {
+  const {
+    input, meta, options, placeholder,
+  } = props;
+  return (
+    <div className="form__form-group-input-wrap">
+      <SelectField
+        {...input}
+        options={options}
+        placeholder={placeholder}
+      />
+      {meta.touched && meta.error && <span className="form__form-group-error">{meta.error}</span>}
+    </div>
+  );
+};
 
 renderSelectField.propTypes = {
   input: PropTypes.shape({

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
 import { Field, reduxForm } from 'redux-form';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import renderRadioButtonField from '../../../../shared/components/form/RadioButton';
 import renderCheckBoxField from '../../../../shared/components/form/CheckBox';
@@ -212,4 +212,4 @@ DefaultControls.propTypes = {
 
 export default reduxForm({
   form: 'defaults_controls', // a unique identifier for this form
-})(translate('common')(DefaultControls));
+})(withTranslation('common')(DefaultControls));

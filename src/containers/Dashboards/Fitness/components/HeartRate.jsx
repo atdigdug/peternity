@@ -2,7 +2,7 @@ import React from 'react';
 import { PieChart, Pie, ResponsiveContainer } from 'recharts';
 import { Card, CardBody, Col } from 'reactstrap';
 import HeartOutlineIcon from 'mdi-react/HeartOutlineIcon';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const data = [{ value: 68, fill: '#ff4861' },
@@ -37,4 +37,4 @@ HeartRate.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(HeartRate);
+export default withTranslation('common')(HeartRate);

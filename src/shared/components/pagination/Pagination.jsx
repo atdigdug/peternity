@@ -1,92 +1,63 @@
-/* eslint-disable */
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { Pagination, PaginationItem, PaginationLink } from 'reactstrap';
 import PropTypes from 'prop-types';
 import range from 'lodash.range';
 import ChevronRightIcon from 'mdi-react/ChevronRightIcon';
 import ChevronLeftIcon from 'mdi-react/ChevronLeftIcon';
 
-export default class PaginationComponent extends PureComponent {
+export default class CustPag extends React.Component {
   static propTypes = {
-    items: PropTypes.array.isRequired,
     onChangePage: PropTypes.func.isRequired,
-    pageSize: PropTypes.number,
+    itemsCount: PropTypes.number.isRequired,
+    itemsToShow: PropTypes.number.isRequired,
+    pageOfItems: PropTypes.number.isRequired,
   };
 
-  constructor(props) {
-    super(props);
-    this.state = { pager: {}, initialPage: 1, size: this.props.pageSize };
-  }
-
-  componentWillMount() {
-    // set page if items array isn't empty
-    if (this.props.items && this.props.items.length) {
-      this.setPage(this.props.initialPage);
-    }
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    // reset page if items array has changed
-    if (this.props.items !== prevProps.items) {
-      this.setPage(this.props.initialPage);
-    }
-  }
-
   setPage = (page) => {
-    const items = this.props.items;
-    const pager = this.state.pager;
-    const size = this.state.size;
+    const { itemsCount, itemsToShow, onChangePage } = this.props;
 
-    if (page < 1 || page > pager.totalPages) {
+    // calculate total pages
+    const totalPages = Math.ceil(itemsCount / itemsToShow);
+
+    if (page < 1 || page > totalPages) {
       return;
     }
 
-    // get new pager object for specified page
-    this.pager = this.getPager(items.length, page, size);
-
-    // get new page of items from items array
-    const pageOfItems = items.slice(pager.startIndex, pager.endIndex + 1);
-
-    // update state
-    this.setState({ pager: this.pager });
-
     // call change page function in parent component
-    this.props.onChangePage(pageOfItems);
+    onChangePage(page);
   };
 
-  getPager = (totalItems, currentPage, pageSize) => {
+  getPager = (totalItems, curPage, pSize) => {
     // default to first page
-    currentPage = currentPage || 1;
+    const currentPage = curPage || 1;
 
     // default page size is 10
-    pageSize = pageSize || 10;
+    const pageSize = pSize || 10;
 
     // calculate total pages
     const totalPages = Math.ceil(totalItems / pageSize);
 
-    let startPage,
-      endPage;
+    let startPage;
+    let endPage;
     if (totalPages <= 10) {
       // less than 10 total pages so show all
       startPage = 1;
       endPage = totalPages;
-    } else {
+    } else if (currentPage <= 6) {
       // more than 10 total pages so calculate start and end pages
-      if (currentPage <= 6) {
-        startPage = 1;
-        endPage = 10;
-      } else if (currentPage + 4 >= totalPages) {
-        startPage = totalPages - 9;
-        endPage = totalPages;
-      } else {
-        startPage = currentPage - 5;
-        endPage = currentPage + 4;
-      }
+      startPage = 1;
+      endPage = 10;
+    } else if (currentPage + 4 >= totalPages) {
+      startPage = totalPages - 9;
+      endPage = totalPages;
+    } else {
+      startPage = currentPage - 5;
+      endPage = currentPage + 4;
     }
 
     // calculate start and end item indexes
     const startIndex = (currentPage - 1) * pageSize;
-    const endIndex = Math.min(startIndex + pageSize - 1, totalItems - 1);
+    const endIndex = Math.min((startIndex + pageSize) - 1, totalItems - 1);
 
     // create an array of pages to ng-repeat in the pager control
     const pages = range(startPage, endPage + 1);
@@ -106,50 +77,64 @@ export default class PaginationComponent extends PureComponent {
   };
 
   render() {
-    const { items } = this.props;
-    const pager = this.pager;
+    const { itemsCount, itemsToShow, pageOfItems } = this.props;
 
-    return (
+    const pages = [];
+    for (let i = 1; i <= Math.ceil(itemsCount / itemsToShow); i += 1) {
+      pages.push(i);
+    }
+
+    return itemsCount ? (
       <div className="pagination__wrap">
-        {(!pager.pages || pager.pages.length <= 1) ? '' :
-        <Pagination className="pagination">
-          <PaginationItem className="pagination__item" disabled={pager.currentPage === 1}>
-            <PaginationLink
-              className="pagination__link pagination__link--arrow"
-              type="button"
-              onClick={() => this.setPage(1)}
-            >
-              <ChevronLeftIcon className="pagination__link-icon" />
-            </PaginationLink>
-          </PaginationItem>
-          {pager.pages.map((page, index) =>
-              (<PaginationItem className="pagination__item" key={index} active={pager.currentPage === page}>
-                <PaginationLink className="pagination__link" type="button" onClick={() => this.setPage(page)}>
-                  {page}
+        {(itemsCount <= 1) ? ''
+          : (
+            <Pagination className="pagination">
+              <PaginationItem className="pagination__item" disabled={pageOfItems === 1}>
+                <PaginationLink
+                  className="pagination__link pagination__link--arrow"
+                  type="button"
+                  onClick={() => this.setPage(1)}
+                >
+                  <ChevronLeftIcon className="pagination__link-icon" />
                 </PaginationLink>
-              </PaginationItem>))}
-          <PaginationItem className="pagination__item" disabled={pager.currentPage === pager.totalPages}>
-            <PaginationLink
-              className="pagination__link pagination__link--arrow"
-              type="button"
-              onClick={() => this.setPage(pager.totalPages)}
-            >
-              <ChevronRightIcon className="pagination__link-icon" />
-            </PaginationLink>
-          </PaginationItem>
-        </Pagination>
-        }
+              </PaginationItem>
+              {pages.map(page => (
+                <PaginationItem
+                  className="pagination__item"
+                  key={page}
+                  active={pageOfItems === page}
+                >
+                  <PaginationLink
+                    className="pagination__link"
+                    type="button"
+                    onClick={() => this.setPage(page)}
+                  >
+                    {page}
+                  </PaginationLink>
+                </PaginationItem>
+              ))
+          }
+              <PaginationItem className="pagination__item" disabled={pageOfItems === pages.length}>
+                <PaginationLink
+                  className="pagination__link pagination__link--arrow"
+                  type="button"
+                  onClick={() => this.setPage(pages.length)}
+                >
+                  <ChevronRightIcon className="pagination__link-icon" />
+                </PaginationLink>
+              </PaginationItem>
+            </Pagination>
+          )
+          }
         <div className="pagination-info">
-          <span>Showing {`${pager.pageSize * (pager.currentPage - 1) + 1} `}
-            to {pager.pageSize * pager.currentPage > items.length ? items.length
-              : pager.pageSize * pager.currentPage} of {items.length}
+          <span>Showing {`${(itemsToShow * (pageOfItems - 1)) + 1} `}
+              to {itemsToShow * pageOfItems > itemsCount ? itemsCount
+            : itemsToShow * pageOfItems} of {itemsCount}
           </span>
         </div>
       </div>
-    );
+    ) : <div />;
   }
 }
 
 /* eslint-enable */
-
-// todo: rework it

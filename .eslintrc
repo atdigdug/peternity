@@ -19,8 +19,11 @@
       "specialLink": [ "to", "hrefLeft", "hrefRight" ],
       "aspects": [ "noHref", "invalidHref", "preferButton" ]
     }],
+    "jsx-a11y/label-has-associated-control": [0, {}],
     "max-len": ["error", {"code": 120, "ignoreRegExpLiterals": true, "tabWidth": 2}],
     "no-console": [1],
-    "linebreak-style": "off"
+    "linebreak-style": "off",
+    "react/jsx-one-expression-per-line": [0, { "allow": "literal" }],
+    "react/destructuring-assignment": [0, "always", { "ignoreClassFields": true }]
   }
 }

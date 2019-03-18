@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unused-state,react/no-unescaped-entities */
 import React, { PureComponent } from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
-import EditTable from '../../../../shared/components/table/EditableTable';
+import DataPaginationTable from '../../../../shared/components/table/DataPaginationTable';
 import Pagination from '../../../../shared/components/pagination/Pagination';
 
 export default class DataTable extends PureComponent {
@@ -16,48 +16,64 @@ export default class DataTable extends PureComponent {
       {
         key: 'first',
         name: 'First Name',
-        sortable: true,
+        sortable: false,
       },
       {
         key: 'last',
         name: 'Last Name',
-        sortable: true,
+        sortable: false,
       },
       {
         key: 'user',
         name: 'Username',
-        sortable: true,
+        sortable: false,
       },
       {
         key: 'age',
         name: 'Age',
-        sortable: true,
+        sortable: false,
       },
       {
         key: 'date',
         name: 'Date',
-        sortable: true,
+        sortable: false,
       },
       {
         key: 'location',
         name: 'Location',
-        sortable: true,
+        sortable: false,
       },
       {
         key: 'work',
         name: 'Work',
-        sortable: true,
+        sortable: false,
       },
     ];
 
+    const initialPageNumber = 1;
+    const initialRowsCount = 10;
+
+    const minRows = 20;
+    const maxRows = 41;
+    const rowsCount = Math.random() * (maxRows - minRows);
+
+    const originalRows = this.createRows(rowsCount + minRows);
+    const currentPageRows = this.filterRows(originalRows, initialPageNumber, initialRowsCount);
+
     this.state = {
-      rows: this.createRows(23),
-      pageOfItems: [],
+      rows: originalRows,
+      rowsToShow: currentPageRows,
+      pageOfItems: initialPageNumber,
+      itemsToShow: initialRowsCount,
     };
   }
 
   onChangePage = (pageOfItems) => {
-    this.setState({ pageOfItems });
+    const { rows, itemsToShow } = this.state;
+    if (pageOfItems) {
+      const rowsToShow = this.filterRows(rows, pageOfItems, itemsToShow);
+      this.setState({ rowsToShow, pageOfItems });
+    }
   };
 
   getRandomDate = (start, end) => new Date(start.getTime() + (Math.random() * (end.getTime()
@@ -80,7 +96,17 @@ export default class DataTable extends PureComponent {
     return rows;
   };
 
+  filterRows = (originalRows, pageNumber, rowsOnPage) => {
+    const rowsFrom = rowsOnPage * (pageNumber - 1);
+    const rowsTo = rowsFrom + rowsOnPage;
+    return originalRows.slice(rowsFrom, rowsTo);
+  };
+
   render() {
+    const {
+      rows, itemsToShow, pageOfItems, rowsToShow,
+    } = this.state;
+
     return (
       <Col md={12} lg={12}>
         <Card>
@@ -89,16 +115,16 @@ export default class DataTable extends PureComponent {
               <h5 className="bold-text">data table</h5>
               <h5 className="subhead">Use table with column's option <span className="red-text">sortable</span></h5>
             </div>
-            <p>Show
-              <select className="select-options">
-                <option value="10">10</option>
-                <option value="20">20</option>
-                <option value="30">30</option>
-              </select>
-              entries
-            </p>
-            <EditTable heads={this.heads} rows={this.state.rows} />
-            <Pagination items={this.state.rows} onChangePage={this.onChangePage} />
+            <DataPaginationTable
+              heads={this.heads}
+              rows={rowsToShow}
+            />
+            <Pagination
+              itemsCount={rows.length}
+              itemsToShow={itemsToShow}
+              pageOfItems={pageOfItems}
+              onChangePage={this.onChangePage}
+            />
           </CardBody>
         </Card>
       </Col>

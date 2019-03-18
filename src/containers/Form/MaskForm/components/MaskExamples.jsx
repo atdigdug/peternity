@@ -1,9 +1,11 @@
 import React from 'react';
-import { Card, CardBody, Col, Button, ButtonToolbar } from 'reactstrap';
+import {
+  Card, CardBody, Col, Button, ButtonToolbar,
+} from 'reactstrap';
 import { Field, reduxForm } from 'redux-form';
 import MaskedInput from 'react-text-mask';
-import { translate } from 'react-i18next';
-import PropTypes from 'prop-types';
+import { withTranslation } from 'react-i18next';
+import * as PropTypes from 'prop-types';
 
 const renderField = ({
   input, placeholder, type, mask,
@@ -15,7 +17,7 @@ renderField.propTypes = {
   input: PropTypes.shape().isRequired,
   placeholder: PropTypes.string,
   type: PropTypes.string,
-  mask: PropTypes.func.isRequired,
+  mask: PropTypes.arrayOf(PropTypes.any).isRequired,
 };
 
 renderField.defaultProps = {
@@ -130,4 +132,4 @@ MaskExamples.propTypes = {
 
 export default reduxForm({
   form: 'mask_examples', // a unique identifier for this form
-})(translate('common')(MaskExamples));
+})(withTranslation('common')(MaskExamples));

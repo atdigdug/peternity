@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import PointSizes from './components/PointSizes';
 import RandomAnimatedLine from './components/RandomAnimatedLine';
@@ -34,4 +34,4 @@ ChartsJS.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(ChartsJS);
+export default withTranslation('common')(ChartsJS);

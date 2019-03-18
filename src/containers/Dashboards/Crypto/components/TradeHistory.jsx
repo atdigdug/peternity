@@ -1,5 +1,5 @@
 import React from 'react';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { Table } from 'reactstrap';
 import Panel from '../../../../shared/components/Panel';
@@ -61,4 +61,4 @@ TradeHistory.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(TradeHistory);
+export default withTranslation('common')(TradeHistory);

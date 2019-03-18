@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { CustomizerProps, ThemeProps } from '../../shared/prop-types/ReducerProps';
-import YM from './YM';
-// todo: delete ym
 
 class MainWrapper extends PureComponent {
   static propTypes = {
@@ -14,7 +12,7 @@ class MainWrapper extends PureComponent {
   };
 
   render() {
-    const { theme, customizer } = this.props;
+    const { theme, customizer, children } = this.props;
 
     const wrapperClass = classNames({
       wrapper: true,
@@ -25,9 +23,8 @@ class MainWrapper extends PureComponent {
 
     return (
       <div className={theme.className}>
-        <YM />
         <div className={wrapperClass}>
-          {this.props.children}
+          {children}
         </div>
       </div>
     );

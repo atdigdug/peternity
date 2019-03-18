@@ -57,4 +57,3 @@ CartPurchase.propTypes = {
 export default reduxForm({
   form: 'cart_purchase_form', // a unique identifier for this form
 })(CartPurchase);
-

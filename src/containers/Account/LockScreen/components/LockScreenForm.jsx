@@ -21,13 +21,12 @@ class AccountForm extends PureComponent {
 
   showPassword(e) {
     e.preventDefault();
-    this.setState({
-      showPassword: !this.state.showPassword,
-    });
+    this.setState(prevState => ({ showPassword: !prevState.showPassword }));
   }
 
   render() {
     const { handleSubmit } = this.props;
+    const { showPassword } = this.state;
 
     return (
       <form className="form" onSubmit={handleSubmit}>
@@ -40,11 +39,12 @@ class AccountForm extends PureComponent {
             <Field
               name="password"
               component="input"
-              type={this.state.showPassword ? 'text' : 'password'}
+              type={showPassword ? 'text' : 'password'}
               placeholder="Password"
             />
             <button
-              className={`form__form-group-button${this.state.showPassword ? ' active' : ''}`}
+              className={`form__form-group-button${showPassword ? ' active' : ''}`}
+              type="button"
               onClick={e => this.showPassword(e)}
             ><EyeIcon />
             </button>

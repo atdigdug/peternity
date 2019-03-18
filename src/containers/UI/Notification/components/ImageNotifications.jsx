@@ -1,7 +1,9 @@
 import React, { PureComponent } from 'react';
-import { Button, ButtonToolbar, Card, CardBody, Col } from 'reactstrap';
+import {
+  Button, ButtonToolbar, Card, CardBody, Col,
+} from 'reactstrap';
 import PropTypes from 'prop-types';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import { ImageNotification } from '../../../../shared/components/Notification';
 
 const image = `${process.env.PUBLIC_URL}/img/photo_notification.png`;
@@ -13,7 +15,8 @@ class ImageNotifications extends PureComponent {
   };
 
   show = (position) => {
-    this.props.showNotification({
+    const { showNotification } = this.props;
+    return showNotification({
       notification: <ImageNotification
         title="Lora Simpson"
         img={image}
@@ -48,4 +51,4 @@ class ImageNotifications extends PureComponent {
   }
 }
 
-export default translate('common')(ImageNotifications);
+export default withTranslation('common')(ImageNotifications);

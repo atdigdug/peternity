@@ -1,5 +1,7 @@
 import React from 'react';
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Brush, Legend, ResponsiveContainer } from 'recharts';
+import {
+  AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Brush, Legend, ResponsiveContainer,
+} from 'recharts';
 import Panel from '../../../../shared/components/Panel';
 
 const data = [{ name: '25.04', btc: 59, eth: 140 },

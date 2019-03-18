@@ -1,7 +1,8 @@
 import React from 'react';
-import { Col, Container, Row, Card, CardBody, UncontrolledTooltip } from 'reactstrap';
+import {
+  Col, Container, Row, Card, CardBody, UncontrolledTooltip, Breadcrumb, BreadcrumbItem,
+} from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import { Breadcrumb } from 'react-bootstrap';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
@@ -22,8 +23,8 @@ const EngagementsDetail = () => (
         <Card>
           <CardBody>
             <Breadcrumb>
-              <Breadcrumb.Item href="/engagements">Organization 1</Breadcrumb.Item>
-              <Breadcrumb.Item active>Annual Sale Launch Engagement</Breadcrumb.Item>
+              <BreadcrumbItem><a href="/engagements">Organization 1</a></BreadcrumbItem>
+              <BreadcrumbItem active>Annual Sale Launch Engagement</BreadcrumbItem>
             </Breadcrumb>
           </CardBody>
         </Card>
@@ -33,17 +34,17 @@ const EngagementsDetail = () => (
       <Col>
         <Card>
           <CardBody>
-            <Stepper activeStep="0">
-              <Step id="tooltip1" key="Intake" completed="true">
+            <Stepper activeStep={0}>
+              <Step id="tooltip1" key="Intake" completed>
                 <StepLabel optional="1/1/2018">Intake</StepLabel>
               </Step>
-              <Step id="tooltip2" key="Threat Model" completed="true">
+              <Step id="tooltip2" key="Threat Model" completed>
                 <StepLabel optional="2/1/2018">Threat Model</StepLabel>
               </Step>
-              <Step id="tooltip3" key="Onboard" completed="true">
+              <Step id="tooltip3" key="Onboard" completed>
                 <StepLabel optional="3/1/2018">Onboard</StepLabel>
               </Step>
-              <Step key="Offboard" active="true">
+              <Step key="Offboard" active>
                 <StepLabel>Offboard</StepLabel>
               </Step>
               <Step key="Risk Model">

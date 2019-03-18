@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import ReactHighmaps from 'react-highcharts/ReactHighmaps.src';
 import maps from './world';
@@ -59,8 +59,8 @@ const config = {
     shadow: false,
     borderRadius: 0,
     useHTML: true,
-    pointFormat: '<br><span class=\'f32\'><span class=\'flag {point.flag}\'></span></span>' +
-    '{point.name}: <b>{point.value}</b>/km²',
+    pointFormat: '<br><span class=\'f32\'><span class=\'flag {point.flag}\'></span></span>'
+    + '{point.name}: <b>{point.value}</b>/km²',
   },
 
   colorAxis: {
@@ -96,4 +96,4 @@ Map.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(Map);
+export default withTranslation('common')(Map);

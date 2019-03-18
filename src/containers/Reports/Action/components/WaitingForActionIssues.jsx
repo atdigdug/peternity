@@ -1,5 +1,7 @@
 import React from 'react';
-import { Card, CardBody, Col, Table } from 'reactstrap';
+import {
+  Card, CardBody, Col, Table,
+} from 'reactstrap';
 
 const WaitingForActionIssues = () => (
   <Col md={12} lg={12} xl={6}>

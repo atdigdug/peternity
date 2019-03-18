@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const SimpleIconsListGreen = ({ t }) => (
@@ -27,4 +27,4 @@ SimpleIconsListGreen.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(SimpleIconsListGreen);
+export default withTranslation('common')(SimpleIconsListGreen);

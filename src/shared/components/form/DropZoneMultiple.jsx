@@ -18,16 +18,25 @@ class DropZoneMultipleField extends PureComponent {
   constructor() {
     super();
     this.state = {};
+    this.onDrop = this.onDrop.bind(this);
+  }
+
+  onDrop(files) {
+    const { onChange } = this.props;
+    onChange(files.map(fl => Object.assign(fl, {
+      preview: URL.createObjectURL(fl),
+    })));
   }
 
   removeFile= (index, e) => {
+    const { value, onChange } = this.props;
     e.preventDefault();
-    this.props.onChange(this.props.value.filter((val, i) => i !== index));
+    onChange(value.filter((val, i) => i !== index));
   };
 
   render() {
-    const files = this.props.value;
-    const { name, onChange, value } = this.props;
+    const { name, value } = this.props;
+    const files = value;
 
     return (
       <div className="dropzone dropzone--multiple">
@@ -36,34 +45,47 @@ class DropZoneMultipleField extends PureComponent {
           accept="image/jpeg, image/png"
           name={name}
           onDrop={(filesToUpload) => {
-            onChange(value ? value.concat(filesToUpload) : filesToUpload);
+            this.onDrop(value ? value.concat(filesToUpload) : filesToUpload);
           }}
         >
-          {(!files || files.length === 0) &&
-          <div className="dropzone__drop-here"><span className="lnr lnr-upload" /> Drop files here to upload</div>}
+          {({ getRootProps, getInputProps }) => (
+            <div {...getRootProps()} className="dropzone__input">
+              {(!files || files.length === 0)
+              && (
+                <div className="dropzone__drop-here">
+                  <span className="lnr lnr-upload" /> Drop file here to upload
+                </div>
+              )}
+              <input {...getInputProps()} />
+            </div>
+          )}
         </Dropzone>
-        {files && Array.isArray(files) &&
+        {files && Array.isArray(files)
+        && (
         <div className="dropzone__imgs-wrapper">
-          {files.map((file, i) =>
-            (
-              <div className="dropzone__img" key={i} style={{ backgroundImage: `url(${file.preview})` }}>
-                <p className="dropzone__img-name">{file.name}</p>
-                <button className="dropzone__img-delete" onClick={e => this.removeFile(i, e)}>
+          {files.map((file, i) => (
+            <div className="dropzone__img" key={i} style={{ backgroundImage: `url(${file.preview})` }}>
+              <p className="dropzone__img-name">{file.name}</p>
+              <button className="dropzone__img-delete" type="button" onClick={e => this.removeFile(i, e)}>
                 Remove
-                </button>
-              </div>
-            ))}
-        </div>}
+              </button>
+            </div>
+          ))}
+        </div>
+        )}
       </div>
     );
   }
 }
 
-const renderDropZoneMultipleField = props => (
-  <DropZoneMultipleField
-    {...props.input}
-  />
-);
+const renderDropZoneMultipleField = (props) => {
+  const { input } = props;
+  return (
+    <DropZoneMultipleField
+      {...input}
+    />
+  );
+};
 
 renderDropZoneMultipleField.propTypes = {
   input: PropTypes.shape({

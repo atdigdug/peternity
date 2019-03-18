@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react';
-import { Card, Col, Nav, NavItem, NavLink, TabContent, TabPane } from 'reactstrap';
+import {
+  Card, Col, Nav, NavItem, NavLink, TabContent, TabPane,
+} from 'reactstrap';
 import classnames from 'classnames';
 import ProfileTimeLine from './ProfileTimeLine';
 import ProfileActivities from './ProfileActivities';
@@ -17,7 +19,8 @@ export default class ProfileTabs extends PureComponent {
   }
 
   toggle(tab) {
-    if (this.state.activeTab !== tab) {
+    const { activeTab } = this.state;
+    if (activeTab !== tab) {
       this.setState({
         activeTab: tab,
       });
@@ -25,6 +28,12 @@ export default class ProfileTabs extends PureComponent {
   }
 
   render() {
+    const initialValues = {
+      username: 'Larry Boom',
+      email: 'boom@mail.com',
+    };
+
+    const { activeTab } = this.state;
     return (
       <Col md={12} lg={12} xl={8}>
         <Card>
@@ -33,7 +42,7 @@ export default class ProfileTabs extends PureComponent {
               <Nav tabs>
                 <NavItem>
                   <NavLink
-                    className={classnames({ active: this.state.activeTab === '1' })}
+                    className={classnames({ active: activeTab === '1' })}
                     onClick={() => {
                       this.toggle('1');
                     }}
@@ -43,7 +52,7 @@ export default class ProfileTabs extends PureComponent {
                 </NavItem>
                 <NavItem>
                   <NavLink
-                    className={classnames({ active: this.state.activeTab === '2' })}
+                    className={classnames({ active: activeTab === '2' })}
                     onClick={() => {
                       this.toggle('2');
                     }}
@@ -53,7 +62,7 @@ export default class ProfileTabs extends PureComponent {
                 </NavItem>
                 <NavItem>
                   <NavLink
-                    className={classnames({ active: this.state.activeTab === '3' })}
+                    className={classnames({ active: activeTab === '3' })}
                     onClick={() => {
                       this.toggle('3');
                     }}
@@ -62,7 +71,7 @@ export default class ProfileTabs extends PureComponent {
                   </NavLink>
                 </NavItem>
               </Nav>
-              <TabContent activeTab={this.state.activeTab}>
+              <TabContent activeTab={activeTab}>
                 <TabPane tabId="1">
                   <ProfileActivities />
                 </TabPane>
@@ -70,7 +79,7 @@ export default class ProfileTabs extends PureComponent {
                   <ProfileTimeLine />
                 </TabPane>
                 <TabPane tabId="3">
-                  <ProfileSettings onSubmit={showResults} />
+                  <ProfileSettings onSubmit={showResults} initialValues={initialValues} />
                 </TabPane>
               </TabContent>
             </div>

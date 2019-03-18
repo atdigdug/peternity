@@ -1,5 +1,5 @@
 import React from 'react';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import Panel from '../../../../shared/components/Panel';
 
@@ -22,4 +22,4 @@ DefaultPanelWithSubhead.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(DefaultPanelWithSubhead);
+export default withTranslation('common')(DefaultPanelWithSubhead);

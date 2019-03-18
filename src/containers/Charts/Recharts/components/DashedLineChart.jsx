@@ -1,7 +1,9 @@
 import React from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { translate } from 'react-i18next';
+import {
+  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
+} from 'recharts';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const data = [
@@ -39,7 +41,7 @@ const DashedLineChart = ({ t }) => (
           <LineChart
             data={data}
             margin={{
-             top: 0, right: 0, left: -15, bottom: 0,
+              top: 0, right: 0, left: -15, bottom: 0,
             }}
           >
             <XAxis dataKey="name" />
@@ -61,4 +63,4 @@ DashedLineChart.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(DashedLineChart);
+export default withTranslation('common')(DashedLineChart);

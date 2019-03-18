@@ -8,19 +8,19 @@ import TableSortLabel from '@material-ui/core/TableSortLabel';
 
 const rows = [
   {
-    id: 'name', numeric: false, disablePadding: true, label: 'Dessert (100g serving)',
+    id: 'name', disablePadding: true, label: 'Dessert (100g serving)',
   },
   {
-    id: 'calories', numeric: true, disablePadding: false, label: 'Calories',
+    id: 'calories', disablePadding: false, label: 'Calories',
   },
   {
-    id: 'fat', numeric: true, disablePadding: false, label: 'Fat (g)',
+    id: 'fat', disablePadding: false, label: 'Fat (g)',
   },
   {
-    id: 'carbs', numeric: true, disablePadding: false, label: 'Carbs (g)',
+    id: 'carbs', disablePadding: false, label: 'Carbs (g)',
   },
   {
-    id: 'protein', numeric: true, disablePadding: false, label: 'Protein (g)',
+    id: 'protein', disablePadding: false, label: 'Protein (g)',
   },
 ];
 
@@ -35,7 +35,8 @@ export default class MatTableHead extends PureComponent {
   };
 
   createSortHandler = property => (event) => {
-    this.props.onRequestSort(event, property);
+    const { onRequestSort } = this.props;
+    onRequestSort(event, property);
   };
 
   render() {
@@ -58,7 +59,7 @@ export default class MatTableHead extends PureComponent {
             <TableCell
               className="material-table__cell material-table__cell--sort"
               key={row.id}
-              numeric={row.numeric}
+              align="right"
               padding={row.disablePadding ? 'none' : 'default'}
               sortDirection={orderBy === row.id ? order : false}
             >
@@ -71,7 +72,7 @@ export default class MatTableHead extends PureComponent {
                 {row.label}
               </TableSortLabel>
             </TableCell>
-            ), this)}
+          ), this)}
         </TableRow>
       </TableHead>
     );

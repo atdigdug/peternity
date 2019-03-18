@@ -23,7 +23,8 @@ class FileInputField extends PureComponent {
 
     return (
       <div className="form__form-group-file">
-        <label htmlFor={name}>Choose the file</label>
+        {/* TODO turn back label */}
+        {/* <label htmlFor={name}>Choose the file</label> */}
         <span>{value.name}</span>
         <input
           type="file"
@@ -43,14 +44,15 @@ class FileInputField extends PureComponent {
   }
 }
 
-const renderFileInputField = props => (
-  <div className="form__form-group-input-wrap">
-    <FileInputField
-      {...props.input}
-    />
-    {props.meta.touched && props.meta.error && <span className="form__form-group-error">{props.meta.error}</span>}
-  </div>
-);
+const renderFileInputField = (props) => {
+  const { input, meta } = props;
+  return (
+    <div className="form__form-group-input-wrap">
+      <FileInputField {...input} />
+      {meta.touched && meta.error && <span className="form__form-group-error">{meta.error}</span>}
+    </div>
+  );
+};
 
 renderFileInputField.propTypes = {
   input: PropTypes.shape({

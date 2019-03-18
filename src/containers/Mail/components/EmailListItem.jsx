@@ -14,6 +14,7 @@ export default class EmailListItem extends PureComponent {
   static propTypes = {
     email: EmailProps.isRequired,
     onLetter: PropTypes.func.isRequired,
+    itemId: PropTypes.number.isRequired,
   };
 
   constructor() {
@@ -25,11 +26,12 @@ export default class EmailListItem extends PureComponent {
 
   onFavorite = (e) => {
     e.preventDefault();
-    this.setState({ favorite: !this.state.favorite });
+    this.setState(prevState => ({ favorite: !prevState.favorite }));
   };
 
   render() {
-    const { email, onLetter } = this.props;
+    const { email, onLetter, itemId } = this.props;
+    const { favorite } = this.state;
     const itemClass = classNames({
       'inbox__email-list-item': true,
       'inbox__email-list-item--unread': email.unread,
@@ -38,15 +40,15 @@ export default class EmailListItem extends PureComponent {
     return (
       <tr className={itemClass}>
         <td>
-          <span className="checkbox-btn checkbox-btn--colored-click inbox__email-list-item-checkbox">
-            <input className="checkbox-btn__checkbox" type="checkbox" />
+          <label htmlFor={itemId} className="checkbox-btn checkbox-btn--colored-click inbox__email-list-item-checkbox">
+            <input id={itemId} className="checkbox-btn__checkbox" type="checkbox" />
             <span className="checkbox-btn__checkbox-custom">
               <CheckIcon />
             </span>
-          </span>
+          </label>
         </td>
         <td onClick={this.onFavorite}>
-          <StarIcon className={`inbox__favorite${this.state.favorite ? ' active' : ''}`} />
+          <StarIcon className={`inbox__favorite${favorite ? ' active' : ''}`} />
         </td>
         <td className="inbox__email-table-name" onClick={onLetter}>{email.name}</td>
         <td onClick={onLetter} className="inbox__email-table-preview">

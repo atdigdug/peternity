@@ -1,7 +1,9 @@
 import React from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
-import { HorizontalGridLines, LineSeries, VerticalGridLines, XAxis, FlexibleWidthXYPlot, YAxis } from 'react-vis';
-import { translate } from 'react-i18next';
+import {
+  HorizontalGridLines, LineSeries, VerticalGridLines, XAxis, FlexibleWidthXYPlot, YAxis,
+} from 'react-vis';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const data = [];
@@ -46,4 +48,4 @@ LineSeriesWithManyColors.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(LineSeriesWithManyColors);
+export default withTranslation('common')(LineSeriesWithManyColors);

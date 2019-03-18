@@ -1,5 +1,7 @@
 import React from 'react';
-import { Container, Row, Col, CardBody, Card } from 'reactstrap';
+import {
+  Container, Row, Col, CardBody, Card,
+} from 'reactstrap';
 
 const Grids = () => (
   <Container>

@@ -1,5 +1,7 @@
 import React from 'react';
-import { Col, Container, Row, Button, Card, CardBody } from 'reactstrap';
+import {
+  Col, Container, Row, Button, Card, CardBody,
+} from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import Table from './components/DataTable';
 import RiskFilter from './components/RiskFilter';

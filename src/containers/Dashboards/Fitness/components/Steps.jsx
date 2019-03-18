@@ -2,7 +2,7 @@ import React from 'react';
 import { PieChart, Pie, ResponsiveContainer } from 'recharts';
 import { Card, CardBody, Col } from 'reactstrap';
 import WalkIcon from 'mdi-react/WalkIcon';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const data = [{ value: 1200, fill: '#4ce1b6' },
@@ -37,4 +37,4 @@ Steps.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(Steps);
+export default withTranslation('common')(Steps);

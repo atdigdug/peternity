@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react';
-import { BarChart, Bar, ResponsiveContainer, Tooltip, XAxis, YAxis, CartesianGrid } from 'recharts';
+import {
+  BarChart, Bar, ResponsiveContainer, Tooltip, XAxis, YAxis, CartesianGrid,
+} from 'recharts';
 import Panel from '../../../../shared/components/Panel';
 
 const dataYearly = [
@@ -57,7 +59,7 @@ class SalesStatistisBar extends PureComponent {
   }
 
   handleChange = () => {
-    this.setState({ yearly: !this.state.yearly });
+    this.setState(prevState => ({ yearly: !prevState.yearly }));
   };
 
   render() {
@@ -70,22 +72,25 @@ class SalesStatistisBar extends PureComponent {
         subhead="By Consultant"
       >
         <ResponsiveContainer height={260}>
-          {this.state.yearly ?
-            <BarChart data={dataYearly} margin={{ top: 20, left: -15 }}>
-              <XAxis dataKey="name" tickLine={false} />
-              <YAxis tickLine={false} />
-              <Tooltip />
-              <CartesianGrid vertical={false} />
-              <Bar dataKey="uv" name="Sales" fill="#ff4861" barSize={10} />
-            </BarChart>
-            :
-            <BarChart data={dataMontly} margin={{ top: 20, left: -15 }}>
-              <XAxis dataKey="name" tickLine={false} />
-              <YAxis tickLine={false} />
-              <Tooltip />
-              <CartesianGrid vertical={false} />
-              <Bar dataKey="uv" name="Sales" fill="#4ce1b6" barSize={4} />
-            </BarChart>
+          {this.state.yearly
+            ? (
+              <BarChart data={dataYearly} margin={{ top: 20, left: -15 }}>
+                <XAxis dataKey="name" tickLine={false} />
+                <YAxis tickLine={false} />
+                <Tooltip />
+                <CartesianGrid vertical={false} />
+                <Bar dataKey="uv" name="Sales" fill="#ff4861" barSize={10} />
+              </BarChart>
+            )
+            : (
+              <BarChart data={dataMontly} margin={{ top: 20, left: -15 }}>
+                <XAxis dataKey="name" tickLine={false} />
+                <YAxis tickLine={false} />
+                <Tooltip />
+                <CartesianGrid vertical={false} />
+                <Bar dataKey="uv" name="Sales" fill="#4ce1b6" barSize={4} />
+              </BarChart>
+            )
           }
 
         </ResponsiveContainer>

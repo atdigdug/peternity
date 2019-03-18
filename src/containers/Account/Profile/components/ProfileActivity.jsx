@@ -19,16 +19,19 @@ export default class ProfileActivity extends PureComponent {
   };
 
   render() {
+    const {
+      img, name, date, children,
+    } = this.props;
     return (
       <div className="profile__activity">
         <div className="profile__activity-avatar">
-          <img src={this.props.img} alt="" />
+          <img src={img} alt="" />
         </div>
         <div>
-          <p className="profile__activity-name">{this.props.name}
-            <span className="profile__activity-date"> {this.props.date}</span>
+          <p className="profile__activity-name">{name}
+            <span className="profile__activity-date"> {date}</span>
           </p>
-          {this.props.children}
+          {children}
         </div>
       </div>
     );

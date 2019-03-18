@@ -16,9 +16,9 @@ const WizardFormOne = ({ handleSubmit, previousPage }) => (
           component={renderSelectField}
           type="text"
           options={[
-                { value: 'one', label: 'One' },
-                { value: 'two', label: 'Two' },
-              ]}
+            { value: 'one', label: 'One' },
+            { value: 'two', label: 'Two' },
+          ]}
           placeholder="Choose plan"
         />
       </div>

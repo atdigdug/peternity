@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
 import { Doughnut } from 'react-chartjs-2';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 function getRandomInt(min, max) {
@@ -52,11 +52,13 @@ class DynamiclyRefreshedDoughnut extends PureComponent {
   }
 
   componentWillUnmount() {
-    clearInterval(this.state.intervalId);
+    const { intervalId } = this.state;
+    clearInterval(intervalId);
   }
 
   render() {
     const { t } = this.props;
+    const { data } = this.state;
 
     return (
       <Col md={12} lg={12} xl={6}>
@@ -65,7 +67,7 @@ class DynamiclyRefreshedDoughnut extends PureComponent {
             <div className="card__title">
               <h5 className="bold-text">{t('charts.react_chartjs.dynamicly_refreshed_doughnut')}</h5>
             </div>
-            <Doughnut data={this.state.data} />
+            <Doughnut data={data} />
           </CardBody>
         </Card>
       </Col>
@@ -73,4 +75,4 @@ class DynamiclyRefreshedDoughnut extends PureComponent {
   }
 }
 
-export default translate('common')(DynamiclyRefreshedDoughnut);
+export default withTranslation('common')(DynamiclyRefreshedDoughnut);

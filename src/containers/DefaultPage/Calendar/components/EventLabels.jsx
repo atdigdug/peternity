@@ -1,5 +1,7 @@
 import React from 'react';
-import { Card, CardBody, Col, Button, ButtonToolbar, ButtonGroup } from 'reactstrap';
+import {
+  Card, CardBody, Col, Button, ButtonToolbar, ButtonGroup,
+} from 'reactstrap';
 
 const EventLabels = () => (
   <Col md={12} lg={12} xl={3}>

@@ -8,7 +8,7 @@ import {
   FlexibleWidthXYPlot,
   YAxis,
 } from 'react-vis';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const Bar = ({ t }) => (
@@ -30,18 +30,18 @@ const Bar = ({ t }) => (
             <YAxis />
             <VerticalBarSeries
               data={[
-                    { x: 'A', y: 10 },
-                    { x: 'B', y: 5 },
-                    { x: 'C', y: 15 },
-                  ]}
+                { x: 'A', y: 10 },
+                { x: 'B', y: 5 },
+                { x: 'C', y: 15 },
+              ]}
               color="#70bbfd"
             />
             <VerticalBarSeries
               data={[
-                    { x: 'A', y: 12 },
-                    { x: 'B', y: 2 },
-                    { x: 'C', y: 11 },
-                  ]}
+                { x: 'A', y: 12 },
+                { x: 'B', y: 2 },
+                { x: 'C', y: 11 },
+              ]}
               color="#c88ffa"
             />
           </FlexibleWidthXYPlot>
@@ -55,4 +55,4 @@ Bar.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(Bar);
+export default withTranslation('common')(Bar);

@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
 import { Field, reduxForm } from 'redux-form';
-import { translate } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const logoJava = `${process.env.PUBLIC_URL}/img/java.png`;
@@ -15,20 +14,6 @@ const logostyle = {
 class ArchitectureForm extends PureComponent {
   static propTypes = {
     handleSubmit: PropTypes.func.isRequired,
-  };
-
-  constructor() {
-    super();
-    this.state = {
-      showPassword: false,
-    };
-  }
-
-  showPassword = (e) => {
-    e.preventDefault();
-    this.setState({
-      showPassword: !this.state.showPassword,
-    });
   };
 
   render() {
@@ -80,4 +65,4 @@ class ArchitectureForm extends PureComponent {
 
 export default reduxForm({
   form: 'horizontal_form', // a unique identifier for this form
-})(translate('common')(ArchitectureForm));
+})((ArchitectureForm));

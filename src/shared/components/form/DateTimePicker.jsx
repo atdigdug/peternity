@@ -15,33 +15,36 @@ class DateTimePickerField extends PureComponent {
   }
 
   handleChange = (date) => {
+    const { onChange } = this.props;
     this.setState({
       startDate: date,
     });
-    this.props.onChange(date);
+    onChange(date);
   };
 
   render() {
+    const { startDate } = this.state;
+
     return (
       <div className="date-picker">
         <DatePicker
           timeFormat="HH:mm"
           className="form__form-group-datepicker"
-          selected={this.state.startDate}
+          selected={startDate}
           onChange={this.handleChange}
           showTimeSelect
           dateFormat="LLL"
+          dropDownMode="select"
         />
       </div>
     );
   }
 }
 
-const renderDateTimePickerField = props => (
-  <DateTimePickerField
-    {...props.input}
-  />
-);
+const renderDateTimePickerField = (props) => {
+  const { input } = props;
+  return <DateTimePickerField {...input} />;
+};
 
 renderDateTimePickerField.propTypes = {
   input: PropTypes.shape({

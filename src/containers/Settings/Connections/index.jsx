@@ -1,5 +1,7 @@
 import React from 'react';
-import { Col, Container, Row, Card, CardBody, Button } from 'reactstrap';
+import {
+  Col, Container, Row, Card, CardBody, Button,
+} from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
 const logoWhitehat = `${process.env.PUBLIC_URL}/img/whitehat.png`;

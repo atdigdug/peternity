@@ -1,7 +1,9 @@
 import React from 'react';
-import { Card, CardBody, Col, Button, ButtonToolbar } from 'reactstrap';
+import {
+  Card, CardBody, Col, Button, ButtonToolbar,
+} from 'reactstrap';
 import { Field, reduxForm } from 'redux-form';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import renderRadioButtonField from '../../../../shared/components/form/RadioButton';
 import renderSelectField from '../../../../shared/components/form/Select';
@@ -79,9 +81,9 @@ const VerticalFormHalf = ({ handleSubmit, reset, t }) => (
                   component={renderSelectField}
                   type="text"
                   options={[
-                        { value: 'one', label: 'One' },
-                        { value: 'two', label: 'Two' },
-                      ]}
+                    { value: 'one', label: 'One' },
+                    { value: 'two', label: 'Two' },
+                  ]}
                 />
               </div>
             </div>
@@ -128,4 +130,4 @@ VerticalFormHalf.propTypes = {
 
 export default reduxForm({
   form: 'vertical_form_layout_half', // a unique identifier for this form
-})(translate('common')(VerticalFormHalf));
+})(withTranslation('common')(VerticalFormHalf));

@@ -1,6 +1,8 @@
 import React from 'react';
-import { Button, ButtonToolbar, Card, CardBody, Col } from 'reactstrap';
-import { translate } from 'react-i18next';
+import {
+  Button, ButtonToolbar, Card, CardBody, Col,
+} from 'reactstrap';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const DefaultButtons = ({ t }) => (
@@ -47,4 +49,4 @@ DefaultButtons.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(DefaultButtons);
+export default withTranslation('common')(DefaultButtons);

@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react';
-import { Nav, NavItem, NavLink, TabContent, TabPane } from 'reactstrap';
+import {
+  Nav, NavItem, NavLink, TabContent, TabPane,
+} from 'reactstrap';
 import classnames from 'classnames';
 
 export default class ProductTabs extends PureComponent {
@@ -12,7 +14,8 @@ export default class ProductTabs extends PureComponent {
   }
 
   toggle = (tab) => {
-    if (this.state.activeTab !== tab) {
+    const { activeTab } = this.state;
+    if (activeTab !== tab) {
       this.setState({
         activeTab: tab,
       });

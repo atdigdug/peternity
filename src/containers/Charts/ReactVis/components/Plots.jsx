@@ -8,7 +8,7 @@ import {
   XAxis,
   YAxis,
 } from 'react-vis';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 function getRandomSeriesData(total) {
@@ -103,4 +103,4 @@ class Plots extends PureComponent {
   }
 }
 
-export default translate('common')(Plots);
+export default withTranslation('common')(Plots);

@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
-import { BarChart, Bar, ResponsiveContainer, Tooltip, XAxis, YAxis, CartesianGrid } from 'recharts';
-import { translate } from 'react-i18next';
+import {
+  BarChart, Bar, ResponsiveContainer, Tooltip, XAxis, YAxis, CartesianGrid,
+} from 'recharts';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import Panel from '../../../../shared/components/Panel';
 
@@ -63,11 +65,12 @@ class SalesStatistisBar extends PureComponent {
   }
 
   handleChange = () => {
-    this.setState({ yearly: !this.state.yearly });
+    this.setState(prevState => ({ yearly: !prevState.yearly }));
   };
 
   render() {
     const { t } = this.props;
+    const { yearly } = this.state;
 
     return (
       <Panel
@@ -78,22 +81,25 @@ class SalesStatistisBar extends PureComponent {
         subhead="See how effective your business is"
       >
         <ResponsiveContainer height={260}>
-          {this.state.yearly ?
-            <BarChart data={dataYearly} margin={{ top: 20, left: -15 }}>
-              <XAxis dataKey="name" tickLine={false} />
-              <YAxis tickLine={false} />
-              <Tooltip />
-              <CartesianGrid vertical={false} />
-              <Bar dataKey="uv" name="Sales" fill="#ff4861" barSize={10} />
-            </BarChart>
-            :
-            <BarChart data={dataMontly} margin={{ top: 20, left: -15 }}>
-              <XAxis dataKey="name" tickLine={false} />
-              <YAxis tickLine={false} />
-              <Tooltip />
-              <CartesianGrid vertical={false} />
-              <Bar dataKey="uv" name="Sales" fill="#4ce1b6" barSize={4} />
-            </BarChart>
+          {yearly
+            ? (
+              <BarChart data={dataYearly} margin={{ top: 20, left: -15 }}>
+                <XAxis dataKey="name" tickLine={false} />
+                <YAxis tickLine={false} />
+                <Tooltip />
+                <CartesianGrid vertical={false} />
+                <Bar dataKey="uv" name="Sales" fill="#ff4861" barSize={10} />
+              </BarChart>
+            )
+            : (
+              <BarChart data={dataMontly} margin={{ top: 20, left: -15 }}>
+                <XAxis dataKey="name" tickLine={false} />
+                <YAxis tickLine={false} />
+                <Tooltip />
+                <CartesianGrid vertical={false} />
+                <Bar dataKey="uv" name="Sales" fill="#4ce1b6" barSize={4} />
+              </BarChart>
+            )
           }
 
         </ResponsiveContainer>
@@ -109,4 +115,4 @@ class SalesStatistisBar extends PureComponent {
   }
 }
 
-export default translate('common')(SalesStatistisBar);
+export default withTranslation('common')(SalesStatistisBar);

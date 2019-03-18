@@ -19,24 +19,25 @@ export default class Gallery extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      images: this.props.images,
+      images: props.images,
       currentTag: 'all',
-      tags: this.props.tags,
+      tags: props.tags,
       lightboxIsOpen: false,
       currentImage: 0,
     };
   }
 
   onFilter = (tag, e) => {
+    const { images } = this.props;
     e.preventDefault();
     if (tag === 'all') {
-      const imgs = this.props.images;
+      const imgs = images;
       this.setState({
         images: imgs,
         currentTag: 'all',
       });
     } else {
-      const imgs = this.props.images.filter(t => t.type === tag);
+      const imgs = images.filter(t => t.type === tag);
       this.setState({
         images: imgs,
         currentTag: tag,
@@ -60,15 +61,11 @@ export default class Gallery extends PureComponent {
   };
 
   gotoPrevious = () => {
-    this.setState({
-      currentImage: this.state.currentImage - 1,
-    });
+    this.setState(prevState => ({ currentImage: prevState.currentImage - 1 }));
   };
 
   gotoNext = () => {
-    this.setState({
-      currentImage: this.state.currentImage + 1,
-    });
+    this.setState(prevState => ({ currentImage: prevState.currentImage + 1 }));
   };
 
   gotoImage = (index) => {
@@ -78,37 +75,45 @@ export default class Gallery extends PureComponent {
   };
 
   handleClickImage = () => {
-    if (this.state.currentImage === this.props.images.length - 1) return;
+    const { currentImage } = this.state;
+    const { images } = this.props;
+    if (currentImage === images.length - 1) return;
     this.gotoNext();
   };
 
   render() {
+    const {
+      currentImage, lightboxIsOpen, tags, images, currentTag,
+    } = this.state;
+
     return (
       <div className="gallery">
         <div className="gallery__btns">
           <button
-            className={`gallery__btn${this.state.currentTag === 'all' ? ' gallery__btn--active' : ''}`}
+            type="button"
+            className={`gallery__btn${currentTag === 'all' ? ' gallery__btn--active' : ''}`}
             onClick={e => this.onFilter('all', e)}
           >all
           </button>
-          {this.state.tags.map((btn, i) => (
+          {tags.map((btn, i) => (
             <button
+              type="button"
               key={i}
-              className={`gallery__btn${btn.tag === this.state.currentTag ? ' gallery__btn--active' : ''}`}
+              className={`gallery__btn${btn.tag === currentTag ? ' gallery__btn--active' : ''}`}
               onClick={e => this.onFilter(btn.tag, e)}
             >{btn.title}
             </button>
-            ))}
+          ))}
         </div>
-        {this.state.images.map((img, i) => (
+        {images.map((img, i) => (
           <a className="gallery__img-wrap" key={i} onClick={e => this.openLightbox(i, e)} href={img.src}>
             <img src={img.src} alt={img.alt} />
           </a>
-          ))}
+        ))}
         <Lightbox
-          currentImage={this.state.currentImage}
-          images={this.state.images}
-          isOpen={this.state.lightboxIsOpen}
+          currentImage={currentImage}
+          images={images}
+          isOpen={lightboxIsOpen}
           onClickImage={this.handleClickImage}
           onClickNext={this.gotoNext}
           onClickPrev={this.gotoPrevious}

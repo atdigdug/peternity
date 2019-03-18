@@ -1,6 +1,8 @@
 import React from 'react';
-import { Card, CardBody, Col, Badge, Table } from 'reactstrap';
-import { translate } from 'react-i18next';
+import {
+  Card, CardBody, Col, Badge, Table,
+} from 'reactstrap';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const ResponsiveTable = ({ t }) => (
@@ -96,4 +98,4 @@ ResponsiveTable.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(ResponsiveTable);
+export default withTranslation('common')(ResponsiveTable);

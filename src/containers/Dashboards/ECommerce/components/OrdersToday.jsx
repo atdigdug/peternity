@@ -1,9 +1,11 @@
 /* eslint-disable react/no-array-index-key */
 import React, { PureComponent } from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
-import { BarChart, Bar, Cell, ResponsiveContainer } from 'recharts';
+import {
+  BarChart, Bar, Cell, ResponsiveContainer,
+} from 'recharts';
 import TrendingDownIcon from 'mdi-react/TrendingDownIcon';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const data = [
@@ -77,4 +79,4 @@ class OrdersToday extends PureComponent {
   }
 }
 
-export default translate('common')(OrdersToday);
+export default withTranslation('common')(OrdersToday);

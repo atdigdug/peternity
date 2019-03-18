@@ -37,20 +37,22 @@ export default class Expand extends PureComponent {
   };
 
   render() {
+    const { load } = this.state;
+    const { color, outline, title } = this.props;
     const expandClass = classNames({
       icon: true,
       expand: true,
-      'expand--load': this.state.load,
+      'expand--load': load,
     });
 
     return (
       <Button
         onClick={this.onLoad}
         className={expandClass}
-        color={this.props.color}
-        outline={this.props.outline}
+        color={color}
+        outline={outline}
       >
-        <p><LoadingIcon /> {this.props.title}</p>
+        <p><LoadingIcon /> {title}</p>
       </Button>
     );
   }

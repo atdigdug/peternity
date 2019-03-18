@@ -24,11 +24,13 @@ class Landing extends PureComponent {
   };
 
   changeToDark = () => {
-    this.props.dispatch(changeThemeToDark());
+    const { dispatch } = this.props;
+    dispatch(changeThemeToDark());
   };
 
   changeToLight = () => {
-    this.props.dispatch(changeThemeToLight());
+    const { dispatch } = this.props;
+    dispatch(changeThemeToLight());
   };
 
   render() {
@@ -47,19 +49,23 @@ class Landing extends PureComponent {
                   <nav className="landing__menu-nav">
                     <button
                       onClick={() => scrollToComponent(this.About, { offset: -50, align: 'top', duration: 1000 })}
+                      type="button"
                     >
                       About EasyDEV
                     </button>
-                    <button onClick={() => scrollToComponent(this.Features, {
-                      offset: -50,
-                      align: 'top',
-                      duration: 1500,
-                    })}
+                    <button
+                      onClick={() => scrollToComponent(this.Features, {
+                        offset: -50,
+                        align: 'top',
+                        duration: 1500,
+                      })}
+                      type="button"
                     >
                       Features
                     </button>
                     <button
                       onClick={() => scrollToComponent(this.Demos, { offset: -50, align: 'top', duration: 2000 })}
+                      type="button"
                     >
                       Demos
                     </button>
@@ -69,6 +75,7 @@ class Landing extends PureComponent {
                         align: 'top',
                         duration: 2500,
                       })}
+                      type="button"
                     >
                       Feature request <span className="landing__menu-nav-new" />
                     </button>
@@ -78,7 +85,7 @@ class Landing extends PureComponent {
                       rel="noopener noreferrer"
                       href="https://themeforest.net/item/easypro-developer-friendly-react-bootstrap-4-admin-template/21798550"
                     >
-                      Buy now for $25
+                      Buy now for $26
                     </a>
                   </nav>
                 </div>

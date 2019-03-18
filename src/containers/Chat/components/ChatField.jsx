@@ -9,12 +9,14 @@ const ChatField = () => (
       <Input className="chat__field-input" name="chatField" placeholder="Type here…" />
       <div className="chat__field-controls">
         <button
+          type="button"
           className="chat__icon-button"
           onClick={(e) => { e.preventDefault(); }}
         >
           <EmoticonIcon />
         </button>
         <button
+          type="button"
           className="chat__icon-button"
           onClick={(e) => { e.preventDefault(); }}
         >

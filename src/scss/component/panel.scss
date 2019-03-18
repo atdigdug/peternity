@@ -21,6 +21,14 @@
     }
   }
 
+  &.panel--narrow {
+
+    .panel__title {
+      margin-bottom: 0;
+    }
+
+  }
+
   &.panel--divider {
 
     .panel__body {

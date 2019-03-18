@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, ButtonToolbar } from 'reactstrap';
 import { Field, reduxForm } from 'redux-form';
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 import MaskedInput from 'react-text-mask';
 import CreditCardIcon from 'mdi-react/CreditCardIcon';
 import renderRadioButtonField from '../../../../shared/components/form/RadioButton';
@@ -20,7 +20,7 @@ renderField.propTypes = {
   input: PropTypes.shape().isRequired,
   placeholder: PropTypes.string,
   type: PropTypes.string,
-  mask: PropTypes.arrayOf(),
+  mask: PropTypes.arrayOf(PropTypes.any),
 };
 
 renderField.defaultProps = {

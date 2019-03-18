@@ -37,6 +37,8 @@ export default class AlertComponent extends PureComponent {
   };
 
   render() {
+    const { visible } = this.state;
+
     const {
       color, className, icon, children,
     } = this.props;
@@ -59,11 +61,11 @@ export default class AlertComponent extends PureComponent {
         break;
     }
 
-    if (this.state.visible) {
+    if (visible) {
       return (
-        <Alert color={color} className={className} isOpen={this.state.visible}>
+        <Alert color={color} className={className} isOpen={visible}>
           {icon && <div className="alert__icon">{Icon}</div>}
-          <button className="close" onClick={this.onDismiss}><span className="lnr lnr-cross" /></button>
+          <button className="close" type="button" onClick={this.onDismiss}><span className="lnr lnr-cross" /></button>
           <div className="alert__content">
             {children}
           </div>

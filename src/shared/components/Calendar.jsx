@@ -5,7 +5,7 @@ import withDragAndDrop from 'react-big-calendar/lib/addons/dragAndDrop';
 
 import moment from 'moment';
 
-BigCalendar.momentLocalizer(moment);
+const localizer = BigCalendar.momentLocalizer(moment);
 
 const DragAndDropCalendar = withDragAndDrop(BigCalendar);
 
@@ -29,7 +29,7 @@ export default class CalendarComponent extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      events: this.props.events,
+      events: props.events,
     };
   }
 
@@ -83,6 +83,7 @@ export default class CalendarComponent extends PureComponent {
     return (
       <div className={`calendar${small ? ' calendar--small' : ''}`}>
         <DragAndDropCalendar
+          localizer={localizer}
           events={events}
           views={['month', 'week', 'day']}
           popup

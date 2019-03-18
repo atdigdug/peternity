@@ -9,11 +9,15 @@ const crypto = `${process.env.PUBLIC_URL}/img/landing/demos/4.png`;
 const eCommerce = `${process.env.PUBLIC_URL}/img/landing/demos/3.png`;
 const analytics = `${process.env.PUBLIC_URL}/img/landing/demos/1.png`;
 const fitness = `${process.env.PUBLIC_URL}/img/landing/demos/2.png`;
+const booking = `${process.env.PUBLIC_URL}/img/landing/demos/5.png`;
+const mobileApp = `${process.env.PUBLIC_URL}/img/landing/demos/6.png`;
 
 const cryptoDark = `${process.env.PUBLIC_URL}/img/landing/demos/1_3.png`;
 const eCommerceDark = `${process.env.PUBLIC_URL}/img/landing/demos/1_2.png`;
 const analyticsDark = `${process.env.PUBLIC_URL}/img/landing/demos/1_1.png`;
 const fitnessDark = `${process.env.PUBLIC_URL}/img/landing/demos/fitness_dark.png`;
+const bookingDark = `${process.env.PUBLIC_URL}/img/landing/demos/booking_dark.png`;
+const mobileAppDark = `${process.env.PUBLIC_URL}/img/landing/demos/mobile_app_dark.png`;
 
 const background = `${process.env.PUBLIC_URL}/img/landing/right_bg.png`;
 
@@ -29,6 +33,7 @@ const DemoThemeToggle = ({ theme, changeToLight, changeToDark }) => (
         onChange={() => {}}
       />
       <button
+        type="button"
         className="toggle-btn__input-label"
         onClick={theme.className === 'theme-dark' ? changeToLight : changeToDark}
       >Toggle
@@ -61,6 +66,32 @@ class Demos extends PureComponent {
           <Row>
             <Col md={12}>
               <h3 className="landing__section-title">EasyDEV Demos</h3>
+            </Col>
+          </Row>
+          <Row className="landing__demo-wrap">
+            <Col lg={8}>
+              <Link className="landing__demo" to="/dashboard_mobile_app">
+                <div className="landing__demo-img-wrap">
+                  <img src={theme.className === 'theme-dark' ? mobileAppDark : mobileApp} alt="" />
+                </div>
+              </Link>
+            </Col>
+            <Col lg={4} className="landing__demo-theme-toggle">
+              <p className="landing__demo-title landing__demo-title--new">Dashboard Mobile App</p>
+              <DemoThemeToggle theme={theme} changeToLight={changeToLight} changeToDark={changeToDark} />
+            </Col>
+          </Row>
+          <Row className="landing__demo-wrap">
+            <Col lg={8}>
+              <Link className="landing__demo" to="/dashboard_booking">
+                <div className="landing__demo-img-wrap">
+                  <img src={theme.className === 'theme-dark' ? bookingDark : booking} alt="" />
+                </div>
+              </Link>
+            </Col>
+            <Col lg={4} className="landing__demo-theme-toggle">
+              <p className="landing__demo-title landing__demo-title--new">Booking Dashboard</p>
+              <DemoThemeToggle theme={theme} changeToLight={changeToLight} changeToDark={changeToDark} />
             </Col>
           </Row>
           <Row className="landing__demo-wrap">

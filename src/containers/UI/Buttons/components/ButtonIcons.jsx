@@ -1,11 +1,13 @@
 import React from 'react';
-import { Button, ButtonToolbar, Card, CardBody, Col } from 'reactstrap';
+import {
+  Button, ButtonToolbar, Card, CardBody, Col,
+} from 'reactstrap';
 import SettingsIcon from 'mdi-react/SettingsIcon';
 import SendIcon from 'mdi-react/SendIcon';
 import CommentAlertOutlineIcon from 'mdi-react/CommentAlertOutlineIcon';
 import CloseCircleOutlineIcon from 'mdi-react/CloseCircleOutlineIcon';
 import ThumbUpOutlineIcon from 'mdi-react/ThumbUpOutlineIcon';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import Expand from '../../../../shared/components/Expand';
 
@@ -46,4 +48,4 @@ ButtonIcons.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(ButtonIcons);
+export default withTranslation('common')(ButtonIcons);

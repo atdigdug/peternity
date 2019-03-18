@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import BasicMap from './components/BasicMap';
 import PinWithInfoWindow from './components/PinWithInfoWindow';
@@ -29,4 +29,4 @@ GoogleMap.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(GoogleMap);
+export default withTranslation('common')(GoogleMap);

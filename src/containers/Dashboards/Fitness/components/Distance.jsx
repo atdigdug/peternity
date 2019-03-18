@@ -2,7 +2,7 @@ import React from 'react';
 import { PieChart, Pie, ResponsiveContainer } from 'recharts';
 import { Card, CardBody, Col } from 'reactstrap';
 import MapMarkerRadiusIcon from 'mdi-react/MapMarkerRadiusIcon';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const data = [{ value: 3.8, fill: '#70bbfd' },
@@ -37,4 +37,4 @@ Distance.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(Distance);
+export default withTranslation('common')(Distance);

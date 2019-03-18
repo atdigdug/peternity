@@ -17,13 +17,14 @@ export default class EditableTable extends PureComponent {
 
   constructor(props, context) {
     super(props, context);
-    const originalRows = this.props.rows;
+    const originalRows = props.rows;
     const rows = originalRows.slice(0, 10);
     this.state = { rows, originalRows };
   }
 
   handleGridRowsUpdated = ({ fromRow, toRow, updated }) => {
-    const rows = this.state.rows.slice();
+    let { rows } = this.state;
+    rows = rows.slice();
 
     for (let i = fromRow; i <= toRow; i += 1) {
       const rowToUpdate = rows[i];
@@ -37,28 +38,33 @@ export default class EditableTable extends PureComponent {
     const comparer = (a, b) => {
       if (sortDirection === 'ASC') {
         return (a[sortColumn] > b[sortColumn]) ? 1 : -1;
-      } else if (sortDirection === 'DESC') {
+      } if (sortDirection === 'DESC') {
         return (a[sortColumn] < b[sortColumn]) ? 1 : -1;
       }
     };
 
-    const sortRows = this.state.originalRows.slice(0);
-    const rows = sortDirection === 'NONE' ? this.state.originalRows.slice(0, 10) : sortRows.sort(comparer).slice(0, 10);
+    const { originalRows } = this.state;
+    const sortRows = originalRows.slice(0);
+    const rows = sortDirection === 'NONE' ? originalRows.slice(0, 10) : sortRows.sort(comparer).slice(0, 10);
 
     this.setState({ rows });
   };
 
-  rowGetter = i => this.state.rows[i];
+  rowGetter = (i) => {
+    const { rows } = this.state;
+    return rows[i];
+  };
 
   render() {
+    const { heads, rows } = this.props;
     return (
       <div className="table">
         <ReactDataGrid
           onGridSort={this.handleGridSort}
           enableCellSelect
-          columns={this.props.heads}
+          columns={heads}
           rowGetter={this.rowGetter}
-          rowsCount={this.state.rows.length}
+          rowsCount={rows.length}
           onGridRowsUpdated={this.handleGridRowsUpdated}
           rowHeight={44}
           minColumnWidth={100}

@@ -1,11 +1,12 @@
 /* eslint-disable react/no-unused-state */
 import React, { PureComponent } from 'react';
-import { ButtonToolbar, Card, CardBody, Col } from 'reactstrap';
+import {
+  ButtonToolbar, Card, CardBody, Col,
+} from 'reactstrap';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import MagnifyIcon from 'mdi-react/MagnifyIcon';
 import EditTable from '../../../../shared/components/table/EditableTable';
-import Pagination from '../../../../shared/components/pagination/Pagination';
 
 
 const Img1 = `${process.env.PUBLIC_URL}/img/for_store/vase.png`;
@@ -27,8 +28,8 @@ PhotoFormatter.propTypes = {
 };
 
 const StatusFormatter = ({ value }) => (
-  value === 'Enabled' ? <span className="badge badge-success">Enabled</span> :
-  <span className="badge badge-disabled">Disabled</span>
+  value === 'Enabled' ? <span className="badge badge-success">Enabled</span>
+    : <span className="badge badge-disabled">Disabled</span>
 );
 
 StatusFormatter.propTypes = {
@@ -117,6 +118,8 @@ export default class ProductsListTable extends PureComponent {
   };
 
   render() {
+    const { rows } = this.state;
+
     return (
       <Col md={12} lg={12}>
         <Card>
@@ -143,8 +146,7 @@ export default class ProductsListTable extends PureComponent {
               </select>
               entries
             </p>
-            <EditTable heads={this.heads} rows={this.state.rows} enableRowSelect />
-            <Pagination items={this.state.rows} onChangePage={this.onChangePage} />
+            <EditTable heads={this.heads} rows={rows} enableRowSelect />
           </CardBody>
         </Card>
       </Col>

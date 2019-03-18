@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import HeadingsSubheadings from './components/HeadingsSubheadings';
 import BasicHeadings from './components/BasicHeadings';
@@ -44,4 +44,4 @@ Typography.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(Typography);
+export default withTranslation('common')(Typography);

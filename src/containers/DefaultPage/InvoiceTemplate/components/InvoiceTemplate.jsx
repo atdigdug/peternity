@@ -1,6 +1,8 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
-import { Card, Col, Button, ButtonToolbar, Table } from 'reactstrap';
+import {
+  Card, Col, Button, ButtonToolbar, Table,
+} from 'reactstrap';
 
 const invoiceData = [
   { title: 'Wordpress Plugin Apollo 200', quantity: 1, cost: 27 },

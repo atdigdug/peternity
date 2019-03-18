@@ -2,7 +2,7 @@
 import React, { PureComponent } from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import NotificationSystem from 'rc-notification';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import BasicNotifications from './components/BasicNotifications';
 import ImageNotifications from './components/ImageNotifications';
@@ -20,7 +20,7 @@ const showNotification = ({ notification, position }) => {
         content: notification,
         duration: 5,
         closable: true,
-        style: { top: 0, left: 240 },
+        style: { top: 0, left: 0 },
         className: position,
       });
       break;
@@ -86,4 +86,4 @@ class Notifications extends PureComponent {
   }
 }
 
-export default translate('common')(Notifications);
+export default withTranslation('common')(Notifications);

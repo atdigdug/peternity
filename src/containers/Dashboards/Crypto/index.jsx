@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Col, Container, Row } from 'reactstrap';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import BTC from './components/BTC';
@@ -23,14 +23,15 @@ class CryptoDashboard extends PureComponent {
   };
 
   onDeleteCryptoTableData = (index, e) => {
+    const { dispatch, cryptoTable } = this.props;
     e.preventDefault();
-    const arrayCopy = [...this.props.cryptoTable];
+    const arrayCopy = [...cryptoTable];
     arrayCopy.splice(index, 1);
-    this.props.dispatch(deleteCryptoTableData(arrayCopy));
+    dispatch(deleteCryptoTableData(arrayCopy));
   };
 
   render() {
-    const { t } = this.props;
+    const { t, cryptoTable } = this.props;
 
     return (
       <Container className="dashboard">
@@ -50,7 +51,7 @@ class CryptoDashboard extends PureComponent {
           <BtcEth />
           <CryptotrendsToday />
           <PlaceOrder />
-          <TopTen cryptoTable={this.props.cryptoTable} onDeleteCryptoTableData={this.onDeleteCryptoTableData} />
+          <TopTen cryptoTable={cryptoTable} onDeleteCryptoTableData={this.onDeleteCryptoTableData} />
         </Row>
       </Container>
     );
@@ -59,4 +60,4 @@ class CryptoDashboard extends PureComponent {
 
 export default connect(state => ({
   cryptoTable: state.cryptoTable.items,
-}))(translate('common')(CryptoDashboard));
+}))(withTranslation('common')(CryptoDashboard));

@@ -20,16 +20,20 @@ class CryptoDashboardEdit extends PureComponent {
   }
 
   componentDidMount() {
-    this.props.dispatch(loadCryptoTableData(this.props.match.params.index));
+    const { dispatch, match } = this.props;
+    dispatch(loadCryptoTableData(match.params.index));
   }
 
   handleSubmit = (formValues) => {
-    this.props.dispatch(changeCryptoTableData(formValues, this.props.match.params.index));
+    const { dispatch, match } = this.props;
+    dispatch(changeCryptoTableData(formValues, match.params.index));
     this.setState({ redirect: true });
   };
 
   render() {
-    if (this.state.redirect) {
+    const { redirect } = this.state;
+
+    if (redirect) {
       return <Redirect to="/dashboard_crypto" />;
     }
 

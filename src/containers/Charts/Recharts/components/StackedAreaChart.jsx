@@ -1,7 +1,9 @@
 import React from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { translate } from 'react-i18next';
+import {
+  AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
+} from 'recharts';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const data = [
@@ -39,7 +41,7 @@ const StackedAreaChart = ({ t }) => (
           <AreaChart
             data={data}
             margin={{
-             top: 0, right: 0, left: -15, bottom: 0,
+              top: 0, right: 0, left: -15, bottom: 0,
             }}
           >
             <XAxis dataKey="name" />
@@ -60,4 +62,4 @@ StackedAreaChart.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(StackedAreaChart);
+export default withTranslation('common')(StackedAreaChart);

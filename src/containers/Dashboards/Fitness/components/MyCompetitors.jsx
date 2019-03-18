@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import Panel from '../../../../shared/components/Panel';
 
@@ -74,4 +74,4 @@ MyCompetitors.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(MyCompetitors);
+export default withTranslation('common')(MyCompetitors);

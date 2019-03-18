@@ -1,5 +1,7 @@
 import React from 'react';
-import { Card, CardBody, Col, Progress, Button } from 'reactstrap';
+import {
+  Card, CardBody, Col, Progress, Button,
+} from 'reactstrap';
 import Statistics from './Statistics';
 
 const Summary = () => (

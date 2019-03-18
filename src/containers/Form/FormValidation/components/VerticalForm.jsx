@@ -1,9 +1,11 @@
 import React, { PureComponent } from 'react';
-import { Card, CardBody, Col, Button, ButtonToolbar } from 'reactstrap';
+import {
+  Card, CardBody, Col, Button, ButtonToolbar,
+} from 'reactstrap';
 import { Field, reduxForm } from 'redux-form';
 import PropTypes from 'prop-types';
 import EyeIcon from 'mdi-react/EyeIcon';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import renderSelectField from '../../../../shared/components/form/Select';
 import validate from './validate';
 
@@ -50,15 +52,14 @@ class VerticalForm extends PureComponent {
 
   showPassword = (e) => {
     e.preventDefault();
-    this.setState({
-      showPassword: !this.state.showPassword,
-    });
+    this.setState(prevState => ({ showPassword: !prevState.showPassword }));
   };
 
   render() {
     const {
       handleSubmit, pristine, reset, submitting, t,
     } = this.props;
+    const { showPassword } = this.state;
 
     return (
       <Col md={12} lg={12} xl={6}>
@@ -108,11 +109,12 @@ class VerticalForm extends PureComponent {
                   <Field
                     name="password"
                     component={renderField}
-                    type={this.state.showPassword ? 'text' : 'password'}
+                    type={showPassword ? 'text' : 'password'}
                     placeholder="Password"
                   />
                   <button
-                    className={`form__form-group-button${this.state.showPassword ? ' active' : ''}`}
+                    type="button"
+                    className={`form__form-group-button${showPassword ? ' active' : ''}`}
                     tabIndex="-1"
                     onClick={e => this.showPassword(e)}
                   ><EyeIcon />
@@ -150,4 +152,4 @@ class VerticalForm extends PureComponent {
 export default reduxForm({
   form: 'vertical_form_validation', // a unique identifier for this form
   validate,
-})(translate('common')(VerticalForm));
+})(withTranslation('common')(VerticalForm));

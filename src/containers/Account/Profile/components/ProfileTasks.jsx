@@ -1,12 +1,14 @@
 /* eslint-disable jsx-a11y/label-has-for */
 import React from 'react';
-import { Card, CardBody, Col, Badge } from 'reactstrap';
+import {
+  Card, CardBody, Col, Badge,
+} from 'reactstrap';
 import CheckIcon from 'mdi-react/CheckIcon';
 import PropTypes from 'prop-types';
 
 const CheckBox = ({ checked }) => (
-  <label className="checkbox-btn profile__current-task-checkbox">
-    <input className="checkbox-btn__checkbox" type="checkbox" defaultChecked={checked} />
+  <label htmlFor="profile-task-id" className="checkbox-btn profile__current-task-checkbox">
+    <input id="profile-task-id" className="checkbox-btn__checkbox" type="checkbox" defaultChecked={checked} />
     <span className="checkbox-btn__checkbox-custom">
       <CheckIcon />
     </span>

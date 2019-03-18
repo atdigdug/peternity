@@ -43,20 +43,21 @@ export default class CollapseComponent extends PureComponent {
   };
 
   toggle = () => {
-    this.setState({ collapse: !this.state.collapse });
+    this.setState(prevState => ({ collapse: !prevState.collapse }));
   };
 
   render() {
     const { className, title, children } = this.props;
+    const { icon, collapse, status } = this.state;
 
     return (
-      <div className={`collapse__wrapper ${this.state.status} ${className}`}>
-        <button onClick={this.toggle} className="collapse__title">
-          {this.state.icon}
+      <div className={`collapse__wrapper ${status} ${className}`}>
+        <button onClick={this.toggle} className="collapse__title" type="button">
+          {icon}
           <p>{title}<ChevronDownIcon /></p>
         </button>
         <Collapse
-          isOpen={this.state.collapse}
+          isOpen={collapse}
           className="collapse__content"
           onEntering={this.onEntering}
           onEntered={this.onEntered}

@@ -1,7 +1,9 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
-import { PieChart, Pie, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { translate } from 'react-i18next';
+import {
+  PieChart, Pie, Tooltip, Legend, ResponsiveContainer,
+} from 'recharts';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import Panel from '../../../../shared/components/Panel';
 
@@ -62,4 +64,4 @@ CryptotrendsToday.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(CryptotrendsToday);
+export default withTranslation('common')(CryptotrendsToday);

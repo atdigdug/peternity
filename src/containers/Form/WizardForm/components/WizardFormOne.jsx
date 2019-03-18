@@ -18,13 +18,12 @@ class WizardFormOne extends PureComponent {
 
   showPassword = (e) => {
     e.preventDefault();
-    this.setState({
-      showPassword: !this.state.showPassword,
-    });
+    this.setState(prevState => ({ showPassword: !prevState.showPassword }));
   };
 
   render() {
     const { handleSubmit } = this.props;
+    const { showPassword } = this.state;
 
     return (
       <form className="form form--horizontal wizard__form" onSubmit={handleSubmit}>
@@ -68,11 +67,12 @@ class WizardFormOne extends PureComponent {
             <Field
               name="password"
               component="input"
-              type={this.state.showPassword ? 'text' : 'password'}
+              type={showPassword ? 'text' : 'password'}
               placeholder="Password"
             />
             <button
-              className={`form__form-group-button${this.state.showPassword ? ' active' : ''}`}
+              type="button"
+              className={`form__form-group-button${showPassword ? ' active' : ''}`}
               tabIndex="-1"
               onClick={e => this.showPassword(e)}
             ><EyeIcon />

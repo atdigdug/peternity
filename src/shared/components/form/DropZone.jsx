@@ -22,49 +22,75 @@ class DropZoneField extends PureComponent {
   constructor() {
     super();
     this.state = {};
+    this.onDrop = this.onDrop.bind(this);
+  }
+
+  onDrop(file) {
+    const { onChange } = this.props;
+    onChange(file.map(fl => Object.assign(fl, {
+      preview: URL.createObjectURL(fl),
+    })));
   }
 
   removeFile(index, e) {
+    const { onChange, value } = this.props;
     e.preventDefault();
-    this.props.onChange(this.props.value.filter((val, i) => i !== index));
+    onChange(value.filter((val, i) => i !== index));
   }
 
   render() {
-    const files = this.props.value;
+    const {
+      value, customHeight, name,
+    } = this.props;
+
+    const files = value;
 
     return (
-      <div className={`dropzone dropzone--single${this.props.customHeight ? ' dropzone--custom-height' : ''}`}>
+      <div className={`dropzone dropzone--single${customHeight ? ' dropzone--custom-height' : ''}`}>
         <Dropzone
-          className="dropzone__input"
           accept="image/jpeg, image/png"
-          name={this.props.name}
+          name={name}
           multiple={false}
-          onDrop={(filesToUpload) => {
-            this.props.onChange(filesToUpload);
+          onDrop={(fileToUpload) => {
+            this.onDrop(fileToUpload);
           }}
         >
-          {(!files || files.length === 0) &&
-          <div className="dropzone__drop-here"><span className="lnr lnr-upload" /> Drop file here to upload</div>}
+          {({ getRootProps, getInputProps }) => (
+            <div {...getRootProps()} className="dropzone__input">
+              {(!files || files.length === 0)
+              && (
+              <div className="dropzone__drop-here">
+                <span className="lnr lnr-upload" /> Drop file here to upload
+              </div>
+              )}
+              <input {...getInputProps()} />
+            </div>
+          )}
         </Dropzone>
-        {files && Array.isArray(files) && files.length > 0 &&
-        <div className="dropzone__img">
+        {files && Array.isArray(files) && files.length > 0
+        && (
+        <aside className="dropzone__img">
           <img src={files[0].preview} alt="drop-img" />
           <p className="dropzone__img-name">{files[0].name}</p>
-          <button className="dropzone__img-delete" onClick={e => this.removeFile(0, e)}>
+          <button className="dropzone__img-delete" type="button" onClick={e => this.removeFile(0, e)}>
             Remove
           </button>
-        </div>}
+        </aside>
+        )}
       </div>
     );
   }
 }
 
-const renderDropZoneField = props => (
-  <DropZoneField
-    {...props.input}
-    customHeight={props.customHeight}
-  />
-);
+const renderDropZoneField = (props) => {
+  const { input, customHeight } = props;
+  return (
+    <DropZoneField
+      {...input}
+      customHeight={customHeight}
+    />
+  );
+};
 
 renderDropZoneField.propTypes = {
   input: PropTypes.shape({

@@ -9,29 +9,33 @@ import { ContactProps } from '../../../shared/prop-types/ChatProps';
 
 const ChatTopbar = ({ onClick, contact }) => (
   <div className="chat__topbar">
-    <button className="chat__topbar-button chat__topbar-button--menu" onClick={onClick}>
+    <button className="chat__topbar-button chat__topbar-button--menu" type="button" onClick={onClick}>
       <MenuIcon className="chat__topbar-button-icon" />
     </button>
-    {contact &&
+    {contact
+    && (
     <div className="chat__topbar-contact">
       <p className="chat__topbar-contact-name">{contact.name}</p>
       <p className="chat__topbar-contact-post">{contact.post}</p>
-    </div> }
+    </div>
+    ) }
     <div className="chat__topbar-right">
-      {contact &&
+      {contact
+        && (
         <div className="chat__topbar-controls">
-          <button className="chat__topbar-button">
+          <button className="chat__topbar-button" type="button">
             <VideoIcon className="chat__topbar-button-icon" />
           </button>
-          <button className="chat__topbar-button">
+          <button className="chat__topbar-button" type="button">
             <PhoneIcon className="chat__topbar-button-icon" />
           </button>
-          <button className="chat__topbar-button">
+          <button className="chat__topbar-button" type="button">
             <StarIcon className="chat__topbar-button-icon" />
           </button>
         </div>
+        )
       }
-      <button className="chat__topbar-button">
+      <button className="chat__topbar-button" type="button">
         <MoreVertIcon className="chat__topbar-button-icon" />
       </button>
     </div>

@@ -1,5 +1,7 @@
 import React from 'react';
-import { Card, CardBody, Col, ButtonToolbar } from 'reactstrap';
+import {
+  Card, CardBody, Col, ButtonToolbar,
+} from 'reactstrap';
 import EmailIcon from 'mdi-react/EmailIcon';
 import CheckboxMarkedCircleIcon from 'mdi-react/CheckboxMarkedCircleIcon';
 import { Link } from 'react-router-dom';

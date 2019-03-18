@@ -74,20 +74,20 @@ export default class Inbox extends PureComponent {
 
   onCompose = (e) => {
     e.preventDefault();
-    this.setState({ compose: true, openMailboxes: false, email: false });
+    this.setState({ compose: true, email: false });
   };
 
   onMailBox = (mailbox, e) => {
     e.preventDefault();
     this.setState({
-      mailbox, compose: false, email: false, openMailboxes: false,
+      mailbox, compose: false, email: false,
     });
   };
 
   onLabel = (label, e) => {
     e.preventDefault();
     this.setState({
-      label, compose: false, email: false, openMailboxes: false,
+      label, compose: false, email: false,
     });
   };
 
@@ -97,7 +97,7 @@ export default class Inbox extends PureComponent {
   };
 
   onOpenMailboxes = () => {
-    this.setState({ openMailboxes: !this.state.openMailboxes });
+    this.setState(prevState => ({ openMailboxes: !prevState.openMailboxes }));
   };
 
   render() {
@@ -105,8 +105,14 @@ export default class Inbox extends PureComponent {
       compose, openMailboxes, email, mailbox, label,
     } = this.state;
 
+    const { emails } = this.props;
+
     return (
-      <div className={`inbox${openMailboxes ? ' inbox--show-mailboxes' : ''}`}>
+      <div
+        className={`inbox${openMailboxes ? ' inbox--show-mailboxes' : ''}`}
+        onClick={openMailboxes ? this.onOpenMailboxes : null}
+        role="presentation"
+      >
         <div className="inbox__mailbox-list">
           <Button
             color="primary"
@@ -117,7 +123,7 @@ export default class Inbox extends PureComponent {
             <PenIcon />Compose
           </Button>
           {mailboxes.map((m, i) => (
-            <button className="inbox__list-button" key={i} onClick={e => this.onMailBox(i, e)}>
+            <button type="button" className="inbox__list-button" key={i} onClick={e => this.onMailBox(i, e)}>
               <MailBox title={m.title} amount={m.amount} selected={i === mailbox}>
                 {m.icon}
               </MailBox>
@@ -126,6 +132,7 @@ export default class Inbox extends PureComponent {
           <p className="inbox__labels">Labels</p>
           {labels.map((l, i) => (
             <button
+              type="button"
               key={i}
               onClick={e => this.onLabel(i, e)}
               className={`inbox__list-button inbox__label${label === i ? ' active' : ''}`}
@@ -136,25 +143,27 @@ export default class Inbox extends PureComponent {
         </div>
         <div className="inbox__container">
           <div className={`inbox__topbar${email ? ' inbox__topbar--hide' : ''}`}>
-            <button className="inbox__topbar-button" onClick={this.onOpenMailboxes}>
+            <button className="inbox__topbar-button" type="button" onClick={this.onOpenMailboxes}>
               <MenuIcon className="inbox__topbar-button-icon" />
             </button>
           </div>
-          {!compose ?
-            <div>
-              {email ?
-                <Email
-                  email={emailExample[0]}
-                  onReply={this.onCompose}
-                  onSubmit
-                  onBack={e => this.onMailBox(mailbox, e)}
-                />
-                :
-                <InboxTable emails={this.props.emails} onLetter={this.onLetter} />
+          {!compose
+            ? (
+              <div>
+                {email
+                  ? (
+                    <Email
+                      email={emailExample[0]}
+                      onReply={this.onCompose}
+                      onSubmit
+                      onBack={e => this.onMailBox(mailbox, e)}
+                    />
+                  )
+                  : <InboxTable emails={emails} onLetter={this.onLetter} />
               }
-            </div>
-            :
-            <ComposeEmail onSubmit={showResults} />}
+              </div>
+            )
+            : <ComposeEmail onSubmit={showResults} />}
         </div>
       </div>
     );

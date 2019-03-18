@@ -2,7 +2,6 @@
 import React, { PureComponent } from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
 import MagnifyIcon from 'mdi-react/MagnifyIcon';
-import Pagination from '../../../../shared/components/pagination/Pagination';
 import SearchResult from './SearchResult';
 import results from './results';
 
@@ -43,10 +42,15 @@ export default class SearchHere extends PureComponent {
             <h4>{'Search result for \'Invoice template\''}</h4>
             <h4 className="subhead">Found 18 results</h4>
             <div>
-              {results.slice(0, 10).map((r, i) =>
-                <SearchResult key={i} title={r.title} link={r.link} preview={r.preview} />)}
+              {results.slice(0, 10).map((r, i) => (
+                <SearchResult
+                  key={i}
+                  title={r.title}
+                  link={r.link}
+                  preview={r.preview}
+                />
+              ))}
             </div>
-            <Pagination items={this.state.rows} onChangePage={this.onChangePage} />
           </CardBody>
         </Card>
       </Col>

@@ -2,7 +2,7 @@ import React from 'react';
 import { PieChart, Pie, ResponsiveContainer } from 'recharts';
 import { Card, CardBody, Col } from 'reactstrap';
 import FlashIcon from 'mdi-react/FlashIcon';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const data = [{ value: 360, fill: '#f6da6e' },
@@ -37,4 +37,4 @@ CaloriesBurn.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(CaloriesBurn);
+export default withTranslation('common')(CaloriesBurn);

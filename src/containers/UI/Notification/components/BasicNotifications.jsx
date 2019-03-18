@@ -1,7 +1,9 @@
 import React, { PureComponent } from 'react';
-import { Button, ButtonToolbar, Card, CardBody, Col } from 'reactstrap';
+import {
+  Button, ButtonToolbar, Card, CardBody, Col,
+} from 'reactstrap';
 import PropTypes from 'prop-types';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import { BasicNotification } from '../../../../shared/components/Notification';
 
 class BasicNotifications extends PureComponent {
@@ -11,7 +13,8 @@ class BasicNotifications extends PureComponent {
   };
 
   show = (position) => {
-    this.props.showNotification({
+    const { showNotification } = this.props;
+    return showNotification({
       notification: <BasicNotification
         title="Remember!"
         message="Learning day desirous informed expenses material returned six the.
@@ -45,4 +48,4 @@ class BasicNotifications extends PureComponent {
   }
 }
 
-export default translate('common')(BasicNotifications);
+export default withTranslation('common')(BasicNotifications);

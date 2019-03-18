@@ -1,7 +1,9 @@
 import React from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
-import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { translate } from 'react-i18next';
+import {
+  ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
+} from 'recharts';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const data01 = [
@@ -67,4 +69,4 @@ MultipleYAxesScatterChart.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(MultipleYAxesScatterChart);
+export default withTranslation('common')(MultipleYAxesScatterChart);

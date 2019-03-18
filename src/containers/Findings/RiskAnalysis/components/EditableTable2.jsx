@@ -23,7 +23,8 @@ export default class EditableTable extends PureComponent {
   }
 
   handleGridRowsUpdated = ({ fromRow, toRow, updated }) => {
-    const rows = this.state.rows.slice();
+    let { rows } = this.state;
+    rows = rows.slice();
 
     for (let i = fromRow; i <= toRow; i += 1) {
       const rowToUpdate = rows[i];
@@ -37,13 +38,14 @@ export default class EditableTable extends PureComponent {
     const comparer = (a, b) => {
       if (sortDirection === 'ASC') {
         return (a[sortColumn] > b[sortColumn]) ? 1 : -1;
-      } else if (sortDirection === 'DESC') {
+      } if (sortDirection === 'DESC') {
         return (a[sortColumn] < b[sortColumn]) ? 1 : -1;
       }
     };
 
-    const sortRows = this.state.originalRows.slice(0);
-    const rows = sortDirection === 'NONE' ? this.state.originalRows.slice(0, 10) : sortRows.sort(comparer).slice(0, 10);
+    const { originalRows } = this.state;
+    const sortRows = originalRows.slice(0);
+    const rows = sortDirection === 'NONE' ? originalRows.slice(0, 10) : sortRows.sort(comparer).slice(0, 10);
 
     this.setState({ rows });
   };

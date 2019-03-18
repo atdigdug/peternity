@@ -47,8 +47,8 @@ const ComposeEmail = ({ handleSubmit, reset }) => (
       <Button
         outline
         onClick={(e) => {
-            e.preventDefault();
-          }}
+          e.preventDefault();
+        }}
         className="inbox__files-btn"
         size="sm"
       >Add files

@@ -21,22 +21,21 @@ class TimePickerField extends PureComponent {
 
   toggleOpen = (e) => {
     e.preventDefault();
-    this.setState({
-      open: !this.state.open,
-    });
+    this.setState(prevState => ({ open: !prevState.open }));
   };
 
   render() {
     const { name, onChange, timeMode } = this.props;
+    const { open } = this.state;
     const btnClass = classNames({
       'form__form-group-button': true,
-      active: this.state.open,
+      active: open,
     });
 
     return (
       <div className="form__form-group-field">
         <TimePicker
-          open={this.state.open}
+          open={open}
           onOpen={this.setOpen}
           onClose={this.setOpen}
           name={name}
@@ -44,7 +43,11 @@ class TimePickerField extends PureComponent {
           showSecond={false}
           use12Hours={timeMode}
         />
-        <button className={btnClass} onClick={this.toggleOpen}>
+        <button
+          className={btnClass}
+          type="button"
+          onClick={this.toggleOpen}
+        >
           <AvTimerIcon />
         </button>
       </div>
@@ -52,12 +55,15 @@ class TimePickerField extends PureComponent {
   }
 }
 
-const renderTimePickerField = props => (
-  <TimePickerField
-    {...props.input}
-    timeMode={props.timeMode}
-  />
-);
+const renderTimePickerField = (props) => {
+  const { input, timeMode } = props;
+  return (
+    <TimePickerField
+      {...input}
+      timeMode={timeMode}
+    />
+  );
+};
 
 renderTimePickerField.propTypes = {
   input: PropTypes.shape({

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { I18nextProvider } from 'react-i18next';
@@ -37,18 +37,22 @@ class App extends Component {
         <BrowserRouter basename="/easydev">
           <I18nextProvider i18n={i18next}>
             <ScrollToTop>
-              {!loaded &&
-                <div className={`load${loading ? '' : ' loaded'}`}>
-                  <div className="load__icon-wrap">
-                    <svg className="load__icon">
-                      <path fill="#4ce1b6" d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z" />
-                    </svg>
+              <Fragment>
+                {!loaded
+                  && (
+                  <div className={`load${loading ? '' : ' loaded'}`}>
+                    <div className="load__icon-wrap">
+                      <svg className="load__icon">
+                        <path fill="#4ce1b6" d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z" />
+                      </svg>
+                    </div>
                   </div>
+                  )
+                }
+                <div>
+                  <Router />
                 </div>
-              }
-              <div>
-                <Router />
-              </div>
+              </Fragment>
             </ScrollToTop>
           </I18nextProvider>
         </BrowserRouter>

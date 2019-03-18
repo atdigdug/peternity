@@ -3,20 +3,20 @@ import React, { PureComponent } from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
 import PropTypes from 'prop-types';
 import EditTable from '../../../../shared/components/table/EditableTable';
-import Pagination from '../../../../shared/components/pagination/Pagination';
 
 const MoneyFormatter = ({ value }) => (
   <div>
       ${value}
-  </div>);
+  </div>
+);
 
 MoneyFormatter.propTypes = {
   value: PropTypes.string.isRequired,
 };
 
 const StatusFormatter = ({ value }) => (
-  value === 'Enabled' ? <span className="badge badge-success">Enabled</span> :
-  <span className="badge badge-disabled">Disabled</span>
+  value === 'Enabled' ? <span className="badge badge-success">Enabled</span>
+    : <span className="badge badge-disabled">Disabled</span>
 );
 
 StatusFormatter.propTypes = {
@@ -108,6 +108,7 @@ export default class OrdersListTable extends PureComponent {
   };
 
   render() {
+    const { rows } = this.state;
     return (
       <Col md={12} lg={12}>
         <Card>
@@ -123,8 +124,7 @@ export default class OrdersListTable extends PureComponent {
               </select>
               entries
             </p>
-            <EditTable heads={this.heads} rows={this.state.rows} />
-            <Pagination items={this.state.rows} onChangePage={this.onChangePage} />
+            <EditTable heads={this.heads} rows={rows} />
           </CardBody>
         </Card>
       </Col>

@@ -15,7 +15,7 @@ const handle = ({ value, index, ...restProps }) => (
     placement="top"
     key={index}
   >
-    <Handle value={value} {...restProps} />
+    <Handle value={value} {...restProps} dragging={undefined} />
   </Tooltip>
 );
 
@@ -36,7 +36,7 @@ export default class SliderTheme extends PureComponent {
 
   static defaultProps = {
     marks: {},
-    value: null,
+    value: 0,
     tipFormatter: value => value,
   };
 

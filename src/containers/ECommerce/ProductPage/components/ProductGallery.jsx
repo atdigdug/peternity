@@ -36,22 +36,15 @@ export default class ProductGallery extends PureComponent {
   };
 
   closeLightbox = () => {
-    this.setState({
-      currentImage: this.state.currentImagePreview,
-      lightboxIsOpen: false,
-    });
+    this.setState(prevState => ({ currentImage: prevState.currentImagePreview, lightboxIsOpen: false }));
   };
 
   gotoPrevious = () => {
-    this.setState({
-      currentImage: this.state.currentImage - 1,
-    });
+    this.setState(prevState => ({ currentImage: prevState.currentImage - 1 }));
   };
 
   gotoNext = () => {
-    this.setState({
-      currentImage: this.state.currentImage + 1,
-    });
+    this.setState(prevState => ({ currentImage: prevState.currentImage + 1 }));
   };
 
   gotoImage = (index) => {
@@ -61,32 +54,35 @@ export default class ProductGallery extends PureComponent {
   };
 
   handleClickImage = () => {
-    if (this.state.currentImage === this.props.images.length - 1) return;
+    const { images } = this.props;
+    const { currentImage } = this.state;
+    if (currentImage === images.length - 1) return;
     this.gotoNext();
   };
 
   render() {
+    const { images } = this.props;
+    const { currentImage, currentImagePreview, lightboxIsOpen } = this.state;
     return (
       <div className="product-gallery">
         <a
           className="product-gallery__current-img"
-          onClick={e => this.openLightbox(this.state.currentImage, e)}
-          href={this.props.images[this.state.currentImage].src}
+          onClick={e => this.openLightbox(currentImage, e)}
+          href={images[currentImage].src}
         >
-          <img src={this.props.images[this.state.currentImagePreview].src} alt="product-img" />
+          <img src={images[currentImagePreview].src} alt="product-img" />
         </a>
         <div className="product_gallery__gallery">
-          {this.props.images.map((img, i) =>
-            (
-              <button key={i} onClick={e => this.changeImg(i, e)} className="product-gallery__img-preview">
-                <img src={img.src} alt="product-img" />
-              </button>
-            ))}
+          {images.map((img, i) => (
+            <button type="button" key={i} onClick={e => this.changeImg(i, e)} className="product-gallery__img-preview">
+              <img src={img.src} alt="product-img" />
+            </button>
+          ))}
         </div>
         <Lightbox
-          currentImage={this.state.currentImage}
-          images={this.props.images}
-          isOpen={this.state.lightboxIsOpen}
+          currentImage={currentImage}
+          images={images}
+          isOpen={lightboxIsOpen}
           onClickImage={this.handleClickImage}
           onClickNext={this.gotoNext}
           onClickPrev={this.gotoPrevious}

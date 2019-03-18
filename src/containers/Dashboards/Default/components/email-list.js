@@ -2,8 +2,8 @@ export default [
   {
     name: 'Nikolay Morris',
     subject: 'Breakfast agreeable incommode departure it an.',
-    preview: 'By ignorant at on wondered relation. Enough at tastes really so cousin am of. ' +
-    'Extensive therefore supported by.. ',
+    preview: 'By ignorant at on wondered relation. Enough at tastes really so cousin am of. '
+      + 'Extensive therefore supported by.. ',
     attach: true,
     favorite: false,
     time: '04:23 PM',
@@ -12,8 +12,8 @@ export default [
   {
     name: 'Asha Gharapure',
     subject: 'By ignorant at on wondered relation.',
-    preview: 'Enough at tastes really so cousin am of. Extensive therefore supported by extremity of ' +
-    'contented. Is pursuit compac nviterns…',
+    preview: 'Enough at tastes really so cousin am of. Extensive therefore supported by extremity of '
+      + 'contented. Is pursuit compac nviterns…',
     attach: false,
     favorite: true,
     time: '09:54 AM',
@@ -22,8 +22,8 @@ export default [
   {
     name: 'Nikolay Morris',
     subject: 'Breakfast agreeable incommode departure it an.',
-    preview: 'By ignorant at on wondered relation. Enough at tastes really so cousin am of. ' +
-    'Extensive therefore supported by.. ',
+    preview: 'By ignorant at on wondered relation. Enough at tastes really so cousin am of. '
+      + 'Extensive therefore supported by.. ',
     attach: true,
     favorite: true,
     time: 'July 12',
@@ -32,8 +32,8 @@ export default [
   {
     name: 'Asha Gharapure',
     subject: 'By ignorant at on wondered relation. ',
-    preview: 'Enough at tastes really so cousin am of. Extensive therefore supported by extremity of ' +
-    'contented. Is pursuit compact  inviterns… ',
+    preview: 'Enough at tastes really so cousin am of. Extensive therefore supported by extremity of '
+    + 'contented. Is pursuit compact  inviterns… ',
     attach: false,
     favorite: false,
     time: 'July 12',
@@ -42,8 +42,8 @@ export default [
   {
     name: 'Aspirity Team',
     subject: 'Death there mirth way the noisy merit.',
-    preview: 'Piqued shy spring nor six though mutual living ask extent. Replying of dashwood advanced ' +
-    'ladyship smallest disposal or...',
+    preview: 'Piqued shy spring nor six though mutual living ask extent. Replying of dashwood advanced '
+    + 'ladyship smallest disposal or...',
     attach: false,
     favorite: false,
     time: 'July 10 ',
@@ -70,8 +70,8 @@ export default [
   {
     name: 'Asha Gharapure',
     subject: 'By ignorant at on wondered relation.',
-    preview: 'Enough at tastes really so cousin am of. Extensive therefore supported by extremity of ' +
-    'contented. Is pursuit compact  inviterns… ',
+    preview: 'Enough at tastes really so cousin am of. Extensive therefore supported by extremity of '
+    + 'contented. Is pursuit compact  inviterns… ',
     attach: false,
     favorite: false,
     time: 'July 06',
@@ -80,8 +80,8 @@ export default [
   {
     name: 'Aspirity Team',
     subject: 'Death there mirth way the noisy merit.',
-    preview: 'Piqued shy spring nor six though mutual living ask extent. Replying of dashwood advanced ' +
-    'ladyship smallest disposal or...',
+    preview: 'Piqued shy spring nor six though mutual living ask extent. Replying of dashwood advanced '
+    + 'ladyship smallest disposal or...',
     attach: false,
     favorite: false,
     time: 'July 05 ',

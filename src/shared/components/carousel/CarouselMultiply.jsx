@@ -8,6 +8,7 @@ export default class CarouselMultiply extends PureComponent {
   };
 
   render() {
+    const { children } = this.props;
     // all settings: https://github.com/akiran/react-slick
     const settings = {
       dots: true,
@@ -26,7 +27,7 @@ export default class CarouselMultiply extends PureComponent {
 
     return (
       <Slider {...settings}>
-        {this.props.children}
+        {children}
       </Slider>
     );
   }

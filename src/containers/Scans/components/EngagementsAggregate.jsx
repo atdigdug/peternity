@@ -1,5 +1,7 @@
 import React from 'react';
-import { Card, CardBody, Row, Col } from 'reactstrap';
+import {
+  Card, CardBody, Row, Col,
+} from 'reactstrap';
 import { Pie } from 'react-chartjs-2';
 
 const data = {

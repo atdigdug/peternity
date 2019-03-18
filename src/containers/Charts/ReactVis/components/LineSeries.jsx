@@ -1,7 +1,9 @@
 import React from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
-import { HorizontalGridLines, LineSeries, VerticalGridLines, XAxis, FlexibleWidthXYPlot, YAxis } from 'react-vis';
-import { translate } from 'react-i18next';
+import {
+  HorizontalGridLines, LineSeries, VerticalGridLines, XAxis, FlexibleWidthXYPlot, YAxis,
+} from 'react-vis';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const LineSeriesChart = ({ t }) => (
@@ -21,33 +23,33 @@ const LineSeriesChart = ({ t }) => (
               className="react-vis__svg-line"
               curve="curveMonotoneX"
               data={[
-                    { x: 1, y: 3 },
-                    { x: 2, y: 5 },
-                    { x: 3, y: 15 },
-                    { x: 4, y: 12 },
-                  ]}
+                { x: 1, y: 3 },
+                { x: 2, y: 5 },
+                { x: 3, y: 15 },
+                { x: 4, y: 12 },
+              ]}
               color="#70bbfd"
             />
             <LineSeries
               className="react-vis__svg-line"
               curve="curveMonotoneX"
               data={[
-                    { x: 1, y: 10 },
-                    { x: 2, y: 4 },
-                    { x: 3, y: 2 },
-                    { x: 4, y: 15 },
-                  ]}
+                { x: 1, y: 10 },
+                { x: 2, y: 4 },
+                { x: 3, y: 2 },
+                { x: 4, y: 15 },
+              ]}
               color="#c88ffa"
             />
             <LineSeries
               className="react-vis__svg-line"
               curve="curveMonotoneX"
               data={[
-                    { x: 1, y: 7 },
-                    { x: 2, y: 11 },
-                    { x: 3, y: 9 },
-                    { x: 4, y: 2 },
-                  ]}
+                { x: 1, y: 7 },
+                { x: 2, y: 11 },
+                { x: 3, y: 9 },
+                { x: 4, y: 2 },
+              ]}
               color="#f6da6e"
             />
           </FlexibleWidthXYPlot>
@@ -61,4 +63,4 @@ LineSeriesChart.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(LineSeriesChart);
+export default withTranslation('common')(LineSeriesChart);

@@ -1,25 +1,10 @@
 import React, { PureComponent } from 'react';
 import { Field, reduxForm } from 'redux-form';
-import { translate } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 class HorizontalForm extends PureComponent {
   static propTypes = {
     handleSubmit: PropTypes.func.isRequired,
-  };
-
-  constructor() {
-    super();
-    this.state = {
-      showPassword: false,
-    };
-  }
-
-  showPassword = (e) => {
-    e.preventDefault();
-    this.setState({
-      showPassword: !this.state.showPassword,
-    });
   };
 
   render() {
@@ -70,4 +55,4 @@ class HorizontalForm extends PureComponent {
 
 export default reduxForm({
   form: 'horizontal_form', // a unique identifier for this form
-})(translate('common')(HorizontalForm));
+})((HorizontalForm));

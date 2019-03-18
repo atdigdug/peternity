@@ -15,6 +15,8 @@ class SidebarContent extends Component {
   };
 
   render() {
+    const { changeToLight, changeToDark } = this.props;
+
     return (
       <div className="sidebar__content">
         <ul className="sidebar__block">
@@ -37,10 +39,10 @@ class SidebarContent extends Component {
         <ul className="sidebar__block">
           <SidebarCategory title="Settings" icon="layers">
             <SidebarLink title="Connections" route="/settings/connections" onClick={this.hideSidebar} />
-            <button className="sidebar__link" onClick={this.props.changeToLight}>
+            <button className="sidebar__link" type="button" onClick={changeToLight}>
               <p className="sidebar__link-title">Light Theme</p>
             </button>
-            <button className="sidebar__link" onClick={this.props.changeToDark}>
+            <button className="sidebar__link" type="button" onClick={changeToDark}>
               <p className="sidebar__link-title">Dark Theme</p>
             </button>
           </SidebarCategory>

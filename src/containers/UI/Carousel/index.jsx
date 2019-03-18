@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import BasicCarousel from './components/BasicCarousel';
 import BasicCarouselWithoutCaption from './components/BasicCarouselWithoutCaption';
@@ -28,4 +28,4 @@ Carousel.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(Carousel);
+export default withTranslation('common')(Carousel);

@@ -10,12 +10,12 @@ const NavigationBottom = ({
 }) => (
   <div className="documentation__nav-bottom">
     <div className="documentation__nav-bottom-left">
-      {prevLink ?
-        <Link to={prevLink}><ChevronLeftIcon /><p>{prevTitle}</p></Link> : ''}
+      {prevLink
+        ? <Link to={prevLink}><ChevronLeftIcon /><p>{prevTitle}</p></Link> : ''}
     </div>
     <div className="documentation__nav-bottom-right">
-      {nextLink ?
-        <Link to={nextLink}><p>{nextTitle}</p><ChevronRightIcon /></Link> : ''}
+      {nextLink
+        ? <Link to={nextLink}><p>{nextTitle}</p><ChevronRightIcon /></Link> : ''}
     </div>
   </div>
 );

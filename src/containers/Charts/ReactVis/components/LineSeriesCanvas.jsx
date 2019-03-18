@@ -1,7 +1,9 @@
 import React, { PureComponent } from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
-import { HorizontalGridLines, LineMarkSeries, VerticalGridLines, XAxis, FlexibleWidthXYPlot, YAxis } from 'react-vis';
-import { translate } from 'react-i18next';
+import {
+  HorizontalGridLines, LineMarkSeries, VerticalGridLines, XAxis, FlexibleWidthXYPlot, YAxis,
+} from 'react-vis';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 function getRandomData() {
@@ -24,10 +26,12 @@ class LineSeriesCanvas extends PureComponent {
   }
 
   render() {
+    const { data } = this.state;
+
     const lineSeriesProps = {
       color: '#70bbfd',
       strokeWidth: 1,
-      data: this.state.data,
+      data,
     };
     const { t } = this.props;
 
@@ -59,4 +63,4 @@ class LineSeriesCanvas extends PureComponent {
   }
 }
 
-export default translate('common')(LineSeriesCanvas);
+export default withTranslation('common')(LineSeriesCanvas);

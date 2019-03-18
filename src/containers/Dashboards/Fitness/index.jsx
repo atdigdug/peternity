@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import PropTypes from 'prop-types';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import ActivityChart from './components/ActivityChart';
 import ActivityRating from './components/ActivityRating';
 import FatBurning from './components/FatBurning';
@@ -39,4 +39,4 @@ FitnessDashboard.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(FitnessDashboard);
+export default withTranslation('common')(FitnessDashboard);

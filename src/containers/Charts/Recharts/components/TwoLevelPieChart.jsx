@@ -1,7 +1,9 @@
 import React from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
-import { PieChart, Pie, Tooltip, ResponsiveContainer } from 'recharts';
-import { translate } from 'react-i18next';
+import {
+  PieChart, Pie, Tooltip, ResponsiveContainer,
+} from 'recharts';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const data01 = [
@@ -47,4 +49,4 @@ TwoLevelPieChart.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(TwoLevelPieChart);
+export default withTranslation('common')(TwoLevelPieChart);

@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
-import { AreaChart, Tooltip, Area, ResponsiveContainer } from 'recharts';
+import {
+  AreaChart, Tooltip, Area, ResponsiveContainer,
+} from 'recharts';
 import TrendingDownIcon from 'mdi-react/TrendingDownIcon';
 import PropTypes from 'prop-types';
 
@@ -81,4 +83,3 @@ export default class ETH extends PureComponent {
     );
   }
 }
-

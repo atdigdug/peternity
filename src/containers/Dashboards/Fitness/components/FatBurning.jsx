@@ -1,6 +1,8 @@
 import React from 'react';
-import { AreaChart, Area, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
-import { translate } from 'react-i18next';
+import {
+  AreaChart, Area, YAxis, Tooltip, ResponsiveContainer,
+} from 'recharts';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import Panel from '../../../../shared/components/Panel';
 
@@ -31,7 +33,7 @@ const FatBurning = ({ t }) => (
       <AreaChart
         data={data}
         margin={{
-         top: 0, right: 0, left: -15, bottom: 0,
+          top: 0, right: 0, left: -15, bottom: 0,
         }}
       >
         <defs>
@@ -52,4 +54,4 @@ FatBurning.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(FatBurning);
+export default withTranslation('common')(FatBurning);

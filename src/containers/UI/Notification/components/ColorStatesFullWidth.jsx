@@ -1,7 +1,9 @@
 import React, { PureComponent } from 'react';
-import { Button, ButtonToolbar, Card, CardBody, Col } from 'reactstrap';
+import {
+  Button, ButtonToolbar, Card, CardBody, Col,
+} from 'reactstrap';
 import PropTypes from 'prop-types';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import { FullWideNotification } from '../../../../shared/components/Notification';
 
 class ColorStatesFullWidth extends PureComponent {
@@ -11,7 +13,8 @@ class ColorStatesFullWidth extends PureComponent {
   };
 
   show = (color) => {
-    this.props.showNotification({
+    const { showNotification } = this.props;
+    return showNotification({
       notification: <FullWideNotification
         color={color}
         message="Learning day desirous informed expenses material returned six the.
@@ -48,4 +51,4 @@ class ColorStatesFullWidth extends PureComponent {
   }
 }
 
-export default translate('common')(ColorStatesFullWidth);
+export default withTranslation('common')(ColorStatesFullWidth);

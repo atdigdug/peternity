@@ -1,9 +1,11 @@
 /* eslint-disable react/no-array-index-key */
 import React, { PureComponent } from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
-import { BarChart, Bar, Cell, ResponsiveContainer } from 'recharts';
+import {
+  BarChart, Bar, Cell, ResponsiveContainer,
+} from 'recharts';
 import TrendingUpIcon from 'mdi-react/TrendingUpIcon';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 const data = [
@@ -35,7 +37,7 @@ class TotalProfit extends PureComponent {
     this.setState({
       activeIndex: index,
     });
-  }
+  };
 
   render() {
     const { activeIndex } = this.state;
@@ -77,4 +79,4 @@ class TotalProfit extends PureComponent {
   }
 }
 
-export default translate('common')(TotalProfit);
+export default withTranslation('common')(TotalProfit);

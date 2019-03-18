@@ -25,10 +25,12 @@ export default class TextEditorTwo extends Component {
   }
 
   onEditorStateChange = (editorState) => {
+    const { onChange } = this.props;
+
     this.setState({
       editorState,
     });
-    if (this.props.onChange) { this.props.onChange(draftToHtml(convertToRaw(editorState.getCurrentContent()))); }
+    if (onChange) { onChange(draftToHtml(convertToRaw(editorState.getCurrentContent()))); }
   };
 
   render() {

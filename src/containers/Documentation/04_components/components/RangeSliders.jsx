@@ -9,7 +9,7 @@ const RangeSliders = () => (
         <h5 className="bold-text">Range Sliders</h5>
       </div>
       <p>Sliders are based on <a href="https://github.com/schrodinger/rc-slider">rc-slider</a>. The template has two
-            types of Sliders: one-value slider and range slider.
+        types of Sliders: one-value slider and range slider.
       </p>
       <CodeHighlither>
         {`import React, {PureComponent} from 'react';
@@ -52,7 +52,7 @@ export default class Example extends PureComponent {
           <tr>
             <td>tipFormatter</td>
             <td>func</td>
-            <td>Format of tooltip: e.g. tipFormatter={value => `$${value}`}</td>
+            <td>{'Format of tooltip: e.g. tipFormatter={value => value}'}</td>
           </tr>
           <tr>
             <td>marks</td>

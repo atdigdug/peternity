@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
-import { AreaChart, Tooltip, Area, ResponsiveContainer } from 'recharts';
+import {
+  AreaChart, Tooltip, Area, ResponsiveContainer,
+} from 'recharts';
 import TrendingUpIcon from 'mdi-react/TrendingUpIcon';
 import PropTypes from 'prop-types';
 
@@ -81,4 +83,3 @@ export default class XRP extends PureComponent {
     );
   }
 }
-

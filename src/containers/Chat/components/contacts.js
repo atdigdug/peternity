@@ -7,9 +7,9 @@ export default [
     messages: [
       {
         userName: 'littleOrc',
-        message: 'Of be talent me answer do relied. Mistress in on so laughing throwing endeavor occasion welcomed. ' +
-        'Gravity sir brandon calling can. No years do widow house delay stand. Prospect six kindness use steepest ' +
-        'new ask.',
+        message: 'Of be talent me answer do relied. Mistress in on so laughing throwing endeavor occasion welcomed. '
+        + 'Gravity sir brandon calling can. No years do widow house delay stand. Prospect six kindness use steepest '
+        + 'new ask.',
         date: new Date(2018, 3, 7, 10, 20, 0, 0),
       },
       {
@@ -33,8 +33,8 @@ export default [
       },
       {
         userName: 'littleOrc',
-        message: 'Eldest father can design tastes did joy settle. Roused future he ye an marked. Arose mr rapid ' +
-        'in so vexed words. Gay welcome led add lasting chiefly say looking. ',
+        message: 'Eldest father can design tastes did joy settle. Roused future he ye an marked. Arose mr rapid '
+        + 'in so vexed words. Gay welcome led add lasting chiefly say looking. ',
         date: new Date(2018, 3, 7, 12, 35, 0, 0),
       },
     ],
@@ -54,9 +54,9 @@ export default [
     messages: [
       {
         userName: 'dragonKing',
-        message: 'Knowledge nay estimable questions repulsive daughters boy. Solicitude gay way unaffected ' +
-        'expression for. His mistress ladyship required off horrible disposed rejoiced. Unpleasing pianoforte ' +
-        'unreserved as oh he unpleasant no inquietude insipidity. ',
+        message: 'Knowledge nay estimable questions repulsive daughters boy. Solicitude gay way unaffected '
+        + 'expression for. His mistress ladyship required off horrible disposed rejoiced. Unpleasing pianoforte '
+        + 'unreserved as oh he unpleasant no inquietude insipidity. ',
         date: new Date(2018, 3, 7, 10, 22, 0, 0),
       },
       {

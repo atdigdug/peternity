@@ -26,7 +26,8 @@ class MultiSelectField extends PureComponent {
   };
 
   handleChange = (value) => {
-    this.props.onChange(value);
+    const { onChange } = this.props;
+    onChange(value);
   };
 
   render() {
@@ -36,31 +37,37 @@ class MultiSelectField extends PureComponent {
 
     return (
       <Select
-        multi
+        isMulti
         name={name}
         value={value}
         onChange={this.handleChange}
         options={options}
         clearable={false}
-        className="form__form-group-select"
         closeOnSelect={false}
         removeSelected={false}
+        className="react-select"
         placeholder={placeholder}
+        classNamePrefix="react-select"
       />
     );
   }
 }
 
-const renderMultiSelectField = props => (
-  <div className="form__form-group-input-wrap">
-    <MultiSelectField
-      {...props.input}
-      options={props.options}
-      placeholder={props.placeholder}
-    />
-    {props.meta.touched && props.meta.error && <span className="form__form-group-error">{props.meta.error}</span>}
-  </div>
-);
+const renderMultiSelectField = (props) => {
+  const {
+    input, meta, options, placeholder,
+  } = props;
+  return (
+    <div className="form__form-group-input-wrap">
+      <MultiSelectField
+        {...input}
+        options={options}
+        placeholder={placeholder}
+      />
+      {meta.touched && meta.error && <span className="form__form-group-error">{meta.error}</span>}
+    </div>
+  );
+};
 
 renderMultiSelectField.propTypes = {
   input: PropTypes.shape({
@@ -85,4 +92,3 @@ renderMultiSelectField.defaultProps = {
 };
 
 export default renderMultiSelectField;
-

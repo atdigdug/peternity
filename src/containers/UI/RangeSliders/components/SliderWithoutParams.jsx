@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import Slider from '../../../../shared/components/range_slider/Slider';
 
@@ -22,4 +22,4 @@ SliderWithoutParams.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(SliderWithoutParams);
+export default withTranslation('common')(SliderWithoutParams);

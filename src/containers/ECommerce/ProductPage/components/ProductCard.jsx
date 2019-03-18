@@ -1,5 +1,7 @@
 import React from 'react';
-import { Card, CardBody, Col, ButtonToolbar } from 'reactstrap';
+import {
+  Card, CardBody, Col, ButtonToolbar,
+} from 'reactstrap';
 import HeartIcon from 'mdi-react/HeartIcon';
 import StarIcon from 'mdi-react/StarIcon';
 import StarOutlineIcon from 'mdi-react/StarOutlineIcon';
@@ -23,7 +25,7 @@ const ProductCard = () => (
               <StarIcon />
               <StarIcon />
               <StarOutlineIcon />
-              <a className="product-card__link" href="/">See all reviews</a>
+              <a className="product-card__link" href="/easydev/e-commerce/product_page">See all reviews</a>
             </div>
             <h1 className="product-card__price">$17.19 <span className="product-card__old-price">$23</span></h1>
             <p>Knowledge nay estimable questions repulsive daughters boy. Solicitude gay way unaffected expression
@@ -36,16 +38,16 @@ const ProductCard = () => (
                 <span className="form__form-group-label product-card__form-label">Select Color</span>
                 <div className="form__form-group-field">
                   <ColorSelect options={[
-                        { value: 'Pink Sugar', label: 'Pink Sugar', color: '#f7a9c4' },
-                        { value: 'Pink Sugar', label: 'Pink Sugar', color: '#f7a9c4' },
-                        { value: 'Pink Sugar', label: 'Pink Sugar', color: '#f7a9c4' },
-                      ]}
+                    { value: 'Pink Sugar', label: 'Pink Sugar', color: '#f7a9c4' },
+                    { value: 'Pink Sugar', label: 'Pink Sugar', color: '#f7a9c4' },
+                    { value: 'Pink Sugar', label: 'Pink Sugar', color: '#f7a9c4' },
+                  ]}
                   />
                 </div>
               </div>
               <ButtonToolbar className="product-card__btn-toolbar">
                 <Link className="btn btn-primary" to="/e-commerce/cart">Add to cart</Link>
-                <button className="product-card__wish-btn"><HeartIcon />Add to wishlist</button>
+                <button className="product-card__wish-btn" type="button"><HeartIcon />Add to wishlist</button>
               </ButtonToolbar>
             </form>
             <ProductTabs />

@@ -49,8 +49,9 @@ export default class MatTable extends PureComponent {
   handleRequestSort = (event, property) => {
     const orderBy = property;
     let order = 'desc';
+    const { orderBy: stateOrderBy, order: stateOrder } = this.state;
 
-    if (this.state.orderBy === property && this.state.order === 'desc') { order = 'asc'; }
+    if (stateOrderBy === property && stateOrder === 'desc') { order = 'asc'; }
 
     this.setState({ order, orderBy });
   };
@@ -93,7 +94,8 @@ export default class MatTable extends PureComponent {
   };
 
   handleDeleteSelected = () => {
-    let copyData = [...this.state.data];
+    const { data } = this.state;
+    let copyData = [...data];
     const { selected } = this.state;
 
     for (let i = 0; i < selected.length; i += 1) {
@@ -103,7 +105,10 @@ export default class MatTable extends PureComponent {
     this.setState({ data: copyData, selected: [] });
   };
 
-  isSelected = id => this.state.selected.indexOf(id) !== -1;
+  isSelected = (id) => {
+    const { selected } = this.state;
+    return selected.indexOf(id) !== -1;
+  };
 
   render() {
     const {
@@ -160,10 +165,10 @@ export default class MatTable extends PureComponent {
                           >
                             {d.name}
                           </TableCell>
-                          <TableCell className="material-table__cell" numeric>{d.calories}</TableCell>
-                          <TableCell className="material-table__cell" numeric>{d.fat}</TableCell>
-                          <TableCell className="material-table__cell" numeric>{d.carbs}</TableCell>
-                          <TableCell className="material-table__cell" numeric>{d.protein}</TableCell>
+                          <TableCell className="material-table__cell" align="right">{d.calories}</TableCell>
+                          <TableCell className="material-table__cell" align="right">{d.fat}</TableCell>
+                          <TableCell className="material-table__cell" align="right">{d.carbs}</TableCell>
+                          <TableCell className="material-table__cell" align="right">{d.protein}</TableCell>
                         </TableRow>
                       );
                     })}

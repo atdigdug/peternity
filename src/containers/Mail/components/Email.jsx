@@ -37,12 +37,13 @@ export default class Email extends PureComponent {
 
   render() {
     const { email, onReply, onBack } = this.props;
+    const { quickReply } = this.state;
 
     return (
       <div className="inbox__email inbox__content">
         <div className="inbox__email-header">
           <div className="inbox__email-left">
-            <button className="inbox__email-back" onClick={onBack}><ArrowLeftIcon /></button>
+            <button className="inbox__email-back" type="button" onClick={onBack}><ArrowLeftIcon /></button>
             <div className="inbox__email-ava">
               <img src={email.ava} alt="" />
             </div>
@@ -55,40 +56,43 @@ export default class Email extends PureComponent {
           </div>
           <div className="inbox__email-right">
             <p className="inbox__email-time">{email.time}</p>
-            <button className="inbox__email-btn" onClick={onReply}><ReplyIcon /></button>
-            <button className="inbox__email-btn"><DeleteIcon /></button>
-            <button className="inbox__email-btn"><PrinterIcon /></button>
+            <button className="inbox__email-btn" type="button" onClick={onReply}><ReplyIcon /></button>
+            <button className="inbox__email-btn" type="button"><DeleteIcon /></button>
+            <button className="inbox__email-btn" type="button"><PrinterIcon /></button>
           </div>
         </div>
         <div className="inbox__email-body">
           {email.body}
         </div>
-        {email.attachment ?
-          <div className="inbox__email-attachment">
-            <h5 className="inbox__email-attachment-title">Attachment (2 file 12Mb):</h5>
-            {email.attachment.map((a, i) => (
-              <div key={i} className="inbox__email-attachment-link">
-                <PaperclipIcon /><a href={a.link} download>{a.name} ({a.size})</a>
-              </div>
-            ))}
-          </div> : ''
+        {email.attachment
+          ? (
+            <div className="inbox__email-attachment">
+              <h5 className="inbox__email-attachment-title">Attachment (2 file 12Mb):</h5>
+              {email.attachment.map((a, i) => (
+                <div key={i} className="inbox__email-attachment-link">
+                  <PaperclipIcon /><a href={a.link} download>{a.name} ({a.size})</a>
+                </div>
+              ))}
+            </div>
+          ) : ''
         }
         <div className="inbox__email-reply">
           <textarea className="inbox__email-reply-textarea" onFocus={this.onQuickReply} />
-          {!this.state.quickReply ?
-            <p className="inbox__email-reply-placeholder">Click here to <span>reply</span></p>
-            :
-            <div>
-              <button className="inbox__email-reply-close" onClick={this.onQuickReplyClose}>
-                <CloseIcon />
-              </button>
-              <ButtonToolbar className="inbox__email-reply-btns">
-                <Button size="sm" color="primary">Send</Button>
-                <button className="inbox__email-reply-btn-full" onClick={onReply}>
-                  Go to full answer form
+          {!quickReply
+            ? <p className="inbox__email-reply-placeholder">Click here to <span>reply</span></p>
+            : (
+              <div>
+                <button className="inbox__email-reply-close" type="button" onClick={this.onQuickReplyClose}>
+                  <CloseIcon />
                 </button>
-              </ButtonToolbar>
-            </div>
+                <ButtonToolbar className="inbox__email-reply-btns">
+                  <Button size="sm" color="primary">Send</Button>
+                  <button className="inbox__email-reply-btn-full" type="button" onClick={onReply}>
+                  Go to full answer form
+                  </button>
+                </ButtonToolbar>
+              </div>
+            )
           }
         </div>
       </div>

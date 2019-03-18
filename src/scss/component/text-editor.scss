@@ -93,6 +93,11 @@
     }
   }
 
+  .rdw-option-wrapper {
+    min-width: 0!important;
+    width: auto!important;
+  }
+
   .rdw-dropdown-wrapper {
 
     @include themify($themes) {

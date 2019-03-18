@@ -1,6 +1,8 @@
 import React from 'react';
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { translate } from 'react-i18next';
+import {
+  AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
+} from 'recharts';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import Panel from '../../../../shared/components/Panel';
 
@@ -48,4 +50,4 @@ ActivityChart.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(ActivityChart);
+export default withTranslation('common')(ActivityChart);

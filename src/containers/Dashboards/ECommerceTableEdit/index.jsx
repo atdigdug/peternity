@@ -20,16 +20,20 @@ class ECommerceDashboardEdit extends PureComponent {
   }
 
   componentDidMount() {
-    this.props.dispatch(loadNewOrderTableData(this.props.match.params.index));
+    const { dispatch, match } = this.props;
+    dispatch(loadNewOrderTableData(match.params.index));
   }
 
   handleSubmit = (formValues) => {
-    this.props.dispatch(changeNewOrderTableData(formValues, this.props.match.params.index));
+    const { dispatch, match } = this.props;
+    dispatch(changeNewOrderTableData(formValues, match.params.index));
     this.setState({ redirect: true });
   };
 
   render() {
-    if (this.state.redirect) {
+    const { redirect } = this.state;
+
+    if (redirect) {
       return <Redirect to="/dashboard_e_commerce" />;
     }
 

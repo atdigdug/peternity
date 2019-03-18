@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardBody, Col } from 'reactstrap';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import Carousel from '../../../../shared/components/carousel/CarouselSingle';
 
@@ -54,4 +54,4 @@ BasicCarouselWithCaption.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate('common')(BasicCarouselWithCaption);
+export default withTranslation('common')(BasicCarouselWithCaption);

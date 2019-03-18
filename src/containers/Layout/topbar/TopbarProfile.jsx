@@ -14,18 +14,18 @@ export default class TopbarProfile extends PureComponent {
   }
 
   toggle = () => {
-    this.setState({ collapse: !this.state.collapse });
+    this.setState(prevState => ({ collapse: !prevState.collapse }));
   };
 
   render() {
     return (
       <div className="topbar__profile">
-        <button className="topbar__avatar" onClick={this.toggle}>
+        <button className="topbar__avatar" type="button" onClick={this.toggle}>
           <img className="topbar__avatar-img" src={Ava} alt="avatar" />
           <p className="topbar__avatar-name">Jane Doe</p>
           <DownIcon className="topbar__icon" />
         </button>
-        {this.state.collapse && <button className="topbar__back" onClick={this.toggle} />}
+        {this.state.collapse && <button className="topbar__back" type="button" onClick={this.toggle} />}
         <Collapse isOpen={this.state.collapse} className="topbar__menu-wrap">
           <div className="topbar__menu">
             <TopbarMenuLink title="Page one" icon="list" path="/pages/one" />

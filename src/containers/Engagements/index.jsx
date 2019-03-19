@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Col, Container, Row, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, ButtonToolbar, Button,
+  Col, Container, Row, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, ButtonGroup, Button,
 } from 'reactstrap';
 import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
 import SettingsIcon from 'mdi-react/SettingsIcon';
@@ -32,11 +32,11 @@ const EngagementDefault = () => (
         </UncontrolledDropdown>
       </Col>
       <Col xl="6">
-        <div align="right">
-          <ButtonToolbar>
+        <div className="float-right">
+          <ButtonGroup>
             <Button className="icon"><p><SettingsIcon /> Condensed</p></Button>
             <Button className="icon" outline><p><SettingsIcon /> Detailed</p></Button>
-          </ButtonToolbar>
+          </ButtonGroup>
         </div>
       </Col>
     </Row>

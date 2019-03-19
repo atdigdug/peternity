@@ -3,18 +3,24 @@ import {
   Col, Container, Row, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, ButtonGroup, Button,
 } from 'reactstrap';
 import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
-import SettingsIcon from 'mdi-react/SettingsIcon';
+import CondensedIcon from 'mdi-react/ViewHeadlineIcon';
+import DetailedIcon from 'mdi-react/ViewAgendaIcon';
 import EngagementsAggregate from './components/EngagementsAggregate';
 import Table from './components/NewDataTable';
 
 const EngagementDefault = () => (
   <Container>
     <Row>
-      <Col md={12}>
+      <Col>
         <h3 className="page-title">Engagements</h3>
         <h3 className="page-subhead subhead">
           Active 54 &nbsp;&nbsp;&nbsp; Closed 392 &nbsp;&nbsp;&nbsp; Favorites Only 13
         </h3>
+      </Col>
+      <Col>
+        <div className="float-right">
+          <Button color="success">+ New Engagement</Button>
+        </div>
       </Col>
     </Row>
     <Row>
@@ -34,8 +40,8 @@ const EngagementDefault = () => (
       <Col xl="6">
         <div className="float-right">
           <ButtonGroup>
-            <Button className="icon"><p><SettingsIcon /> Condensed</p></Button>
-            <Button className="icon" outline><p><SettingsIcon /> Detailed</p></Button>
+            <Button className="icon"><p><CondensedIcon /> Condensed</p></Button>
+            <Button className="icon" outline><p><DetailedIcon /> Detailed</p></Button>
           </ButtonGroup>
         </div>
       </Col>

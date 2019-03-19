@@ -9,11 +9,10 @@ import Topbar from './topbar/Topbar';
 import TopbarWithNavigation from './topbar_with_navigation/TopbarWithNavigation';
 import Sidebar from './sidebar/Sidebar';
 import SidebarMobile from './topbar_with_navigation/sidebar_mobile/SidebarMobile';
-import Customizer from './customizer/Customizer';
 import { changeMobileSidebarVisibility, changeSidebarVisibility } from '../../redux/actions/sidebarActions';
 import { changeThemeToDark, changeThemeToLight } from '../../redux/actions/themeActions';
 import { changeBorderRadius, toggleBoxShadow, toggleTopNavigation } from '../../redux/actions/customizerActions';
-import { CustomizerProps, SidebarProps, ThemeProps } from '../../shared/prop-types/ReducerProps';
+import { CustomizerProps, SidebarProps } from '../../shared/prop-types/ReducerProps';
 
 let notification = null;
 
@@ -25,7 +24,6 @@ class Layout extends Component {
     dispatch: PropTypes.func.isRequired,
     sidebar: SidebarProps.isRequired,
     customizer: CustomizerProps.isRequired,
-    theme: ThemeProps.isRequired,
   };
 
   componentDidMount() {
@@ -73,7 +71,7 @@ class Layout extends Component {
   };
 
   render() {
-    const { customizer, sidebar, theme } = this.props;
+    const { customizer, sidebar } = this.props;
     const layoutClass = classNames({
       layout: true,
       'layout--collapse': sidebar.collapse,
@@ -82,17 +80,6 @@ class Layout extends Component {
 
     return (
       <div className={layoutClass}>
-        <Customizer
-          customizer={customizer}
-          sidebar={sidebar}
-          theme={theme}
-          changeSidebarVisibility={this.changeSidebarVisibility}
-          toggleTopNavigation={this.toggleTopNavigation}
-          changeToDark={this.changeToDark}
-          changeToLight={this.changeToLight}
-          changeBorderRadius={this.changeBorderRadius}
-          toggleBoxShadow={this.toggleBoxShadow}
-        />
         {customizer.topNavigation
           ? (
             <TopbarWithNavigation

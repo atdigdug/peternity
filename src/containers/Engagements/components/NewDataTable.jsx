@@ -66,7 +66,7 @@ const EngagementDataTable = () => (
             <td>9553</td>
             <td>China 20/20</td>
             <td>2</td>
-            <td>Chandra</td>
+            <td>Delta</td>
             <td>12/25/2019</td>
             <td>High</td>
             <td>137</td>
@@ -80,7 +80,7 @@ const EngagementDataTable = () => (
             <td>8302</td>
             <td>Engagement 8302</td>
             <td>4</td>
-            <td>Alice</td>
+            <td>Echo</td>
             <td>6/10/2019</td>
             <td>Medium</td>
             <td>469</td>
@@ -94,13 +94,13 @@ const EngagementDataTable = () => (
             <td>17485</td>
             <td>Engagement 17485</td>
             <td>5</td>
-            <td>Alice</td>
+            <td>Foxtrot</td>
             <td>3/29/2020</td>
-            <td>Medium</td>
-            <td>576</td>
+            <td>TBD</td>
+            <td>TBD</td>
             <td>
               <div className="progress-wrap progress-wrap--big progress-wrap--blue">
-                <Progress value={40} />
+                <Progress value={0} />
               </div>
             </td>
           </tr>
@@ -108,7 +108,7 @@ const EngagementDataTable = () => (
             <td>16124</td>
             <td>Engagement 16124</td>
             <td>3</td>
-            <td>Alice</td>
+            <td>Gerry</td>
             <td>10/20/2019</td>
             <td>High</td>
             <td>344</td>
@@ -122,7 +122,7 @@ const EngagementDataTable = () => (
             <td>11704</td>
             <td>Engagement 11704</td>
             <td>2</td>
-            <td>Alice</td>
+            <td>Howard</td>
             <td>4/15/2019</td>
             <td>High</td>
             <td>133</td>
@@ -136,7 +136,7 @@ const EngagementDataTable = () => (
             <td>9373</td>
             <td>Engagement 9373</td>
             <td>4</td>
-            <td>Alice</td>
+            <td>Indigo</td>
             <td>10/17/2019</td>
             <td>Low</td>
             <td>942</td>
@@ -150,7 +150,7 @@ const EngagementDataTable = () => (
             <td>11839</td>
             <td>Engagement 11839</td>
             <td>3</td>
-            <td>Chandra</td>
+            <td>Juliet</td>
             <td>11/30/2019</td>
             <td>Medium</td>
             <td>613</td>

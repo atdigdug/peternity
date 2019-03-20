@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Progress, Table, Card, CardBody,
 } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 
 const EngagementDataTable = () => (
   <Card>
@@ -22,7 +23,9 @@ const EngagementDataTable = () => (
         <tbody>
           <tr>
             <td>6752</td>
-            <td>Merger Release</td>
+            <NavLink to="/engagements/detail">
+              <td>Merger Release</td>
+            </NavLink>
             <td>5</td>
             <td>Bob</td>
             <td>7/27/2019</td>

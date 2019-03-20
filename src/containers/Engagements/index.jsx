@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Col, Container, Row, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, ButtonGroup, Button,
 } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
 import CondensedIcon from 'mdi-react/MenuIcon';
 import DetailedIcon from 'mdi-react/ViewAgendaIcon';
@@ -19,7 +20,9 @@ const EngagementDefault = () => (
       </Col>
       <Col>
         <div className="float-right">
-          <Button color="success">+ New Engagement</Button>
+          <NavLink to="/engagements/input">
+            <Button color="success">+ New Engagement</Button>
+          </NavLink>
         </div>
       </Col>
     </Row>

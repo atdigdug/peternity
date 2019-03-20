@@ -3,7 +3,7 @@ import {
   Col, Container, Row, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, ButtonGroup, Button,
 } from 'reactstrap';
 import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
-import CondensedIcon from 'mdi-react/ViewHeadlineIcon';
+import CondensedIcon from 'mdi-react/MenuIcon';
 import DetailedIcon from 'mdi-react/ViewAgendaIcon';
 import EngagementsAggregate from './components/EngagementsAggregate';
 import Table from './components/NewDataTable';

@@ -79,6 +79,13 @@ const dataBU = {
   }],
 };
 
+const options = {
+  legend: {
+    display: true,
+    position: 'left',
+  },
+};
+
 const EngagementsAggregate = () => (
   <Col xl={12}>
     <Row>
@@ -88,7 +95,7 @@ const EngagementsAggregate = () => (
             <div className="card__title">
               <h5 className="bold-text">By Risk</h5>
             </div>
-            <Pie data={data} />
+            <Pie data={data} options={options} />
           </CardBody>
         </Card>
       </Col>
@@ -98,7 +105,7 @@ const EngagementsAggregate = () => (
             <div className="card__title">
               <h5 className="bold-text">By Consultant</h5>
             </div>
-            <Pie data={dataConsultant} />
+            <Pie data={dataConsultant} options={options} />
           </CardBody>
         </Card>
       </Col>
@@ -108,7 +115,7 @@ const EngagementsAggregate = () => (
             <div className="card__title">
               <h5 className="bold-text">By Business Unit</h5>
             </div>
-            <Pie data={dataBU} />
+            <Pie data={dataBU} options={options} />
           </CardBody>
         </Card>
       </Col>

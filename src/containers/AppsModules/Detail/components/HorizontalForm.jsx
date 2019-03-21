@@ -1,7 +1,10 @@
 import React, { PureComponent } from 'react';
-import { Card, CardBody, Col } from 'reactstrap';
+import {
+  Card, CardBody, Col, Button,
+} from 'reactstrap';
 import { Field, reduxForm } from 'redux-form';
 import PropTypes from 'prop-types';
+import SendIcon from 'mdi-react/SendIcon';
 
 class HorizontalForm extends PureComponent {
   static propTypes = {
@@ -56,6 +59,7 @@ class HorizontalForm extends PureComponent {
                 </div>
               </div>
             </form>
+            <Button className="icon icon--right" color="primary" outline><p>Findings Template <SendIcon /></p></Button>
           </CardBody>
         </Card>
       </Col>

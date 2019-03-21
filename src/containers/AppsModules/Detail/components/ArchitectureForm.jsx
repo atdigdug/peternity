@@ -4,9 +4,12 @@ import { Field, reduxForm } from 'redux-form';
 import PropTypes from 'prop-types';
 
 const logoJava = `${process.env.PUBLIC_URL}/img/java.png`;
+const logoHtml = `${process.env.PUBLIC_URL}/img/HTML5logo.png`;
+const logoCss = `${process.env.PUBLIC_URL}/img/CSS3logo.png`;
 
 const logostyle = {
   maxWidth: 100,
+  maxHeight: 100,
   width: '100%',
   height: '100%',
 };
@@ -30,6 +33,8 @@ class ArchitectureForm extends PureComponent {
               <div className="form__form-group">
                 <span className="form__form-group-label">Architechture Type</span>
                 <img style={logostyle} src={logoJava} alt="" />
+                <img style={logostyle} src={logoHtml} alt="" />
+                <img style={logostyle} src={logoCss} alt="" />
               </div>
               <div className="form__form-group">
                 <span className="form__form-group-label">Data Center</span>

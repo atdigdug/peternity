@@ -24,6 +24,7 @@ import FindingsRiskAnalysis from '../Findings/RiskAnalysis/index';
 import DevSupportDefault from '../DevSupport/index';
 import SettingsConnections from '../Settings/Connections/index';
 import SettingsConnectionsAdd from '../Settings/Connections/Add/index';
+import SearchResultsDefault from '../SearchResults/index';
 
 import Alerts from '../UI/Alerts/index';
 import Buttons from '../UI/Buttons/index';
@@ -169,6 +170,12 @@ const Settings = () => (
   </Switch>
 );
 
+const SearchResultsRoutes = () => (
+  <Switch>
+    <Route path="/searchresults" component={SearchResultsDefault} />
+  </Switch>
+);
+
 const UI = () => (
   <Switch>
     <Route path="/ui/alerts" component={Alerts} />
@@ -303,6 +310,7 @@ const wrappedRoutes = () => (
       <Route path="/findings" component={Findings} />
       <Route path="/devsupport" component={DevSupport} />
       <Route path="/settings" component={Settings} />
+      <Route path="/searchresults" component={SearchResultsRoutes} />
       <Route path="/ui" component={UI} />
       <Route path="/mail" component={Mail} />
       <Route path="/chat" component={Chat} />

@@ -42,7 +42,40 @@ export default class SearchHere extends PureComponent {
             <h4>{'Search result for \'Invoice template\''}</h4>
             <h4 className="subhead">Found 18 results</h4>
             <div>
-              {results.slice(0, 10).map((r, i) => (
+              {results.slice(0, 3).map((r, i) => (
+                <SearchResult
+                  key={i}
+                  title={r.title}
+                  link={r.link}
+                  preview={r.preview}
+                />
+              ))}
+            </div>
+            <h4>Engagements</h4>
+            <div>
+              {results.slice(3, 6).map((r, i) => (
+                <SearchResult
+                  key={i}
+                  title={r.title}
+                  link={r.link}
+                  preview={r.preview}
+                />
+              ))}
+            </div>
+            <h4>Apps</h4>
+            <div>
+              {results.slice(6, 8).map((r, i) => (
+                <SearchResult
+                  key={i}
+                  title={r.title}
+                  link={r.link}
+                  preview={r.preview}
+                />
+              ))}
+            </div>
+            <h4>Findings</h4>
+            <div>
+              {results.slice(8, 10).map((r, i) => (
                 <SearchResult
                   key={i}
                   title={r.title}

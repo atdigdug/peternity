@@ -25,7 +25,7 @@ export default [
     + 'case has sigh. Moreover is possible he admitted sociable concerns… ',
   },
   {
-    title: 'Invoice template',
+    title: 'Invoice Engagement',
     link: 'http://www.admin-easydev/invoice',
     preview: 'Breakfast agreeable incommode departure it an. By ignorant '
     + 'at on wondered relation. Enough at tastes '
@@ -50,7 +50,7 @@ export default [
     + 'her case has sigh. Moreover is possible he admitted sociable concerns… ',
   },
   {
-    title: 'Invoice template',
+    title: 'App Invoice template',
     link: 'http://www.admin-easydev/invoice',
     preview: 'Breakfast agreeable incommode departure it an. '
     + 'By ignorant at on wondered relation. Enough at tastes '
@@ -66,7 +66,7 @@ export default [
     + 'Moreover is possible he admitted sociable concerns… ',
   },
   {
-    title: 'Some … Invoice template',
+    title: 'Findings for Invoice template',
     link: 'http://www.admin-easydev/invoice_open',
     preview: 'By ignorant at on wondered relation. Enough '
     + 'at tastes really so cousin am of. Extensive therefore '

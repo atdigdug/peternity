@@ -9,6 +9,7 @@ import StepLabel from '@material-ui/core/StepLabel';
 import HorizontalForm from './components/HorizontalForm';
 import HorizontalForm2 from './components/HorizontalForm2';
 import RiskPriorities from './components/RiskPriorities';
+import Summary from './components/Summary';
 
 const EngagementsDetail = () => (
   <Container>
@@ -34,6 +35,59 @@ const EngagementsDetail = () => (
         </div>
       </Col>
     </Row>
+
+    <Row>
+      <Col xl="8">
+        <Row>
+          <Col>
+            <Summary />
+          </Col>
+        </Row>
+        Applications
+        <Row>
+          <Col xl="6">
+            <Card>
+              <CardBody>
+                Sonia App
+              </CardBody>
+            </Card>
+          </Col>
+          <Col xl="6">
+            <Card>
+              <CardBody>
+                App 3
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+        <Row>
+          <Col xl="6">
+            <Card>
+              <CardBody>
+                Customer Portal
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+      </Col>
+      <Col xl="4">
+        <Card>
+          <CardBody>
+            Add to favorites
+          </CardBody>
+        </Card>
+      </Col>
+    </Row>
+    <Row>
+      <Col>
+        <Card>
+          <CardBody>
+            Findings
+          </CardBody>
+        </Card>
+      </Col>
+    </Row>
+
     <Row>
       <Col>
         <Card>

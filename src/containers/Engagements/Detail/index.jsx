@@ -10,6 +10,7 @@ import HorizontalForm from './components/HorizontalForm';
 import HorizontalForm2 from './components/HorizontalForm2';
 import RiskPriorities from './components/RiskPriorities';
 import Summary from './components/Summary';
+import App1 from './components/App1';
 
 const EngagementsDetail = () => (
   <Container>
@@ -46,27 +47,15 @@ const EngagementsDetail = () => (
         Applications
         <Row>
           <Col xl="6">
-            <Card>
-              <CardBody>
-                Sonia App
-              </CardBody>
-            </Card>
+            <App1 />
           </Col>
           <Col xl="6">
-            <Card>
-              <CardBody>
-                App 3
-              </CardBody>
-            </Card>
+            <App1 />
           </Col>
         </Row>
         <Row>
           <Col xl="6">
-            <Card>
-              <CardBody>
-                Customer Portal
-              </CardBody>
-            </Card>
+            <App1 />
           </Col>
         </Row>
       </Col>

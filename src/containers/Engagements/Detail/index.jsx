@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Col, Container, Row, Card, CardBody, UncontrolledTooltip, Breadcrumb, BreadcrumbItem,
+  Col, Container, Row, Card, CardBody, UncontrolledTooltip, Breadcrumb, BreadcrumbItem, Button,
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import Stepper from '@material-ui/core/Stepper';
@@ -13,21 +13,25 @@ import RiskPriorities from './components/RiskPriorities';
 const EngagementsDetail = () => (
   <Container>
     <Row>
-      <Col md={12}>
-        <h3 className="page-title">Annual Sale Launch Engagement Details</h3>
-        <h3 className="page-subhead subhead">Next step: This is what you have to do next.</h3>
-      </Col>
+      <Breadcrumb>
+        <BreadcrumbItem><a href="/engagements">Engagements</a></BreadcrumbItem>
+        <BreadcrumbItem active>Merger Release</BreadcrumbItem>
+      </Breadcrumb>
     </Row>
     <Row>
       <Col>
-        <Card>
-          <CardBody>
-            <Breadcrumb>
-              <BreadcrumbItem><a href="/engagements">Organization 1</a></BreadcrumbItem>
-              <BreadcrumbItem active>Annual Sale Launch Engagement</BreadcrumbItem>
-            </Breadcrumb>
-          </CardBody>
-        </Card>
+        <h3 className="page-title">Merger Release</h3>
+        <h3 className="page-subhead subhead">6752</h3>
+      </Col>
+      <Col>
+        <div className="float-right">
+          <NavLink to="/engagements/input">
+            <Button color="success">+ Add Application</Button>
+          </NavLink>
+          <NavLink to="/engagements/input">
+            <Button outline>Edit Application</Button>
+          </NavLink>
+        </div>
       </Col>
     </Row>
     <Row>

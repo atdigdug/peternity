@@ -4,7 +4,7 @@ import {
   Card, CardBody, Progress, Row, Col,
 } from 'reactstrap';
 import { Doughnut } from 'react-chartjs-2';
-import StatusIcon from 'mdi-react/DoneIcon';
+import StatusIcon from 'mdi-react/RotateRightIcon';
 
 const options = {
   legend: {
@@ -43,22 +43,22 @@ const App = () => (
   <Card>
     <CardBody>
       <div className="card__title">
-        <h5 className="bold-text">Partner Mobile App</h5><span className="subhead">v19.2</span>
+        <h5 className="bold-text">Customer Portal</h5><span className="subhead">v2.14</span>
       </div>
-      <div className="progress-wrap progress-wrap--middle">
-        <Progress value={100} />
+      <div className="progress-wrap progress-wrap--middle progress-wrap--blue">
+        <Progress value={80} />
       </div>
       <Row>
         <Col>
-          <StatusIcon /> Risk model
+          <StatusIcon /> Offboarding ...
         </Col>
         <Col align="right">
-        Risk rating: 427
+        Risk rating: 1023
         </Col>
       </Row>
       <p />
       <h6 className="bold-text">Scans:</h6>
-      WhiteHat | Veracode
+      FxCop | CheckMarx
       <p />
       <h6 className="bold-text">Findings risk:</h6>
       <Doughnut data={data} options={options} />

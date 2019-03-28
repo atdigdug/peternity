@@ -7,6 +7,8 @@ import EditIcon from 'mdi-react/EditIcon';
 import Summary from './components/Summary';
 import Details from './components/Details';
 import App1 from './components/App1';
+import App2 from './components/App2';
+import App3 from './components/App3';
 import Findings from './components/FindingsTable';
 
 const EngagementsDetail = () => (
@@ -49,12 +51,12 @@ const EngagementsDetail = () => (
             <App1 />
           </Col>
           <Col xl="6">
-            <App1 />
+            <App2 />
           </Col>
         </Row>
         <Row>
           <Col xl="6">
-            <App1 />
+            <App3 />
           </Col>
         </Row>
       </Col>

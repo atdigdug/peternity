@@ -3,6 +3,7 @@ import {
   Col, Container, Row, Breadcrumb, BreadcrumbItem, Button,
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+import EditIcon from 'mdi-react/EditIcon';
 import Summary from './components/Summary';
 import Details from './components/Details';
 import App1 from './components/App1';
@@ -27,7 +28,7 @@ const EngagementsDetail = () => (
             <Button color="success">+ Add Application</Button>
           </NavLink>
           <NavLink to="/engagements/input">
-            <Button outline>Edit Application</Button>
+            <Button outline><EditIcon /> Edit Application</Button>
           </NavLink>
         </div>
       </Col>

@@ -18,7 +18,7 @@ export default class ProjectMember extends PureComponent {
     } = this.props;
 
     return (
-      <div className="project-member">
+      <div className="project-member" style={{ borderBottom: 'none' }}>
         <div className="project-member__avatar-wrap">
           <img src={img} alt="" />
         </div>

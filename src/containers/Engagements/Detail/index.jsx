@@ -44,7 +44,7 @@ const EngagementsDetail = () => (
             <Summary />
           </Col>
         </Row>
-        Applications
+        <h5>APPLICATIONS</h5>
         <Row>
           <Col xl="6">
             <App1 />

@@ -16,7 +16,7 @@ const Summary = () => (
     <CardBody>
       <Row>
         <Col>
-          <FavoriteIcon />Add to favorites
+          <FavoriteIcon /> Add to favorites
           <hr />
           <p />
           <h6 className="bold-text">Requestor</h6>

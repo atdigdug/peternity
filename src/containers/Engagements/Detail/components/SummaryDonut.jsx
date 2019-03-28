@@ -14,9 +14,9 @@ function getRandomInt(min, max) {
 
 const getState = () => ({
   labels: [
-    'Red',
-    'Blue',
-    'Yellow',
+    'High',
+    'Medium',
+    'Low',
   ],
   datasets: [{
     data: [getRandomInt(50, 200), getRandomInt(100, 150), getRandomInt(150, 250)],

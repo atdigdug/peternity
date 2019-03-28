@@ -1,9 +1,10 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
 import {
-  Row, Col, Card, CardBody, Progress,
+  Card, CardBody, Progress, Row, Col,
 } from 'reactstrap';
 import { Doughnut } from 'react-chartjs-2';
+import StatusIcon from 'mdi-react/RotateRightIcon';
 
 const options = {
   legend: {
@@ -12,14 +13,18 @@ const options = {
   },
 };
 
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * ((max - min) + 1)) + min;
+}
+
 const data = {
   labels: [
-    'Red',
-    'Blue',
-    'Yellow',
+    'High',
+    'Medium',
+    'Low',
   ],
   datasets: [{
-    data: [50, 100, 150],
+    data: [getRandomInt(50, 200), getRandomInt(100, 150), getRandomInt(150, 250)],
     backgroundColor: [
       '#FF6384',
       '#36A2EB',
@@ -37,19 +42,26 @@ const data = {
 const App = () => (
   <Card>
     <CardBody>
+      <div className="card__title">
+        <h5 className="bold-text">Sonia App</h5><span className="subhead">v19.2</span>
+      </div>
+      <div className="progress-wrap progress-wrap--middle progress-wrap--blue">
+        <Progress value={80} />
+      </div>
       <Row>
         <Col>
-          Sonia App v19.2
-          <div className="progress-wrap progress-wrap--middle progress-wrap--blue">
-            <Progress value={80} />
-          </div>
-          Risk model Risk rating: 427
-          <h6>Scans:</h6>
-          WhiteHat | Veracode
-          <h6>Findings risk:</h6>
-          <Doughnut data={data} options={options} />
+          <StatusIcon />Risk model
+        </Col>
+        <Col align="right">
+        Risk rating: 427
         </Col>
       </Row>
+      <p />
+      <h6 className="bold-text">Scans:</h6>
+      WhiteHat | Veracode
+      <p />
+      <h6 className="bold-text">Findings risk:</h6>
+      <Doughnut data={data} options={options} />
     </CardBody>
   </Card>
 );

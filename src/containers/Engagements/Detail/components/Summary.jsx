@@ -17,6 +17,7 @@ const Summary = () => (
           <h6 className="bold-text">Risk rating:</h6>
           Low (893)<p />
           <h6 className="bold-text">Progress:</h6>
+          <p />
           <div className="progress-wrap progress-wrap--middle progress-wrap--blue">
             <Progress value={80} />
           </div>

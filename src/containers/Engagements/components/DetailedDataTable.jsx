@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Progress, Card, CardBody, Row, Col,
 } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 import FavoriteIcon from 'mdi-react/FavoriteIcon';
 import Donut from '../Detail/components/SummaryDonut';
 
@@ -11,7 +12,9 @@ const EngagementDataTable = () => (
       <CardBody>
         <Row>
           <Col>
-            <h4>Merger Release</h4>
+            <NavLink to="/engagements/detail">
+              <h4>Merger Release</h4>
+            </NavLink>
             6752
           </Col>
           <Col align="right">

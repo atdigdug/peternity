@@ -26,14 +26,14 @@ const data = {
   datasets: [{
     data: [getRandomInt(50, 200), getRandomInt(100, 150), getRandomInt(150, 250)],
     backgroundColor: [
-      '#FF6384',
-      '#36A2EB',
-      '#FFCE56',
+      '#FF6960',
+      '#5AD3F6',
+      '#B5F434',
     ],
     hoverBackgroundColor: [
-      '#FF6384',
-      '#36A2EB',
-      '#FFCE56',
+      '#FF6960',
+      '#5AD3F6',
+      '#B5F434',
     ],
     borderColor: 'rgba(255,255,255,0.54)',
   }],

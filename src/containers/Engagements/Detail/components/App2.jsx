@@ -20,10 +20,10 @@ const data = {
   datasets: [{
     data: [100],
     backgroundColor: [
-      '#eff1f5',
+      '#E4E4E4',
     ],
     hoverBackgroundColor: [
-      '#eff1f5',
+      '#E4E4E4',
     ],
     borderColor: 'rgba(255,255,255,0.54)',
   }],

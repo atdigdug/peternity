@@ -28,15 +28,15 @@ export default class EngagementDefault extends PureComponent {
       <Container>
         <Row>
           <Col>
-            <h3 className="page-title">Engagements</h3>
+            <h3 className="page-title">Applications</h3>
             <h3 className="page-subhead subhead">
-              Active 54 &nbsp;&nbsp;&nbsp; Closed 392 &nbsp;&nbsp;&nbsp; Favorites Only 13
+              All (75) &nbsp;&nbsp;&nbsp; Favorites Only (14)
             </h3>
           </Col>
           <Col>
             <div className="float-right">
               <NavLink to="/engagements/input">
-                <Button color="success">+ New Engagement</Button>
+                <Button color="success">+ Add Application</Button>
               </NavLink>
             </div>
           </Col>
@@ -48,10 +48,10 @@ export default class EngagementDefault extends PureComponent {
           <Col xl="6">
             <UncontrolledDropdown>
               <DropdownToggle className="icon icon--right">
-                <p>Most urgent <ChevronDownIcon /></p>
+                <p>Most recent <ChevronDownIcon /></p>
               </DropdownToggle>
               <DropdownMenu className="dropdown__menu">
-                <DropdownItem>Most urgent</DropdownItem>
+                <DropdownItem>Most recent</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
           </Col>

@@ -7,7 +7,7 @@ import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
 import CondensedIcon from 'mdi-react/MenuIcon';
 import DetailedIcon from 'mdi-react/ViewAgendaIcon';
 import AppsAggregate from './components/AppsAggregate';
-import Table from './components/DataTable';
+import DetailedDataTable from './components/DetailedDataTable';
 
 export default class EngagementDefault extends PureComponent {
   constructor() {
@@ -19,9 +19,9 @@ export default class EngagementDefault extends PureComponent {
     let dataTable;
 
     if (this.state.isCondensed) {
-      dataTable = <Table />;
+      dataTable = <DetailedDataTable />;
     } else {
-      dataTable = <Table />;
+      dataTable = <DetailedDataTable />;
     }
 
     return (

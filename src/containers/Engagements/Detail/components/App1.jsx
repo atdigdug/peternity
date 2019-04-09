@@ -3,6 +3,7 @@ import React from 'react';
 import {
   Card, CardBody, Progress, Row, Col,
 } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 import { Doughnut } from 'react-chartjs-2';
 import StatusIcon from 'mdi-react/DoneIcon';
 
@@ -43,7 +44,10 @@ const App = () => (
   <Card>
     <CardBody>
       <div className="card__title">
-        <h5 className="bold-text">Partner Mobile App</h5><span className="subhead">v19.2</span>
+        <NavLink to="/appsmodules/detail">
+          <h5 className="bold-text">Partner Mobile App</h5>
+        </NavLink>
+        <span className="subhead">v19.2</span>
       </div>
       <div className="progress-wrap progress-wrap--middle">
         <Progress value={100} />

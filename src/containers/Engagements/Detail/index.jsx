@@ -35,7 +35,6 @@ const EngagementsDetail = () => (
         </div>
       </Col>
     </Row>
-
     <Row>
       <Col xl="8">
         <Row>

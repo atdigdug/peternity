@@ -1,32 +1,46 @@
 import React from 'react';
 import {
-  Col, Container, Row, Card, CardBody, UncontrolledTooltip, Breadcrumb, BreadcrumbItem,
+  Col, Container, Row, Card, CardBody, UncontrolledTooltip, Breadcrumb, BreadcrumbItem, Button,
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
-import HorizontalForm from './components/HorizontalForm';
-import ArchitectureForm from './components/ArchitectureForm';
-import RiskPriorities from './components/RiskPriorities';
-import Plots from './components/Plots';
+import EditIcon from 'mdi-react/EditIcon';
+import Alert from '../../../shared/components/Alert';
+import Version1 from './components/Version1';
+import Details from './components/Details';
+import Findings from './components/FindingsTable';
 
 const AppsModulesDetail = () => (
   <Container>
     <Row>
-      <Col md={12}>
-        <h3 className="page-title">Sonia App Details</h3>
-        <h3 className="page-subhead subhead">Part of the Annual Sale Launch Engagement</h3>
+      <Breadcrumb>
+        <BreadcrumbItem><a href="/engagements/detail">Merger Release</a></BreadcrumbItem>
+        <BreadcrumbItem active>Partner Mobile App</BreadcrumbItem>
+      </Breadcrumb>
+    </Row>
+    <Row>
+      <Col>
+        <h3 className="page-title">Partner Mobile App</h3>
+        <h3 className="page-subhead subhead">latest version: 2.14 (2/22/2019)</h3>
+      </Col>
+      <Col>
+        <div className="float-right">
+          <NavLink to="/engagements/input">
+            <Button outline><EditIcon /> Edit Application</Button>
+          </NavLink>
+        </div>
       </Col>
     </Row>
     <Row>
       <Col>
-        <Breadcrumb>
-          <BreadcrumbItem><a href="/engagements/detail">Annual Sale Launch Engagement</a></BreadcrumbItem>
-          <BreadcrumbItem active>Sonia App</BreadcrumbItem>
-        </Breadcrumb>
+        <Alert color="success" className="alert--colored" icon="rotate-right">
+          <p>scans in progress...</p>
+        </Alert>
       </Col>
     </Row>
+    <p />
     <Row>
       <Col>
         <Card>
@@ -62,98 +76,31 @@ const AppsModulesDetail = () => (
       </Col>
     </Row>
     <Row>
-      <HorizontalForm />
-      <ArchitectureForm />
+      <Col xl="8">
+        <Version1 />
+      </Col>
+      <Col xl="4">
+        <Details />
+      </Col>
     </Row>
     <Row>
       <Col>
         <Card>
-          <CardBody style={{ backgroundColor: '#add8e6' }}>
-            <Row>
-              <Col xl="3">
-                <NavLink to="/scans/detail">
-                  <Card>
-                    <CardBody>
-                      <div className="card__title">
-                        <h5 className="bold-text">Whitehat Scan</h5>
-                        <h5 className="subhead">DAST</h5>
-                      </div>
-                      <RiskPriorities />
-                      Last run: 2018-02-01 19:07
-                    </CardBody>
-                  </Card>
-                </NavLink>
-              </Col>
-              <Col xl="3">
-                <Card>
-                  <CardBody>
-                    <div className="card__title">
-                      <h5 className="bold-text">Nexus Scan</h5>
-                      <h5 className="subhead">OSS</h5>
-                    </div>
-                    <RiskPriorities />
-                    Last run: 2018-02-01 19:09
-                  </CardBody>
-                </Card>
-              </Col>
-              <Col xl="3">
-                <NavLink to="/scans/input">
-                  <Card>
-                    <CardBody>
-                      <h1 className="bold-text">+ Add Scan</h1>
-                    </CardBody>
-                  </Card>
-                </NavLink>
-              </Col>
-            </Row>
+          <CardBody>
+            <div className="card__title">
+              <h5 className="bold-text">Older Versions</h5>
+            </div>
+            <hr />
+            <Row><Col><Version1 /></Col></Row>
+            <hr />
+            <Row><Col><Version1 /></Col></Row>
           </CardBody>
         </Card>
       </Col>
     </Row>
     <Row>
-      <Plots />
-    </Row>
-    <Row>
       <Col>
-        <Card>
-          <CardBody style={{ backgroundColor: '#ffffe0' }}>
-            <div className="card__title">
-              <h5 className="bold-text">Aggregated Data</h5>
-            </div>
-            <Row>
-              <Col xl="4">
-                <Card>
-                  <CardBody>
-                    <div className="card__title">
-                      <h5 className="bold-text">Findings By Status</h5>
-                    </div>
-                    <RiskPriorities />
-                  </CardBody>
-                </Card>
-              </Col>
-              <Col xl="4">
-                <Card>
-                  <CardBody>
-                    <div className="card__title">
-                      <h5 className="bold-text">Active Findings By Priority</h5>
-                    </div>
-                    <RiskPriorities />
-                  </CardBody>
-                </Card>
-              </Col>
-              <Col xl="4">
-                <Card>
-                  <CardBody>
-                    <div className="card__title">
-                      <h5 className="bold-text">Findings By Scan</h5>
-                    </div>
-                    <RiskPriorities />
-                  </CardBody>
-                </Card>
-              </Col>
-            </Row>
-          </CardBody>
-        </Card>
+        <Findings />
       </Col>
     </Row>
   </Container>

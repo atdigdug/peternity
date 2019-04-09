@@ -11,15 +11,17 @@ const Summary = () => (
     <CardBody>
       <div className="card__title">
         <NavLink to="/appsmodules/detail">
-          <h5 className="bold-text">Partner Mobile App</h5>
+          <h5 className="bold-text">Version 2.14 (LATEST)</h5>
         </NavLink>
-        <span className="subhead">v19.2</span>
+        <span className="subhead">(2/22/2019)</span>
       </div>
-      <div className="progress-wrap progress-wrap--middle">
-        <Progress value={100} />
-      </div>
+      <hr />
       <Row>
-        <Col>
+        <Col xl="4">
+          <h6 className="bold-text">Findings risk:</h6>
+          <Donut />
+        </Col>
+        <Col xl="4">
           <h6 className="bold-text">Due Date:</h6>
           7/27/2019<p />
           <h6 className="bold-text">Consultant:</h6>
@@ -32,10 +34,7 @@ const Summary = () => (
             <Progress value={80} />
           </div>
         </Col>
-        <Col>
-          <h6 className="bold-text">Findings risk:</h6>
-          <Donut />
-        </Col>
+        <Col xl="4">&nbsp;</Col>
       </Row>
     </CardBody>
   </Card>

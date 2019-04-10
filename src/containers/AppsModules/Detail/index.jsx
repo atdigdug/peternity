@@ -35,7 +35,7 @@ const AppsModulesDetail = () => (
     </Row>
     <Row>
       <Col>
-        <Alert color="success" className="alert--colored" icon="rotate-right">
+        <Alert color="success" className="alert--colored" icon>
           <p>scans in progress...</p>
         </Alert>
       </Col>

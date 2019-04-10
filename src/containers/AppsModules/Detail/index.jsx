@@ -9,6 +9,8 @@ import StepLabel from '@material-ui/core/StepLabel';
 import EditIcon from 'mdi-react/EditIcon';
 import Alert from '../../../shared/components/Alert';
 import Version1 from './components/Version1';
+import Version2 from './components/Version2';
+import Version3 from './components/Version3';
 import Details from './components/Details';
 import Findings from './components/FindingsTable';
 
@@ -91,9 +93,9 @@ const AppsModulesDetail = () => (
               <h5 className="bold-text">Older Versions</h5>
             </div>
             <hr />
-            <Row><Col><Version1 /></Col></Row>
+            <Row><Col><Version2 /></Col></Row>
             <hr />
-            <Row><Col><Version1 /></Col></Row>
+            <Row><Col><Version3 /></Col></Row>
           </CardBody>
         </Card>
       </Col>

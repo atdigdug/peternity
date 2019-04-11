@@ -5,8 +5,8 @@ import {
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import FavoriteIcon from 'mdi-react/StarOutlineIcon';
-import StatusIcon from 'mdi-react/DoneIcon';
-import Donut from '../Detail/components/SummaryDonut';
+import StatusIcon from 'mdi-react/RotateRightIcon';
+import Donut from './EmptyDonut';
 
 const Summary = () => (
   <Card>
@@ -17,7 +17,7 @@ const Summary = () => (
             <NavLink to="/appsmodules/detail">
               <h5 className="bold-text">Sonia App</h5>
             </NavLink>
-            <span className="subhead">latest version: v19.2 (4/9/2019)</span>
+            <span className="subhead">latest version: v1.00 (1/16/2019)</span>
           </div>
         </Col>
         <Col align="right"><FavoriteIcon /></Col>
@@ -25,24 +25,24 @@ const Summary = () => (
       <Row>
         <Col>
           <div className="progress-wrap progress-wrap--middle progress-wrap--blue">
-            <Progress value={100} />
+            <Progress value={10} />
           </div>
         </Col>
         <Col align="right">
-          <Badge pill><StatusIcon /> Risk Model</Badge>
+          <Badge pill><StatusIcon /> Intake</Badge>
         </Col>
       </Row>
       <hr />
       <Row>
         <Col>
           <h6 className="bold-text">Architecture:</h6>
-          Java<p />
+          Python<p />
           <h6 className="bold-text">Total Scans:</h6>
-          31<p />
+          0<p />
           <h6 className="bold-text">Consultant:</h6>
-          Bob<p />
+          Chandra<p />
           <h6 className="bold-text">Risk rating:</h6>
-          Low (893)<p />
+          TBD<p />
         </Col>
         <Col>
           <h6 className="bold-text">Findings risk:</h6>

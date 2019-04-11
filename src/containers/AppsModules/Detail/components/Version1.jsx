@@ -8,6 +8,7 @@ import InProgressIcon from 'mdi-react/RotateRightIcon';
 import CompletedIcon from 'mdi-react/DoneIcon';
 import Donut from './SummaryDonut';
 
+
 const Summary = () => (
   <Card>
     <CardBody>
@@ -20,7 +21,16 @@ const Summary = () => (
       <Row>
         <Col xl="6">
           <h6 className="bold-text">Risk rating:</h6>
-            Low (1023)<p />
+          <div className="dashboard__table-orders-amount">
+            <span>Low (1023)</span>
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+          </div>
+          <p />
           <h6 className="bold-text">Findings risk:</h6>
           <Donut />
         </Col>
@@ -33,7 +43,8 @@ const Summary = () => (
             <Progress value={20} />
           </div>
           <Badge color="success" pill><InProgressIcon /> in progress...</Badge>
-          as part of Merger Release
+          <p />
+          as part of <span className="bold-text" style={{ color: 'green' }}>Merger Release</span>
 
           <div className="card__title">
             <h5 className="bold-text">Nexus Scan</h5>
@@ -42,8 +53,9 @@ const Summary = () => (
           <div className="progress-wrap progress-wrap--middle">
             <Progress value={100} />
           </div>
-          <p><Badge pill><CompletedIcon /> 3/1/2019 3:43 PM</Badge></p>
-          <p />as part of CRM Update
+          <Badge pill><CompletedIcon /> 3/1/2019 3:43 PM</Badge>
+          <p />
+          as part of <span className="bold-text" style={{ color: 'green' }}>CRM Update</span>
         </Col>
       </Row>
     </CardBody>

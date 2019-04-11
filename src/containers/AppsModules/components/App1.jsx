@@ -1,7 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
 import {
-  Row, Col, Card, CardBody, Progress, Button,
+  Row, Col, Card, CardBody, Progress, Badge,
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import FavoriteIcon from 'mdi-react/StarIcon';
@@ -17,7 +17,7 @@ const Summary = () => (
             <NavLink to="/appsmodules/detail">
               <h5 className="bold-text">Partner Mobile App</h5>
             </NavLink>
-            <span className="subhead">v19.2</span>
+            <span className="subhead">latest version: v19.2 (4/9/2019)</span>
           </div>
         </Col>
         <Col align="right"><FavoriteIcon /></Col>
@@ -29,7 +29,7 @@ const Summary = () => (
           </div>
         </Col>
         <Col align="right">
-          <Button className="rounded"><StatusIcon /> Risk Model</Button>
+          <Badge pill><StatusIcon /> Risk Model</Badge>
         </Col>
       </Row>
       <hr />

@@ -4,7 +4,7 @@ import {
   Row, Col, Card, CardBody, Progress, Badge,
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import FavoriteIcon from 'mdi-react/StarIcon';
+import FavoriteIcon from 'mdi-react/StarOutlineIcon';
 import StatusIcon from 'mdi-react/RotateRightIcon';
 import Donut from '../Detail/components/SummaryDonut';
 

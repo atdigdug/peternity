@@ -24,7 +24,7 @@ const Summary = () => (
       </Row>
       <Row>
         <Col>
-          <div className="progress-wrap progress-wrap--middle">
+          <div className="progress-wrap progress-wrap--middle progress-wrap--blue">
             <Progress value={100} />
           </div>
         </Col>

@@ -20,7 +20,7 @@ const Summary = () => (
       <Row>
         <Col xl="4">
           <h6 className="bold-text">Risk rating:</h6>
-            Low (893)<p />
+            Low (1023)<p />
           <h6 className="bold-text">Findings risk:</h6>
           <Donut />
         </Col>
@@ -32,8 +32,9 @@ const Summary = () => (
           <div className="progress-wrap progress-wrap--middle progress-wrap--blue">
             <Progress value={80} />
           </div>
-          <p><Badge color="success" pill><InProgressIcon /> in progress...</Badge></p>
-          <p />as part of Merger Release
+          <Badge color="success" pill><InProgressIcon /> in progress...</Badge>
+          <p />
+          as part of <span className="bold-text" style={{ color: 'green' }}>Merger Release</span>
 
           <div className="card__title">
             <h5 className="bold-text">Checkmarx Scan</h5>
@@ -42,8 +43,9 @@ const Summary = () => (
           <div className="progress-wrap progress-wrap--middle">
             <Progress value={100} />
           </div>
-          <p><Badge pill><CompletedIcon /> 1/24/2019 4:07 PM</Badge></p>
-          <p />as part of CRM Update
+          <Badge pill><CompletedIcon /> 1/24/2019 4:07 PM</Badge>
+          <p />
+          as part of <span className="bold-text" style={{ color: 'green' }}>CRM Update</span>
         </Col>
         <Col xl="4">
           <div className="card__title">
@@ -53,8 +55,9 @@ const Summary = () => (
           <div className="progress-wrap progress-wrap--middle">
             <Progress value={100} />
           </div>
-          <p><Badge color="secondary" pill><CompletedIcon /> 1/25/2019 6:30 PM</Badge></p>
-          <p />as part of CRM Update
+          <Badge color="secondary" pill><CompletedIcon /> 1/25/2019 6:30 PM</Badge>
+          <p />
+          as part of <span className="bold-text" style={{ color: 'green' }}>CRM Update</span>
         </Col>
       </Row>
     </CardBody>

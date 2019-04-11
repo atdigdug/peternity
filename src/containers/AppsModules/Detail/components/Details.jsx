@@ -13,6 +13,15 @@ const Summary = () => (
           <FavoriteIcon /> Add to favorites
           <hr />
           <p />
+          <h6 className="bold-text">Architecture</h6>
+          PHP
+          <p />
+          <h6 className="bold-text">Total Scans</h6>
+          14
+          <p />
+          <h6 className="bold-text">Consultant</h6>
+          Chandra
+          <p />
           <h6 className="bold-text">Description</h6>
           ZenMana and MSAT have announced today the planned merger of their business operations to offer a unified
           mobile and communications solution to the enterprise market. ZenMana will acquire the MSAT assets, people

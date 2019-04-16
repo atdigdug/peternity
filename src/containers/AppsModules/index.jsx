@@ -18,6 +18,8 @@ export default class EngagementDefault extends PureComponent {
   render() {
     let dataTable;
 
+    document.title = 'Applications - AppSecFlo';
+
     if (this.state.isCondensed) {
       dataTable = <DetailedDataTable />;
     } else {

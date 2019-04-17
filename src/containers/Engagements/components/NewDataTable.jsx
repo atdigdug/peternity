@@ -30,7 +30,7 @@ const EngagementDataTable = () => (
             <td>Low</td>
             <td>893</td>
             <td>
-              <div className="progress-wrap progress-wrap--big progress-wrap--blue">
+              <div className="progress-wrap progress-wrap--middle progress-wrap--blue">
                 <Progress value={80} />
               </div>
             </td>
@@ -44,7 +44,7 @@ const EngagementDataTable = () => (
             <td>Low</td>
             <td>795</td>
             <td>
-              <div className="progress-wrap progress-wrap--big progress-wrap--blue">
+              <div className="progress-wrap progress-wrap--middle progress-wrap--blue">
                 <Progress value={20} />
               </div>
             </td>
@@ -58,7 +58,7 @@ const EngagementDataTable = () => (
             <td>High</td>
             <td>95</td>
             <td>
-              <div className="progress-wrap progress-wrap--big progress-wrap--blue">
+              <div className="progress-wrap progress-wrap--middle progress-wrap--blue">
                 <Progress value={80} />
               </div>
             </td>
@@ -72,7 +72,7 @@ const EngagementDataTable = () => (
             <td>High</td>
             <td>137</td>
             <td>
-              <div className="progress-wrap progress-wrap--big progress-wrap--blue">
+              <div className="progress-wrap progress-wrap--middle progress-wrap--blue">
                 <Progress value={40} />
               </div>
             </td>
@@ -86,7 +86,7 @@ const EngagementDataTable = () => (
             <td>Medium</td>
             <td>469</td>
             <td>
-              <div className="progress-wrap progress-wrap--big progress-wrap--blue">
+              <div className="progress-wrap progress-wrap--middle progress-wrap--blue">
                 <Progress value={60} />
               </div>
             </td>
@@ -100,7 +100,7 @@ const EngagementDataTable = () => (
             <td>TBD</td>
             <td>TBD</td>
             <td>
-              <div className="progress-wrap progress-wrap--big progress-wrap--blue">
+              <div className="progress-wrap progress-wrap--middle progress-wrap--blue">
                 <Progress value={0} />
               </div>
             </td>
@@ -114,7 +114,7 @@ const EngagementDataTable = () => (
             <td>High</td>
             <td>344</td>
             <td>
-              <div className="progress-wrap progress-wrap--big progress-wrap--blue">
+              <div className="progress-wrap progress-wrap--middle progress-wrap--blue">
                 <Progress value={60} />
               </div>
             </td>
@@ -128,7 +128,7 @@ const EngagementDataTable = () => (
             <td>High</td>
             <td>133</td>
             <td>
-              <div className="progress-wrap progress-wrap--big progress-wrap--blue">
+              <div className="progress-wrap progress-wrap--middle progress-wrap--blue">
                 <Progress value={60} />
               </div>
             </td>
@@ -142,7 +142,7 @@ const EngagementDataTable = () => (
             <td>Low</td>
             <td>942</td>
             <td>
-              <div className="progress-wrap progress-wrap--big progress-wrap--blue">
+              <div className="progress-wrap progress-wrap--middle progress-wrap--blue">
                 <Progress value={40} />
               </div>
             </td>
@@ -156,7 +156,7 @@ const EngagementDataTable = () => (
             <td>Medium</td>
             <td>613</td>
             <td>
-              <div className="progress-wrap progress-wrap--big progress-wrap--blue">
+              <div className="progress-wrap progress-wrap--middle progress-wrap--blue">
                 <Progress value={80} />
               </div>
             </td>

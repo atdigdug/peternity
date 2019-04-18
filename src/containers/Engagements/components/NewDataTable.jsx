@@ -21,22 +21,22 @@ const EngagementDataTable = () => (
           </tr>
         </thead>
         <tbody>
-          <NavLink to="/engagements/detail">
-            <tr>
-              <td>6752</td>
+          <tr>
+            <td>6752</td>
+            <NavLink to="/engagements/detail">
               <td>Merger Release</td>
-              <td>5</td>
-              <td>Bob</td>
-              <td>7/27/2019</td>
-              <td>Low</td>
-              <td>893</td>
-              <td>
-                <div className="progress-wrap progress-wrap--middle progress-wrap--blue">
-                  <Progress value={80} />
-                </div>
-              </td>
-            </tr>
-          </NavLink>
+            </NavLink>
+            <td>5</td>
+            <td>Bob</td>
+            <td>7/27/2019</td>
+            <td>Low</td>
+            <td>893</td>
+            <td>
+              <div className="progress-wrap progress-wrap--middle progress-wrap--blue">
+                <Progress value={80} />
+              </div>
+            </td>
+          </tr>
           <tr>
             <td>19106</td>
             <td>Spring Release</td>

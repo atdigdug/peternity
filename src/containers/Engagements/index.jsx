@@ -55,6 +55,7 @@ export default class EngagementDefault extends PureComponent {
               </DropdownToggle>
               <DropdownMenu className="dropdown__menu">
                 <DropdownItem>Most urgent</DropdownItem>
+                <DropdownItem>Most recent</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
           </Col>

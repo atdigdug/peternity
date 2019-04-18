@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 const EngagementDataTable = () => (
   <Card>
     <CardBody>
-      <Table responsive className="table--bordered dashboard__audience-table">
+      <Table responsive hover className="table--bordered dashboard__audience-table">
         <thead>
           <tr>
             <th>ID</th>

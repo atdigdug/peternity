@@ -5,7 +5,7 @@ import classNames from 'classnames';
 export default class TopbarSearch extends PureComponent {
   constructor() {
     super();
-    this.state = { inputOpen: false };
+    this.state = { inputOpen: true };
   }
 
   onInputOpen = (e) => {
@@ -23,7 +23,7 @@ export default class TopbarSearch extends PureComponent {
 
     return (
       <form className="topbar__search" action="/searchresults">
-        <input className={searchClass} />
+        <input placeholder="search..." className={searchClass} />
         <button className="topbar__btn topbar__search-btn" type="button" onClick={this.onInputOpen}>
           <SearchIcon />
         </button>

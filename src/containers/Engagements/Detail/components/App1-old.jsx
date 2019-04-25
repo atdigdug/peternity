@@ -4,42 +4,13 @@ import {
   Card, CardBody, Progress, Row, Col,
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import { Doughnut, HorizontalBar } from 'react-chartjs-2';
+import { Doughnut } from 'react-chartjs-2';
 import StatusIcon from 'mdi-react/DoneIcon';
 
-const oldOptions = {
+const options = {
   legend: {
     display: true,
     position: 'left',
-  },
-};
-
-const options = {
-  scales: {
-    xAxes: [{
-      stacked: true,
-      gridLines: {
-        display: false,
-        drawBorder: false,
-      },
-      ticks: {
-        display: false,
-      },
-    }],
-    yAxes: [{
-      stacked: true,
-      barThickness: 20,
-      gridLines: {
-        display: false,
-        drawBorder: false,
-      },
-      ticks: {
-        display: false,
-      },
-    }],
-  },
-  legend: {
-    display: false,
   },
 };
 
@@ -47,7 +18,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * ((max - min) + 1)) + min;
 }
 
-const oldData = {
+const data = {
   labels: [
     'High',
     'Medium',
@@ -66,30 +37,6 @@ const oldData = {
       '#B5F434',
     ],
     borderColor: 'rgba(255,255,255,0.54)',
-  }],
-};
-
-const data = {
-  datasets: [{
-    label: 'High',
-    data: [getRandomInt(50, 200)],
-    backgroundColor: [
-      '#FF6960',
-    ],
-  },
-  {
-    label: 'Medium',
-    data: [getRandomInt(100, 150)],
-    backgroundColor: [
-      '#5AD3F6',
-    ],
-  },
-  {
-    label: 'Low',
-    data: [getRandomInt(150, 250)],
-    backgroundColor: [
-      '#B5F434',
-    ],
   }],
 };
 
@@ -118,8 +65,7 @@ const App = () => (
       WhiteHat | Veracode
       <p />
       <h6 className="bold-text">Findings risk:</h6>
-      <Doughnut data={oldData} options={oldOptions} />
-      <HorizontalBar data={data} options={options} />
+      <Doughnut data={data} options={options} />
     </CardBody>
   </Card>
 );

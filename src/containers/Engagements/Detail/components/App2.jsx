@@ -1,57 +1,125 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
 import {
-  Card, CardBody, Progress, Row, Col,
+  Card, CardBody, Progress, Row, Col, Badge,
 } from 'reactstrap';
-import { Doughnut } from 'react-chartjs-2';
-import StatusIcon from 'mdi-react/RotateRightIcon';
+import { NavLink } from 'react-router-dom';
+import { HorizontalBar } from 'react-chartjs-2';
+import InProgressIcon from 'mdi-react/RotateRightIcon';
 
 const options = {
+  scales: {
+    xAxes: [{
+      stacked: true,
+      gridLines: {
+        display: false,
+        drawBorder: false,
+      },
+      ticks: {
+        display: false,
+      },
+    }],
+    yAxes: [{
+      stacked: true,
+      barThickness: 20,
+      gridLines: {
+        display: false,
+        drawBorder: false,
+      },
+      ticks: {
+        display: false,
+      },
+    }],
+  },
   legend: {
-    display: true,
-    position: 'left',
+    display: false,
   },
 };
 
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * ((max - min) + 1)) + min;
+}
+
 const data = {
-  labels: [
-    'TBD',
-  ],
   datasets: [{
-    data: [100],
+    label: 'High',
+    data: [getRandomInt(50, 200)],
     backgroundColor: [
-      '#E4E4E4',
+      '#FF6960',
     ],
-    hoverBackgroundColor: [
-      '#E4E4E4',
+  },
+  {
+    label: 'Medium',
+    data: [getRandomInt(100, 150)],
+    backgroundColor: [
+      '#5AD3F6',
     ],
-    borderColor: 'rgba(255,255,255,0.54)',
+  },
+  {
+    label: 'Low',
+    data: [getRandomInt(150, 250)],
+    backgroundColor: [
+      '#B5F434',
+    ],
   }],
+  labels: ['Findings'],
 };
 
 const App = () => (
   <Card>
     <CardBody>
       <div className="card__title">
-        <h5 className="bold-text">Vendor Registration App</h5><span className="subhead">v1.02</span>
-      </div>
-      <div className="progress-wrap progress-wrap--middle progress-wrap--blue">
-        <Progress value={20} />
+        <NavLink to="/appsmodules/detail">
+          <h5 className="bold-text">Customer Portal</h5>
+        </NavLink>
+        <span className="subhead">v2.14</span>
+        <br />
+        <Badge pill color="success"><InProgressIcon /> Onboarding</Badge>&nbsp;
+        <Badge pill>2</Badge>&nbsp;
+        <Badge pill>3</Badge>
       </div>
       <Row>
-        <Col>
-          <StatusIcon /> Threat model
+        <Col xl="4">
+          <h6 className="bold-text">Risk Rating:</h6>
+          TBD
+          <p />
+          <h6 className="bold-text">Findings: 750</h6>
+          <div>
+            <HorizontalBar data={data} options={options} />
+          </div>
         </Col>
-        <Col align="right">
-        Risk rating: TBD
+        <Col xl="4">
+          <div className="card__title">
+            <h5 className="bold-text">FxCop Scan</h5>
+            <span className="subhead">SAST</span>
+          </div>
+          <div className="progress-wrap progress-wrap--middle">
+            <Progress value={70} />
+          </div>
+          <p />
+          Risk rating: TBD
+          <div className="card__title">
+            <h5 className="bold-text">Veracode Scan</h5>
+            <span className="subhead">SAST</span>
+          </div>
+          <div className="progress-wrap progress-wrap--middle">
+            <Progress value={100} />
+          </div>
+          <p />
+          Risk rating: 54.7
+        </Col>
+        <Col xl="4">
+          <div className="card__title">
+            <h5 className="bold-text">CheckMarx Scan</h5>
+            <span className="subhead">DAST</span>
+          </div>
+          <div className="progress-wrap progress-wrap--middle">
+            <Progress value={30} />
+          </div>
+          <p />
+          Risk rating: TBD
         </Col>
       </Row>
-      <p />
-      <h6 className="bold-text">Scans:</h6>
-      Veracode
-      <p />
-      <h6 className="bold-text">Findings risk:</h6>
-      <Doughnut data={data} options={options} />
     </CardBody>
   </Card>
 );

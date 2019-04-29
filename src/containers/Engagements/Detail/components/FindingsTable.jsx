@@ -9,32 +9,31 @@ export default class DataTable extends PureComponent {
     this.heads = [
       {
         key: 'id',
-        name: '#',
-        width: 80,
+        name: 'ID',
       },
       {
-        key: 'first',
-        name: 'Findings',
+        key: 'rule',
+        name: 'Rule',
         sortable: true,
       },
       {
-        key: 'user',
-        name: 'Scan',
+        key: 'tool',
+        name: 'Tool',
         sortable: true,
       },
       {
-        key: 'age',
+        key: 'app',
         name: 'Application',
         sortable: true,
       },
       {
-        key: 'last',
-        name: 'Status',
+        key: 'assigned',
+        name: 'Assigned',
         sortable: true,
       },
       {
-        key: 'summary',
-        name: 'Summary',
+        key: 'risk',
+        name: 'Risk',
         sortable: true,
       },
     ];
@@ -56,12 +55,13 @@ export default class DataTable extends PureComponent {
     const rows = [];
     for (let i = 1; i < numberOfRows + 1; i += 1) {
       rows.push({
-        id: i,
-        first: ['Finding 1', 'Finding 2', 'Finding 3'][Math.floor((Math.random() * 3))],
-        last: ['Pri 0', 'Pri 1', 'Pri 2'][Math.floor((Math.random() * 3))],
-        user: ['Scan 1', 'Scan 2', 'Scan 3'][Math.floor((Math.random() * 3))],
-        age: ['App 1', 'App 2', 'App 3'][Math.floor((Math.random() * 3))],
-        summary: ['Cross-site scripting', 'SQL Injection', 'Out-dated Library'][Math.floor((Math.random() * 3))],
+        id: Math.floor((Math.random() * 999999999)),
+        rule: ['Cross-site scripting (XSS)', 'Command injection', 'Authentication',
+          'Dead code', 'Cross-site request forgery'][Math.floor((Math.random() * 5))],
+        tool: ['Whitehat', 'Veracode', 'CheckMarx', 'FxCop'][Math.floor((Math.random() * 4))],
+        app: ['Customer Portal', 'Partner Mobile App', 'Vendor Registration App'][Math.floor((Math.random() * 3))],
+        assigned: ['App 1', 'App 2', 'App 3'][Math.floor((Math.random() * 3))],
+        risk: ['High', 'Medium', 'Low'][Math.floor((Math.random() * 3))],
       });
     }
     return rows;

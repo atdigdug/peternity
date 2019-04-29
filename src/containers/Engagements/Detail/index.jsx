@@ -46,15 +46,17 @@ const EngagementsDetail = () => (
           <h5 className="bold-text">Applications</h5>
         </div>
         <Row>
-          <Col xl="6">
+          <Col>
             <App1 />
           </Col>
-          <Col xl="6">
+        </Row>
+        <Row>
+          <Col>
             <App2 />
           </Col>
         </Row>
         <Row>
-          <Col xl="6">
+          <Col>
             <App3 />
           </Col>
         </Row>

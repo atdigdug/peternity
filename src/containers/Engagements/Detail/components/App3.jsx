@@ -3,9 +3,8 @@ import React from 'react';
 import {
   Card, CardBody, Progress, Row, Col, Badge,
 } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
 import { HorizontalBar } from 'react-chartjs-2';
-import CompletedIcon from 'mdi-react/DoneIcon';
+import InProgressIcon from 'mdi-react/RotateRightIcon';
 
 const options = {
   scales: {
@@ -69,35 +68,20 @@ const App = () => (
   <Card>
     <CardBody>
       <div className="card__title">
-        <NavLink to="/appsmodules/detail">
-          <h5 className="bold-text">Partner Mobile App</h5>
-        </NavLink>
-        <span className="subhead">v19.2</span>
+        <h5 className="bold-text">Vendor Registration App</h5>
+        <span className="subhead">v1.02</span>
         <br />
-        <Badge pill><CompletedIcon /></Badge>&nbsp;
-        <Badge pill><CompletedIcon /></Badge>&nbsp;
-        <Badge pill><CompletedIcon /> Risk model</Badge>
+        <Badge pill color="success"><InProgressIcon /> Intake</Badge>
       </div>
       <Row>
         <Col xl="4">
           <h6 className="bold-text">Risk Rating:</h6>
-          98.3
+          TBD
           <p />
-          <h6 className="bold-text">Findings: 945</h6>
+          <h6 className="bold-text">Findings: TBD</h6>
           <div>
             <HorizontalBar data={data} options={options} />
           </div>
-        </Col>
-        <Col xl="4">
-          <div className="card__title">
-            <h5 className="bold-text">Whitehat Scan</h5>
-            <span className="subhead">DAST</span>
-          </div>
-          <div className="progress-wrap progress-wrap--middle">
-            <Progress value={100} />
-          </div>
-          <p />
-          Risk rating: 45.2
         </Col>
         <Col xl="4">
           <div className="card__title">
@@ -105,10 +89,13 @@ const App = () => (
             <span className="subhead">SAST</span>
           </div>
           <div className="progress-wrap progress-wrap--middle">
-            <Progress value={100} />
+            <Progress value={0} />
           </div>
           <p />
-          Risk rating: 99.6
+          Risk rating: TBD
+        </Col>
+        <Col xl="4">
+          &nbsp;
         </Col>
       </Row>
     </CardBody>

@@ -3,7 +3,6 @@ import React from 'react';
 import {
   Card, CardBody, Progress, Row, Col, Badge,
 } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
 import { HorizontalBar } from 'react-chartjs-2';
 import InProgressIcon from 'mdi-react/RotateRightIcon';
 
@@ -69,9 +68,7 @@ const App = () => (
   <Card>
     <CardBody>
       <div className="card__title">
-        <NavLink to="/appsmodules/detail">
-          <h5 className="bold-text">Customer Portal</h5>
-        </NavLink>
+        <h5 className="bold-text">Customer Portal</h5>
         <span className="subhead">v2.14</span>
         <br />
         <Badge pill color="success"><InProgressIcon /> Onboarding</Badge>&nbsp;

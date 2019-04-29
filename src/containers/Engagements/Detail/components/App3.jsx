@@ -9,7 +9,6 @@ import InProgressIcon from 'mdi-react/RotateRightIcon';
 const options = {
   scales: {
     xAxes: [{
-      stacked: true,
       gridLines: {
         display: false,
         drawBorder: false,
@@ -19,7 +18,6 @@ const options = {
       },
     }],
     yAxes: [{
-      stacked: true,
       barThickness: 20,
       gridLines: {
         display: false,
@@ -35,31 +33,10 @@ const options = {
   },
 };
 
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * ((max - min) + 1)) + min;
-}
-
 const data = {
   datasets: [{
-    label: 'High',
-    data: [getRandomInt(50, 200)],
-    backgroundColor: [
-      '#FF6960',
-    ],
-  },
-  {
-    label: 'Medium',
-    data: [getRandomInt(100, 150)],
-    backgroundColor: [
-      '#5AD3F6',
-    ],
-  },
-  {
-    label: 'Low',
-    data: [getRandomInt(150, 250)],
-    backgroundColor: [
-      '#B5F434',
-    ],
+    data: [1],
+    backgroundColor: '#E4E4E4',
   }],
   labels: ['Findings'],
 };

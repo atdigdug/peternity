@@ -1,18 +1,11 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
 import {
-  Card, CardBody, Progress, Row, Col,
+  Card, CardBody, Progress, Row, Col, Badge,
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import { Doughnut, HorizontalBar } from 'react-chartjs-2';
-import StatusIcon from 'mdi-react/DoneIcon';
-
-const oldOptions = {
-  legend: {
-    display: true,
-    position: 'left',
-  },
-};
+import { HorizontalBar } from 'react-chartjs-2';
+import CompletedIcon from 'mdi-react/DoneIcon';
 
 const options = {
   scales: {
@@ -47,28 +40,6 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * ((max - min) + 1)) + min;
 }
 
-const oldData = {
-  labels: [
-    'High',
-    'Medium',
-    'Low',
-  ],
-  datasets: [{
-    data: [getRandomInt(50, 200), getRandomInt(100, 150), getRandomInt(150, 250)],
-    backgroundColor: [
-      '#FF6960',
-      '#5AD3F6',
-      '#B5F434',
-    ],
-    hoverBackgroundColor: [
-      '#FF6960',
-      '#5AD3F6',
-      '#B5F434',
-    ],
-    borderColor: 'rgba(255,255,255,0.54)',
-  }],
-};
-
 const data = {
   datasets: [{
     label: 'High',
@@ -91,6 +62,7 @@ const data = {
       '#B5F434',
     ],
   }],
+  labels: ['Findings'],
 };
 
 const App = () => (
@@ -101,25 +73,44 @@ const App = () => (
           <h5 className="bold-text">Partner Mobile App</h5>
         </NavLink>
         <span className="subhead">v19.2</span>
-      </div>
-      <div className="progress-wrap progress-wrap--middle">
-        <Progress value={100} />
+        <br />
+        <Badge pill><CompletedIcon /></Badge>&nbsp;
+        <Badge pill><CompletedIcon /></Badge>&nbsp;
+        <Badge pill><CompletedIcon /> Risk model</Badge>
       </div>
       <Row>
-        <Col>
-          <StatusIcon /> Risk model
+        <Col xl="4">
+          <h6 className="bold-text">Risk Rating:</h6>
+          98.3
+          <p />
+          <h6 className="bold-text">Findings: 945</h6>
+          <div>
+            <HorizontalBar data={data} options={options} />
+          </div>
         </Col>
-        <Col align="right">
-        Risk rating: 427
+        <Col xl="4">
+          <div className="card__title">
+            <h5 className="bold-text">Whitehat Scan</h5>
+            <span className="subhead">DAST</span>
+          </div>
+          <div className="progress-wrap progress-wrap--middle">
+            <Progress value={100} />
+          </div>
+          <p />
+          Risk rating: 45.2
+        </Col>
+        <Col xl="4">
+          <div className="card__title">
+            <h5 className="bold-text">Veracode Scan</h5>
+            <span className="subhead">SAST</span>
+          </div>
+          <div className="progress-wrap progress-wrap--middle">
+            <Progress value={100} />
+          </div>
+          <p />
+          Risk rating: 99.6
         </Col>
       </Row>
-      <p />
-      <h6 className="bold-text">Scans:</h6>
-      WhiteHat | Veracode
-      <p />
-      <h6 className="bold-text">Findings risk:</h6>
-      <Doughnut data={oldData} options={oldOptions} />
-      <HorizontalBar data={data} options={options} />
     </CardBody>
   </Card>
 );

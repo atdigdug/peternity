@@ -2,8 +2,7 @@ import React from 'react';
 import {
   Col, Container, Row, Button,
 } from 'reactstrap';
-import ListOfActiveEngagements from './components/ListOfActiveEngagements';
-import EngagementsAggregate from './components/EngagementsAggregate';
+import Tool1 from './components/Tool1';
 import Table from './components/DataTable';
 
 const ApplicationsDefault = () => (
@@ -22,10 +21,16 @@ const ApplicationsDefault = () => (
       </Col>
     </Row>
     <Row>
-      <ListOfActiveEngagements />
+      <Col><Tool1 /></Col>
+      <Col><Tool1 /></Col>
     </Row>
     <Row>
-      <EngagementsAggregate />
+      <Col><Tool1 /></Col>
+      <Col><Tool1 /></Col>
+    </Row>
+    <Row>
+      <Col><Tool1 /></Col>
+      <Col>&nbsp;</Col>
     </Row>
     <Row>
       <Table />

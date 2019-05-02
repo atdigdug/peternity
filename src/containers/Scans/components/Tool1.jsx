@@ -4,7 +4,7 @@ import {
   Row, Col, Card, CardBody, Badge,
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import StatusIcon from 'mdi-react/DoneIcon';
+import StatusIcon from 'mdi-react/RotateRightIcon';
 
 const logoWhitehat = `${process.env.PUBLIC_URL}/img/whitehat.png`;
 
@@ -21,28 +21,23 @@ const Summary = () => (
         <Col>
           <div className="card__title">
             <NavLink to="/appsmodules/detail">
-              <h5 className="bold-text">Whitehat</h5>
+              <h5 className="bold-text" style={{ float: 'left' }}>Whitehat</h5>
             </NavLink>
-            <span className="subhead">#14</span>
+            <h5>&nbsp;#14</h5>
           </div>
-          <Badge pill><StatusIcon /> Risk Model</Badge>
+          <Badge pill color="success"><StatusIcon /> 3 scans in progress</Badge>
         </Col>
         <Col align="right"><img style={logostyle} src={logoWhitehat} alt="" /></Col>
       </Row>
       <hr />
       <Row>
         <Col>
-          <h6 className="bold-text">Architecture:</h6>
-          Java<p />
-          <h6 className="bold-text">Total Scans:</h6>
-          31<p />
-          <h6 className="bold-text">Consultant:</h6>
-          Bob<p />
-          <h6 className="bold-text">Risk rating:</h6>
-          Low (893)<p />
-        </Col>
-        <Col>
-          <h6 className="bold-text">Findings risk:</h6>
+          <h6 className="bold-text">Types:</h6>
+          DAST, SAST, MAST, SCA<p />
+          <h6 className="bold-text">Owner:</h6>
+          WhiteHat Security<p />
+          <h6 className="bold-text">Times used:</h6>
+          110<p />
         </Col>
       </Row>
     </CardBody>

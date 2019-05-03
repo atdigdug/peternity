@@ -6,7 +6,7 @@ import {
 import { NavLink } from 'react-router-dom';
 import StatusIcon from 'mdi-react/RotateRightIcon';
 
-const logoWhitehat = `${process.env.PUBLIC_URL}/img/whitehat.png`;
+const logoScanner = `${process.env.PUBLIC_URL}/img/whitehat.png`;
 
 const logostyle = {
   left: 0,
@@ -27,7 +27,7 @@ const Summary = () => (
           </div>
           <Badge pill color="success"><StatusIcon /> 3 scans in progress</Badge>
         </Col>
-        <Col align="right"><img style={logostyle} src={logoWhitehat} alt="" /></Col>
+        <Col align="right"><img style={logostyle} src={logoScanner} alt="" /></Col>
       </Row>
       <hr />
       <Row>

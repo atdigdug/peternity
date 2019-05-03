@@ -7,6 +7,10 @@ import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
 import FilterIcon from 'mdi-react/FilterVariantIcon';
 import SearchIcon from 'mdi-react/MagnifyIcon';
 import Tool1 from './components/Tool1';
+import Tool2 from './components/Tool2';
+import Tool3 from './components/Tool3';
+import Tool4 from './components/Tool4';
+import Tool5 from './components/Tool5';
 import Table from './components/DataTable';
 
 const ApplicationsDefault = () => (
@@ -62,14 +66,14 @@ const ApplicationsDefault = () => (
     </Row>
     <Row>
       <Col><Tool1 /></Col>
-      <Col><Tool1 /></Col>
+      <Col><Tool2 /></Col>
     </Row>
     <Row>
-      <Col><Tool1 /></Col>
-      <Col><Tool1 /></Col>
+      <Col><Tool3 /></Col>
+      <Col><Tool4 /></Col>
     </Row>
     <Row>
-      <Col><Tool1 /></Col>
+      <Col><Tool5 /></Col>
       <Col>&nbsp;</Col>
     </Row>
     <Row>

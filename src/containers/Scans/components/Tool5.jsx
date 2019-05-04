@@ -4,7 +4,7 @@ import {
   Row, Col, Card, CardBody, Badge,
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import StatusIcon from 'mdi-react/RotateRightIcon';
+import StatusIcon from 'mdi-react/HistoryIcon';
 
 const logoScanner = `${process.env.PUBLIC_URL}/img/sonatype.png`;
 
@@ -25,7 +25,7 @@ const Summary = () => (
             </NavLink>
             <h5>&nbsp;#14</h5>
           </div>
-          <Badge pill color="success"><StatusIcon /> 3 scans in progress</Badge>
+          <Badge pill><StatusIcon /> last used 5 Apr</Badge>
         </Col>
         <Col align="right"><img style={logostyle} src={logoScanner} alt="" /></Col>
       </Row>

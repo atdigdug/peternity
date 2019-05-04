@@ -25,7 +25,7 @@ const Summary = () => (
             </NavLink>
             <h5>&nbsp;#14</h5>
           </div>
-          <Badge pill color="success"><StatusIcon /> 3 scans in progress</Badge>
+          <Badge pill color="success"><StatusIcon /> 1 scan in progress</Badge>
         </Col>
         <Col align="right"><img style={logostyle} src={logoScanner} alt="" /></Col>
       </Row>

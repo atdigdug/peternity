@@ -6,7 +6,7 @@ import {
 import { NavLink } from 'react-router-dom';
 import StatusIcon from 'mdi-react/RotateRightIcon';
 
-const logoScanner = `${process.env.PUBLIC_URL}/img/whitehat.png`;
+const logoScanner = `${process.env.PUBLIC_URL}/img/sonatype.png`;
 
 const logostyle = {
   left: 0,
@@ -21,7 +21,7 @@ const Summary = () => (
         <Col>
           <div className="card__title">
             <NavLink to="/appsmodules/detail">
-              <h5 className="bold-text" style={{ float: 'left' }}>FxCop</h5>
+              <h5 className="bold-text" style={{ float: 'left' }}>SonaType Nexus</h5>
             </NavLink>
             <h5>&nbsp;#14</h5>
           </div>
@@ -33,11 +33,11 @@ const Summary = () => (
       <Row>
         <Col>
           <h6 className="bold-text">Types:</h6>
-          DAST, SAST, MAST, SCA<p />
+          SCA<p />
           <h6 className="bold-text">Owner:</h6>
-          WhiteHat Security<p />
+          Sonatype, Inc.<p />
           <h6 className="bold-text">Times used:</h6>
-          110<p />
+          12<p />
         </Col>
       </Row>
     </CardBody>

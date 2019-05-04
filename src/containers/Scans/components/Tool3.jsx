@@ -6,7 +6,7 @@ import {
 import { NavLink } from 'react-router-dom';
 import StatusIcon from 'mdi-react/RotateRightIcon';
 
-const logoScanner = `${process.env.PUBLIC_URL}/img/whitehat.png`;
+const logoScanner = `${process.env.PUBLIC_URL}/img/checkmarx.png`;
 
 const logostyle = {
   left: 0,
@@ -33,11 +33,11 @@ const Summary = () => (
       <Row>
         <Col>
           <h6 className="bold-text">Types:</h6>
-          DAST, SAST, MAST, SCA<p />
+          SAST, MAST, SCA<p />
           <h6 className="bold-text">Owner:</h6>
-          WhiteHat Security<p />
+          CheckMarx, Inc.<p />
           <h6 className="bold-text">Times used:</h6>
-          110<p />
+          56<p />
         </Col>
       </Row>
     </CardBody>

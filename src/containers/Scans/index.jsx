@@ -11,7 +11,7 @@ import Tool2 from './components/Tool2';
 import Tool3 from './components/Tool3';
 import Tool4 from './components/Tool4';
 import Tool5 from './components/Tool5';
-import Table from './components/DataTable';
+import Table from './components/NewDataTable';
 
 const ApplicationsDefault = () => (
   <Container>
@@ -77,7 +77,40 @@ const ApplicationsDefault = () => (
       <Col>&nbsp;</Col>
     </Row>
     <Row>
-      <Table />
+      <Col>
+        <h5 className="title bold-text">SCANS</h5>
+        <h5 className="subhead">
+          342
+        </h5>
+        <ButtonToolbar className="form__button-toolbar">
+          <UncontrolledDropdown>
+            <DropdownToggle className="icon icon--right">
+              <p>Most recent <ChevronDownIcon /></p>
+            </DropdownToggle>
+            <DropdownMenu className="dropdown__menu">
+              <DropdownItem>Most recent</DropdownItem>
+              <DropdownItem>Most urgent</DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+          <ButtonGroup>
+            <form className="form">
+              <div className="form__form-group">
+                <div className="form__form-group-field" style={{ backgroundColor: 'white' }}>
+                  <div className="form__form-group-icon">
+                    <SearchIcon />
+                  </div>
+                  <input name="search" type="text" placeholder="Search..." />
+                </div>
+              </div>
+            </form>
+          </ButtonGroup>
+        </ButtonToolbar>
+      </Col>
+    </Row>
+    <Row>
+      <Col>
+        <Table />
+      </Col>
     </Row>
   </Container>
 );

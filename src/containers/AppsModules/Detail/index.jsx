@@ -12,7 +12,7 @@ import Version1 from './components/Version1';
 import Version2 from './components/Version2';
 import Version3 from './components/Version3';
 import Details from './components/Details';
-import Findings from './components/FindingsTable';
+import Findings from '../../AsfShared/FindingsTable';
 
 const AppsModulesDetail = () => (
   <Container>

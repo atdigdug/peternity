@@ -7,7 +7,7 @@ import FavoritedIcon from 'mdi-react/StarIcon';
 import FavoriteIcon from 'mdi-react/StarOutlineIcon';
 import CompletedIcon from 'mdi-react/DoneIcon';
 import InProgressIcon from 'mdi-react/RotateRightIcon';
-import FindingsBar from './FindingsBar';
+import FindingsBar from '../../AsfShared/FindingsBar';
 
 const EngagementDataTable = () => (
   <div>

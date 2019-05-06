@@ -3,13 +3,16 @@ import React from 'react';
 import {
   Card, CardBody, Progress,
 } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 import FindingsBar from '../../../AsfShared/FindingsBar';
 
 const Summary = () => (
   <Card>
     <CardBody>
       <div className="card__title">
-        <h5 className="bold-text">Veracode Scan</h5>
+        <NavLink to="/scans/detail">
+          <h5 className="bold-text">Veracode Scan</h5>
+        </NavLink>
         <span className="subhead">#59102</span>
       </div>
       <div className="progress-wrap progress-wrap--middle">

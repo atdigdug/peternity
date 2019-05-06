@@ -72,6 +72,7 @@ const AppsModulesDetail = () => (
               <CardBody>
                 <div className="card__title">
                   <h5 className="bold-text">Older Versions</h5>
+                  6
                 </div>
                 <hr />
                 <Row><Col><Version2 /></Col></Row>

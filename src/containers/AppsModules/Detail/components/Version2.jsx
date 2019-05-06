@@ -6,7 +6,7 @@ import {
 import { NavLink } from 'react-router-dom';
 import InProgressIcon from 'mdi-react/RotateRightIcon';
 import CompletedIcon from 'mdi-react/DoneIcon';
-import Donut from './SummaryDonut';
+import FindingsBar from '../../../AsfShared/FindingsBar';
 
 const Summary = () => (
   <Card>
@@ -17,12 +17,16 @@ const Summary = () => (
         </NavLink>
         <span className="subhead">(1/23/2019)</span>
       </div>
+      <Badge pill><CompletedIcon /></Badge>&nbsp;
+      <Badge pill><CompletedIcon /></Badge>&nbsp;
+      <Badge pill color="success"><InProgressIcon /> Risk model</Badge>
+      <p />
       <Row>
         <Col xl="4">
           <h6 className="bold-text">Risk rating:</h6>
-            Low (1023)<p />
+            TBD<p />
           <h6 className="bold-text">Findings risk:</h6>
-          <Donut />
+          <FindingsBar />
         </Col>
         <Col xl="4">
           <div className="card__title">
@@ -32,7 +36,7 @@ const Summary = () => (
           <div className="progress-wrap progress-wrap--middle progress-wrap--blue">
             <Progress value={80} />
           </div>
-          <Badge color="success" pill><InProgressIcon /> in progress...</Badge>
+          Risk Rating: TBD
           <p />
           as part of <span className="bold-text" style={{ color: 'green' }}>Merger Release</span>
 
@@ -43,21 +47,12 @@ const Summary = () => (
           <div className="progress-wrap progress-wrap--middle">
             <Progress value={100} />
           </div>
-          <Badge pill><CompletedIcon /> 1/24/2019 4:07 PM</Badge>
+          Risk Rating 28.0
           <p />
           as part of <span className="bold-text" style={{ color: 'green' }}>CRM Update</span>
         </Col>
         <Col xl="4">
-          <div className="card__title">
-            <h5 className="bold-text">Nexus Scan</h5>
-            <span className="subhead">OSS</span>
-          </div>
-          <div className="progress-wrap progress-wrap--middle">
-            <Progress value={100} />
-          </div>
-          <Badge color="secondary" pill><CompletedIcon /> 1/25/2019 6:30 PM</Badge>
-          <p />
-          as part of <span className="bold-text" style={{ color: 'green' }}>CRM Update</span>
+          &nbsp;
         </Col>
       </Row>
     </CardBody>

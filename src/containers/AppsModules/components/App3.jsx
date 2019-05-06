@@ -5,6 +5,7 @@ import {
 } from 'reactstrap';
 import FavoriteIcon from 'mdi-react/StarOutlineIcon';
 import StatusIcon from 'mdi-react/RotateRightIcon';
+import FindingsBar from '../../AsfShared/FindingsBarTbd';
 
 const Summary = () => (
   <Card>
@@ -35,6 +36,7 @@ const Summary = () => (
           <h6 className="bold-text">Risk rating:</h6>
           TBD<p />
           <h6 className="bold-text">Findings: TBD</h6>
+          <FindingsBar />
         </Col>
       </Row>
     </CardBody>

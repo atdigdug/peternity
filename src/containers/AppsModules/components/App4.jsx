@@ -1,12 +1,11 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
 import {
-  Row, Col, Card, CardBody, Progress, Badge,
+  Row, Col, Card, CardBody, Badge,
 } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
 import FavoriteIcon from 'mdi-react/StarOutlineIcon';
-import StatusIcon from 'mdi-react/RotateRightIcon';
-import Donut from './EmptyDonut';
+import StatusIcon from 'mdi-react/DoneIcon';
+import FindingsBar from '../../AsfShared/FindingsBarTbd';
 
 const Summary = () => (
   <Card>
@@ -14,39 +13,30 @@ const Summary = () => (
       <Row>
         <Col>
           <div className="card__title">
-            <NavLink to="/appsmodules/detail">
-              <h5 className="bold-text">Sonia App</h5>
-            </NavLink>
-            <span className="subhead">latest version: v1.00 (1/16/2019)</span>
+            <h5 className="bold-text">Sonia App</h5>
+            <span className="subhead">#4099</span>
           </div>
-        </Col>
-        <Col align="right"><FavoriteIcon /></Col>
-      </Row>
-      <Row>
-        <Col>
-          <div className="progress-wrap progress-wrap--middle progress-wrap--blue">
-            <Progress value={10} />
-          </div>
-        </Col>
-        <Col align="right">
           <Badge pill><StatusIcon /> Intake</Badge>
         </Col>
+        <Col align="right"><FavoriteIcon /></Col>
       </Row>
       <hr />
       <Row>
         <Col>
+          <h6 className="bold-text">Consultant:</h6>
+          Bob<p />
+          <h6 className="bold-text">Platform:</h6>
+          Windows<p />
           <h6 className="bold-text">Architecture:</h6>
           Python<p />
-          <h6 className="bold-text">Total Scans:</h6>
-          0<p />
-          <h6 className="bold-text">Consultant:</h6>
-          Chandra<p />
-          <h6 className="bold-text">Risk rating:</h6>
-          TBD<p />
         </Col>
         <Col>
-          <h6 className="bold-text">Findings risk:</h6>
-          <Donut />
+          <h6 className="bold-text">VERSION 1.0 (LATEST)</h6>
+          16 Jan 2019<p />
+          <h6 className="bold-text">Risk rating:</h6>
+          TBD<p />
+          <h6 className="bold-text">Findings: TBD</h6>
+          <FindingsBar />
         </Col>
       </Row>
     </CardBody>

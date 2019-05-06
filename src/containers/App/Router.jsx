@@ -19,6 +19,7 @@ import AppsModulesDetailVersion from '../AppsModules/DetailVersion/index';
 import ScansDefault from '../Scans/index';
 import ScansInput from '../Scans/Input/index';
 import ScansDetail from '../Scans/Detail/index';
+import ScansToolsDetail from '../Scans/ToolsDetail/index';
 import FindingsDefault from '../Findings/index';
 import FindingsDetail from '../Findings/Detail/index';
 import FindingsRiskAnalysis from '../Findings/RiskAnalysis/index';
@@ -146,6 +147,7 @@ const AppsModules = () => (
 const Scans = () => (
   <Switch>
     <Route path="/scans/detail" component={ScansDetail} />
+    <Route path="/scans/toolsdetail" component={ScansToolsDetail} />
     <Route path="/scans/input" component={ScansInput} />
     <Route path="/scans" component={ScansDefault} />
   </Switch>

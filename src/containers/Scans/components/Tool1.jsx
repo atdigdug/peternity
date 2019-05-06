@@ -20,7 +20,7 @@ const Summary = () => (
       <Row>
         <Col>
           <div className="card__title">
-            <NavLink to="/appsmodules/detail">
+            <NavLink to="/scans/toolsdetail">
               <h5 className="bold-text" style={{ float: 'left' }}>Whitehat</h5>
             </NavLink>
             <h5>&nbsp;#14</h5>

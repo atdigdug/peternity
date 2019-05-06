@@ -3,7 +3,6 @@ import React from 'react';
 import {
   Row, Col, Card, CardBody, Badge,
 } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
 import StatusIcon from 'mdi-react/RotateRightIcon';
 
 const logoScanner = `${process.env.PUBLIC_URL}/img/synopsys.png`;
@@ -20,9 +19,7 @@ const Summary = () => (
       <Row>
         <Col>
           <div className="card__title">
-            <NavLink to="/appsmodules/detail">
-              <h5 className="bold-text" style={{ float: 'left' }}>Synopsys</h5>
-            </NavLink>
+            <h5 className="bold-text" style={{ float: 'left' }}>Synopsys</h5>
             <h5>&nbsp;#14</h5>
           </div>
           <Badge pill color="success"><StatusIcon /> 1 scan in progress</Badge>

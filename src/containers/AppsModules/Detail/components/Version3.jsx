@@ -5,7 +5,7 @@ import {
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import CompletedIcon from 'mdi-react/DoneIcon';
-import Donut from './SummaryDonut';
+import FindingsBar from '../../../AsfShared/FindingsBar';
 
 const Summary = () => (
   <Card>
@@ -16,12 +16,16 @@ const Summary = () => (
         </NavLink>
         <span className="subhead">(12/6/2018)</span>
       </div>
+      <Badge pill><CompletedIcon /></Badge>&nbsp;
+      <Badge pill><CompletedIcon /></Badge>&nbsp;
+      <Badge pill><CompletedIcon /> Risk model</Badge>
+      <p />
       <Row>
         <Col xl="4">
           <h6 className="bold-text">Risk rating:</h6>
             Low (1023)<p />
           <h6 className="bold-text">Findings risk:</h6>
-          <Donut />
+          <FindingsBar />
         </Col>
         <Col xl="4">
           <div className="card__title">
@@ -31,7 +35,7 @@ const Summary = () => (
           <div className="progress-wrap progress-wrap--middle">
             <Progress value={100} />
           </div>
-          <Badge pill><CompletedIcon /> 12/16/2018</Badge>
+          Risk Rating: 84.8
           <p />
           as part of <span className="bold-text" style={{ color: 'green' }}>Merger Release</span>
         </Col>

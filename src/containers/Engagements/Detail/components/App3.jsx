@@ -3,43 +3,8 @@ import React from 'react';
 import {
   Card, CardBody, Progress, Row, Col, Badge,
 } from 'reactstrap';
-import { HorizontalBar } from 'react-chartjs-2';
 import InProgressIcon from 'mdi-react/RotateRightIcon';
-
-const options = {
-  scales: {
-    xAxes: [{
-      gridLines: {
-        display: false,
-        drawBorder: false,
-      },
-      ticks: {
-        display: false,
-      },
-    }],
-    yAxes: [{
-      barThickness: 20,
-      gridLines: {
-        display: false,
-        drawBorder: false,
-      },
-      ticks: {
-        display: false,
-      },
-    }],
-  },
-  legend: {
-    display: false,
-  },
-};
-
-const data = {
-  datasets: [{
-    data: [1],
-    backgroundColor: '#E4E4E4',
-  }],
-  labels: ['Findings'],
-};
+import FindingsBar from '../../../AsfShared/FindingsBarTbd';
 
 const App = () => (
   <Card>
@@ -57,7 +22,7 @@ const App = () => (
           <p />
           <h6 className="bold-text">Findings: TBD</h6>
           <div>
-            <HorizontalBar data={data} options={options} />
+            <FindingsBar />
           </div>
         </Col>
         <Col xl="4">

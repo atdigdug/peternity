@@ -4,66 +4,8 @@ import {
   Card, CardBody, Progress, Row, Col, Badge,
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import { HorizontalBar } from 'react-chartjs-2';
 import CompletedIcon from 'mdi-react/DoneIcon';
-
-const options = {
-  scales: {
-    xAxes: [{
-      stacked: true,
-      gridLines: {
-        display: false,
-        drawBorder: false,
-      },
-      ticks: {
-        display: false,
-      },
-    }],
-    yAxes: [{
-      stacked: true,
-      barThickness: 20,
-      gridLines: {
-        display: false,
-        drawBorder: false,
-      },
-      ticks: {
-        display: false,
-      },
-    }],
-  },
-  legend: {
-    display: false,
-  },
-};
-
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * ((max - min) + 1)) + min;
-}
-
-const data = {
-  datasets: [{
-    label: 'High',
-    data: [getRandomInt(50, 200)],
-    backgroundColor: [
-      '#FF6960',
-    ],
-  },
-  {
-    label: 'Medium',
-    data: [getRandomInt(100, 150)],
-    backgroundColor: [
-      '#5AD3F6',
-    ],
-  },
-  {
-    label: 'Low',
-    data: [getRandomInt(150, 250)],
-    backgroundColor: [
-      '#B5F434',
-    ],
-  }],
-  labels: ['Findings'],
-};
+import FindingsBar from '../../../AsfShared/FindingsBar';
 
 const App = () => (
   <Card>
@@ -85,7 +27,7 @@ const App = () => (
           <p />
           <h6 className="bold-text">Findings: 945</h6>
           <div>
-            <HorizontalBar data={data} options={options} />
+            <FindingsBar />
           </div>
         </Col>
         <Col xl="4">

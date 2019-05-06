@@ -1,40 +1,23 @@
 import React from 'react';
 import {
-  Col, Container, Row, Card, CardBody, Button, Breadcrumb, BreadcrumbItem,
+  Col, Container, Row, Card, CardBody, Breadcrumb, BreadcrumbItem,
 } from 'reactstrap';
 import HorizontalForm from './components/HorizontalForm';
 
 const ScansDetail = () => (
   <Container>
     <Row>
+      <Breadcrumb>
+        <BreadcrumbItem><a href="/engagements/detail">Annual Sale Launch Engagement</a></BreadcrumbItem>
+        <BreadcrumbItem><a href="/appsmodules/detail">Sonia App</a></BreadcrumbItem>
+        <BreadcrumbItem><a href="/scans/detail">WhiteHat Scan</a></BreadcrumbItem>
+        <BreadcrumbItem active>Finding 1234</BreadcrumbItem>
+      </Breadcrumb>
+    </Row>
+    <Row>
       <Col md={12}>
-        <h3 className="page-title">Finding 1234</h3>
-        <h3 className="page-subhead subhead">From WhiteHat scan of Sonia App</h3>
-      </Col>
-    </Row>
-    <Row>
-      <Col>
-        <Breadcrumb>
-          <BreadcrumbItem><a href="/engagements/detail">Annual Sale Launch Engagement</a></BreadcrumbItem>
-          <BreadcrumbItem><a href="/appsmodules/detail">Sonia App</a></BreadcrumbItem>
-          <BreadcrumbItem><a href="/scans/detail">WhiteHat Scan</a></BreadcrumbItem>
-          <BreadcrumbItem active>Finding 1234</BreadcrumbItem>
-        </Breadcrumb>
-      </Col>
-    </Row>
-    <Row>
-      <Col xl="12">
-        <Card>
-          <CardBody>
-            <form className="form">
-              <div className="form__form-group">
-                <Button color="primary" type="submit">Action 1</Button>
-                <Button color="primary" type="submit">Action 2</Button>
-                <Button color="primary" type="submit">Action 3</Button>
-              </div>
-            </form>
-          </CardBody>
-        </Card>
+        <h3 className="page-title">Cross-site Scripting (XSS)</h3>
+        <h3 className="page-subhead subhead">#223256043</h3>
       </Col>
     </Row>
     <Row>

@@ -11,7 +11,7 @@ const Summary = () => (
   <Card>
     <CardBody>
       <div className="card__title">
-        <NavLink to="/appsmodules/detailversion">
+        <NavLink to="/appsmodules/detail">
           <h5 className="bold-text">Version 2.14 (LATEST)</h5>
         </NavLink>
         <span className="subhead">(2/22/2019)</span>

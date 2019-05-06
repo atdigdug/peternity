@@ -5,6 +5,7 @@ import {
 } from 'reactstrap';
 import FavoriteIcon from 'mdi-react/StarIcon';
 import HistoryIcon from 'mdi-react/HistoryIcon';
+import FindingsBar from '../../../AsfShared/FindingsBar';
 
 const Summary = () => (
   <Card>
@@ -27,6 +28,7 @@ const Summary = () => (
           TBD
           <p />
           <h6 className="bold-text">Findings: 1695</h6>
+          <FindingsBar />
           <p />
           <h6 className="bold-text">Description</h6>
           ZenMana and MSAT have announced today the planned merger of their business operations to offer a unified

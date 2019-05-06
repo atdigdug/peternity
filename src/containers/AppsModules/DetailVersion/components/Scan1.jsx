@@ -3,14 +3,14 @@ import React from 'react';
 import {
   Card, CardBody, Progress,
 } from 'reactstrap';
-import FindingsBar from '../../../AsfShared/FindingsBar';
+import FindingsBar from '../../../AsfShared/FindingsBarTbd';
 
 const Summary = () => (
   <Card>
     <CardBody>
       <div className="card__title">
         <h5 className="bold-text">Whitehat Scan</h5>
-        <span className="subhead">DAST</span>
+        <span className="subhead">#25621</span>
       </div>
       <div className="progress-wrap progress-wrap--middle progress-wrap--blue">
         <Progress value={20} />

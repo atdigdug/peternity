@@ -9,14 +9,14 @@ const Summary = () => (
   <Card>
     <CardBody>
       <div className="card__title">
-        <h5 className="bold-text">Whitehat Scan</h5>
-        <span className="subhead">DAST</span>
+        <h5 className="bold-text">Veracode Scan</h5>
+        <span className="subhead">#59102</span>
       </div>
-      <div className="progress-wrap progress-wrap--middle progress-wrap--blue">
-        <Progress value={20} />
+      <div className="progress-wrap progress-wrap--middle">
+        <Progress value={100} />
       </div>
       <h6 className="bold-text">Type:</h6>
-      DAST<p />
+      SAST<p />
       <h6 className="bold-text">Risk rating:</h6>
       TBD<p />
       <h6 className="bold-text">Findings:</h6>

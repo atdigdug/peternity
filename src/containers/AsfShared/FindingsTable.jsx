@@ -60,7 +60,7 @@ export default class DataTable extends PureComponent {
           'Dead code', 'Cross-site request forgery'][Math.floor((Math.random() * 5))],
         tool: ['Whitehat', 'Veracode', 'CheckMarx', 'FxCop'][Math.floor((Math.random() * 4))],
         app: ['Customer Portal', 'Partner Mobile App', 'Vendor Registration App'][Math.floor((Math.random() * 3))],
-        assigned: ['App 1', 'App 2', 'App 3'][Math.floor((Math.random() * 3))],
+        assigned: ['Bob', 'Chandra', 'Howard'][Math.floor((Math.random() * 3))],
         risk: ['High', 'Medium', 'Low'][Math.floor((Math.random() * 3))],
       });
     }

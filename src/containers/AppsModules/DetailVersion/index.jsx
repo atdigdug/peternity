@@ -7,11 +7,9 @@ import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import EditIcon from 'mdi-react/EditIcon';
-import HistoryIcon from 'mdi-react/HistoryIcon';
 import Scan1 from './components/Scan1';
-import Version1 from './components/Version1';
-import Version2 from './components/Version2';
-import Version3 from './components/Version3';
+import Scan2 from './components/Scan2';
+import Scan3 from './components/Scan3';
 import Details from './components/Details';
 import Findings from '../../AsfShared/FindingsTable';
 
@@ -27,7 +25,12 @@ const AppsModulesDetail = () => (
       <Col>
         <h3 className="page-title">Partner Mobile App</h3>
         <h3 className="page-subhead subhead">
-          2.14 (for full version page, go to Partner Mobile App version 2.14 (latest))
+          2.14 (for full version page, go to
+          &nbsp;
+          <NavLink to="/appsmodules/detail">
+            <span className="bold-text">Partner Mobile App version 2.14 (latest)</span>
+          </NavLink>
+          )
         </h3>
       </Col>
       <Col>
@@ -63,30 +66,18 @@ const AppsModulesDetail = () => (
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col xl="6">
             <Scan1 />
           </Col>
-          <Col>
-            <Version1 />
+          <Col xl="6">
+            <Scan2 />
           </Col>
         </Row>
         <Row>
-          <Col>
-            <Card>
-              <CardBody>
-                <div className="card__title">
-                  <h5 className="bold-text">Older Versions</h5>
-                  6
-                </div>
-                <hr />
-                <Row><Col><Version2 /></Col></Row>
-                <hr />
-                <Row><Col><Version3 /></Col></Row>
-                <hr />
-                <Button outline><HistoryIcon />Load older</Button>
-              </CardBody>
-            </Card>
+          <Col xl="6">
+            <Scan3 />
           </Col>
+          <Col xl="6">&nbsp;</Col>
         </Row>
       </Col>
       <Col xl="3">

@@ -41,7 +41,7 @@ const Summary = () => (
           as part of <span className="bold-text" style={{ color: 'green' }}>Merger Release</span>
 
           <div className="card__title">
-            <h5 className="bold-text">Nexus Scan</h5>
+            <h5 className="bold-text">Veracode Scan</h5>
             <span className="subhead">OSS</span>
           </div>
           <div className="progress-wrap progress-wrap--middle">

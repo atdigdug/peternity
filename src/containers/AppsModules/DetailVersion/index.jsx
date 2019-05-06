@@ -8,7 +8,7 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import EditIcon from 'mdi-react/EditIcon';
 import HistoryIcon from 'mdi-react/HistoryIcon';
-import Alert from '../../../shared/components/Alert';
+import Scan1 from './components/Scan1';
 import Version1 from './components/Version1';
 import Version2 from './components/Version2';
 import Version3 from './components/Version3';
@@ -26,7 +26,9 @@ const AppsModulesDetail = () => (
     <Row>
       <Col>
         <h3 className="page-title">Partner Mobile App</h3>
-        <h3 className="page-subhead subhead">2.14 (for full version ...)</h3>
+        <h3 className="page-subhead subhead">
+          2.14 (for full version page, go to Partner Mobile App version 2.14 (latest))
+        </h3>
       </Col>
       <Col>
         <div className="float-right">
@@ -40,29 +42,30 @@ const AppsModulesDetail = () => (
       <Col xl="9">
         <Row>
           <Col>
-            <Alert color="success" className="alert--colored" icon>
-              <p>scans in progress...</p>
-            </Alert>
-          </Col>
-        </Row>
-        <p />
-        <Row>
-          <Col>
             <Card>
               <CardBody>
                 <Stepper activeStep={0}>
-                  <Step id="tooltip1" key="Intake" completed>
-                    <StepLabel optional="1/1/2018">Intake</StepLabel>
+                  <Step id="tooltip3" key="Onboard" completed>
+                    <StepLabel optional="3/1/2018">Onboard</StepLabel>
+                  </Step>
+                  <Step key="Offboard" active>
+                    <StepLabel>Offboard</StepLabel>
+                  </Step>
+                  <Step key="Risk Model">
+                    <StepLabel>Risk Model</StepLabel>
                   </Step>
                 </Stepper>
-                <UncontrolledTooltip placement="bottom" target="tooltip1">
-                  More detail about Intake completion
+                <UncontrolledTooltip placement="bottom" target="tooltip3">
+                  More detail about Onboard completion
                 </UncontrolledTooltip>
               </CardBody>
             </Card>
           </Col>
         </Row>
         <Row>
+          <Col>
+            <Scan1 />
+          </Col>
           <Col>
             <Version1 />
           </Col>

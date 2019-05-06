@@ -7,6 +7,7 @@ import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import EditIcon from 'mdi-react/EditIcon';
+import HistoryIcon from 'mdi-react/HistoryIcon';
 import Alert from '../../../shared/components/Alert';
 import Version1 from './components/Version1';
 import Version2 from './components/Version2';
@@ -78,6 +79,8 @@ const AppsModulesDetail = () => (
                 <Row><Col><Version2 /></Col></Row>
                 <hr />
                 <Row><Col><Version3 /></Col></Row>
+                <hr />
+                <Button outline><HistoryIcon />Load older</Button>
               </CardBody>
             </Card>
           </Col>

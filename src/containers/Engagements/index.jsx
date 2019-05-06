@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
 import CondensedIcon from 'mdi-react/MenuIcon';
 import DetailedIcon from 'mdi-react/ViewAgendaIcon';
-import EngagementsAggregate from './components/EngagementsAggregate';
+import EngagementsAggregate from '../AsfShared/GenericAggregate';
 import Table from './components/NewDataTable';
 import DetailedTable from './components/DetailedDataTable';
 

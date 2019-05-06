@@ -14,15 +14,15 @@ const data = {
   datasets: [{
     data: [4, 2, 3, 1],
     backgroundColor: [
-      '#FF6960',
-      '#5AD3F6',
-      '#B5F434',
+      '#F56F7E',
+      '#FFC600',
+      '#ACE832',
       '#E4E4E4',
     ],
     hoverBackgroundColor: [
-      '#FF6960',
-      '#5AD3F6',
-      '#B5F434',
+      '#F56F7E',
+      '#FFC600',
+      '#ACE832',
       '#E4E4E4',
     ],
     borderColor: 'rgba(255,255,255,0.54)',
@@ -86,7 +86,7 @@ const options = {
   },
 };
 
-const EngagementsAggregate = () => (
+const GenericAggregate = () => (
   <Col xl={12}>
     <Row>
       <Col xl={4}>
@@ -123,4 +123,4 @@ const EngagementsAggregate = () => (
   </Col>
 );
 
-export default EngagementsAggregate;
+export default GenericAggregate;

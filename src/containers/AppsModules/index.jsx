@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
 import CondensedIcon from 'mdi-react/MenuIcon';
 import DetailedIcon from 'mdi-react/ViewAgendaIcon';
-import AppsAggregate from './components/AppsAggregate';
+import AppsAggregate from '../AsfShared/GenericAggregate';
 import DetailedDataTable from './components/DetailedDataTable';
 
 export default class EngagementDefault extends PureComponent {

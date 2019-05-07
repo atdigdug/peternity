@@ -14,7 +14,7 @@ const App = () => (
         <NavLink to="/appsmodules/detailversion">
           <h5 className="bold-text">Partner Mobile App</h5>
         </NavLink>
-        <span className="subhead">v19.2</span>
+        <span className="subhead">v2.14</span>
         <br />
         <Badge pill><CompletedIcon /></Badge>&nbsp;
         <Badge pill><CompletedIcon /></Badge>&nbsp;

@@ -11,7 +11,7 @@ const App = () => (
     <CardBody>
       <div className="card__title">
         <h5 className="bold-text">Customer Portal</h5>
-        <span className="subhead">v2.14</span>
+        <span className="subhead">v19.2</span>
         <br />
         <Badge pill color="success"><InProgressIcon /> Onboarding</Badge>&nbsp;
         <Badge pill>2</Badge>&nbsp;

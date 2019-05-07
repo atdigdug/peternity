@@ -9,18 +9,19 @@ const Summary = () => (
   <Card>
     <CardBody>
       <div className="card__title">
-        <h5 className="bold-text">Nexus Scan</h5>
-        <span className="subhead">#37791</span>
+        <h5 className="bold-text">SCA</h5>
+        <span className="subhead">#25621</span>
       </div>
       <div className="progress-wrap progress-wrap--middle">
         <Progress value={100} />
       </div>
-      <h6 className="bold-text">Type:</h6>
-      OSS<p />
+      <h6 className="bold-text">Application:</h6>
+      Customer Portal v19.2<p />
       <h6 className="bold-text">Risk rating:</h6>
-      54.7<p />
-      <h6 className="bold-text">Findings:</h6>
+      86.2<p />
+      <h6 className="bold-text">Findings: 467</h6>
       <FindingsBar />
+      part of CRM Update
     </CardBody>
   </Card>
 );

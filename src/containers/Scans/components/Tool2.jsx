@@ -5,7 +5,7 @@ import {
 } from 'reactstrap';
 import StatusIcon from 'mdi-react/HistoryIcon';
 
-const logoScanner = `${process.env.PUBLIC_URL}/img/veracode.png`;
+const logoScanner = `${process.env.PUBLIC_URL}/img/whitehat.png`;
 
 const logostyle = {
   left: 0,
@@ -19,8 +19,8 @@ const Summary = () => (
       <Row>
         <Col>
           <div className="card__title">
-            <h5 className="bold-text" style={{ float: 'left' }}>Veracode</h5>
-            <h5>&nbsp;#14</h5>
+            <h5 className="bold-text" style={{ float: 'left' }}>WhiteHat</h5>
+            <h5>&nbsp;#07</h5>
           </div>
           <Badge pill><StatusIcon /> last used 12 Apr</Badge>
         </Col>

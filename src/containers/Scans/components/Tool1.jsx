@@ -6,7 +6,7 @@ import {
 import { NavLink } from 'react-router-dom';
 import StatusIcon from 'mdi-react/RotateRightIcon';
 
-const logoScanner = `${process.env.PUBLIC_URL}/img/whitehat.png`;
+const logoScanner = `${process.env.PUBLIC_URL}/img/veracode.png`;
 
 const logostyle = {
   left: 0,
@@ -21,7 +21,7 @@ const Summary = () => (
         <Col>
           <div className="card__title">
             <NavLink to="/scans/toolsdetail">
-              <h5 className="bold-text" style={{ float: 'left' }}>Whitehat</h5>
+              <h5 className="bold-text" style={{ float: 'left' }}>Veracode</h5>
             </NavLink>
             <h5>&nbsp;#14</h5>
           </div>

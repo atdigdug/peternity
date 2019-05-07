@@ -20,7 +20,7 @@ const Summary = () => (
         <Col>
           <div className="card__title">
             <h5 className="bold-text" style={{ float: 'left' }}>SonaType Nexus</h5>
-            <h5>&nbsp;#14</h5>
+            <h5>&nbsp;#34</h5>
           </div>
           <Badge pill><StatusIcon /> last used 5 Apr</Badge>
         </Col>

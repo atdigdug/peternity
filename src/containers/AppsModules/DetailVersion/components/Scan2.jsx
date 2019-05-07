@@ -3,23 +3,20 @@ import React from 'react';
 import {
   Card, CardBody, Progress,
 } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
-import FindingsBar from '../../../AsfShared/FindingsBar';
+import FindingsBar from '../../../AsfShared/FindingsBarTbd';
 
 const Summary = () => (
   <Card>
     <CardBody>
       <div className="card__title">
-        <NavLink to="/scans/detail">
-          <h5 className="bold-text">Veracode Scan</h5>
-        </NavLink>
-        <span className="subhead">#59102</span>
+        <h5 className="bold-text">Whitehat Scan</h5>
+        <span className="subhead">#25621</span>
       </div>
-      <div className="progress-wrap progress-wrap--middle">
-        <Progress value={100} />
+      <div className="progress-wrap progress-wrap--middle progress-wrap--blue">
+        <Progress value={20} />
       </div>
       <h6 className="bold-text">Type:</h6>
-      SAST<p />
+      DAST<p />
       <h6 className="bold-text">Risk rating:</h6>
       TBD<p />
       <h6 className="bold-text">Findings:</h6>

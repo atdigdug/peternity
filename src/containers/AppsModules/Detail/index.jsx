@@ -8,7 +8,7 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import EditIcon from 'mdi-react/EditIcon';
 import HistoryIcon from 'mdi-react/HistoryIcon';
-import Alert from '../../../shared/components/Alert';
+import Alert from '../../AsfShared/ScanAlert';
 import Version1 from './components/Version1';
 import Version2 from './components/Version2';
 import Version3 from './components/Version3';
@@ -41,7 +41,7 @@ const AppsModulesDetail = () => (
         <Row>
           <Col>
             <Alert color="success" className="alert--colored" icon>
-              <p>scans in progress...</p>
+              <p>versions engaged...</p>
             </Alert>
           </Col>
         </Row>
@@ -52,7 +52,7 @@ const AppsModulesDetail = () => (
               <CardBody>
                 <Stepper activeStep={0}>
                   <Step id="tooltip1" key="Intake" completed>
-                    <StepLabel optional="1/1/2018">Intake</StepLabel>
+                    <StepLabel optional="30 Nov 2018">Intake</StepLabel>
                   </Step>
                 </Stepper>
                 <UncontrolledTooltip placement="bottom" target="tooltip1">
@@ -72,8 +72,8 @@ const AppsModulesDetail = () => (
             <Card>
               <CardBody>
                 <div className="card__title">
-                  <h5 className="bold-text">Older Versions</h5>
-                  6
+                  <h5 className="bold-text float-left">Older Versions</h5>
+                  <h5 className="subhead">&nbsp;6</h5>
                 </div>
                 <hr />
                 <Row><Col><Version2 /></Col></Row>

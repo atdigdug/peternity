@@ -32,7 +32,7 @@ const Summary = () => (
           <h6 className="bold-text">Types:</h6>
           DAST, SAST, MAST, SCA<p />
           <h6 className="bold-text">Owner:</h6>
-          Veracode<p />
+          WhiteHat Security<p />
           <h6 className="bold-text">Times used:</h6>
           122<p />
         </Col>

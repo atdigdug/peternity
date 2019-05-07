@@ -4,7 +4,7 @@ import {
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import EditIcon from 'mdi-react/EditIcon';
-import Alert from '../../../shared/components/Alert';
+import Alert from '../../AsfShared/ScanAlert';
 import Scan1 from './components/Scan1';
 import Scan2 from './components/Scan2';
 import Scan3 from './components/Scan3';
@@ -21,7 +21,7 @@ const AppsModulesDetail = () => (
     </Row>
     <Row>
       <Col>
-        <h3 className="page-title">WhiteHat</h3>
+        <h3 className="page-title">Veracode</h3>
         <h3 className="page-subhead subhead">#14</h3>
       </Col>
       <Col>
@@ -35,7 +35,7 @@ const AppsModulesDetail = () => (
     <Row>
       <Col>
         <Alert color="success" className="alert--colored" icon>
-          <p>scans in progress...</p>
+          <p>3 scans in progress...</p>
         </Alert>
       </Col>
     </Row>

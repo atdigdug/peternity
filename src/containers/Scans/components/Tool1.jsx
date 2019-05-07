@@ -35,7 +35,7 @@ const Summary = () => (
           <h6 className="bold-text">Types:</h6>
           DAST, SAST, MAST, SCA<p />
           <h6 className="bold-text">Owner:</h6>
-          WhiteHat Security<p />
+          Veracode, Inc.<p />
           <h6 className="bold-text">Times used:</h6>
           110<p />
         </Col>

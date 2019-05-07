@@ -17,8 +17,9 @@ const AppsModulesDetail = () => (
   <Container>
     <Row>
       <Breadcrumb>
+        <BreadcrumbItem><a href="/engagements">Engagements</a></BreadcrumbItem>
         <BreadcrumbItem><a href="/engagements/detail">Merger Release</a></BreadcrumbItem>
-        <BreadcrumbItem active>Partner Mobile App</BreadcrumbItem>
+        <BreadcrumbItem active>Partner Mobile App v2.14</BreadcrumbItem>
       </Breadcrumb>
     </Row>
     <Row>

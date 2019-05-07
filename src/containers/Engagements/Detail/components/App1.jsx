@@ -11,7 +11,7 @@ const App = () => (
   <Card>
     <CardBody>
       <div className="card__title">
-        <NavLink to="/appsmodules/detail">
+        <NavLink to="/appsmodules/detailversion">
           <h5 className="bold-text">Partner Mobile App</h5>
         </NavLink>
         <span className="subhead">v19.2</span>

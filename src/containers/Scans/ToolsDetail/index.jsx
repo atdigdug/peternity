@@ -9,7 +9,7 @@ import Scan1 from './components/Scan1';
 import Scan2 from './components/Scan2';
 import Scan3 from './components/Scan3';
 import Details from './components/Details';
-import Findings from '../../AsfShared/FindingsTable';
+import CompletedScans from './components/ScansTable';
 
 const AppsModulesDetail = () => (
   <Container>
@@ -58,7 +58,7 @@ const AppsModulesDetail = () => (
     </Row>
     <Row>
       <Col>
-        <Findings />
+        <CompletedScans />
       </Col>
     </Row>
   </Container>

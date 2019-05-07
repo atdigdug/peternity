@@ -3,7 +3,7 @@ import React from 'react';
 import {
   Row, Col, Card, CardBody, Badge,
 } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import FavoriteIcon from 'mdi-react/StarIcon';
 import StatusIcon from 'mdi-react/DoneIcon';
 import FindingsBar from '../../AsfShared/FindingsBar';
@@ -14,9 +14,9 @@ const Summary = () => (
       <Row>
         <Col>
           <div className="card__title">
-            <NavLink to="/appsmodules/detail">
+            <Link to="/appsmodules/detail">
               <h5 className="bold-text">Partner Mobile App</h5>
-            </NavLink>
+            </Link>
             <span className="subhead">#3746</span>
           </div>
           <Badge pill><StatusIcon /> Intake</Badge>

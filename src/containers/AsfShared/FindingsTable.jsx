@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unused-state,react/no-unescaped-entities */
 import React, { PureComponent } from 'react';
 import { Card, CardBody } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import EditTable from '../../shared/components/table/EditableTable';
 
 export default class DataTable extends PureComponent {
@@ -72,7 +73,9 @@ export default class DataTable extends PureComponent {
       <Card>
         <CardBody>
           <div className="card__title">
-            <h5 className="bold-text">Findings</h5>
+            <Link to="/findings/detail">
+              <h5 className="bold-text">Findings</h5>
+            </Link>
           </div>
           <EditTable heads={this.heads} rows={this.state.rows} />
         </CardBody>

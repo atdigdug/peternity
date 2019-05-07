@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Col, Container, Row, Card, CardBody, Button,
 } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
 import Table from '../AsfShared/FindingsTable';
 
 const ApplicationsDefault = () => (
@@ -31,9 +30,6 @@ const ApplicationsDefault = () => (
                 </Row>
               </div>
             </form>
-            <NavLink to="/findings/detail">
-              Temp Link
-            </NavLink>
           </CardBody>
         </Card>
       </Col>

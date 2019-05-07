@@ -9,7 +9,7 @@ import Details from './components/Details';
 import App1 from './components/App1';
 import App2 from './components/App2';
 import App3 from './components/App3';
-import Findings from './components/FindingsTable';
+import Findings from '../../AsfShared/FindingsTable';
 
 const EngagementsDetail = () => (
   <Container>

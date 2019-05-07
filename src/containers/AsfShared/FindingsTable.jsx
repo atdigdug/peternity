@@ -70,16 +70,19 @@ export default class DataTable extends PureComponent {
 
   render() {
     return (
-      <Card>
-        <CardBody>
-          <div className="card__title">
-            <Link to="/findings/detail">
-              <h5 className="bold-text">Findings</h5>
-            </Link>
-          </div>
-          <EditTable heads={this.heads} rows={this.state.rows} />
-        </CardBody>
-      </Card>
+      <div>
+        <div className="card__title">
+          <Link to="/findings/detail">
+            <h5 className="bold-text float-left">Findings</h5>
+            <h5 className="subhead">&nbsp;750</h5>
+          </Link>
+        </div>
+        <Card>
+          <CardBody>
+            <EditTable heads={this.heads} rows={this.state.rows} />
+          </CardBody>
+        </Card>
+      </div>
     );
   }
 }

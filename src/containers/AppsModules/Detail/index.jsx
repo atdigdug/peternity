@@ -54,9 +54,15 @@ const AppsModulesDetail = () => (
                   <Step id="tooltip1" key="Intake" completed>
                     <StepLabel optional="30 Nov 2018">Intake</StepLabel>
                   </Step>
+                  <Step id="tooltip2" key="Architecture" completed>
+                    <StepLabel optional="15 Jan 2019">Architecture</StepLabel>
+                  </Step>
                 </Stepper>
                 <UncontrolledTooltip placement="bottom" target="tooltip1">
                   More detail about Intake completion
+                </UncontrolledTooltip>
+                <UncontrolledTooltip placement="bottom" target="tooltip2">
+                  More detail about Architecture
                 </UncontrolledTooltip>
               </CardBody>
             </Card>

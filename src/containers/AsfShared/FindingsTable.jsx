@@ -1,7 +1,11 @@
 /* eslint-disable react/no-unused-state,react/no-unescaped-entities */
 import React, { PureComponent } from 'react';
-import { Card, CardBody } from 'reactstrap';
+import {
+  Card, CardBody, ButtonToolbar, ButtonGroup, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem,
+} from 'reactstrap';
 import { Link } from 'react-router-dom';
+import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
+import SearchIcon from 'mdi-react/MagnifyIcon';
 import EditTable from '../../shared/components/table/EditableTable';
 
 export default class DataTable extends PureComponent {
@@ -77,6 +81,29 @@ export default class DataTable extends PureComponent {
             <h5 className="subhead">&nbsp;750</h5>
           </Link>
         </div>
+        <ButtonToolbar className="form__button-toolbar">
+          <UncontrolledDropdown>
+            <DropdownToggle className="icon icon--right">
+              <p>Most recent <ChevronDownIcon /></p>
+            </DropdownToggle>
+            <DropdownMenu className="dropdown__menu">
+              <DropdownItem>Most recent</DropdownItem>
+              <DropdownItem>Most urgent</DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+          <ButtonGroup>
+            <form className="form">
+              <div className="form__form-group">
+                <div className="form__form-group-field" style={{ backgroundColor: 'white' }}>
+                  <div className="form__form-group-icon">
+                    <SearchIcon />
+                  </div>
+                  <input name="search" type="text" placeholder="search findings ..." />
+                </div>
+              </div>
+            </form>
+          </ButtonGroup>
+        </ButtonToolbar>
         <Card>
           <CardBody>
             <EditTable heads={this.heads} rows={this.state.rows} />

@@ -5,18 +5,18 @@ import {
 import Panel from '../../../../shared/components/Panel';
 
 const dataYearly = [
-  { name: 'Jan', uv: 4000 },
-  { name: 'Feb', uv: 3000 },
-  { name: 'Mar', uv: 2000 },
-  { name: 'Apr', uv: 2780 },
-  { name: 'May', uv: 1890 },
-  { name: 'June', uv: 2390 },
-  { name: 'July', uv: 3490 },
-  { name: 'Aug', uv: 2000 },
-  { name: 'Sep', uv: 2780 },
-  { name: 'Oct', uv: 1890 },
-  { name: 'Nov', uv: 3578 },
-  { name: 'Dec', uv: 2378 },
+  { name: 'Jan', uv: 39 },
+  { name: 'Feb', uv: 30 },
+  { name: 'Mar', uv: 20 },
+  { name: 'Apr', uv: 27 },
+  { name: 'May', uv: 35 },
+  { name: 'June', uv: 23 },
+  { name: 'July', uv: 34 },
+  { name: 'Aug', uv: 20 },
+  { name: 'Sep', uv: 27 },
+  { name: 'Oct', uv: 18 },
+  { name: 'Nov', uv: 35 },
+  { name: 'Dec', uv: 23 },
 ];
 
 const dataMontly = [
@@ -94,13 +94,6 @@ class SalesStatistisBar extends PureComponent {
           }
 
         </ResponsiveContainer>
-        <hr />
-        <div className="toggle-btn dashboard__sales-toggle">
-          <input className="toggle-btn__input" type="checkbox" name="sales" id="sales" onChange={this.handleChange} />
-          <span className="dashboard__sales-toggle-left">Yearly</span>
-          <span className="toggle-btn__input-label">Toggle</span>
-          <span className="dashboard__sales-toggle-right">Monthly</span>
-        </div>
       </Panel>
     );
   }

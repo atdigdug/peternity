@@ -1,7 +1,7 @@
 import React from 'react';
 import { PieChart, Pie, ResponsiveContainer } from 'recharts';
 import { Card, CardBody, Col } from 'reactstrap';
-import HeartOutlineIcon from 'mdi-react/HeartOutlineIcon';
+import HeartOutlineIcon from 'mdi-react/DesktopWindowsIcon';
 
 const data = [{ value: 68, fill: '#ff4861' },
   { value: 32, fill: '#eeeeee' }];
@@ -22,10 +22,9 @@ const HeartRate = () => (
           <div className="dashboard__health-chart-info">
             <HeartOutlineIcon style={{ fill: '#ff4861' }} />
             <p className="dashboard__health-chart-number">96</p>
-            <p className="dashboard__health-chart-units">b/min</p>
+            <p className="dashboard__health-chart-units">days</p>
           </div>
         </div>
-        <p className="dashboard__goal">Reference: 58-120</p>
       </CardBody>
     </Card>
   </Col>

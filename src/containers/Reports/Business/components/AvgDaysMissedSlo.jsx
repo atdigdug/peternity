@@ -1,7 +1,7 @@
 import React from 'react';
 import { PieChart, Pie, ResponsiveContainer } from 'recharts';
 import { Card, CardBody, Col } from 'reactstrap';
-import MapMarkerRadiusIcon from 'mdi-react/MapMarkerRadiusIcon';
+import MapMarkerRadiusIcon from 'mdi-react/CallMissedIcon';
 
 const data = [{ value: 3.8, fill: '#70bbfd' },
   { value: 0.2, fill: '#eeeeee' }];
@@ -21,11 +21,10 @@ const Distance = () => (
           </ResponsiveContainer>
           <div className="dashboard__health-chart-info">
             <MapMarkerRadiusIcon style={{ fill: '#70bbfd' }} />
-            <p className="dashboard__health-chart-number">3.8</p>
-            <p className="dashboard__health-chart-units">km</p>
+            <p className="dashboard__health-chart-number">101</p>
+            <p className="dashboard__health-chart-units">days</p>
           </div>
         </div>
-        <p className="dashboard__goal">Goal: 4 km</p>
       </CardBody>
     </Card>
   </Col>

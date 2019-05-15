@@ -6,10 +6,10 @@ import {
 import PropTypes from 'prop-types';
 import Panel from '../../../../shared/components/Panel';
 
-const data01 = [{ name: 'Cycling', value: 10, fill: '#4ce1b6' },
-  { name: 'Walking', value: 37, fill: '#70bbfd' },
-  { name: 'Run', value: 21, fill: '#f6da6e' },
-  { name: 'Swimming', value: 32, fill: '#ff4861' }];
+const data01 = [{ name: 'Low', value: 10, fill: '#4ce1b6' },
+  { name: 'Medium', value: 37, fill: '#70bbfd' },
+  { name: 'High', value: 21, fill: '#f6da6e' },
+  { name: 'TBD', value: 32, fill: '#ff4861' }];
 
 const style = {
   left: 0,

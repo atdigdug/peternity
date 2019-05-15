@@ -94,13 +94,6 @@ class SalesStatistisBar extends PureComponent {
           }
 
         </ResponsiveContainer>
-        <hr />
-        <div className="toggle-btn dashboard__sales-toggle">
-          <input className="toggle-btn__input" type="checkbox" name="sales" id="sales" onChange={this.handleChange} />
-          <span className="dashboard__sales-toggle-left">Yearly</span>
-          <span className="toggle-btn__input-label">Toggle</span>
-          <span className="dashboard__sales-toggle-right">Monthly</span>
-        </div>
       </Panel>
     );
   }

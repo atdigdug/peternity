@@ -1,9 +1,9 @@
 import React from 'react';
-import { Container, Row } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 
-import Defects from './components/Defects';
+import Defects from './components/RiskPriorities';
 import StaleDefects from './components/StaleDefects';
-import DefectsList from './components/DefectsList';
+import DefectsList from '../../AsfShared/FindingsTable';
 
 const ReportAction = () => (
   <Container className="dashboard">
@@ -12,7 +12,9 @@ const ReportAction = () => (
       <StaleDefects />
     </Row>
     <Row>
-      <DefectsList />
+      <Col>
+        <DefectsList />
+      </Col>
     </Row>
   </Container>
 );

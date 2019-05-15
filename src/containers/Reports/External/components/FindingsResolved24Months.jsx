@@ -1,7 +1,7 @@
 import React from 'react';
 import { PieChart, Pie, ResponsiveContainer } from 'recharts';
 import { Card, CardBody, Col } from 'reactstrap';
-import FlashIcon from 'mdi-react/FlashIcon';
+import FlashIcon from 'mdi-react/BuildIcon';
 
 const data = [{ value: 360, fill: '#f6da6e' },
   { value: 140, fill: '#eeeeee' }];
@@ -22,10 +22,8 @@ const CaloriesBurn = () => (
           <div className="dashboard__health-chart-info">
             <FlashIcon style={{ fill: '#f6da6e' }} />
             <p className="dashboard__health-chart-number">360</p>
-            <p className="dashboard__health-chart-units">kKal</p>
           </div>
         </div>
-        <p className="dashboard__goal">Goal: 500 kKal</p>
       </CardBody>
     </Card>
   </Col>

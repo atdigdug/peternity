@@ -3,6 +3,10 @@ import {
   Col, Container, Row, Card, CardBody,
 } from 'reactstrap';
 
+const logoSalesforce = `${process.env.PUBLIC_URL}/img/salesforce.png`;
+const logoServiceNow = `${process.env.PUBLIC_URL}/img/servicenow.png`;
+const logoAtlassian = `${process.env.PUBLIC_URL}/img/atlassian.png`;
+
 const logoWhitehat = `${process.env.PUBLIC_URL}/img/whitehat.png`;
 const logoVeracode = `${process.env.PUBLIC_URL}/img/veracode.png`;
 const logoAcunetix = `${process.env.PUBLIC_URL}/img/acunetix.png`;
@@ -35,6 +39,13 @@ const logoWhiteSource = `${process.env.PUBLIC_URL}/img/whitesource.png`;
 const logoPureSec = `${process.env.PUBLIC_URL}/img/puresec.png`;
 const logoProtego = `${process.env.PUBLIC_URL}/img/protego.png`;
 
+const logoJenkins = `${process.env.PUBLIC_URL}/img/jenkins.png`;
+const logoBamboo = `${process.env.PUBLIC_URL}/img/bamboo.png`;
+const logoTravisCi = `${process.env.PUBLIC_URL}/img/travisci.png`;
+const logoCircleCi = `${process.env.PUBLIC_URL}/img/circleci.png`;
+const logoTeamCity = `${process.env.PUBLIC_URL}/img/teamcity.png`;
+const logoHarness = `${process.env.PUBLIC_URL}/img/harness.png`;
+
 const logostyle = {
   left: 0,
   width: 100,
@@ -53,8 +64,11 @@ const ScansDetail = () => (
         <Card>
           <CardBody>
             <div className="card__title">
-              <h5 className="bold-text">Platform</h5>
+              <h5 className="bold-text">Platforms</h5>
             </div>
+            <img style={logostyle} src={logoSalesforce} alt="" />&nbsp;
+            <img style={logostyle} src={logoServiceNow} alt="" />&nbsp;
+            <img style={logostyle} src={logoAtlassian} alt="" />&nbsp;
           </CardBody>
         </Card>
       </Col>
@@ -81,20 +95,20 @@ const ScansDetail = () => (
             <img style={logostyle} src={logoOpenVas} alt="" />&nbsp;
             <img style={logostyle} src={logoNmap} alt="" />&nbsp;
             <img style={logostyle} src={logoTenable} alt="" />&nbsp;
-            <p />
+
             <img style={logostyle} src={logoSynopsys} alt="" />&nbsp;
             <img style={logostyle} src={logoVirtualForge} alt="" />&nbsp;
             <img style={logostyle} src={logoCheckMarx} alt="" />&nbsp;
             <img style={logostyle} src={logoSiteLock} alt="" />&nbsp;
             <img style={logostyle} src={logoBrakeMan} alt="" />&nbsp;
             <img style={logostyle} src={logoSonarCube} alt="" />&nbsp;
-            <p />
+
             <img style={logostyle} src={logoContrast} alt="" />&nbsp;
-            <p />
+
             <img style={logostyle} src={logoSnyk} alt="" />&nbsp;
             <img style={logostyle} src={logoSonaType} alt="" />&nbsp;
             <img style={logostyle} src={logoWhiteSource} alt="" />&nbsp;
-            <p />
+
             <img style={logostyle} src={logoPureSec} alt="" />&nbsp;
             <img style={logostyle} src={logoProtego} alt="" />&nbsp;
           </CardBody>
@@ -108,6 +122,12 @@ const ScansDetail = () => (
             <div className="card__title">
               <h5 className="bold-text">CI/CD</h5>
             </div>
+            <img style={logostyle} src={logoJenkins} alt="" />&nbsp;
+            <img style={logostyle} src={logoBamboo} alt="" />&nbsp;
+            <img style={logostyle} src={logoTravisCi} alt="" />&nbsp;
+            <img style={logostyle} src={logoCircleCi} alt="" />&nbsp;
+            <img style={logostyle} src={logoTeamCity} alt="" />&nbsp;
+            <img style={logostyle} src={logoHarness} alt="" />&nbsp;
           </CardBody>
         </Card>
       </Col>

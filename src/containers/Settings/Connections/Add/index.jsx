@@ -46,6 +46,9 @@ const logoCircleCi = `${process.env.PUBLIC_URL}/img/circleci.png`;
 const logoTeamCity = `${process.env.PUBLIC_URL}/img/teamcity.png`;
 const logoHarness = `${process.env.PUBLIC_URL}/img/harness.png`;
 
+const logoEclipse = `${process.env.PUBLIC_URL}/img/eclipse.png`;
+const logoVisualStudio = `${process.env.PUBLIC_URL}/img/visualstudio.png`;
+
 const logostyle = {
   left: 0,
   width: 100,
@@ -139,6 +142,8 @@ const ScansDetail = () => (
             <div className="card__title">
               <h5 className="bold-text">Developer Tools</h5>
             </div>
+            <img style={logostyle} src={logoEclipse} alt="" />&nbsp;
+            <img style={logostyle} src={logoVisualStudio} alt="" />&nbsp;
           </CardBody>
         </Card>
       </Col>

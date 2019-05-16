@@ -49,6 +49,14 @@ const logoHarness = `${process.env.PUBLIC_URL}/img/harness.png`;
 const logoEclipse = `${process.env.PUBLIC_URL}/img/eclipse.png`;
 const logoVisualStudio = `${process.env.PUBLIC_URL}/img/visualstudio.png`;
 
+const logoSlack = `${process.env.PUBLIC_URL}/img/slack.png`;
+const logoOutlook = `${process.env.PUBLIC_URL}/img/outlook.png`;
+const logoTeams = `${process.env.PUBLIC_URL}/img/teams.png`;
+const logoWorkplace = `${process.env.PUBLIC_URL}/img/workplace.png`;
+const logoChatter = `${process.env.PUBLIC_URL}/img/chatter.svg`;
+
+const logoArcher = `${process.env.PUBLIC_URL}/img/archer.jpg`;
+
 const logostyle = {
   left: 0,
   width: 100,
@@ -155,6 +163,11 @@ const ScansDetail = () => (
             <div className="card__title">
               <h5 className="bold-text">Communication</h5>
             </div>
+            <img style={logostyle} src={logoSlack} alt="" />&nbsp;
+            <img style={logostyle} src={logoOutlook} alt="" />&nbsp;
+            <img style={logostyle} src={logoTeams} alt="" />&nbsp;
+            <img style={logostyle} src={logoChatter} alt="" />&nbsp;
+            <img style={logostyle} src={logoWorkplace} alt="" />&nbsp;
           </CardBody>
         </Card>
       </Col>
@@ -166,6 +179,7 @@ const ScansDetail = () => (
             <div className="card__title">
               <h5 className="bold-text">CMDB</h5>
             </div>
+            <img style={logostyle} src={logoServiceNow} alt="" />&nbsp;
           </CardBody>
         </Card>
       </Col>
@@ -177,6 +191,7 @@ const ScansDetail = () => (
             <div className="card__title">
               <h5 className="bold-text">GRC</h5>
             </div>
+            <img style={logostyle} src={logoArcher} alt="" />&nbsp;
           </CardBody>
         </Card>
       </Col>

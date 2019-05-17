@@ -36,9 +36,8 @@ const AppsModulesDetail = () => (
       </Col>
       <Col>
         <div className="float-right">
-          <NavLink to="/engagements/input">
-            <Button outline><EditIcon /> Edit Application</Button>
-          </NavLink>
+          <Button color="success">+ Add Scan</Button>
+          <Button outline><EditIcon /> Edit Version</Button>
         </div>
       </Col>
     </Row>

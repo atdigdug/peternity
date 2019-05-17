@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Col, Container, Row, Card, CardBody, UncontrolledTooltip, Breadcrumb, BreadcrumbItem, Button,
 } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
@@ -30,9 +29,8 @@ const AppsModulesDetail = () => (
       </Col>
       <Col>
         <div className="float-right">
-          <NavLink to="/engagements/input">
-            <Button outline><EditIcon /> Edit Application</Button>
-          </NavLink>
+          <Button outline>+ Add Version</Button>
+          <Button outline><EditIcon /> Edit Application</Button>
         </div>
       </Col>
     </Row>

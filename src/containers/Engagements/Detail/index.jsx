@@ -26,12 +26,10 @@ const EngagementsDetail = () => (
       </Col>
       <Col>
         <div className="float-right">
-          <NavLink to="/engagements/input">
+          <NavLink to="/appsmodules/input">
             <Button color="success">+ Add Application</Button>
           </NavLink>
-          <NavLink to="/engagements/input">
-            <Button outline><EditIcon /> Edit Application</Button>
-          </NavLink>
+          &nbsp;<Button outline><EditIcon /> Edit Engagement</Button>
         </div>
       </Col>
     </Row>

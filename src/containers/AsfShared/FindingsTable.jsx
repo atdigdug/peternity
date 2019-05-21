@@ -9,10 +9,8 @@ import SearchIcon from 'mdi-react/MagnifyIcon';
 const EngagementDataTable = () => (
   <div>
     <div className="card__title">
-      <Link to="/findings/detail">
-        <h5 className="bold-text float-left">Findings</h5>
-        <h5 className="subhead">&nbsp;750</h5>
-      </Link>
+      <h5 className="bold-text float-left">Findings</h5>
+      <h5 className="subhead">&nbsp;750</h5>
     </div>
     <ButtonToolbar className="form__button-toolbar">
       <UncontrolledDropdown>
@@ -53,7 +51,7 @@ const EngagementDataTable = () => (
           <tbody>
             <tr>
               <td>1</td>
-              <Link to="/engagements/detail">
+              <Link to="/findings/detail">
                 <td>Cross-site scripting (XSS)</td>
               </Link>
               <td>CheckMarx</td>

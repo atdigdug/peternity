@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Col, Container, Row, Breadcrumb, BreadcrumbItem, Button,
 } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import EditIcon from 'mdi-react/EditIcon';
 import Summary from './components/Summary';
 import Details from './components/Details';
@@ -15,7 +15,7 @@ const EngagementsDetail = () => (
   <Container>
     <Row>
       <Breadcrumb>
-        <BreadcrumbItem><a href="/engagements">Engagements</a></BreadcrumbItem>
+        <BreadcrumbItem><Link to="/engagements">Engagements</Link></BreadcrumbItem>
         <BreadcrumbItem active>Merger Release</BreadcrumbItem>
       </Breadcrumb>
     </Row>
@@ -26,9 +26,9 @@ const EngagementsDetail = () => (
       </Col>
       <Col>
         <div className="float-right">
-          <NavLink to="/appsmodules/input">
+          <Link to="/appsmodules/input">
             <Button color="success">+ Add Application</Button>
-          </NavLink>
+          </Link>
           &nbsp;<Button outline><EditIcon /> Edit Engagement</Button>
         </div>
       </Col>

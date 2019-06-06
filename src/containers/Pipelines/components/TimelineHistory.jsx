@@ -2,36 +2,27 @@ import React from 'react';
 import { Col } from 'reactstrap';
 import TimeLineItem from '../../../shared/components/TimeLineItem';
 
-const Ava1 = `${process.env.PUBLIC_URL}/img/14.png`;
-const Ava2 = `${process.env.PUBLIC_URL}/img/15.png`;
-
 const TimelineHistory = () => (
   <Col md={12}>
     <div className="timeline">
-      <TimeLineItem type="work" title="Business meetup" date="3 hours ago">
-        <p>Dependent certainty off discovery him his tolerably offending. Ham for attention remainder
-              sometimes additions recommend fat our.
-        </p>
+      <TimeLineItem type="work" title="Onboarding" date="6/1/2019 12:03pm">
+        <p>WhiteHat : Partner Mobile App</p>
       </TimeLineItem>
-      <TimeLineItem type="video" title="Video conference with client" date="5 hours ago">
-        <p>Dependent certainty off discovery him his tolerably offending. Ham for attention remainder
-              sometimes additions recommend fat our.
-        </p>
+      <TimeLineItem type="work" title="Onboarding" date="6/1/2019 12:06pm">
+        <p>CheckMarx : Partner Mobile App</p>
+        <p>Error! Fix error.</p>
       </TimeLineItem>
-      <TimeLineItem img={Ava1} title="Call to Jovanna" date="8 hours ago">
-        <p>Dependent certainty off discovery him his tolerably offending. Ham for attention remainder
-              sometimes additions recommend fat our.
-        </p>
+      <TimeLineItem type="work" title="Scanning" date="6/1/2019 12:11pm">
+        <p>WhiteHat : Partner Mobile App</p>
       </TimeLineItem>
-      <TimeLineItem type="file" title="Create offer. Prepare document" date="Yesterday at 18:30">
-        <p>Dependent certainty off discovery him his tolerably offending. Ham for attention remainder
-              sometimes additions recommend fat our.
-        </p>
+      <TimeLineItem type="work" title="Offboarding" date="6/1/2019 12:31pm">
+        <p>WhiteHat : Partner Mobile App</p>
       </TimeLineItem>
-      <TimeLineItem img={Ava2} title="Conversation with Philip" date="21.03.2017">
-        <p>Dependent certainty off discovery him his tolerably offending. Ham for attention remainder
-              sometimes additions recommend fat our.
-        </p>
+      <TimeLineItem type="work" title="Onboarding" date="6/1/2019 1:19pm">
+        <p>Veracode : Partner Mobile App</p>
+      </TimeLineItem>
+      <TimeLineItem type="work" title="Scanning" date="6/1/2019 1:22pm">
+        <p>Veracode : Partner Mobile App</p>
       </TimeLineItem>
     </div>
   </Col>

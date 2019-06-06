@@ -56,7 +56,7 @@ const EngagementDataTable = () => (
             <td>Error</td>
             <td>Partner Mobile App</td>
             <td>CheckMarx</td>
-            <td>-</td>
+            <td>Fix Error</td>
             <td>-</td>
             <td>-</td>
           </tr>

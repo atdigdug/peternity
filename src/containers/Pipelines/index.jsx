@@ -9,7 +9,7 @@ const ScansDetail = () => (
   <Container>
     <Row>
       <Col md={12}>
-        <h3 className="page-title">Developer Support</h3>
+        <h3 className="page-title">Pipelines</h3>
       </Col>
     </Row>
     <Row>

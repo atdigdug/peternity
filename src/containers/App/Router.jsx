@@ -27,6 +27,7 @@ import DevSupportDefault from '../DevSupport/index';
 import SettingsConnections from '../Settings/Connections/index';
 import SettingsConnectionsAdd from '../Settings/Connections/Add/index';
 import SearchResultsDefault from '../SearchResults/index';
+import PipelinesDefault from '../Pipelines/index';
 
 import Alerts from '../UI/Alerts/index';
 import Buttons from '../UI/Buttons/index';
@@ -164,6 +165,12 @@ const Findings = () => (
 const DevSupport = () => (
   <Switch>
     <Route path="/devsupport" component={DevSupportDefault} />
+  </Switch>
+);
+
+const Pipelines = () => (
+  <Switch>
+    <Route path="/pipelines" component={PipelinesDefault} />
   </Switch>
 );
 
@@ -313,6 +320,7 @@ const wrappedRoutes = () => (
       <Route path="/scans" component={Scans} />
       <Route path="/findings" component={Findings} />
       <Route path="/devsupport" component={DevSupport} />
+      <Route path="/pipelines" component={Pipelines} />
       <Route path="/settings" component={Settings} />
       <Route path="/searchresults" component={SearchResultsRoutes} />
       <Route path="/ui" component={UI} />

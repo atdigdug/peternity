@@ -35,6 +35,7 @@ class SidebarContent extends Component {
           <SidebarLink title="Findings" icon="bug" route="/findings" onClick={this.hideSidebar} />
           <SidebarLink title="Risks" icon="warning" route="/findings/riskanalysis" onClick={this.hideSidebar} />
           <SidebarLink title="Dev Support" icon="code" route="/devsupport" onClick={this.hideSidebar} />
+          <SidebarLink title="Pipelines" icon="list" route="/pipelines" onClick={this.hideSidebar} />
         </ul>
         <ul className="sidebar__block">
           <SidebarCategory title="Settings" icon="cog">

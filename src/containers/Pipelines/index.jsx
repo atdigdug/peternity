@@ -2,8 +2,8 @@ import React from 'react';
 import {
   Col, Container, Row, Card, CardBody, Button,
 } from 'reactstrap';
-import Table from './components/DataTable';
-import IrritatingAggregate from './components/Irritating';
+import StatusTable from './components/StatusTable';
+import Timeline from './components/TimelineHistory';
 
 const ScansDetail = () => (
   <Container>
@@ -12,30 +12,25 @@ const ScansDetail = () => (
         <h3 className="page-title">Pipelines</h3>
       </Col>
     </Row>
+    <div className="card__title">
+      <h5 className="bold-text">Tabular</h5>
+    </div>
     <Row>
       <Col>
         <Card>
           <CardBody>
-            <form className="form">
-              <div className="form__form-group">
-                <Row>
-                  <Col xl="4">
-                    <div className="form__form-group-field">
-                      <input />
-                    </div>
-                  </Col>
-                  <Col xl="2">
-                    <Button color="primary" type="submit">Search</Button>
-                  </Col>
-                </Row>
-              </div>
-            </form>
-            <Table />
+            <StatusTable />
           </CardBody>
         </Card>
       </Col>
     </Row>
+    <div className="card__title">
+      <h5 className="bold-text">Columnar</h5>
+    </div>
     <Row>
+      <Col>
+        2946
+      </Col>
       <Col>
         <Card>
           <CardBody>
@@ -72,7 +67,21 @@ const ScansDetail = () => (
             </div>
             Time spent: 13 hours 5 minutes.
             <p />
-            <IrritatingAggregate />
+          </CardBody>
+        </Card>
+      </Col>
+      <Col>
+        Offboard
+      </Col>
+    </Row>
+    <div className="card__title">
+      <h5 className="bold-text">Timeline</h5>
+    </div>
+    <Row>
+      <Col>
+        <Card>
+          <CardBody>
+            <Timeline />
           </CardBody>
         </Card>
       </Col>

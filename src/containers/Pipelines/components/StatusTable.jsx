@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Table, Card, CardBody, Row, Col,
 } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 const EngagementDataTable = () => (
   <Row>
@@ -24,7 +25,9 @@ const EngagementDataTable = () => (
             <tbody>
               <tr>
                 <td>1</td>
-                <td>Jenkins 2946</td>
+                <Link to="/pipelines/detail">
+                  <td>Jenkins 2946</td>
+                </Link>
                 <td>Pending</td>
                 <td>Partner Mobile App</td>
                 <td>FxCop</td>

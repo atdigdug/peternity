@@ -17,7 +17,7 @@ const PipelineDetail = () => (
     </Row>
     <ColumnarData />
     <div className="card__title">
-      <h5 className="bold-text">Timeline : Jenkins 2946</h5>
+      <h5 className="bold-text">Timeline</h5>
     </div>
     <Row>
       <Col>

@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Card, CardBody, Col, Row,
 } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 const ColumnarData = () => (
   <Row>
@@ -9,7 +10,9 @@ const ColumnarData = () => (
       <Card>
         <CardBody>
           <div className="card__title">
-            <h5 className="bold-text">Jenkins 2946</h5>
+            <Link to="/pipelines/detail">
+              <h5 className="bold-text">Jenkins 2946</h5>
+            </Link>
           </div>
           <hr />
           Pending: 1<p />

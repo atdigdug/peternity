@@ -1,12 +1,19 @@
 import React from 'react';
 import {
-  Col, Container, Row, Card, CardBody,
+  Col, Container, Row, Card, CardBody, Breadcrumb, BreadcrumbItem,
 } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import ColumnarData from './components/Columnar';
 import Timeline from './components/TimelineHistory';
 
 const PipelineDetail = () => (
   <Container>
+    <Row>
+      <Breadcrumb>
+        <BreadcrumbItem><Link to="/pipelines">Pipelines</Link></BreadcrumbItem>
+        <BreadcrumbItem active>Jenkins 2946</BreadcrumbItem>
+      </Breadcrumb>
+    </Row>
     <Row>
       <Col md={12}>
         <h3 className="page-title">Pipeline : Jenkins 2946</h3>

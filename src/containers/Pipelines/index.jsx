@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import {
-  Col, Container, Row, Card, CardBody, UncontrolledDropdown, DropdownToggle, DropdownMenu,
+  Col, Container, Row, UncontrolledDropdown, DropdownToggle, DropdownMenu,
   DropdownItem, ButtonGroup, Button,
 } from 'reactstrap';
 import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
@@ -9,7 +9,6 @@ import DetailedIcon from 'mdi-react/ViewAgendaIcon';
 import Aggregate from '../AsfShared/GenericAggregate';
 import StatusTable from './components/StatusTable';
 import ColumnarData from './components/Columnar';
-import Timeline from './components/TimelineHistory';
 
 export default class ScansDetail extends PureComponent {
   constructor() {
@@ -67,18 +66,6 @@ export default class ScansDetail extends PureComponent {
 
         {dataTable}
 
-        <div className="card__title">
-          <h5 className="bold-text">Timeline : Jenkins 2946</h5>
-        </div>
-        <Row>
-          <Col>
-            <Card>
-              <CardBody>
-                <Timeline />
-              </CardBody>
-            </Card>
-          </Col>
-        </Row>
       </Container>
     );
   }

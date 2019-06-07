@@ -28,6 +28,7 @@ import SettingsConnections from '../Settings/Connections/index';
 import SettingsConnectionsAdd from '../Settings/Connections/Add/index';
 import SearchResultsDefault from '../SearchResults/index';
 import PipelinesDefault from '../Pipelines/index';
+import PipelinesDetail from '../Pipelines/Detail/index';
 
 import Alerts from '../UI/Alerts/index';
 import Buttons from '../UI/Buttons/index';
@@ -170,6 +171,7 @@ const DevSupport = () => (
 
 const Pipelines = () => (
   <Switch>
+    <Route path="/pipelines/detail" component={PipelinesDetail} />
     <Route path="/pipelines" component={PipelinesDefault} />
   </Switch>
 );

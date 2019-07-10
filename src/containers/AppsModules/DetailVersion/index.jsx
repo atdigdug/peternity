@@ -7,6 +7,8 @@ import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import EditIcon from 'mdi-react/EditIcon';
+import UsesApp1 from './components/UsesApp1';
+import UsesApp2 from './components/UsesApp2';
 import Scan1 from './components/Scan1';
 import Scan2 from './components/Scan2';
 import Scan3 from './components/Scan3';
@@ -63,6 +65,14 @@ const AppsModulesDetail = () => (
                 </UncontrolledTooltip>
               </CardBody>
             </Card>
+          </Col>
+        </Row>
+        <Row>
+          <Col xl="6">
+            <UsesApp1 />
+          </Col>
+          <Col xl="6">
+            <UsesApp2 />
           </Col>
         </Row>
         <Row>

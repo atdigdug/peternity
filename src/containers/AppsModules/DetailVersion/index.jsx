@@ -12,6 +12,7 @@ import UsesApp2 from './components/UsesApp2';
 import Scan1 from './components/Scan1';
 import Scan2 from './components/Scan2';
 import Scan3 from './components/Scan3';
+import ManualFindings from './components/ManualScan4';
 import Details from './components/Details';
 import Findings from '../../AsfShared/FindingsTable';
 
@@ -87,7 +88,9 @@ const AppsModulesDetail = () => (
           <Col xl="6">
             <Scan3 />
           </Col>
-          <Col xl="6">&nbsp;</Col>
+          <Col xl="6">
+            <ManualFindings />
+          </Col>
         </Row>
       </Col>
       <Col xl="3">

@@ -39,8 +39,9 @@ const AppsModulesDetail = () => (
       </Col>
       <Col>
         <div className="float-right">
-          <Button color="success">+ Add Scan</Button>
-          <Button outline><EditIcon /> Edit Version</Button>
+          <Button color="success">+ Manual Finding</Button>
+          <Button color="success">+ Scan</Button>
+          <Button outline><EditIcon /> Edit</Button>
         </div>
       </Col>
     </Row>

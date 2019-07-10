@@ -46,6 +46,7 @@
     "rc-tooltip": "^3.7.3",
     "react": "^16.8.6",
     "react-app-polyfill": "^0.2.1",
+    "react-autocomplete": "^1.8.1",
     "react-big-calendar": "^0.20.4",
     "react-chartjs-2": "^2.7.6",
     "react-color": "^2.17.3",

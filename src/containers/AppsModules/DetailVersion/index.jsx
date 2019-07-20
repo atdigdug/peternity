@@ -3,9 +3,9 @@ import {
   Col, Container, Row, Card, CardBody, UncontrolledTooltip, Breadcrumb, BreadcrumbItem, Button,
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import Stepper from '@material-ui/core/Stepper';
-import Step from '@material-ui/core/Step';
-import StepLabel from '@material-ui/core/StepLabel';
+import {
+  Stepper, Step, StepLabel, StepButton,
+} from '@material-ui/core';
 import EditIcon from 'mdi-react/EditIcon';
 import UsesApp1 from './components/UsesApp1';
 import UsesApp2 from './components/UsesApp2';
@@ -51,15 +51,32 @@ const AppsModulesDetail = () => (
           <Col>
             <Card>
               <CardBody>
-                <Stepper activeStep={0}>
+                <Stepper nonLinear activeStep={5} alternativeLabel>
                   <Step id="tooltip3" key="Onboard" completed>
-                    <StepLabel optional="3/1/2018">Onboard</StepLabel>
+                    <StepButton optional="3/1/2019">
+                      Onboard
+                    </StepButton>
                   </Step>
-                  <Step key="Offboard" active>
-                    <StepLabel>Offboard</StepLabel>
+                  <Step key="InitRv" active>
+                    <StepLabel>Initiative Review</StepLabel>
                   </Step>
-                  <Step key="Risk Model">
-                    <StepLabel>Risk Model</StepLabel>
+                  <Step key="ArchRv">
+                    <StepLabel>Architecture Review</StepLabel>
+                  </Step>
+                  <Step key="ConfigRv">
+                    <StepLabel>Configuration Review</StepLabel>
+                  </Step>
+                  <Step key="CodeRv">
+                    <StepLabel error>Code Review</StepLabel>
+                  </Step>
+                  <Step key="Pentest" active>
+                    <StepLabel>Pentest</StepLabel>
+                  </Step>
+                  <Step key="VulnAss">
+                    <StepLabel>Vulnerability Assessment</StepLabel>
+                  </Step>
+                  <Step key="DeployRv">
+                    <StepLabel>Deployment Review</StepLabel>
                   </Step>
                 </Stepper>
                 <UncontrolledTooltip placement="bottom" target="tooltip3">

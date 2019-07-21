@@ -53,7 +53,7 @@ const Summary = () => (
         </Col>
         <Col xl="4">
           <div className="card__title">
-            <h5 className="bold-text">Nexus Scan</h5>
+            <h5 className="bold-text">SonarQube Scan</h5>
             <span className="subhead">OSS</span>
           </div>
           <div className="progress-wrap progress-wrap--middle">

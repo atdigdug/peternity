@@ -9,7 +9,7 @@ const Summary = () => (
   <Card>
     <CardBody>
       <div className="card__title">
-        <h5 className="bold-text">Nexus Scan</h5>
+        <h5 className="bold-text">SonarQube Scan</h5>
         <span className="subhead">#37791</span>
       </div>
       <div className="progress-wrap progress-wrap--middle">

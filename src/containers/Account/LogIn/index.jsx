@@ -10,11 +10,11 @@ const LogIn = () => (
       <div className="account__card">
         <div className="account__head">
           <h3 className="account__title">Welcome to
-            <span className="account__logo"> Easy
-              <span className="account__logo-accent">DEV</span>
+            <span className="account__logo"> sken
+              <span className="account__logo-accent">.ai</span>
             </span>
           </h3>
-          <h4 className="account__subhead subhead">Start your business easily</h4>
+          <h4 className="account__subhead subhead">AppSec made easy</h4>
         </div>
         <LogInForm onSubmit />
         <div className="account__or">

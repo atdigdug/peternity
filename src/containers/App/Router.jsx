@@ -16,6 +16,7 @@ import AppsModulesDefault from '../AppsModules/index';
 import AppsModulesInput from '../AppsModules/Input/index';
 import AppsModulesDetail from '../AppsModules/Detail/index';
 import AppsModulesDetailVersion from '../AppsModules/DetailVersion/index';
+import AppsModulesDetailVersionAddScan from '../AppsModules/DetailVersion/AddScan/index';
 import ScansDefault from '../Scans/index';
 import ScansInput from '../Scans/Input/index';
 import ScansDetail from '../Scans/Detail/index';
@@ -140,6 +141,7 @@ const Engagements = () => (
 const AppsModules = () => (
   <Switch>
     <Route path="/appsmodules/detail" component={AppsModulesDetail} />
+    <Route path="/appsmodules/detailversion/addscan" component={AppsModulesDetailVersionAddScan} />
     <Route path="/appsmodules/detailversion" component={AppsModulesDetailVersion} />
     <Route path="/appsmodules/input" component={AppsModulesInput} />
     <Route path="/appsmodules" component={AppsModulesDefault} />

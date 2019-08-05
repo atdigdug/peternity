@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Col, Container, Row, Card, CardBody, UncontrolledTooltip, Breadcrumb, BreadcrumbItem, Button,
 } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
@@ -28,15 +28,17 @@ const AppsModulesDetail = () => (
         <h3 className="page-subhead subhead">
           2.14 (for full version page, go to
           &nbsp;
-          <NavLink to="/appsmodules/detail">
+          <Link to="/appsmodules/detail">
             <span className="bold-text">Partner Mobile App version 2.14 (latest)</span>
-          </NavLink>
+          </Link>
           )
         </h3>
       </Col>
       <Col>
         <div className="float-right">
-          <Button color="success">+ Add Scan</Button>
+          <Link to="/appsmodules/detailversion/addscan">
+            <Button color="success">+ Add Scan</Button>
+          </Link>
           <Button outline><EditIcon /> Edit Version</Button>
         </div>
       </Col>

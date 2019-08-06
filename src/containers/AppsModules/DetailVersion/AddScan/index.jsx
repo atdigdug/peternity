@@ -33,7 +33,13 @@ const AddScan = () => (
             <Card>
               <CardBody>
                 Suggested scans: <p />
-                Coverity
+                <p />
+                Coverity (Recommended) Apps similar to this regularly get scanned by Coverity. (Premium scanner) <p />
+                Blackduck (Optional) You do not have an OSS and License Compliance scanner running for this project.
+                  Apps similar to this do not normally get scanned by Blackduck. (Free scanner) <p />
+                Contrast (Not Recommended) Apps similar to this do not normally get scanned by Contrast.
+                  (Premium scanner) <p />
+                Brakeman (Not Recommended) Your project is not written in Ruby. <p />
               </CardBody>
             </Card>
           </Col>

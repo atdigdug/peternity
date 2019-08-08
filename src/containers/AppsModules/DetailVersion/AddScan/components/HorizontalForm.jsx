@@ -4,6 +4,7 @@ import {
 } from 'reactstrap';
 import { Field, reduxForm } from 'redux-form';
 import PropTypes from 'prop-types';
+import renderSelectField from '../../../../../shared/components/form/Select';
 
 class HorizontalForm extends PureComponent {
   static propTypes = {
@@ -81,23 +82,37 @@ class HorizontalForm extends PureComponent {
               <span className="form__form-group-label">On command failure</span>
               <div className="form__form-group-field">
                 <Field
-                  name="defaultInput"
-                  component="input"
-                  type="text"
-                  placeholder=""
+                  name="select"
+                  component={renderSelectField}
+                  placeholder="Continue executing any remaining commands"
+                  options={[
+                    { value: 'one', label: 'Continue executing any remaining commands' },
+                    { value: 'two', label: 'Skip any remaining commands' },
+                  ]}
                 />
               </div>
+              <br /><br />
+              <span className="form__form-group-description">
+                Suggested selection based off other Coverity scans.
+              </span>
             </div>
             <div className="form__form-group">
               <span className="form__form-group-label">On successful execution</span>
               <div className="form__form-group-field">
                 <Field
-                  name="defaultInput"
-                  component="input"
-                  type="text"
-                  placeholder=""
+                  name="select"
+                  component={renderSelectField}
+                  placeholder="Clean up the intermediate directory"
+                  options={[
+                    { value: 'one', label: 'Clean up the intermediate directory' },
+                    { value: 'two', label: 'Persist the intermediate directory' },
+                  ]}
                 />
               </div>
+              <br /><br />
+              <span className="form__form-group-description">
+                Suggested selection based off other Coverity scans.
+              </span>
             </div>
             <div className="form__form-group">
               <span className="form__form-group-label">Schedule</span>

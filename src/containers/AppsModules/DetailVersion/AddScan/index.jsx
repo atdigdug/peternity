@@ -66,7 +66,7 @@ export default class AddScan extends PureComponent {
                       <td>Premium</td>
                       <td>
                         <Button
-                          className="icon"
+                          color="primary"
                           onClick={() => this.setState(prevState => ({ showDetails: !prevState.showDetails }))}
                         >
                           Select
@@ -81,9 +81,7 @@ export default class AddScan extends PureComponent {
                       </td>
                       <td>Free</td>
                       <td>
-                        <Button
-                          className="icon"
-                        >
+                        <Button>
                           Select
                         </Button>
                       </td>
@@ -94,9 +92,7 @@ export default class AddScan extends PureComponent {
                       <td>Apps similar to this do not normally get scanned by Contrast.</td>
                       <td>Premium</td>
                       <td>
-                        <Button
-                          className="icon"
-                        >
+                        <Button>
                           Select
                         </Button>
                       </td>
@@ -107,9 +103,7 @@ export default class AddScan extends PureComponent {
                       <td>Your project is not written in Ruby.</td>
                       <td>Free</td>
                       <td>
-                        <Button
-                          className="icon"
-                        >
+                        <Button>
                           Select
                         </Button>
                       </td>

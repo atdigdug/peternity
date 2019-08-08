@@ -3,7 +3,7 @@ import {
   Col, Container, Row, Card, CardBody, Breadcrumb, BreadcrumbItem, Button, Table,
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import ScanDetails from './components/Details';
+import ScanDetails from './components/HorizontalForm';
 
 export default class AddScan extends PureComponent {
   constructor() {
@@ -53,7 +53,7 @@ export default class AddScan extends PureComponent {
                     <tr>
                       <th>Scanner</th>
                       <th>Recommendation</th>
-                      <th>Notes</th>
+                      <th>Reason</th>
                       <th>Type</th>
                       <th>Action</th>
                     </tr>
